@@ -1,0 +1,10 @@
+{
+  "name": "cdc-react",
+  "version": "1.0.0",
+  "description": "Library for ReactJS components for the CDC",
+  "main": "index.js",
+  "repository": "git@github.com:CDCgov/cdc-react.git",
+  "author": "cfarmer <cfarmer@fearless.tech>",
+  "license": "APACHE-2.0",
+  "private": true
+}
