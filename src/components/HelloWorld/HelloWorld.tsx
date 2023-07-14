@@ -1,5 +1,21 @@
-const HelloWorld = () => {
-  return "Hello World";
-};
+interface HelloWorldProps {
+  /**
+   * Optional click handler
+   */
+  onClick?: () => void;
+}
 
-export default HelloWorld;
+/**
+ * Primary UI component for user interaction
+ */
+export const HelloWorld = ({
+  ...props
+}: HelloWorldProps) => {
+  return (
+    <div
+      {...props}
+    >
+      Hello World
+    </div>
+  );
+};
