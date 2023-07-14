@@ -2,12 +2,22 @@
   "name": "cdc-react",
   "version": "1.0.0",
   "description": "Library for ReactJS components for the CDC",
-  "main": "index.js",
+  "main": "./dist/cdc-react.umd.js",
+  "module": "./dist/cdc-react.es.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "repository": "git@github.com:CDCgov/cdc-react.git",
   "author": "cfarmer <cfarmer@fearless.tech>",
   "license": "APACHE-2.0",
   "private": true,
   "devDependencies": {
-    "typescript": "^5.1.6"
+    "@vitejs/plugin-react": "^4.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.1.6",
+    "vite": "^4.4.4",
+    "vite-plugin-dts": "^3.2.0"
   }
 }
