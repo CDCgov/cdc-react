@@ -12,8 +12,7 @@
   "scripts": {
     "test": "vitest",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "deploy-storybook": "yarn build-storybook && touch ./storybook-static/.nojekyll && gh-pages -d storybook-static -t true"
+    "build-storybook": "storybook build -o docs && touch ./docs/.nojekyll"
   },
   "repository": "git@github.com:CDCgov/cdc-react.git",
   "author": "cfarmer <cfarmer@fearless.tech>",
@@ -40,9 +39,7 @@
     "typescript": "^5.1.6",
     "vite": "^4.4.4",
     "vite-plugin-dts": "^3.2.0",
-    "vitest": "^0.33.0",
-    "gh-pages": "^5.0.0",
-    "yarn": "^1.22.19"
+    "vitest": "^0.33.0"
   },
   "dependencies": {}
 }

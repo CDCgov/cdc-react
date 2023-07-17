@@ -1,4 +1,4 @@
 node_modules/
 dist/
 .yarnrc
-storybook-static/
+docs/
