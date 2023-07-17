@@ -1,0 +1,43 @@
+{
+  "name": "cdc-react",
+  "version": "1.0.0",
+  "description": "Library for ReactJS components for the CDC",
+  "main": "./dist/cdc-react.umd.js",
+  "module": "./dist/cdc-react.es.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "vitest",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "repository": "git@github.com:CDCgov/cdc-react.git",
+  "author": "cfarmer <cfarmer@fearless.tech>",
+  "license": "APACHE-2.0",
+  "private": true,
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.0.27",
+    "@storybook/addon-interactions": "^7.0.27",
+    "@storybook/addon-links": "^7.0.27",
+    "@storybook/blocks": "^7.0.27",
+    "@storybook/builder-vite": "^7.0.27",
+    "@storybook/react": "^7.0.27",
+    "@storybook/react-vite": "^7.0.27",
+    "@storybook/testing-library": "^0.2.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "^4.0.3",
+    "jsdom": "^22.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.0.27",
+    "typescript": "^5.1.6",
+    "vite": "^4.4.4",
+    "vite-plugin-dts": "^3.2.0",
+    "vitest": "^0.33.0"
+  }
+}
