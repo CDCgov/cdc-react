@@ -59,8 +59,8 @@ export const Header = ({
             </svg>
             Notifications
             <svg className="cdc-react notification-count" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <circle cx="10" cy="12" r="8" fill="#AF4448" style={{ display: notifications.length > 0 ? 'flex' : 'none' }}></circle>
-              <text style={{ display: notifications.length > 0 ? 'flex' : 'none' }} alignmentBaseline="middle" x="10" y="12" textAnchor="middle">{notifications.length}</text>
+              <circle cx="10" cy="12" r="10" fill="#AF4448" style={{ display: notifications.length > 0 ? 'flex' : 'none' }}></circle>
+              <text style={{ display: notifications.length > 0 ? 'flex' : 'none' }} alignmentBaseline="middle" x="10" y="12.5" textAnchor="middle">{notifications.length}</text>
             </svg>
           </button>
           <button>
