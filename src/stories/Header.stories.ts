@@ -6,7 +6,7 @@ import { Header } from '../components';
 const meta = {
   title: 'Components/Header',
   component: Header,
-  tags: ['autodocs'],
+  // tags: ['autodocs'],
   argTypes: {
   },
 } satisfies Meta<typeof Header>;
