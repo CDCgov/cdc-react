@@ -40,7 +40,7 @@ export const Header = ({
               <circle cx="20" cy="20" r="20"></circle>
             </svg>
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none" className="cdc-react header action-items user-profile chevron-down">
-              <path d="M5.25 7.5L9 10.9091L12.75 7.5" stroke="#333333" stroke-linecap="round"></path>
+              <path d="M5.25 7.5L9 10.9091L12.75 7.5" stroke="#333333" strokeLinecap="round"></path>
             </svg>
           </button>
         </div>
