@@ -45,6 +45,7 @@
 
 .cdc-react.header.action-items.user-profile.chevron-down {
     margin-left: -12px;
+    margin-right: -4px;
 }
 
 .cdc-react.popup {
@@ -98,7 +99,7 @@
 .cdc-react.notification-count text {
     display: flex;
     stroke: #fff;
-    font-size: 8px;
+    font-size: 10px;
 }
 
 @media (max-width: 480px) {
