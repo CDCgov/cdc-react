@@ -4,7 +4,6 @@
     padding: 0px 8px;
     align-items: center;
     gap: 12px;
-    align-self: stretch;
     border-bottom: 1px solid #E0E0E0;
     background: #F0F0F0;
 }
@@ -12,4 +11,37 @@
 .cdc-react.header.logo {
     align-self: stretch;
     fill: #005EAA;
+}
+
+.cdc-react.header.action-items {
+    justify-content: end;
+    flex-grow: 1;
+}
+
+.cdc-react.header.action-items button {
+    border-radius: 4px;
+    border: none;
+    display: flex;
+    padding: 5px;
+}
+
+.cdc-react.header.action-items button:hover {
+    background: #e6e6e6;
+}
+
+.cdc-react.header.action-items.user-profile:hover {
+    background: none;
+}
+
+.cdc-react.header.action-items.user-profile {
+    flex-grow: 0;
+}
+
+.cdc-react.header.action-items.user-profile.user-image {
+    align-items: center;
+    padding: 0px;
+}
+
+.cdc-react.header.action-items.user-profile.chevron-down {
+    margin-left: -12px;
 }
