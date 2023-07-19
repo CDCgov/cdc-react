@@ -1,6 +1,6 @@
 import { cleanup, render, screen } from "@testing-library/react";
 import { afterEach } from "vitest";
-import { HelloWorld } from "./HelloWorld";
+import { Header } from "./Header";
 
 afterEach(() => {
   cleanup();
@@ -8,7 +8,7 @@ afterEach(() => {
 
 describe("HelloWorld", () => {
   it("should render", () => {
-    render(<HelloWorld />);
+    render(<Header />);
 
     expect(screen.getByText("Hello World")).toBeInTheDocument();
   });

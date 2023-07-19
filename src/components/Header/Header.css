@@ -1,0 +1,15 @@
+.cdc-react.header {
+    display: flex;
+    height: 60px;
+    padding: 0px 8px;
+    align-items: center;
+    gap: 12px;
+    align-self: stretch;
+    border-bottom: 1px solid #E0E0E0;
+    background: #F0F0F0;
+}
+
+.cdc-react.header.logo {
+    align-self: stretch;
+    fill: #005EAA;
+}
