@@ -1,6 +1,6 @@
 import { cleanup, render, screen } from "@testing-library/react";
 import { afterEach } from "vitest";
-import { Header } from "./Header";
+import { ProfileHeader } from "./ProfileHeader";
 
 afterEach(() => {
   cleanup();
@@ -8,7 +8,7 @@ afterEach(() => {
 
 describe("Header component for DEX CDC Portal", () => {
   it("should render seven buttons with the correct text", () => {
-    const { container } = render(<Header />);
+    const { container } = render(<ProfileHeader />);
 
     expect(container.getElementsByTagName("button").length).toBe(7);
     expect(screen.getByText("Your Profile")).toBeInTheDocument();

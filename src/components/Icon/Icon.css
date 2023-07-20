@@ -1,0 +1,154 @@
+.cdc-react .profile-header {
+    display: flex;
+    height: 60px;
+    padding: 0px 4px;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid #E0E0E0;
+    background: #F0F0F0;
+}
+
+.cdc-react .profile-header .logo {
+    align-self: stretch;
+    fill: #005EAA;
+    margin-left: 0.5rem;
+}
+
+.cdc-react .profile-header .profile-header-menu-item {
+    justify-content: end;
+    flex-grow: 1;
+}
+
+.cdc-react .profile-header .profile-header-menu-item {
+    border-radius: 4px;
+    border: none;
+    display: flex;
+    padding: 5px;
+    background: transparent;
+    align-items: center;
+    justify-content: center;
+}
+
+.cdc-react .profile-header button.profile-header-menu-item:hover {
+    background: #e6e6e6;
+}
+
+.cdc-react .profile-header .profile-header-menu-item .user-profile:hover {
+    background: none;
+}
+
+.cdc-react .profile-header .profile-header-menu-item .user-profile {
+    flex-grow: 0;
+}
+
+.cdc-react .profile-header .profile-header-menu-item.user-profile .user-image {
+    align-items: center;
+    padding: 0px;
+}
+
+.cdc-react .profile-header .profile-header-menu-item.user-profile .chevron-down {
+    margin-right: -4px;
+}
+
+.cdc-react .profile-header-popup {
+    display: flex;
+    width: 240px;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 4px;
+    border: 1px solid #E0E0E0;
+    background: #FFF;
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.10);
+}
+
+.cdc-react .profile-header-popup button.profile-header-popup-menu-item {
+    flex-direction: row;
+    display: flex;
+    min-width: 100%;
+    min-height: 44px;
+    align-items: center;
+    align-self: stretch;
+    background: transparent;
+    border: none;
+}
+
+.cdc-react .profile-header-popup button.profile-header-popup-menu-item:hover {
+    background: #e6e6e6;
+}
+
+.cdc-react .profile-header-popup button.profile-header-popup-menu-item:last-child {
+    border-top: solid 1px #ddd;
+}
+
+.cdc-react .profile-header-popup button.profile-header-popup-menu-item svg {
+    margin-right: 2px;
+    margin-left: 8px;
+}
+
+.cdc-react .profile-header-popup-wrap {
+    position: absolute;
+    top: 68px;
+    right: 44px;
+}
+
+.cdc-react .notification-count {
+    flex-grow: 1;
+    justify-content: end;
+}
+
+.cdc-react .notification-count text {
+    display: flex;
+    stroke: #fff;
+    font-size: 10px;
+}
+
+.cdc-react .profile-header-logo-wrap {
+    display: flex;
+    flex-grow: 10;
+}
+
+.cdc-react .profile-header-menu-items {
+    display: flex;
+    flex-grow: 2;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+}
+
+.cdc-react .profile-header-menu-item.notifications-list-item {
+    display: none;
+}
+
+.cdc-react .profile-header-menu-item.settings-list-item {
+    display: none;
+}
+
+.cdc-react .profile-header-popup-menu-item .profile-header-popup-menu-item-left {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.cdc-react .profile-header-popup-menu-item .profile-header-popup-menu-item-center {
+    display: flex;
+    justify-content: start;
+    flex-grow: 10;
+}
+
+.cdc-react .profile-header-popup-menu-item .profile-header-popup-menu-item-right {
+    display: flex;
+    margin-left: -3.25rem;
+}
+
+@media (max-width: 480px) {
+}
+
+@media (min-width: 480px) {
+    .cdc-react .profile-header-menu-item.notifications-list-item {
+        display: flex;
+    }
+
+    .cdc-react .profile-header-menu-item.settings-list-item {
+        display: flex;
+    }
+}
