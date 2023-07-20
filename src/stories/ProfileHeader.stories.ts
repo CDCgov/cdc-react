@@ -6,8 +6,7 @@ import { ProfileHeader } from '../components';
 const meta = {
   title: 'Components/ProfileHeader',
   component: ProfileHeader,
-  argTypes: {
-  },
+  argTypes: {},
 } satisfies Meta<typeof ProfileHeader>;
 
 export default meta;

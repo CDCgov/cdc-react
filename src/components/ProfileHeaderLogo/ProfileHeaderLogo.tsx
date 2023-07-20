@@ -1,5 +1,5 @@
 import './ProfileHeaderLogo.css'
-import { createElement, ReactNode, useState } from 'react';
+import { createElement, ReactNode } from 'react';
 
 type ProfileHeaderLogoImageEventHandler = ((this: GlobalEventHandlers, ev: Event) => any) | null;
 

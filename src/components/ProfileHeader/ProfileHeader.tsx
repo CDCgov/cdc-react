@@ -1,12 +1,15 @@
 interface ProfileHeaderProps { }
 
-import './ProfileHeader.css'
+import '../../css/global.css';
+import './ProfileHeader.css';
+
 import { useState } from 'react';
 
 import { ProfileHeaderLogo } from '../ProfileHeaderLogo/ProfileHeaderLogo';
 import { Icon } from '../Icon/Icon';
+
 /**
- * Profile Header UI component for DEX CDC Portal
+ * Profile Header UI component
  */
 export const ProfileHeader = ({
   ...props
