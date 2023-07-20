@@ -25,10 +25,10 @@ export const ProfileHeader = ({
       >
         <ProfileHeaderLogo image="../test.png" />
         <div className="profile-header-menu-items">
-          <button className="profile-header-menu-item notifications-list-item">
+          <button className="profile-header-menu-item hide-on-mobile">
             <Icon name="notifications" hasBadge={profileHeaderNotifications.length > 0} />
           </button>
-          <button className="profile-header-menu-item settings-list-item">
+          <button className="profile-header-menu-item hide-on-mobile">
             <Icon name="settings" />
           </button>
           <button className="profile-header-menu-item user-profile" onClick={() => setProfileHeaderPopupOpen(e => !e)}>
