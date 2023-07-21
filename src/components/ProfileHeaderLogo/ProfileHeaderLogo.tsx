@@ -1,16 +1,16 @@
-import { EventHandlerType } from '../../@types';
+import { ImageOnLoadEventHandlerType } from '../../@types';
 
 import './ProfileHeaderLogo.css'
 
-import { createElement, ReactNode } from 'react';
+import { createElement } from 'react';
 
 interface ProfileHeaderLogoProps {
-  image: ReactNode | string;
+  image: JSX.Element | string;
   classNames?: string[];
-  onLoad?: EventHandlerType;
+  onLoad?: ImageOnLoadEventHandlerType;
 }
 
-const getProfileHeaderLogoImageFromProps = (logoImage: any, classNames?: string[], onLoad?: EventHandlerType) => {
+const getProfileHeaderLogoImageFromProps = (logoImage: JSX.Element | string, classNames?: string[], onLoad?: ImageOnLoadEventHandlerType) => {
   if (typeof logoImage === 'string') {
     return createElement('img',
       { className: (classNames || [])?.join(' '), onLoad: onLoad, src: logoImage }

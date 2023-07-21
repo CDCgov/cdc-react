@@ -3,10 +3,6 @@ import { afterEach } from "vitest";
 
 import { ProfileHeaderMenuItem } from "./ProfileHeaderMenuItem";
 
-afterEach(() => {
-  cleanup();
-});
-
 describe("ProfileHeaderMenuItem component for CDC Component Library", () => {
   it("should render a profile header menu item with inner text", () => {
     const { container } = render(

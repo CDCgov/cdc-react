@@ -1,5 +1,4 @@
-import { cleanup, render, screen } from "@testing-library/react";
-import { afterEach } from "vitest";
+import { render, screen } from "@testing-library/react";
 
 import {
   ProfileHeader,
@@ -8,10 +7,6 @@ import {
   ProfileHeaderPopupMenuItem,
   Icon
 } from '../';
-
-afterEach(() => {
-  cleanup();
-});
 
 describe("Header component for DEX CDC Portal", () => {
   it("should render some buttons with the correct text", () => {

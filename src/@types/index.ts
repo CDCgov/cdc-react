@@ -1,1 +1,1 @@
-export type EventHandlerType = any;
+export type ImageOnLoadEventHandlerType = ((this: GlobalEventHandlers, ev: Event) => any) | null;;

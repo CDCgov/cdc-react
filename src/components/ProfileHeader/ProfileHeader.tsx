@@ -1,14 +1,12 @@
 import '../../css/global.css';
 import './ProfileHeader.css';
 
-import { ReactNode } from 'react';
-
 export interface ProfileHeaderProps { 
   className: string;
-  logo?: string | ReactNode;
-  menu?: string | ReactNode | ReactNode[];
-  popupMenu?: string | ReactNode | ReactNode[];
-  children?: string | ReactNode | ReactNode[];
+  logo?: string | JSX.Element;
+  menu?: string | JSX.Element | JSX.Element[];
+  popupMenu?: string | JSX.Element | JSX.Element[];
+  children?: string | JSX.Element | JSX.Element[];
 }
 
 /**

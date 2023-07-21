@@ -1,13 +1,11 @@
-import { EventHandlerType } from '../../@types';
-
 import './ProfileHeaderMenuItem.css'
 
-import { ReactNode } from 'react';
+import { MouseEventHandler } from 'react';
 
 interface ProfileHeaderMenuItemProps { 
   className: string;
-  children: string | ReactNode | ReactNode[];
-  onClick?: EventHandlerType;
+  children: string | JSX.Element | JSX.Element[];
+  onClick?: MouseEventHandler<HTMLButtonElement> | undefined;
 }
 
 export const ProfileHeaderMenuItem = ({
