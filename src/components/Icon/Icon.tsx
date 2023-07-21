@@ -1,3 +1,5 @@
+import './Icon.css'
+
 const Icons = {
   "notifications": (hasBadge?: boolean) => {
     return <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -30,8 +32,6 @@ interface IconProps {
   hasBadge?: boolean;
   classWrapName?: string;
 }
-
-import './Icon.css'
 
 export const Icon = ({
   ...props
