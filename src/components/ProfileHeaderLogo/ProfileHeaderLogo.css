@@ -1,7 +1,8 @@
 .cdc-react .profile-header .logo {
     align-self: stretch;
     fill: #005EAA;
-    margin-left: 0.5rem;
+    margin-left: 0.65rem;
+    max-width: 310px;
 }
 
 .cdc-react .profile-header-logo-wrap {
