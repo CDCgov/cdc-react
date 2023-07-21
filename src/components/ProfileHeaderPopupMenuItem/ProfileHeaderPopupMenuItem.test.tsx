@@ -8,6 +8,12 @@ afterEach(() => {
 
 describe("Header component for DEX CDC Portal", () => {
   it("should render seven buttons with the correct text", () => {
-    const { container } = render(<ProfileHeaderPopupMenuItem />);
+    const { container } = render(
+      <ProfileHeaderPopupMenuItem className="profile-header-popup-menu-item">
+        Test
+      </ProfileHeaderPopupMenuItem>
+    );
+
+    expect(screen.getByText("Test")).toBeInTheDocument();
   });
 });

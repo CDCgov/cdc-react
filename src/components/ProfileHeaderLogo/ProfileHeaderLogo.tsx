@@ -1,15 +1,16 @@
-import './ProfileHeaderLogo.css'
-import { createElement, ReactNode } from 'react';
+import { EventHandlerType } from '../../@types';
 
-type ProfileHeaderLogoImageEventHandler = ((this: GlobalEventHandlers, ev: Event) => any) | null;
+import './ProfileHeaderLogo.css'
+
+import { createElement, ReactNode } from 'react';
 
 interface ProfileHeaderLogoProps {
   image: ReactNode | string;
   classNames?: string[];
-  onLoad?: ProfileHeaderLogoImageEventHandler;
+  onLoad?: EventHandlerType;
 }
 
-const getProfileHeaderLogoImageFromProps = (logoImage: any, classNames?: string[], onLoad?: ProfileHeaderLogoImageEventHandler) => {
+const getProfileHeaderLogoImageFromProps = (logoImage: any, classNames?: string[], onLoad?: EventHandlerType) => {
   if (typeof logoImage === 'string') {
     return createElement('img',
       { className: (classNames || [])?.join(' '), onLoad: onLoad, src: logoImage }
