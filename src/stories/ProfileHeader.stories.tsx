@@ -21,7 +21,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const logo = <ProfileHeaderLogo image={"/cdc-logo.svg"} classNames={["logo"]}/>;
+const logo = <ProfileHeaderLogo classNames={["logo"]}/>;
 
 const menu = (menuClassName: string, setProfileHeaderPopupOpen: any, profileHeaderNotifications: any[]) => {
   return (
