@@ -50,7 +50,7 @@ const popupMenu = (popupMenuWrapClassName: string, popupMenuClassName: string, p
       <div className={popupMenuClassName}>
         <ProfileHeaderPopupMenuItem className="profile-header-popup-menu-item">
           <span className="profile-header-popup-menu-item-left">
-            <Icon name="profile" />
+            <Icon name="user" />
           </span>
           <span className="profile-header-popup-menu-item-center">
             Your Profile

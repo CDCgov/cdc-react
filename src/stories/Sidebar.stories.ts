@@ -5,7 +5,6 @@ import { Sidebar } from "../components";
 const meta = {
   title: "Components/Sidebar",
   component: Sidebar,
-  tags: ["autodocs"],
   argTypes: {},
 } satisfies Meta<typeof Sidebar>;
 
@@ -14,19 +13,20 @@ type Story = StoryObj<typeof meta>;
 
 export const Example: Story = {
   args: {
+    isVisible: true,
     sections: [
       {
         heading: "Insights",
         items: [
-          { icon: "🔥", text: "Dashboard" },
-          { icon: "🔥", text: "Process Status" },
-          { icon: "🔥", text: "Quality" }
+          { icon: "dashboard", text: "Dashboard" },
+          { icon: "process", text: "Process Status" },
+          { icon: "quality", text: "Quality" }
         ],
       },
       {
         heading: "Admin Tasks",
         items: [
-          { icon: "🔥", text: "..." }
+          { icon: "user", text: "..." }
         ],
       },
     ],

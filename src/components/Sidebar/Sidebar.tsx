@@ -1,8 +1,11 @@
-import { useState } from "react";
 import "./Sidebar.css";
 
+import { useState } from "react";
+
+import { Icon, IconNames } from "..";
+
 interface Item {
-  icon: string;
+  icon: IconNames;
   text: string;
 }
 interface Section {
@@ -44,7 +47,7 @@ export const Sidebar = ({ ...props }: SidebarProps) => {
               >
                 <ul>
                   <li>
-                    <span className="icon">{item.icon}</span>
+                    <Icon className="icon" name={item.icon}/>
                     <span className="text">{item.text}</span>
                   </li>
                 </ul>
@@ -56,7 +59,7 @@ export const Sidebar = ({ ...props }: SidebarProps) => {
         <div className="menu_footer">
           <ul>
             <li>
-              <span className="icon">❌</span>
+              <span className="icon"><Icon className="icon" name="logout"/></span>
               <span className="text">Logout</span>
             </li>
           </ul>
