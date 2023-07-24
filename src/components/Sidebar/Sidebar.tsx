@@ -13,8 +13,8 @@ interface SidebarProps {
   isVisible: boolean;
   sections: Section[];
 }
-
-export const Sidebar = ({}: SidebarProps) => {
+export const Sidebar = ({ ...props }: SidebarProps) => {
+  const { sections } = props;
   const [isCollapsed, setCollapsed] = useState(false);
 
   const toggleVisibility = () => {
@@ -34,28 +34,25 @@ export const Sidebar = ({}: SidebarProps) => {
           </button>
         </div>
 
-        <div className="menu_item">
-          {!isCollapsed && <h2 className="heading">Insights</h2>}
+        {sections.map((section, sectionIndex) => (
+          <div key="{sectionIndex}" className="menu_item">
+            {!isCollapsed && <h2 className="heading">{section.heading}</h2>}
+            {section.items.map((item, itemIndex) => (
+              <div
+                key={itemIndex}
+                className={`item ${isCollapsed ? "visible" : "hidden"}`}
+              >
+                <ul>
+                  <li>
+                    <span className="icon">{item.icon}</span>
+                    <span className="text">{item.text}</span>
+                  </li>
+                </ul>
+              </div>
+            ))}
+          </div>
+        ))}
 
-          <ul>
-            <li>
-              <span className="icon">🔥</span>
-              <span className="text">Dashboard</span>
-            </li>
-            <li>
-              <span className="icon">🔥</span>
-              <span className="text">Process Status</span>
-            </li>
-            <li>
-              <span className="icon">🔥</span>
-              <span className="text">Quality</span>
-            </li>
-          </ul>
-        </div>
-
-        <div className="menu_item">
-          {!isCollapsed && <h2 className="heading">Admin Tasks</h2>}
-        </div>
         <div className="menu_footer">
           <ul>
             <li>
