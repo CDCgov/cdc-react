@@ -1,4 +1,12 @@
-*, html, body {
-    font-size: 10px;
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans&display=swap');
+*,
+html,
+body {
+  --main-theme: #005eaa;
+  --main-light: #88c3ea;
+  --main-lighter: #c0e9ff;
+  --indigo: #26418f;
+  --heading-xl: 3.1rem;
+  font-size: 10px;
+  box-sizing: border-box;
 }
