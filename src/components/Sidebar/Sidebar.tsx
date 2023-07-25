@@ -39,7 +39,9 @@ export const Sidebar = ({ ...props }: SidebarProps) => {
 
         {sections.map((section, sectionIndex) => (
           <div key={sectionIndex} className="menu-item">
-            {!isCollapsed && <p className="overline section-heading">{section.heading}</p>}
+            {!isCollapsed && (
+              <p className="overline section-heading">{section.heading}</p>
+            )}
             {section.items.map((item, itemIndex) => (
               <div
                 key={itemIndex}
@@ -48,7 +50,7 @@ export const Sidebar = ({ ...props }: SidebarProps) => {
                 <ul>
                   <li>
                     <Icon className="icon" name={item.icon} />
-                    <span className="text">{item.text}</span>
+                    {!isCollapsed && <span className="text">{item.text}</span>}
                   </li>
                 </ul>
               </div>
