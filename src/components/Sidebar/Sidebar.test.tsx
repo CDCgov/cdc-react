@@ -7,7 +7,7 @@ afterEach(() => {
 });
 
 describe("Sidebar", () => {
-  it("should render a button to collapse the sidebar", () => {
+  it("should render the component", () => {
     render(<Sidebar isVisible={false} sections={[]} />);
 
     expect(screen.getByText("Sidebar")).toBeInTheDocument();
