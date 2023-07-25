@@ -32,6 +32,7 @@ export const Sidebar = ({ ...props }: SidebarProps) => {
             type="button"
             className="usa-button usa-button--outline usa-button--inverse"
             onClick={toggleVisibility}
+            aria-label="toggle"
           >
             {!isCollapsed ? "<<" : ">>"}
           </button>

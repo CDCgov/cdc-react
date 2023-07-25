@@ -7,9 +7,9 @@ afterEach(() => {
 });
 
 describe("Sidebar", () => {
-  it("should render the component", () => {
+  it("should render the toggle button", () => {
     render(<Sidebar isVisible={false} sections={[]} />);
 
-    expect(screen.getByText("Sidebar")).toBeInTheDocument();
+    expect(screen.getByLabelText("toggle")).toBeInTheDocument();
   });
 });
