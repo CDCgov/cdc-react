@@ -27,7 +27,7 @@ export const Sidebar = ({ ...props }: SidebarProps) => {
   return (
     <div className="sidebar">
       <div className={`sidebar-full ${isCollapsed ? "sidebar-collapsed" : ""}`}>
-        <div className="menu_header">
+        <div className="menu-header">
           <button
             type="button"
             className="usa-button usa-button--outline usa-button--inverse"
@@ -38,8 +38,8 @@ export const Sidebar = ({ ...props }: SidebarProps) => {
         </div>
 
         {sections.map((section, sectionIndex) => (
-          <div key="{sectionIndex}" className="menu_item">
-            {!isCollapsed && <p className="overline section_heading">{section.heading}</p>}
+          <div key={sectionIndex} className="menu-item">
+            {!isCollapsed && <p className="overline section-heading">{section.heading}</p>}
             {section.items.map((item, itemIndex) => (
               <div
                 key={itemIndex}
@@ -56,7 +56,7 @@ export const Sidebar = ({ ...props }: SidebarProps) => {
           </div>
         ))}
 
-        <div className="menu_footer">
+        <div className="menu-footer">
           <ul>
             <li>
               <span className="icon">

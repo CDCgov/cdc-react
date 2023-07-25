@@ -16,12 +16,12 @@
 .sidebar .icon svg path {
   stroke: #fff;
 }
-.sidebar .menu_item {
+.sidebar .menu-item {
   padding: 1.2rem 0;
   border-top: 0.1rem solid #1b64ab;
   color: #fff;
 }
-.sidebar .menu_item .section_heading {
+.sidebar .menu-item .section-heading {
   padding: 0.8rem 2.4rem;
   color: var(--main-lighter);
 }
@@ -29,32 +29,32 @@
   background-color: #00407a;
   cursor: pointer;
 }
-.sidebar .menu_item ul {
+.sidebar .menu-item ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-.sidebar .menu_item ul li {
+.sidebar .menu-item ul li {
   display: flex;
   align-items: left;
   padding: 1.6rem 2.4rem;
 }
-.sidebar .menu_footer {
+.sidebar .menu-footer {
   color: #fff;
   margin-top: auto;
   padding: 1.2rem 0;
 }
-.sidebar .menu_footer ul {
+.sidebar .menu-footer ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-.sidebar .menu_footer ul li {
+.sidebar .menu-footer ul li {
   display: flex;
   align-items: left;
   padding: 1.6rem 2.4rem;
 }
-.sidebar .menu_footer ul li .icon {
+.sidebar .menu-footer ul li .icon {
   width: 2.4rem;
   height: 2.6rem;
   color: #fff;
@@ -68,26 +68,26 @@
   display: flex;
   flex-direction: column;
 }
-.sidebar-full .menu_header {
+.sidebar-full .menu-header {
   padding: 0.8rem 1.6rem;
 }
-.sidebar-full .menu_header button {
+.sidebar-full .menu-header button {
   width: 28px;
   height: 24px;
   padding: 0;
   margin: 8px;
   font-size: 1rem;
 }
-.sidebar-full .menu_item {
+.sidebar-full .menu-item {
   height: 100%;
 }
 .sidebar-collapsed {
   background: linear-gradient(225deg, var(--main-theme) 0%, var(--indigo) 100%);
   width: 80px;
 }
-.sidebar-collapsed .menu_item ul li .text {
+.sidebar-collapsed .menu-item ul li .text {
   visibility: hidden;
 }
-.sidebar-collapsed .menu_footer ul li .text {
+.sidebar-collapsed .menu-footer ul li .text {
   visibility: hidden;
 }
