@@ -7,18 +7,17 @@
 .sidebar .menu_item {
   padding-top: 12px;
   padding-bottom: 12px;
-  padding-left: 24px;
-  padding-right: 24px;
-  border-top: 1px solid gray;
-  color: #FFF;
+  border-top: 1px solid #1b64ab;
+  color: #fff;
+}
+.sidebar ul li:hover {
+  background-color: #00407a;
 }
 .sidebar .menu_footer {
-  color: #FFF;
+  color: #fff;
   margin-top: auto;
   padding-top: 12px;
   padding-bottom: 12px;
-  padding-left: 24px;
-  padding-right: 24px;
 }
 .sidebar .menu_footer ul {
   list-style: none;
@@ -28,7 +27,7 @@
 .sidebar .menu_footer ul li {
   display: flex;
   align-items: left;
-  padding: 16px 0px;
+  padding: 16px 24px;
 }
 .sidebar .text {
   margin-left: 12px;
@@ -39,12 +38,12 @@
   line-height: 2.5rem;
 }
 .sidebar .icon svg path {
-  stroke: #FFF;
+  stroke: #fff;
 }
 .sidebar .menu_footer ul li .icon {
   width: 24px;
   height: 26px;
-  color: #FFF;
+  color: #fff;
 }
 .sidebar-collapsed .menu_footer ul li .text {
   visibility: hidden;
@@ -83,7 +82,7 @@
 .sidebar .menu_item ul li {
   display: flex;
   align-items: left;
-  padding: 16px 0px;
+  padding: 16px 24px;
 }
 
 .sidebar-full .menu_item h2 {
@@ -93,6 +92,7 @@
   line-height: 120%;
   letter-spacing: 1.938px;
   text-transform: uppercase;
+  padding: 0 24px;
 }
 .sidebar-collapsed {
   background: var(

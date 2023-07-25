@@ -47,7 +47,7 @@ export const Sidebar = ({ ...props }: SidebarProps) => {
               >
                 <ul>
                   <li>
-                    <Icon className="icon" name={item.icon}/>
+                    <Icon className="icon" name={item.icon} />
                     <span className="text">{item.text}</span>
                   </li>
                 </ul>
@@ -59,7 +59,9 @@ export const Sidebar = ({ ...props }: SidebarProps) => {
         <div className="menu_footer">
           <ul>
             <li>
-              <span className="icon"><Icon className="icon" name="logout"/></span>
+              <span className="icon">
+                <Icon className="icon" name="logout" />
+              </span>
               <span className="text">Logout</span>
             </li>
           </ul>
