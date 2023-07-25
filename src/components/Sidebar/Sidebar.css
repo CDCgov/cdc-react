@@ -13,6 +13,10 @@
   line-height: 120%; /* 2.04rem */
   font-size: 1.7rem;
 }
+.sidebar .icon {
+  display: grid;
+  place-items: center;
+}
 .sidebar .icon svg path {
   stroke: #fff;
 }
@@ -36,8 +40,9 @@
 }
 .sidebar .menu-item ul li {
   display: flex;
-  align-items: left;
+  align-items: center;
   padding: 1.6rem 2.4rem;
+  width: 100%;
 }
 .sidebar .menu-footer {
   color: #fff;
@@ -84,6 +89,9 @@
 .sidebar-collapsed {
   background: linear-gradient(225deg, var(--main-theme) 0%, var(--indigo) 100%);
   width: 80px;
+}
+.sidebar-collapsed .menu-item li {
+  justify-content: center;
 }
 .sidebar-collapsed .menu-item ul li .text {
   visibility: hidden;
