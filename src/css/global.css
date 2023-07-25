@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Public+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans&display=swap");
 *,
 html,
 body {
@@ -11,11 +11,11 @@ body {
   box-sizing: border-box;
 }
 .overline {
-    font-family: Public Sans;
-    font-size: 1.6rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 120%; /* 1.2rem */
-    letter-spacing: 0.16rem;
-    text-transform: uppercase; 
+  font-family: Public Sans;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 1.2rem */
+  letter-spacing: 0.16rem;
+  text-transform: uppercase;
 }
