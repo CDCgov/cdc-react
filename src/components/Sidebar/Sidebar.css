@@ -93,9 +93,3 @@
 .sidebar-collapsed .menu-item li {
   justify-content: center;
 }
-.sidebar-collapsed .menu-item ul li .text {
-  visibility: hidden;
-}
-.sidebar-collapsed .menu-footer ul li .text {
-  visibility: hidden;
-}

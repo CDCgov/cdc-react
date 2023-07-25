@@ -65,7 +65,7 @@ export const Sidebar = ({ ...props }: SidebarProps) => {
               <span className="icon">
                 <Icon className="icon" name="logout" />
               </span>
-              <span className="text">Logout</span>
+              {!isCollapsed && <span className="text">Logout</span>}
             </li>
           </ul>
         </div>
