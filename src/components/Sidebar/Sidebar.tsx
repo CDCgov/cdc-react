@@ -3,6 +3,7 @@ import "./Sidebar.css";
 import { useState } from "react";
 
 import { Icon, IconNames } from "..";
+import { SidebarSection } from "./SidebarSection/SidebarSection";
 
 interface Item {
   icon: IconNames;
@@ -40,34 +41,19 @@ export const Sidebar = ({ ...props }: SidebarProps) => {
 
         {sections.map((section, sectionIndex) => (
           <div key={sectionIndex} className="menu-item">
-            {!isCollapsed && (
-              <p className="overline section-heading">{section.heading}</p>
-            )}
-            {section.items.map((item, itemIndex) => (
-              <div
-                key={itemIndex}
-                className={`item ${isCollapsed ? "visible" : "hidden"}`}
-              >
-                <ul>
-                  <li>
-                    <Icon className="icon" name={item.icon} />
-                    {!isCollapsed && <span className="text">{item.text}</span>}
-                  </li>
-                </ul>
-              </div>
-            ))}
+            <SidebarSection
+              heading={section.heading}
+              items={section.items}
+              hideLabels={isCollapsed}
+            />
           </div>
         ))}
 
         <div className="menu-footer">
-          <ul>
-            <li>
-              <span className="icon">
-                <Icon className="icon" name="logout" />
-              </span>
-              {!isCollapsed && <span className="text">Logout</span>}
-            </li>
-          </ul>
+          <SidebarSection
+            items={[{ text: "Logout", icon: "logout" }]}
+            hideLabels={isCollapsed}
+          />
         </div>
       </div>
     </div>
