@@ -1,0 +1,54 @@
+.cdc-react {
+
+  .sidebar {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sidebar .section {
+    border-top: 0.1rem solid #1b64ab;
+  }
+
+  .menu-header {
+    padding: 0.8rem 1.6rem;
+  }
+
+  .menu-header button {
+    width: 3rem;
+    display: flex;
+    height: 2.3rem;
+    padding: 0.25rem;
+    margin: 0.8rem;
+    font-size: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sidebar .menu-item {
+    flex-grow: 1;
+    padding: 1.2rem 0;
+    color: #fff;
+  }
+
+  .sidebar .menu-footer {
+    color: #fff;
+    margin-top: auto;
+    padding: 1.2rem 0;
+  }
+
+  .sidebar-full {
+    background: linear-gradient(225deg, var(--main-theme) 0%, var(--indigo) 100%);
+    position: fixed;
+    width: 204px;
+    height: 100%;
+    flex: 0 0 calc(1rem + 10rem);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sidebar-collapsed {
+    background: linear-gradient(225deg, var(--main-theme) 0%, var(--indigo) 100%);
+    width: 8rem;
+  }
+}

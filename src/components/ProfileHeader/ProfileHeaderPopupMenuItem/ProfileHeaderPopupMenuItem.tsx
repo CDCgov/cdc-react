@@ -1,19 +1,20 @@
-import './ProfileHeaderMenuItem.css'
+import './ProfileHeaderPopupMenuItem.scss'
 
 import { MouseEventHandler } from 'react';
 
-interface ProfileHeaderMenuItemProps { 
+interface ProfileHeaderPopupMenuItemProps { 
   className: string;
   children: string | JSX.Element | JSX.Element[];
   onClick?: MouseEventHandler<HTMLButtonElement> | undefined;
 }
 
-export const ProfileHeaderMenuItem = ({
+export const ProfileHeaderPopupMenuItem = ({
   ...props
-}: ProfileHeaderMenuItemProps) => {
+}: ProfileHeaderPopupMenuItemProps) => {
+
   return (
     <button className={props.className} onClick={props.onClick}>
       {props.children}
     </button>
-  );
+    );
 };

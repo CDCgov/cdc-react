@@ -8,19 +8,19 @@ afterEach(() => {
 
 describe("Sidebar", () => {
   it("should render the toggle button", () => {
-    render(<Sidebar isVisible={false} sections={[]} />);
+    render(<Sidebar sections={[]} />);
 
     expect(screen.getByLabelText("toggle")).toBeInTheDocument();
   });
 
   it("should show logout button by default", () => {
-    render(<Sidebar isVisible={false} sections={[]} />);
+    render(<Sidebar sections={[]} />);
 
     expect(screen.getByText("Logout")).toBeInTheDocument();
   });
 
   it("should hide logout button when sidebar collapsed", () => {
-    render(<Sidebar isVisible={false} sections={[]} />);
+    render(<Sidebar sections={[]} />);
 
     const toggleBtn = screen.getByLabelText("toggle");
     fireEvent.click(toggleBtn);

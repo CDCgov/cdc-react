@@ -1,7 +1,67 @@
-import "./Icon.css";
+import "./Icon.scss";
 
 const Icons = {
-  dashboard: () => (
+  "chevron-down": () => (
+    <svg 
+      xmlns="http://www.w3.org/2000/svg" 
+      width="24" 
+      height="24" 
+      viewBox="0 0 24 24" 
+      fill="none"
+    >
+      <path 
+        d="M7 10L12 14.5455L17 10" 
+        stroke="currentColor"
+        strokeLinecap="round" 
+      />
+    </svg>
+  ),
+  "chevron-up": () => (
+    <svg 
+      xmlns="http://www.w3.org/2000/svg" 
+      width="24" 
+      height="24" 
+      viewBox="0 0 24 24" 
+      fill="none"
+    >
+      <path 
+        d="M17 14L12 9L7 14" 
+        stroke="currentColor" 
+        strokeLinecap="round" 
+      />
+    </svg>
+  ),
+  "chevron-double-left": () => (
+    <svg 
+      xmlns="http://www.w3.org/2000/svg" 
+      width="25" 
+      height="24" 
+      viewBox="0 0 24 24" 
+      fill="none"
+    >
+      <path 
+        d="M12 7L7 12L12 17M18 7L13 12L18 17" 
+        stroke="currentColor"
+        strokeLinecap="round" 
+      />
+    </svg>
+  ),
+  "chevron-double-right": () => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="13"
+      height="12"
+      viewBox="0 0 13 12"
+      fill="none"
+    >
+      <path
+        d="M7 11L12 6L7 1M1 11L6 6L1 1"
+        stroke="currentColor"
+        strokeLinecap="round"
+      />
+    </svg>
+  ),
+  "dashboard": () => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="20"
@@ -12,30 +72,30 @@ const Icons = {
       <path
         d="M8 1H1V8H8V1Z"
         stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M19 1H12V8H19V1Z"
         stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M19 12H12V19H19V12Z"
         stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M8 12H1V19H8V12Z"
         stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   ),
-  logout: () => (
+  "logout": () => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="24"
@@ -51,7 +111,7 @@ const Icons = {
       />
     </svg>
   ),
-  notifications: (hasBadge?: boolean) => {
+  "notifications": (hasBadge?: boolean) => {
     return (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -76,7 +136,7 @@ const Icons = {
       </svg>
     );
   },
-  process: () => (
+  "process": () => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="24"
@@ -87,12 +147,12 @@ const Icons = {
       <path
         d="M3 13H7L9.5 6L12.5 16L15.5 9.5L17 13H21"
         stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   ),
-  quality: () => (
+  "quality": () => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="24"
@@ -108,7 +168,7 @@ const Icons = {
       />
     </svg>
   ),
-  settings: () => (
+  "settings": () => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="24"
@@ -130,7 +190,7 @@ const Icons = {
       />
     </svg>
   ),
-  support: () => (
+  "support": () => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="24"
@@ -141,12 +201,12 @@ const Icons = {
       <path
         d="M9.38097 9.29996C9.59256 8.69847 10.0102 8.19126 10.5599 7.86818C11.1096 7.54511 11.756 7.42701 12.3844 7.5348C13.0129 7.6426 13.5829 7.96933 13.9935 8.45714C14.4042 8.94494 14.6289 9.56233 14.628 10.2C14.628 12 11.928 12.9 11.928 12.9M12 16.5H12.009M12 21C16.9705 21 21 16.9705 21 12C21 7.02943 16.9705 3 12 3C7.02943 3 3 7.02943 3 12C3 16.9705 7.02943 21 12 21Z"
         stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   ),
-  user: () => (
+  "user": () => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="24"

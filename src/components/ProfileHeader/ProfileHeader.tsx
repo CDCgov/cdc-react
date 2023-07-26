@@ -1,5 +1,5 @@
-import '../../css/global.css';
-import './ProfileHeader.css';
+import '../../scss/global.scss';
+import './ProfileHeader.scss';
 
 export interface ProfileHeaderProps { 
   className: string;

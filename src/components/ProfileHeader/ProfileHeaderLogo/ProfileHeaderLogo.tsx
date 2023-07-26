@@ -1,6 +1,6 @@
-import { ImageOnLoadEventHandlerType } from '../../@types';
+import { ImageOnLoadEventHandlerType } from '../../../@types';
 
-import './ProfileHeaderLogo.css'
+import './ProfileHeaderLogo.scss'
 
 import { createElement } from 'react';
 

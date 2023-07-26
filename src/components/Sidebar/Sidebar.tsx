@@ -1,4 +1,4 @@
-import "./Sidebar.css";
+import "./Sidebar.scss";
 
 import { useState } from "react";
 
@@ -24,34 +24,44 @@ export const Sidebar = ({ sections }: SidebarProps) => {
   };
 
   return (
-    <div className="sidebar">
-      <div className={`sidebar-full ${isCollapsed ? "sidebar-collapsed" : ""}`}>
-        <div className="menu-header section">
-          <button
-            type="button"
-            className="usa-button usa-button--outline usa-button--inverse"
-            onClick={toggleVisibility}
-            aria-label="toggle"
-          >
-            {!isCollapsed ? "<<" : ">>"}
-          </button>
-        </div>
+    <div className="cdc-react">
+      <div className="sidebar">
+        <div className={`sidebar-full ${isCollapsed ? "sidebar-collapsed" : ""}`}>
+          <div className="menu-header section">
+            <button
+              type="button"
+              className="usa-button usa-button--outline usa-button--inverse"
+              onClick={toggleVisibility}
+              aria-label="toggle"
+            >
+              {
+                !isCollapsed ? 
+                  <Icon className="chevron-double-left" name="chevron-double-left"/> : 
+                  <Icon className="chevron-double-right" name="chevron-double-right"/>
+              }
+            </button>
+          </div>
 
-        {sections.map((section, sectionIndex) => (
-          <div key={sectionIndex} className="menu-item section">
+          {sections.map((section, sectionIndex) => (
+            <div key={sectionIndex} className="menu-item section">
+              <SidebarSection
+                heading={section.heading}
+                items={section.items}
+                hideLabels={isCollapsed}
+              />
+            </div>
+          ))}
+
+          <div className="menu-footer section">
             <SidebarSection
-              heading={section.heading}
-              items={section.items}
+              items={[{ text: "Support", icon: "support" }]}
+              hideLabels={isCollapsed}
+            />
+            <SidebarSection
+              items={[{ text: "Logout", icon: "logout" }]}
               hideLabels={isCollapsed}
             />
           </div>
-        ))}
-
-        <div className="menu-footer section">
-          <SidebarSection
-            items={[{ text: "Logout", icon: "logout" }]}
-            hideLabels={isCollapsed}
-          />
         </div>
       </div>
     </div>

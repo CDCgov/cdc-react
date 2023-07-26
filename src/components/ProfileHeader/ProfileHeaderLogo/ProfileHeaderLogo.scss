@@ -1,0 +1,14 @@
+.cdc-react {
+
+    .profile-header .logo {
+        align-self: stretch;
+        fill: #005EAA;
+        margin-left: 0.65rem;
+        max-width: 31rem;
+    }
+
+    .profile-header-logo-wrap {
+        display: flex;
+        flex-grow: 10;
+    }
+}
