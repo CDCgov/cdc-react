@@ -13,21 +13,18 @@ type Story = StoryObj<typeof meta>;
 
 export const Example: Story = {
   args: {
-    isVisible: true,
     sections: [
       {
         heading: "Insights",
         items: [
           { icon: "dashboard", text: "Dashboard" },
           { icon: "process", text: "Process Status" },
-          { icon: "quality", text: "Quality" }
+          { icon: "quality", text: "Quality" },
         ],
       },
       {
         heading: "Admin Tasks",
-        items: [
-          { icon: "user", text: "..." }
-        ],
+        items: [{ icon: "user", text: "Manage Users" }],
       },
     ],
   },
