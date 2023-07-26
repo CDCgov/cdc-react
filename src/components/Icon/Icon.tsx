@@ -2,47 +2,47 @@ import "./Icon.scss";
 
 const Icons = {
   "chevron-down": () => (
-    <svg 
-      xmlns="http://www.w3.org/2000/svg" 
-      width="24" 
-      height="24" 
-      viewBox="0 0 24 24" 
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
       fill="none"
     >
-      <path 
-        d="M7 10L12 14.5455L17 10" 
+      <path
+        d="M7 10L12 14.5455L17 10"
         stroke="currentColor"
-        strokeLinecap="round" 
+        strokeLinecap="round"
       />
     </svg>
   ),
   "chevron-up": () => (
-    <svg 
-      xmlns="http://www.w3.org/2000/svg" 
-      width="24" 
-      height="24" 
-      viewBox="0 0 24 24" 
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
       fill="none"
     >
-      <path 
-        d="M17 14L12 9L7 14" 
-        stroke="currentColor" 
-        strokeLinecap="round" 
+      <path
+        d="M17 14L12 9L7 14"
+        stroke="currentColor"
+        strokeLinecap="round"
       />
     </svg>
   ),
   "chevron-double-left": () => (
-    <svg 
-      xmlns="http://www.w3.org/2000/svg" 
-      width="25" 
-      height="24" 
-      viewBox="0 0 24 24" 
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="25"
+      height="24"
+      viewBox="0 0 24 24"
       fill="none"
     >
-      <path 
-        d="M12 7L7 12L12 17M18 7L13 12L18 17" 
+      <path
+        d="M12 7L7 12L12 17M18 7L13 12L18 17"
         stroke="currentColor"
-        strokeLinecap="round" 
+        strokeLinecap="round"
       />
     </svg>
   ),
@@ -108,6 +108,21 @@ const Icons = {
         stroke="currentColor"
         strokeLinecap="round"
         strokeLinejoin="round"
+      />
+    </svg>
+  ),
+  "menu": () => (
+    <svg 
+      xmlns="http://www.w3.org/2000/svg" 
+      width="24" 
+      height="24" 
+      viewBox="0 0 24 24" 
+      fill="none"
+    >
+      <path 
+        d="M5 8H19M5 12H19M5 16H19" 
+        stroke="currentColor" 
+        strokeLinecap="round" 
       />
     </svg>
   ),
