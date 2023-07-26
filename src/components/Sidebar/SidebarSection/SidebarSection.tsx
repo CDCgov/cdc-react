@@ -1,4 +1,5 @@
 import { Icon, IconNames } from "../../Icon/Icon";
+import "./SidebarSection.css";
 
 interface Item {
   icon: IconNames;
@@ -18,7 +19,7 @@ export const SidebarSection = ({
 }: SidebarSectionProps) => {
   return (
     <>
-      {!hideLabels && <p className="overline section-heading">{heading}</p>}
+      {!hideLabels && <p className="heading">{heading}</p>}
       <ul>
         {items.map((item, index) => (
           <li key={`${item.text}${index}`}>

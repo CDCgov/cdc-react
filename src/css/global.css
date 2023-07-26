@@ -10,12 +10,9 @@ body {
   font-size: 10px;
   box-sizing: border-box;
 }
-.overline {
-  font-family: Public Sans;
-  font-size: 1.6rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 120%; /* 1.2rem */
-  letter-spacing: 0.16rem;
-  text-transform: uppercase;
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }

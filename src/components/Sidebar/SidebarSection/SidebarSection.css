@@ -1,0 +1,33 @@
+li {
+  display: flex;
+  align-items: center;
+  padding: 1.6rem 2.4rem;
+  width: 100%;
+}
+
+li:hover {
+  background-color: #00407a;
+  cursor: pointer;
+}
+
+.heading {
+  font-family: Public Sans;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 1.2rem */
+  letter-spacing: 0.16rem;
+  text-transform: uppercase;
+  padding: 0.8rem 2.4rem;
+  color: var(--main-lighter);
+}
+
+.text {
+  margin-left: 1.2rem;
+  font-family: "Open Sans-Regular", Helvetica;
+  font-style: normal;
+  font-size: 1.7rem;
+  font-weight: 100;
+  line-height: 120%; /* 2.04rem */
+  font-size: 1.7rem;
+}

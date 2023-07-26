@@ -28,7 +28,7 @@ export const Sidebar = ({ ...props }: SidebarProps) => {
   return (
     <div className="sidebar">
       <div className={`sidebar-full ${isCollapsed ? "sidebar-collapsed" : ""}`}>
-        <div className="menu-header">
+        <div className="menu-header section">
           <button
             type="button"
             className="usa-button usa-button--outline usa-button--inverse"
@@ -40,7 +40,7 @@ export const Sidebar = ({ ...props }: SidebarProps) => {
         </div>
 
         {sections.map((section, sectionIndex) => (
-          <div key={sectionIndex} className="menu-item">
+          <div key={sectionIndex} className="menu-item section">
             <SidebarSection
               heading={section.heading}
               items={section.items}
@@ -49,7 +49,7 @@ export const Sidebar = ({ ...props }: SidebarProps) => {
           </div>
         ))}
 
-        <div className="menu-footer">
+        <div className="menu-footer section">
           <SidebarSection
             items={[{ text: "Logout", icon: "logout" }]}
             hideLabels={isCollapsed}
