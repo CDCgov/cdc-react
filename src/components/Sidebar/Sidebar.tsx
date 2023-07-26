@@ -26,10 +26,12 @@ export const Sidebar = ({ sections }: SidebarProps) => {
   return (
     <div className="cdc-react">
       <div className="sidebar-wrap">
-        <div className={`
+        <div
+          className={`
           sidebar
           ${isCollapsed ? "sidebar-collapsed" : ""}
-        `}>
+        `}
+        >
           <div className="menu-header section">
             <button
               type="button"
@@ -38,15 +40,24 @@ export const Sidebar = ({ sections }: SidebarProps) => {
               aria-label="toggle"
             >
               <Icon className="menu" name="menu" />
-              <Icon className="chevron-double-left-mobile" name="chevron-double-left" />
+              <Icon
+                className="chevron-double-left-mobile"
+                name="chevron-double-left"
+              />
 
-              {(!isCollapsed ? (
-                <Icon className="chevron-double-left" name="chevron-double-left" />
+              {!isCollapsed ? (
+                <Icon
+                  className="chevron-double-left"
+                  name="chevron-double-left"
+                />
               ) : (
                 <>
-                  <Icon className="chevron-double-right" name="chevron-double-right" />
+                  <Icon
+                    className="chevron-double-right"
+                    name="chevron-double-right"
+                  />
                 </>
-              ))}
+              )}
             </button>
           </div>
           {sections.map((section, sectionIndex) => (
@@ -61,11 +72,10 @@ export const Sidebar = ({ sections }: SidebarProps) => {
 
           <div className="menu-footer section">
             <SidebarSection
-              items={[{ text: "Support", icon: "support" }]}
-              hideLabels={isCollapsed}
-            />
-            <SidebarSection
-              items={[{ text: "Logout", icon: "logout" }]}
+              items={[
+                { text: "Support", icon: "support" },
+                { text: "Logout", icon: "logout" },
+              ]}
               hideLabels={isCollapsed}
             />
           </div>
