@@ -1,13 +1,25 @@
 .cdc-react {
 
-  .sidebar {
-    height: 100%;
+  .sidebar-wrap {
+    height: 100vh;
     display: flex;
     flex-direction: column;
-  }
 
-  .sidebar .section {
-    border-top: 0.1rem solid #1b64ab;
+    .section {
+      border-top: 0.1rem solid #1b64ab;
+    }
+
+    .menu-item {
+      flex-grow: 1;
+      padding: 1.2rem 0;
+      color: #fff;
+    }
+
+    .menu-footer {
+      color: #fff;
+      margin-top: auto;
+      padding: 1.2rem 0;
+    }
   }
 
   .menu-header {
@@ -25,30 +37,39 @@
     align-items: center;
   }
 
-  .sidebar .menu-item {
-    flex-grow: 1;
-    padding: 1.2rem 0;
-    color: #fff;
-  }
-
-  .sidebar .menu-footer {
-    color: #fff;
-    margin-top: auto;
-    padding: 1.2rem 0;
-  }
-
   .sidebar-full {
     background: linear-gradient(225deg, var(--main-theme) 0%, var(--indigo) 100%);
-    position: fixed;
-    width: 204px;
-    height: 100%;
-    flex: 0 0 calc(1rem + 10rem);
+    width: 20.4rem;
+    height: 100vh;
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
+
+    &.sidebar-collapsed {
+      width: 8rem;
+    }
   }
 
-  .sidebar-collapsed {
-    background: linear-gradient(225deg, var(--main-theme) 0%, var(--indigo) 100%);
+  .sidebar-mobile {
     width: 8rem;
+    background: linear-gradient(225deg, var(--main-theme) 0%, var(--indigo) 100%);
+    flex: 0 0;
+    display: flex;
+    flex-direction: column;
+
+    .menu-item,
+    .menu-footer {
+      display: none;
+    }
+
+    &.sidebar-collapsed {
+      width: 20.4rem;
+
+      .menu-item,
+      .menu-footer {
+        display: flex;
+        flex-flow: column;
+      }
+    }
   }
 }
