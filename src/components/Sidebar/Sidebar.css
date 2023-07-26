@@ -8,6 +8,18 @@
   border-top: 0.1rem solid #1b64ab;
 }
 
+.menu-header {
+  padding: 0.8rem 1.6rem;
+}
+
+.menu-header button {
+  width: 28px;
+  height: 24px;
+  padding: 0;
+  margin: 8px;
+  font-size: 1rem;
+}
+
 .sidebar .menu-item {
   flex-grow: 1;
   padding: 1.2rem 0;
@@ -28,16 +40,6 @@
   flex: 0 0 calc(1rem + 10rem);
   display: flex;
   flex-direction: column;
-}
-.sidebar-full .menu-header {
-  padding: 0.8rem 1.6rem;
-}
-.sidebar-full .menu-header button {
-  width: 28px;
-  height: 24px;
-  padding: 0;
-  margin: 8px;
-  font-size: 1rem;
 }
 
 .sidebar-collapsed {
