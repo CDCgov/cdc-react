@@ -14,11 +14,9 @@ interface Section {
   items: Item[];
 }
 interface SidebarProps {
-  isVisible: boolean;
   sections: Section[];
 }
-export const Sidebar = ({ ...props }: SidebarProps) => {
-  const { sections } = props;
+export const Sidebar = ({ sections }: SidebarProps) => {
   const [isCollapsed, setCollapsed] = useState(false);
 
   const toggleVisibility = () => {
