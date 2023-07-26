@@ -19,7 +19,7 @@ export const SidebarSection = ({
 }: SidebarSectionProps) => {
   return (
     <>
-      {!hideLabels && <p className="heading">{heading}</p>}
+      {heading && !hideLabels && <p className="heading">{heading}</p>}
       <ul>
         {items.map((item, index) => (
           <li key={`${item.text}${index}`} role="button">
