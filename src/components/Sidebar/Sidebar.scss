@@ -44,86 +44,88 @@
     display: flex;
     flex-direction: column;
 
-    &.sidebar-collapsed {
-      width: 8rem;
+    .chevron-double-left-mobile {
+      display: flex;
+    }
+
+    .chevron-double-right {
+      display: none;
+    }
+
+    .chevron-double-left {
+      display: none;
     }
 
     .menu {
       display: none;
     }
 
-    .chevron-double-left-mobile {
-      display: none;
-    }
-  }
-
-  @media (min-width: 600px) {
-
-    .chevron-double-left {
-      display: flex;
-    }
-
-    .chevron-double-right {
-      display: flex;
-    }
-
-    .sidebar {
-      &.sidebar-collapsed {
-        .hide-if-not-mobile {
-          display: none;
-        }
-      }
-    }
-  }
-
-  @media (max-width: 600px) {
-    .sidebar {
+    &.sidebar-collapsed {
       width: 8rem;
-      background: linear-gradient(225deg, var(--main-theme) 0%, var(--indigo) 100%);
       flex: 0 0;
-      display: flex;
-      flex-direction: column;
 
-      .chevron-double-left {
-        display: none;
-      }
-  
-      .chevron-double-right {
+      .chevron-double-left-mobile {
         display: none;
       }
 
       .menu {
-        display: flex;
+        display: flex
       }
 
       .menu-item,
       .menu-footer {
         display: none;
       }
+    }
 
-      .chevron-double-left-mobile {
-        display: none;
-      }
+    // .menu {
+    //   display: none;
+    // }
+  }
 
+  @media (min-width: 600px) {
+    .menu-item,
+    .menu-footer {
+      display: flex;
+      flex-flow: column;
+    }
+
+    .chevron-double-left {
+      display: flex;
+    }
+
+    .chevron-double-right {
+      display: none;
+    }
+
+    .chevron-double-left-mobile {
+      display: none;
+    }
+
+    .menu {
+      display: none;
+    }
+
+    .sidebar {
       &.sidebar-collapsed {
-        width: 20.4rem;
+        flex-grow: 1;
 
+        .chevron-double-right {
+          display: flex;
+        }
+  
+        .chevron-double-left {
+          display: none;
+        }
+  
+        .menu {
+          display: none
+        }
+  
         .menu-item,
         .menu-footer {
           display: flex;
           flex-flow: column;
-        }
-
-        .hide-if-not-mobile {
-          display: flex;
-        }
-
-        .chevron-double-left-mobile {
-          display: flex;
-        }
-
-        .menu {
-          display: none;
         }
       }
     }

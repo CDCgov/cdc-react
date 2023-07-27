@@ -1,9 +1,11 @@
 import "./Sidebar.scss";
 
-import { useState } from "react";
+import { useLayoutEffect, useState } from "react";
 
 import { Icon, IconNames } from "..";
 import { SidebarSection } from "./SidebarSection/SidebarSection";
+
+const MAX_MOBILE_WIDTH_PX = 600;
 
 interface Item {
   icon: IconNames;
@@ -17,7 +19,14 @@ interface SidebarProps {
   sections: Section[];
 }
 export const Sidebar = ({ sections }: SidebarProps) => {
-  const [isCollapsed, setCollapsed] = useState(false);
+  const [isCollapsed, setCollapsed] = useState(true);
+
+  // Run before initial render and dom calculation to determine defualt state of sidebar.
+  useLayoutEffect(() => {
+    if (window.innerWidth > MAX_MOBILE_WIDTH_PX) {
+      setCollapsed(false);
+    }
+  }, []);
 
   const toggleVisibility = () => {
     setCollapsed(!isCollapsed);
