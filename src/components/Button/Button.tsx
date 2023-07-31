@@ -1,10 +1,10 @@
 interface ButtonProps {
-  text: string;
+  children: React.ReactNode;
 }
 
 export const Button = ({
-  text,
+  children,
   onClick,
 }: ButtonProps & JSX.IntrinsicElements["button"]) => {
-  return <button onClick={onClick}>{text}</button>;
+  return <button onClick={onClick}>{children}</button>;
 };
