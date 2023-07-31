@@ -5,15 +5,10 @@ import { Button } from "../components";
 const meta = {
   title: "Components/Button",
   component: Button,
-  argTypes: {},
 } satisfies Meta<typeof Button>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
 
-export const Example: Story = {
-  args: {
-    children: "Click me!",
-    onClick: () => console.log("button clicked"),
-  },
-};
+export const defaultButton = (): React.ReactElement => (
+  <Button>Click Me</Button>
+);
