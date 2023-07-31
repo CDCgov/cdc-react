@@ -14,5 +14,6 @@ type Story = StoryObj<typeof meta>;
 export const Example: Story = {
   args: {
     text: "Click me!",
+    onClick: () => console.log("button clicked"),
   },
 };
