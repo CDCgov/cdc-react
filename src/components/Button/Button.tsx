@@ -1,3 +1,7 @@
-export const Button = () => {
-  return <button>Click me!</button>;
+interface ButtonProps {
+  text: string;
+}
+
+export const Button = ({ text }: ButtonProps) => {
+  return <button>{text}</button>;
 };
