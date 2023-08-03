@@ -1,14 +1,14 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 
 import {
   ProfileHeader,
-  ProfileHeaderProps,
   ProfileHeaderLogo,
   ProfileHeaderMenuItem,
   ProfileHeaderPopupMenuItem,
   Icon,
+  ProfileHeaderNotification,
 } from "../components";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
@@ -25,8 +25,8 @@ const logo = <ProfileHeaderLogo classNames={["logo"]} />;
 
 const menu = (
   menuClassName: string,
-  setProfileHeaderPopupOpen: any,
-  profileHeaderNotifications: any[]
+  setProfileHeaderPopupOpen: Dispatch<SetStateAction<boolean>>,
+  profileHeaderNotifications: ProfileHeaderNotification[]
 ) => {
   return (
     <div className={menuClassName}>
@@ -64,7 +64,7 @@ const popupMenu = (
   popupMenuWrapClassName: string,
   popupMenuClassName: string,
   profileHeaderPopupOpen: boolean,
-  profileHeaderNotifications: any[]
+  profileHeaderNotifications: ProfileHeaderNotification[]
 ) => {
   return (
     <div

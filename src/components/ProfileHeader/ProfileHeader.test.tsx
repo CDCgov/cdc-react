@@ -6,7 +6,9 @@ import {
   ProfileHeaderMenuItem,
   ProfileHeaderPopupMenuItem,
   Icon,
+  ProfileHeaderNotification,
 } from "../";
+import { Dispatch, SetStateAction } from "react";
 
 describe("Header component for DEX CDC Portal", () => {
   it("should render some buttons with the correct text", () => {
@@ -14,8 +16,8 @@ describe("Header component for DEX CDC Portal", () => {
 
     const menu = (
       menuClassName: string,
-      setProfileHeaderPopupOpen: any,
-      profileHeaderNotifications: unknown[]
+      setProfileHeaderPopupOpen: Dispatch<SetStateAction<boolean>>,
+      profileHeaderNotifications: ProfileHeaderNotification[]
     ) => {
       return (
         <div className={menuClassName}>
@@ -53,7 +55,7 @@ describe("Header component for DEX CDC Portal", () => {
       popupMenuWrapClassName: string,
       popupMenuClassName: string,
       profileHeaderPopupOpen: boolean,
-      profileHeaderNotifications: any[]
+      profileHeaderNotifications: ProfileHeaderNotification[]
     ) => {
       return (
         <div
@@ -135,12 +137,12 @@ describe("Header component for DEX CDC Portal", () => {
       <ProfileHeader
         className="profile-header"
         logo={logo}
-        menu={menu("profile-header-menu-items", () => {}, [])}
+        menu={menu("profile-header-menu-items", () => null, [])}
         popupMenu={popupMenu(
           "profile-header-popup-wrap",
           "profile-header-popup",
           true,
-          [{}]
+          [{ type: "alert" }]
         )}
       />
     );
