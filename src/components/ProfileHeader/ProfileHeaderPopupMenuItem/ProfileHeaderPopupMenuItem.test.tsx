@@ -4,7 +4,7 @@ import { ProfileHeaderPopupMenuItem } from "./ProfileHeaderPopupMenuItem";
 
 describe("ProfileHeaderPopupMenuItem component for CDC Component Library", () => {
   it("should render a profile header popup menu component with inner text", () => {
-    const { container } = render(
+    render(
       <ProfileHeaderPopupMenuItem className="profile-header-popup-menu-item">
         Test
       </ProfileHeaderPopupMenuItem>
