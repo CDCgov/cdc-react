@@ -2,14 +2,14 @@ import type { Meta, StoryObj } from "@storybook/react";
 
 import { Sidebar } from "../components";
 
-const meta = {
+const meta: Meta<typeof Sidebar> = {
   title: "Components/Sidebar",
   component: Sidebar,
   argTypes: {},
-} satisfies Meta<typeof Sidebar>;
+};
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof Sidebar>;
 
 export const Example: Story = {
   args: {

@@ -12,14 +12,14 @@ import {
 } from '../components';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
-const meta = {
+const meta: Meta<typeof ProfileHeader> = {
   title: 'Components/ProfileHeader',
   component: ProfileHeader,
   argTypes: {},
-} satisfies Meta<typeof ProfileHeader>;
+};
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof ProfileHeader>;
 
 const logo = <ProfileHeaderLogo classNames={["logo"]}/>;
 
