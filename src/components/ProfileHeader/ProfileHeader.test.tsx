@@ -15,7 +15,7 @@ describe("Header component for DEX CDC Portal", () => {
     const menu = (
       menuClassName: string,
       setProfileHeaderPopupOpen: any,
-      profileHeaderNotifications: any[]
+      profileHeaderNotifications: unknown[]
     ) => {
       return (
         <div className={menuClassName}>
@@ -43,7 +43,7 @@ describe("Header component for DEX CDC Portal", () => {
             >
               <circle cx="20" cy="20" r="20"></circle>
             </svg>
-            <Icon name="chevron-down" className="chevron-down"/>
+            <Icon name="chevron-down" className="chevron-down" />
           </ProfileHeaderMenuItem>
         </div>
       );
