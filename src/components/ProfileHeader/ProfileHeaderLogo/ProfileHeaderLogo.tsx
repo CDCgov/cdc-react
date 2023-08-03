@@ -1,4 +1,4 @@
-import { ImageOnLoadEventHandlerType } from '../../../@types';
+import { GlobalEventHandlerType } from '../../../@types';
 
 import './ProfileHeaderLogo.scss'
 
@@ -7,10 +7,10 @@ import { createElement } from 'react';
 interface ProfileHeaderLogoProps {
   image?: JSX.Element | string | undefined;
   classNames?: string[];
-  onLoad?: ImageOnLoadEventHandlerType;
+  onLoad?: GlobalEventHandlerType;
 }
 
-const getProfileHeaderLogoImageFromProps = (logoImage?: JSX.Element | string | undefined, classNames?: string[], onLoad?: ImageOnLoadEventHandlerType) => {
+const getProfileHeaderLogoImageFromProps = (logoImage?: JSX.Element | string | undefined, classNames?: string[], onLoad?: GlobalEventHandlerType) => {
   if (typeof logoImage === 'string') {
     return createElement('img',
       { className: (classNames || [])?.join(' '), onLoad: onLoad, src: logoImage }
