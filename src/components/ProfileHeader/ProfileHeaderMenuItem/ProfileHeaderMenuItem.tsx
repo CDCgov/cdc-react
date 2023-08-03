@@ -1,8 +1,8 @@
-import './ProfileHeaderMenuItem.scss'
+import "./ProfileHeaderMenuItem.scss";
 
-import { MouseEventHandler } from 'react';
+import { MouseEventHandler } from "react";
 
-interface ProfileHeaderMenuItemProps { 
+interface ProfileHeaderMenuItemProps {
   className: string;
   children: string | JSX.Element | JSX.Element[];
   onClick?: MouseEventHandler<HTMLButtonElement> | undefined;

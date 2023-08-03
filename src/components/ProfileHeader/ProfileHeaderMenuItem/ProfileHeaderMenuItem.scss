@@ -1,60 +1,59 @@
 .cdc-react {
-    .profile-header .profile-header-menu-item {
-        justify-content: end;
-        flex-grow: 1;
-    }
+  .profile-header .profile-header-menu-item {
+    justify-content: end;
+    flex-grow: 1;
+  }
 
-    .profile-header .profile-header-menu-item {
-        border-radius: 0.4rem;
-        border: none;
-        display: flex;
-        padding: 0.5rem 0.75rem;
-        margin: 0 0.5rem;
-        background: transparent;
-        align-items: center;
-        justify-content: center;
-    }
+  .profile-header .profile-header-menu-item {
+    border-radius: 0.4rem;
+    border: none;
+    display: flex;
+    padding: 0.5rem 0.75rem;
+    margin: 0 0.5rem;
+    background: transparent;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .profile-header button.profile-header-menu-item:hover {
-        background: #e6e6e6;
-    }
+  .profile-header button.profile-header-menu-item:hover {
+    background: #e6e6e6;
+  }
 
-    .profile-header .profile-header-menu-item .user-profile:hover {
-        background: none;
-    }
+  .profile-header .profile-header-menu-item .user-profile:hover {
+    background: none;
+  }
 
-    .profile-header .profile-header-menu-item .user-profile {
-        flex-grow: 0;
-    }
+  .profile-header .profile-header-menu-item .user-profile {
+    flex-grow: 0;
+  }
 
-    .profile-header .profile-header-menu-item.user-profile .user-image {
-        align-items: center;
-        padding: 0rem;
-    }
+  .profile-header .profile-header-menu-item.user-profile .user-image {
+    align-items: center;
+    padding: 0rem;
+  }
 
-    .profile-header .profile-header-menu-item.user-profile .chevron-down {
-        margin-right: -0.4rem;
-    }
+  .profile-header .profile-header-menu-item.user-profile .chevron-down {
+    margin-right: -0.4rem;
+  }
 
-    .profile-header-menu-items {
-        display: flex;
-        justify-content: center;
-        height: 100%;
-        align-items: center;
+  .profile-header-menu-items {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+  }
+
+  .profile-header-menu-item.hide-on-mobile {
+    display: none;
+  }
+
+  @media (min-width: 600px) {
+    .profile-header-menu-item.hide-on-mobile {
+      display: flex;
     }
 
     .profile-header-menu-item.hide-on-mobile {
-        display: none;
+      display: flex;
     }
-
-
-    @media (min-width: 600px) {
-        .profile-header-menu-item.hide-on-mobile {
-            display: flex;
-        }
-
-        .profile-header-menu-item.hide-on-mobile {
-            display: flex;
-        }
-    }
+  }
 }

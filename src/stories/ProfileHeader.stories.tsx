@@ -41,8 +41,7 @@ const menu = (
       </ProfileHeaderMenuItem>
       <ProfileHeaderMenuItem
         className="profile-header-menu-item user-profile"
-        onClick={() => setProfileHeaderPopupOpen((e: boolean) => !e)}
-      >
+        onClick={() => setProfileHeaderPopupOpen((e: boolean) => !e)}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="36"
@@ -50,8 +49,7 @@ const menu = (
           viewBox="0 0 40 40"
           fill="none"
           className="user-image"
-          stroke="#ddd"
-        >
+          stroke="#ddd">
           <circle cx="20" cy="20" r="20"></circle>
         </svg>
         <Icon name="chevron-down" className="chevron-down" />
@@ -69,8 +67,7 @@ const popupMenu = (
   return (
     <div
       className={popupMenuWrapClassName}
-      style={{ display: !profileHeaderPopupOpen ? "none" : " flex" }}
-    >
+      style={{ display: !profileHeaderPopupOpen ? "none" : " flex" }}>
       <div className={popupMenuClassName}>
         <ProfileHeaderPopupMenuItem className="profile-header-popup-menu-item">
           <span className="profile-header-popup-menu-item-left">
@@ -94,8 +91,7 @@ const popupMenu = (
               width="24"
               height="24"
               viewBox="0 0 24 24"
-              fill="none"
-            >
+              fill="none">
               <circle
                 cx="10"
                 cy="12"
@@ -104,8 +100,7 @@ const popupMenu = (
                 style={{
                   display:
                     profileHeaderNotifications.length > 0 ? "flex" : "none",
-                }}
-              ></circle>
+                }}></circle>
               <text
                 style={{
                   display:
@@ -114,8 +109,7 @@ const popupMenu = (
                 alignmentBaseline="middle"
                 x="10"
                 y="12.5"
-                textAnchor="middle"
-              >
+                textAnchor="middle">
                 {profileHeaderNotifications.length}
               </text>
             </svg>
