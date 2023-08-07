@@ -65,6 +65,7 @@ export type ButtonTertiaryColorTypes = (typeof ButtonTertiaryColors)[number];
 interface ButtonProps {
   children: React.ReactNode;
   onClick: GlobalEventHandlerType;
+  ariaLabel: string;
   className?: string;
   id?: string;
   readonly theme?: ButtonAccessibilityThemeTypes;
@@ -92,6 +93,7 @@ export const Button = ({
   iconOnly,
   className,
   id,
+  ariaLabel
 }: ButtonProps & JSX.IntrinsicElements["button"]) => {
   let classes: string = "btn";
 
@@ -135,7 +137,7 @@ export const Button = ({
   const disabled: boolean = (state === "disabled" ? true : false);
 
   return (
-    <button id={id} className={classes} onClick={onClick} disabled={disabled}>
+    <button aria-label={ariaLabel} id={id} className={classes} onClick={onClick} disabled={disabled}>
       {iconName && iconPosition === "left" && (
         <Icon name={iconName} className="left icon" />
       )}

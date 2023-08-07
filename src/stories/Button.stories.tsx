@@ -12,18 +12,21 @@ type Story = StoryObj<typeof Button>;
 
 export const defaultButton: Story = {
   args: {
+    ariaLabel: "Default button",
     children: (<span>Default</span>)
   },
 };
 
 export const tinyButton: Story = {
   args: {
+    ariaLabel: "Tiny button",
     size: "tiny",
     children: (<span>Tiny</span>)},
 };
 
 export const bigButton: Story = {
   args: {
+    ariaLabel: "Big button",
     size: "big",
     children: (<span>Big</span>)
   },
@@ -31,6 +34,7 @@ export const bigButton: Story = {
 
 export const defaultButtonDisabled: Story = {
   args: {
+    ariaLabel: "Default button disabled",
     state: "disabled",
     children: (<span>Disabled</span>)
   },
@@ -38,6 +42,7 @@ export const defaultButtonDisabled: Story = {
 
 export const outlineButton: Story = {
   args: {
+    ariaLabel: "Outline button",
     variation: "outline",
     children: (<span>Outline</span>)
   },
@@ -45,6 +50,7 @@ export const outlineButton: Story = {
 
 export const outlineButtonDisabled: Story = {
   args: {
+    ariaLabel: "Outline button disabled",
     variation: "outline",
     state: "disabled",
     children: (<span>Outline</span>)
@@ -53,6 +59,7 @@ export const outlineButtonDisabled: Story = {
 
 export const textButton: Story = {
   args: {
+    ariaLabel: "Text button",
     variation: "text",
     children: (<span>Text</span>)
   },
@@ -60,6 +67,7 @@ export const textButton: Story = {
 
 export const textButtonDisabled: Story = {
   args: {
+    ariaLabel: "Text button disabled",
     variation: "text",
     state: "disabled",
     children: (<span>Text</span>)
@@ -68,6 +76,7 @@ export const textButtonDisabled: Story = {
 
 export const unstyledButton: Story = {
   args: {
+    ariaLabel: "Unstyled button",
     variation: "unstyled",
     children: (<span>Unstyled</span>)
   },
@@ -75,6 +84,7 @@ export const unstyledButton: Story = {
 
 export const unstyledButtonDisabled: Story = {
   args: {
+    ariaLabel: "Unstyled button disabled",
     variation: "unstyled",
     state: "disabled",
     children: (<span>Unstyled</span>)
@@ -83,6 +93,7 @@ export const unstyledButtonDisabled: Story = {
 
 export const inverseButton: Story = {
   args: {
+    ariaLabel: "Inverse button",
     inverse: true,
     children: (<span>Inverse</span>)
   },
@@ -90,6 +101,7 @@ export const inverseButton: Story = {
 
 export const inverseButtonDisabled: Story = {
   args: {
+    ariaLabel: "Inverse button disabled",
     inverse: true,
     state: "disabled",
     children: (<span>Disabled</span>)
@@ -98,6 +110,7 @@ export const inverseButtonDisabled: Story = {
 
 export const inverseOutlineButton: Story = {
   args: {
+    ariaLabel: "Inverse outline button",
     inverse: true,
     variation: "outline",
     children: (<span>Outline</span>)
@@ -106,6 +119,7 @@ export const inverseOutlineButton: Story = {
 
 export const inverseOutlineButtonDisabled: Story = {
   args: {
+    ariaLabel: "Inverse outline button disabled",
     inverse: true,
     variation: "outline",
     state: "disabled",
@@ -115,6 +129,7 @@ export const inverseOutlineButtonDisabled: Story = {
 
 export const inverseTextButton: Story = {
   args: {
+    ariaLabel: "Inverse text button",
     inverse: true,
     variation: "text",
     children: (<span>Text</span>)
@@ -123,6 +138,7 @@ export const inverseTextButton: Story = {
 
 export const inverseTextButtonDisabled: Story = {
   args: {
+    ariaLabel: "Inverse outline button disabled",
     inverse: true,
     variation: "text",
     state: "disabled",
@@ -132,6 +148,7 @@ export const inverseTextButtonDisabled: Story = {
 
 export const inverseUnstyledButton: Story = {
   args: {
+    ariaLabel: "Inverse unstyled button",
     inverse: true,
     variation: "unstyled",
     children: (<span>Unstyled</span>)
@@ -140,6 +157,7 @@ export const inverseUnstyledButton: Story = {
 
 export const inverseUnstyledButtonDisabled: Story = {
   args: {
+    ariaLabel: "Inverse unstyled button disabled",
     inverse: true,
     variation: "unstyled",
     state: "disabled",
@@ -149,6 +167,7 @@ export const inverseUnstyledButtonDisabled: Story = {
 
 export const iconOnlyButton: Story = {
   args: {
+    ariaLabel: "User button",
     iconName: "user",
     iconOnly: true,
   },
@@ -156,6 +175,7 @@ export const iconOnlyButton: Story = {
 
 export const buttonWithIconLeft: Story = {
   args: {
+    ariaLabel: "Quality page navigation button",
     iconName: "quality",
     iconPosition: "left",
     children: (<span>Quality</span>)
@@ -164,6 +184,7 @@ export const buttonWithIconLeft: Story = {
 
 export const buttonWithIconRight: Story = {
   args: {
+    ariaLabel: "Process data button",
     iconName: "process",
     iconPosition: "right",
     children: (<span>Process</span>)
