@@ -41,7 +41,7 @@
       color: #ffffff;
 
       &:focus {
-        background-color: #2491ff;
+        background-color: $main-theme;
       }
 
       &:hover {
@@ -70,6 +70,25 @@
           background-color: $gray-light;
         }
       }
+
+      &.disabled {
+        background-color: #555555;
+        border-radius: 0.25rem;
+        border: solid 0.2rem #555555;
+        color: #3e3e3e;
+
+        &:focus {
+          background-color: #555555;
+        }
+
+        &:hover {
+          background-color: #555555;
+        }
+
+        &:active {
+          background-color: #555555;
+        }
+      }
     }
 
     &.outline {
@@ -79,7 +98,7 @@
       color: #005eaa;
 
       &:focus {
-        background-color: #2491ff;
+        background-color: #ebebeb;
       }
 
       &:hover {
@@ -93,7 +112,7 @@
       &.disabled {
         background-color: transparent;
         border-radius: 0.25rem;
-        border: solid 0.1rem #eaeaea;
+        border: solid 0.2rem #eaeaea;
         color: #eaeaea;
 
         &:focus {
@@ -105,6 +124,36 @@
         }
 
         &:active {
+          background-color: transparent;
+        }
+      }
+
+      &.inverse {
+        background-color: transparent;
+        color: #bce3f9;
+        border-color: #bce3f9;
+
+        &:hover {
+          background-color: transparent;
+          border-color: #dff4ff;
+          color: #dff4ff;
+        }
+
+        &:active {
+          border-color: #ffffff;
+          color: #ffffff;
+          background-color: transparent;
+        }
+
+        &:focus {
+          color: #bce3f9;
+          border-color: #bce3f9;
+          background-color: transparent;
+        }
+
+        &.disabled {
+          border-color: #515151;
+          color: #515151;
           background-color: transparent;
         }
       }
@@ -145,6 +194,97 @@
         &:active {
           background-color: transparent;
         }
+      }
+
+      &.inverse {
+        background: transparent;
+        border-color: transparent;
+        color: #bae1f6;
+
+        &:hover {
+          background-color: #3d3d3d;
+          color: #9facb3;
+        }
+
+        &:active {
+          background-color: #474747;
+          color: #ffffff;
+        }
+
+        &:focus {
+          background-color: #333333;
+          color: #9facb3;
+        }
+
+        &.disabled {
+          background-color: transparent;
+          border-color: transparent;
+          color: #515151;
+        }
+      }
+    }
+
+    &.unstyled {
+      min-width: auto;
+      min-height: auto;
+      background-color: transparent;
+      border-radius: 0rem;
+      border: solid 0.2rem transparent;
+      color: #005eaa;
+
+      &:focus {
+        text-decoration: underline;
+        background-color: transparent;
+      }
+
+      &:hover {
+        background-color: transparent;
+      }
+
+      &:active {
+        background-color: transparent;
+      }
+
+      &.disabled {
+        background-color: transparent;
+        border: solid 0.1rem transparent;
+        color: #eaeaea;
+      }
+
+      &.inverse {
+        background-color: transparent;
+        border-color: transparent;
+
+        &:focus {
+          text-decoration: underline;
+          background-color: transparent;
+        }
+
+        &:hover {
+          background-color: transparent;
+        }
+
+        &:active {
+          background-color: transparent;
+        }
+      }
+    }
+
+    &.inverse {
+      background-color: #c0e9ff;
+      border-color: #c0e9ff;
+      color: #67767f;
+
+      &:focus {
+        background-color: #c0e9ff;
+      }
+
+      &:hover {
+        background-color: #dff4ff;
+      }
+
+      &:active {
+        background-color: #ffffff;
       }
     }
 
