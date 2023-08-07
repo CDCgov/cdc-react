@@ -45,15 +45,18 @@
         border-color: $main-theme-lighter;
         color: $gray-dark;
 
-        &:focus {
+        &:focus,
+        &.focus {
           background-color: $main-theme-lighter;
         }
 
-        &:hover {
+        &:hover,
+        &.hover {
           background-color: #dff4ff;
         }
 
-        &:active {
+        &:active,
+        &.active {
           background-color: $main-theme-lighter;
         }
 
@@ -66,15 +69,18 @@
         }
       }
 
-      &:focus {
+      &:focus,
+      &.focus {
         background-color: $main-theme;
       }
 
-      &:hover {
+      &:hover,
+      &.hover {
         background-color: $main-theme-dark;
       }
 
-      &:active {
+      &:active,
+      &.active {
         background-color: $main-theme-darker;
       }
 
@@ -143,15 +149,18 @@
       border: solid 0.2rem $main-theme;
       color: $main-theme;
 
-      &:focus {
+      &:focus,
+      &.focus {
+        background-color: transparent;
+      }
+
+      &:hover,
+      &.hover {
         background-color: #ebebeb;
       }
 
-      &:hover {
-        background-color: $gray-light;
-      }
-
-      &:active {
+      &:active,
+      &.active {
         background-color: $gray-light;
       }
 
@@ -168,19 +177,22 @@
         color: $main-theme-lighter;
         border-color: $main-theme-lighter;
 
-        &:hover {
+        &:hover,
+        &.hover {
           background-color: #3d3d3d;
           border-color: $main-theme-lighter;
           color: $main-theme-lighter;
         }
 
-        &:active {
+        &:active,
+        &.active {
           border-color: #ffffff;
           color: #ffffff;
           background-color: #474747;
         }
 
-        &:focus {
+        &:focus,
+        &.focus {
           color: $main-theme-lighter;
           border-color: $main-theme-lighter;
           background-color: transparent;
@@ -263,15 +275,18 @@
       border: none;
       color: $main-theme;
 
-      &:focus {
+      &:focus,
+      &.focus {
         background-color: #f5f5f5;
       }
 
-      &:hover {
+      &:hover,
+      &.hover {
         background-color: #f5f5f5;
       }
 
-      &:active {
+      &:active,
+      &.active {
         background-color: #ebebeb;
       }
 
@@ -288,17 +303,20 @@
         border-color: transparent;
         color: #bae1f6;
 
-        &:hover {
+        &:hover,
+        &.hover {
           background-color: #3d3d3d;
           color: #9facb3;
         }
 
-        &:active {
+        &:active,
+        &.active {
           background-color: #474747;
           color: #ffffff;
         }
 
-        &:focus {
+        &:focus,
+        &.focus {
           background-color: #333333;
           color: #ffffff;
         }
@@ -360,16 +378,19 @@
       border: none;
       color: $main-theme;
 
-      &:focus {
+      &:focus,
+      &.focus {
         text-decoration: underline;
         background-color: transparent;
       }
 
-      &:hover {
+      &:hover,
+      &.hover {
         background-color: transparent;
       }
 
-      &:active {
+      &:active,
+      &.active {
         background-color: transparent;
       }
 
@@ -385,18 +406,21 @@
         background-color: transparent;
         border-color: transparent;
 
-        &:focus {
+        &:focus,
+        &.focus {
           color: #ffffff;
           text-decoration: underline;
           background-color: transparent;
         }
 
-        &:hover {
+        &:hover,
+        &.hover {
           color: $main-theme-lighter;
           background-color: transparent;
         }
 
-        &:active {
+        &:active,
+        &.active {
           color: #ffffff;
           background-color: transparent;
         }
@@ -663,16 +687,19 @@
       border-radius: 0rem;
       border: none;
 
-      &:focus {
+      &:focus,
+      &.focus {
         text-decoration: underline;
         background-color: transparent;
       }
 
-      &:hover {
+      &:hover,
+      &.hover {
         background-color: transparent;
       }
 
-      &:active {
+      &:active,
+      &.active {
         background-color: transparent;
       }
 
