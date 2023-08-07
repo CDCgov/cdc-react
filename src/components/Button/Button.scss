@@ -265,9 +265,7 @@
         height: 2.4rem;
       }
     }
-
-    &.has-icon.right,
-    &.has-icon.left {
+    &.has-icon {
       flex-flow: row;
 
       span {
@@ -276,6 +274,14 @@
         display: flex;
         justify-content: center;
         align-items: center;
+      }
+
+      &.left span:last-child {
+        padding-right: 0.5rem;
+      }
+
+      &.right span:first-child {
+        padding-left: 0.5rem;
       }
     }
   }

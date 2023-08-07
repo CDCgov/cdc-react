@@ -104,13 +104,13 @@ export const Button = ({
       onClick={onClick}
       disabled={disabled}>
       {iconName && iconPosition === "left" && (
-        <Icon name={iconName} className="left icon" />
+        <Icon name={iconName} className="left-icon" />
       )}
       {iconOnly !== true
         ? children
         : iconName && <Icon name={iconName} className="center" />}
       {iconName && iconPosition === "right" && (
-        <Icon name={iconName} className="right icon" />
+        <Icon name={iconName} className="right-icon" />
       )}
     </button>
   );
