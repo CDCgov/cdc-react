@@ -40,6 +40,32 @@
       border: solid 0.2rem $main-theme;
       color: #ffffff;
 
+      &.inverse {
+        background-color: $main-theme-lighter;
+        border-color: $main-theme-lighter;
+        color: $gray-dark;
+
+        &:focus {
+          background-color: $main-theme-lighter;
+        }
+
+        &:hover {
+          background-color: #dff4ff;
+        }
+
+        &:active {
+          background-color: #ffffff;
+        }
+
+        &.disabled {
+          background-color: $gray-dark;
+          border-radius: 0.25rem;
+          border: solid 0.2rem $gray-dark;
+          color: #3e3e3e;
+          pointer-events: none;
+        }
+      }
+
       &:focus {
         background-color: $main-theme;
       }
@@ -59,32 +85,24 @@
         color: #ffffff;
         pointer-events: none;
       }
-
-      &.disabled {
-        background-color: $gray-dark;
-        border-radius: 0.25rem;
-        border: solid 0.2rem $gray-dark;
-        color: #3e3e3e;
-        pointer-events: none;
-      }
     }
 
     &.outline {
       background-color: transparent;
       border-radius: 0.25rem;
-      border: solid 0.2rem #005eaa;
-      color: #005eaa;
+      border: solid 0.2rem $main-theme;
+      color: $main-theme;
 
       &:focus {
         background-color: #ebebeb;
       }
 
       &:hover {
-        background-color: #f5f5f5;
+        background-color: $gray-light;
       }
 
       &:active {
-        background-color: #ebebeb;
+        background-color: #3d3d3d;
       }
 
       &.disabled {
@@ -101,7 +119,7 @@
         border-color: $main-theme-lighter;
 
         &:hover {
-          background-color: transparent;
+          background-color: #3d3d3d;
           border-color: $main-theme-lighter;
           color: $main-theme-lighter;
         }
@@ -109,7 +127,7 @@
         &:active {
           border-color: #ffffff;
           color: #ffffff;
-          background-color: transparent;
+          background-color: #474747;
         }
 
         &:focus {
@@ -131,7 +149,7 @@
       background-color: transparent;
       border-radius: 0.25rem;
       border: solid 0.2rem transparent;
-      color: #005eaa;
+      color: $main-theme;
 
       &:focus {
         background-color: #f5f5f5;
@@ -188,7 +206,7 @@
       background-color: transparent;
       border-radius: 0rem;
       border: solid 0.2rem transparent;
-      color: #005eaa;
+      color: $main-theme;
 
       &:focus {
         text-decoration: underline;
@@ -238,27 +256,14 @@
       }
     }
 
-    &.inverse {
-      background-color: #c0e9ff;
-      border-color: #c0e9ff;
-      color: #67767f;
-
-      &:focus {
-        background-color: #c0e9ff;
-      }
-
-      &:hover {
-        background-color: #dff4ff;
-      }
-
-      &:active {
-        background-color: #ffffff;
-      }
-    }
-
     &.icon-only {
       min-width: 5.4rem;
       min-height: 4.5rem;
+
+      span {
+        width: 2.4rem;
+        height: 2.4rem;
+      }
     }
 
     &.has-icon.right,
