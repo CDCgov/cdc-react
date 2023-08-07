@@ -1,4 +1,3 @@
-import '../../scss/global.scss';
 import './ProfileHeader.scss';
 
 export interface ProfileHeaderProps { 

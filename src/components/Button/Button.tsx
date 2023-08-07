@@ -13,9 +13,9 @@ const ButtonSizes = ["tiny", "default", "big"] as const;
 
 export type ButtonSizeTypes = (typeof ButtonSizes)[number];
 
-const ButtonStyles = ["filled", "outline", "text", "unstyled"] as const;
+const ButtonVariations = ["filled", "outline", "text", "unstyled"] as const;
 
-export type ButtonStyleTypes = (typeof ButtonStyles)[number];
+export type ButtonVariationsTypes = (typeof ButtonVariations)[number];
 
 const ButtonStates = [
   "default",
@@ -69,7 +69,7 @@ interface ButtonProps {
   id?: string;
   readonly theme?: ButtonAccessibilityThemeTypes;
   readonly size?: ButtonSizeTypes;
-  readonly style?: ButtonStyleTypes;
+  readonly variation?: ButtonVariationsTypes;
   readonly color?: ButtonPrimaryColorTypes | ButtonTertiaryColorTypes;
   readonly state?: ButtonStateTypes;
   readonly inverse?: boolean;
@@ -83,7 +83,7 @@ export const Button = ({
   onClick,
   size,
   theme,
-  style,
+  variation,
   color,
   state,
   inverse,
@@ -105,8 +105,8 @@ export const Button = ({
   } else {
     classes += ` primary`;
   }
-  if (style !== undefined) {
-    classes += ` ${style}`;
+  if (variation !== undefined) {
+    classes += ` ${variation}`;
   } else {
     classes += ` filled`;
   }
@@ -120,7 +120,7 @@ export const Button = ({
     classes += ` inverse`;
   }
   if (iconName !== undefined) {
-    classes += ` ${iconName}`;
+    classes += ` has-icon ${iconName}`;
   }
   if (iconPosition !== undefined) {
     classes += ` ${iconPosition}`;
@@ -131,16 +131,19 @@ export const Button = ({
   if (className !== undefined) {
     classes += ` ${className}`;
   }
+
+  const disabled: boolean = (state === "disabled" ? true : false);
+
   return (
-    <button id={id} className={classes} onClick={onClick}>
+    <button id={id} className={classes} onClick={onClick} disabled={disabled}>
       {iconName && iconPosition === "left" && (
-        <Icon name={iconName} className="left" />
+        <Icon name={iconName} className="left icon" />
       )}
       {iconOnly !== true
         ? children
         : iconName && <Icon name={iconName} className="center" />}
       {iconName && iconPosition === "right" && (
-        <Icon name={iconName} className="right" />
+        <Icon name={iconName} className="right icon" />
       )}
     </button>
   );

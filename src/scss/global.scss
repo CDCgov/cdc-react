@@ -1,10 +1,20 @@
+$main-theme: #005eaa;
+$main-theme-dark: #004f8f;
+$main-theme-darker: #004175;
+$main-theme-light: #88c3ea;
+$main-theme-lighter: #c0e9ff;
+
+/* Accessibility Colors */
+$indigo: #26418f;
+$gray-light: #e0e0e0;
+
 *,
 html,
 body {
-  --main-theme: #005eaa;
-  --main-light: #88c3ea;
-  --main-lighter: #c0e9ff;
-  --indigo: #26418f;
+  --main-theme: $main-theme;
+  --main-light: $main-theme-light;
+  --main-lighter: $main-theme-lighter;
+  --indigo: $indigo;
   --heading-xl: 3.1rem;
   font-size: 10px;
   box-sizing: border-box;
