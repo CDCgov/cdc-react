@@ -2,12 +2,13 @@ import type { Meta, StoryObj } from "@storybook/react";
 
 import { useState } from "react";
 
+import { MenuItemType, PopupMenuItemType } from "../@types";
+
 import {
   ProfileHeader,
   ProfileHeaderProps,
   ProfileHeaderLogo,
 } from "../components";
-import { MenuItem, PopupMenuItem } from "../@types";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta = {
@@ -29,7 +30,7 @@ export const Example: Story = {
     );
 
     // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
-    const menuItems: MenuItem[] = [
+    const menuItems: MenuItemType[] = [
       {
         badgeCount: 5,
         icon: "notifications",
@@ -48,7 +49,7 @@ export const Example: Story = {
       },
     ];
 
-    const popupMenuItems: PopupMenuItem[] = [
+    const popupMenuItems: PopupMenuItemType[] = [
       {
         icon: "user",
         iconPosition: "left",

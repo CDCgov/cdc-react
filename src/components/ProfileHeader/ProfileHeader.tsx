@@ -1,7 +1,7 @@
 import "../../scss/global.scss";
 import "./ProfileHeader.scss";
 
-import { MenuItem, PopupMenuItem } from "../../@types";
+import { MenuItemType, PopupMenuItemType } from "../../@types";
 
 import { ProfileHeaderMenuItem } from "./ProfileHeaderMenuItem/ProfileHeaderMenuItem";
 import { ProfileHeaderPopupMenuItem } from "./ProfileHeaderPopupMenuItem/ProfileHeaderPopupMenuItem";
@@ -9,8 +9,8 @@ import { ProfileHeaderPopupMenuItem } from "./ProfileHeaderPopupMenuItem/Profile
 export interface ProfileHeaderProps {
   className: string;
   logo?: string | JSX.Element;
-  menuItems?: MenuItem[];
-  popupMenuItems?: PopupMenuItem[];
+  menuItems?: MenuItemType[];
+  popupMenuItems?: PopupMenuItemType[];
   profileHeaderPopupOpen: boolean;
 }
 

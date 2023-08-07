@@ -8,14 +8,14 @@ const IconPositions = ["left", "right"] as const;
 
 export type IconPositionsTypes = (typeof IconPositions)[number];
 
-export interface MenuItem {
+export interface MenuItemType {
   icon: IconNames;
   badgeCount: number;
   className?: string;
   onClick?: MouseEventHandler<HTMLButtonElement> | undefined;
 }
 
-export interface PopupMenuItem {
+export interface PopupMenuItemType {
   icon: IconNames;
   iconPosition: IconPositionsTypes;
   text: string;

@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 
-import { MenuItem, PopupMenuItem } from "../../@types";
+import { MenuItemType, PopupMenuItemType } from "../../@types";
 
 import { ProfileHeader, ProfileHeaderLogo } from "../";
 
@@ -9,7 +9,7 @@ describe("Header component for DEX CDC Portal", () => {
     const logo = <ProfileHeaderLogo image="../test.png" />;
 
     // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
-    const menuItems: MenuItem[] = [
+    const menuItems: MenuItemType[] = [
       {
         badgeCount: 5,
         icon: "notifications",
@@ -28,7 +28,7 @@ describe("Header component for DEX CDC Portal", () => {
       },
     ];
 
-    const popupMenuItems: PopupMenuItem[] = [
+    const popupMenuItems: PopupMenuItemType[] = [
       {
         icon: "user",
         iconPosition: "left",
