@@ -2,4 +2,4 @@
 
 Starting this file way too late, but wanted to recognize contributions made by people who helped this repo. There are many more than this, but I should have started this file years ago.
 
-* TBA
+- TBA

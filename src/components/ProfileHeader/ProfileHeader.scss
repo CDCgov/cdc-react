@@ -1,15 +1,13 @@
 @import '../../scss/global.scss';
 
 .cdc-react {
-
-    .profile-header {
-        display: flex;
-        height: 6rem;
-        padding: 0rem 0.4rem;
-        align-items: center;
-        gap: 1.2rem;
-        border-bottom: 0.1rem solid #E0E0E0;
-        background: #F0F0F0;
-    }
-
+  .profile-header {
+    display: flex;
+    height: 6rem;
+    padding: 0rem 0.4rem;
+    align-items: center;
+    gap: 1.2rem;
+    border-bottom: 0.1rem solid #e0e0e0;
+    background: #f0f0f0;
+  }
 }

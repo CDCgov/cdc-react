@@ -1,6 +1,6 @@
 import './ProfileHeader.scss';
 
-export interface ProfileHeaderProps { 
+export interface ProfileHeaderProps {
   className: string;
   logo?: string | JSX.Element;
   menu?: string | JSX.Element | JSX.Element[];
@@ -8,16 +8,17 @@ export interface ProfileHeaderProps {
   children?: string | JSX.Element | JSX.Element[];
 }
 
+export interface ProfileHeaderNotification {
+  type: string;
+}
+
 /**
  * Profile Header UI component
  */
-export const ProfileHeader = ({
-  ...props
-}: ProfileHeaderProps) => {
+export const ProfileHeader = ({ ...props }: ProfileHeaderProps) => {
   return (
     <div className="cdc-react">
-      <header className={props.className}
-      >
+      <header className={props.className}>
         {props.logo}
         {props.menu}
       </header>

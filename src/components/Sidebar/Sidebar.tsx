@@ -39,15 +39,13 @@ export const Sidebar = ({ sections }: SidebarProps) => {
           className={`
           sidebar
           ${isCollapsed ? "sidebar-collapsed" : ""}
-        `}
-        >
+        `}>
           <div className="menu-header section">
             <button
               type="button"
               className="usa-button usa-button--outline usa-button--inverse"
               onClick={toggleVisibility}
-              aria-label="toggle"
-            >
+              aria-label="toggle">
               <Icon className="menu" name="menu" />
               <Icon
                 className="chevron-double-left-mobile"

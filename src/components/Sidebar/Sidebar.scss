@@ -1,3 +1,5 @@
+@import "../../scss/global.scss";
+
 .cdc-react {
   .sidebar-wrap {
     height: 100vh;
@@ -37,7 +39,7 @@
   }
 
   .sidebar {
-    background: linear-gradient(225deg, var(--main-theme) 0%, var(--indigo) 100%);
+    background: linear-gradient(225deg, $main-theme 0%, $primary-indigo 100%);
     width: 20.4rem;
     height: 100vh;
     flex-grow: 1;
@@ -69,7 +71,7 @@
       }
 
       .menu {
-        display: flex
+        display: flex;
       }
 
       .menu-item,
@@ -113,15 +115,15 @@
         .chevron-double-right {
           display: flex;
         }
-  
+
         .chevron-double-left {
           display: none;
         }
-  
+
         .menu {
-          display: none
+          display: none;
         }
-  
+
         .menu-item,
         .menu-footer {
           display: flex;
