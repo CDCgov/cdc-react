@@ -24,7 +24,9 @@ const logo = <ProfileHeaderLogo classNames={["logo"]} />;
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Example: Story = {
   render: (args: ProfileHeaderProps) => {
-    const [profileHeaderPopupOpen, setProfileHeaderPopupOpen] = useState(false);
+    const [profileHeaderPopupOpen, setProfileHeaderPopupOpen] = useState(
+      args.profileHeaderPopupOpen
+    );
 
     // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
     const menuItems: MenuItem[] = [
@@ -79,7 +81,7 @@ export const Example: Story = {
 
     return (
       <ProfileHeader
-        className="profile-header"
+        className={args.className}
         profileHeaderPopupOpen={profileHeaderPopupOpen}
         logo={logo}
         menuItems={menuItems}
@@ -90,6 +92,5 @@ export const Example: Story = {
   args: {
     className: "profile-header",
     profileHeaderPopupOpen: false,
-    logo: logo,
   },
 };

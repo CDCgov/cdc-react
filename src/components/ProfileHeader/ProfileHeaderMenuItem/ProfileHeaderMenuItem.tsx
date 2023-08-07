@@ -1,7 +1,5 @@
 import "./ProfileHeaderMenuItem.scss";
 
-import { IconPositionsTypes } from "../../../@types";
-
 import { MouseEventHandler } from "react";
 
 import { Icon, IconNames } from "../../Icon/Icon";
@@ -19,7 +17,6 @@ export const ProfileHeaderMenuItem = ({
   className,
   onClick,
 }: ProfileHeaderMenuItemProps) => {
-  console.log(className);
   return (
     <button
       className={`profile-header-menu-item ${className}`}
