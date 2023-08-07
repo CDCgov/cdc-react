@@ -14,7 +14,7 @@ import {
 import { Icon, IconNames } from "../Icon/Icon";
 
 interface ButtonProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   onClick?: GlobalEventHandlerType;
   ariaLabel: string;
   className?: string;
