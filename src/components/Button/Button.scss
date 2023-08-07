@@ -57,37 +57,15 @@
         border-radius: 0.25rem;
         border: solid 0.2rem $gray-light;
         color: #ffffff;
-
-        &:focus {
-          background-color: $gray-light;
-        }
-
-        &:hover {
-          background-color: $gray-light;
-        }
-
-        &:active {
-          background-color: $gray-light;
-        }
+        pointer-events: none;
       }
 
       &.disabled {
-        background-color: #555555;
+        background-color: $gray-dark;
         border-radius: 0.25rem;
-        border: solid 0.2rem #555555;
+        border: solid 0.2rem $gray-dark;
         color: #3e3e3e;
-
-        &:focus {
-          background-color: #555555;
-        }
-
-        &:hover {
-          background-color: #555555;
-        }
-
-        &:active {
-          background-color: #555555;
-        }
+        pointer-events: none;
       }
     }
 
@@ -112,31 +90,20 @@
       &.disabled {
         background-color: transparent;
         border-radius: 0.25rem;
-        border: solid 0.2rem #eaeaea;
-        color: #eaeaea;
-
-        &:focus {
-          background-color: transparent;
-        }
-
-        &:hover {
-          background-color: transparent;
-        }
-
-        &:active {
-          background-color: transparent;
-        }
+        border: solid 0.2rem $gray-light;
+        color: $gray-light;
+        pointer-events: none;
       }
 
       &.inverse {
         background-color: transparent;
-        color: #bce3f9;
-        border-color: #bce3f9;
+        color: $main-theme-lighter;
+        border-color: $main-theme-lighter;
 
         &:hover {
           background-color: transparent;
-          border-color: #dff4ff;
-          color: #dff4ff;
+          border-color: $main-theme-lighter;
+          color: $main-theme-lighter;
         }
 
         &:active {
@@ -146,15 +113,16 @@
         }
 
         &:focus {
-          color: #bce3f9;
-          border-color: #bce3f9;
+          color: $main-theme-lighter;
+          border-color: $main-theme-lighter;
           background-color: transparent;
         }
 
         &.disabled {
-          border-color: #515151;
-          color: #515151;
+          border-color: $gray-dark;
+          color: $gray-dark;
           background-color: transparent;
+          pointer-events: none;
         }
       }
     }
@@ -181,19 +149,8 @@
         background-color: transparent;
         border-radius: 0.25rem;
         border: solid 0.1rem transparent;
-        color: #eaeaea;
-
-        &:focus {
-          background-color: transparent;
-        }
-
-        &:hover {
-          background-color: transparent;
-        }
-
-        &:active {
-          background-color: transparent;
-        }
+        color: $gray-light;
+        pointer-events: none;
       }
 
       &.inverse {
@@ -213,13 +170,14 @@
 
         &:focus {
           background-color: #333333;
-          color: #9facb3;
+          color: #ffffff;
         }
 
         &.disabled {
           background-color: transparent;
           border-color: transparent;
-          color: #515151;
+          color: $gray-dark;
+          pointer-events: none;
         }
       }
     }
@@ -246,26 +204,36 @@
       }
 
       &.disabled {
+        color: $gray-light;
         background-color: transparent;
         border: solid 0.1rem transparent;
-        color: #eaeaea;
+        pointer-events: none;
       }
 
       &.inverse {
+        color: $main-theme-light;
         background-color: transparent;
         border-color: transparent;
 
         &:focus {
+          color: #ffffff;
           text-decoration: underline;
           background-color: transparent;
         }
 
         &:hover {
+          color: $main-theme-lighter;
           background-color: transparent;
         }
 
         &:active {
+          color: #ffffff;
           background-color: transparent;
+        }
+
+        &.disabled {
+          color: $gray-dark;
+          pointer-events: none;
         }
       }
     }
