@@ -2,7 +2,7 @@ import { render } from "@testing-library/react";
 
 import { ProfileHeaderLogo } from "./ProfileHeaderLogo";
 
-describe("ProfileHeaderLogo component for CDC Component Library", () => {
+describe("ProfileHeaderLogo component", () => {
   it("should render a profile header logo component as an image element", () => {
     const classNames = ["logo-test-class"];
 

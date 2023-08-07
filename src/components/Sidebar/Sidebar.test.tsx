@@ -6,7 +6,7 @@ afterEach(() => {
   cleanup();
 });
 
-describe("Sidebar", () => {
+describe("Sidebar component", () => {
   it("should render the toggle button", () => {
     render(<Sidebar sections={[]} />);
 
