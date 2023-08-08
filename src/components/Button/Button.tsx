@@ -8,14 +8,15 @@ import {
   ButtonStateTypes,
   ButtonTertiaryColorTypes,
   ButtonVariationsTypes,
-  GlobalEventHandlerType,
 } from "../../@types";
+
+import { MouseEventHandler } from "react";
 
 import { Icon, IconNames } from "../Icon/Icon";
 
 interface ButtonProps {
   children?: React.ReactNode;
-  onClick?: GlobalEventHandlerType;
+  onClick?: MouseEventHandler<HTMLDivElement> | undefined;
   ariaLabel: string;
   className?: string;
   id?: string;
@@ -97,21 +98,22 @@ export const Button = ({
   const disabled: boolean = state === "disabled" ? true : false;
 
   return (
-    <button
-      aria-label={ariaLabel}
-      id={id}
-      className={classes}
-      onClick={onClick}
-      disabled={disabled}>
-      {iconName && iconPosition === "left" && (
-        <Icon name={iconName} className="left-icon" />
-      )}
-      {iconOnly !== true
-        ? children
-        : iconName && <Icon name={iconName} className="center" />}
-      {iconName && iconPosition === "right" && (
-        <Icon name={iconName} className="right-icon" />
-      )}
-    </button>
+    <div className="cdc-react btn-wrap" onClick={onClick}>
+      <button
+        aria-label={ariaLabel}
+        id={id}
+        className={classes}
+        disabled={disabled}>
+        {iconName && iconPosition === "left" && (
+          <Icon name={iconName} className="left-icon" />
+        )}
+        {iconOnly !== true
+          ? children
+          : iconName && <Icon name={iconName} className="center" />}
+        {iconName && iconPosition === "right" && (
+          <Icon name={iconName} className="right-icon" />
+        )}
+      </button>
+    </div>
   );
 };

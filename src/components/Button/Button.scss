@@ -43,7 +43,7 @@
       &.inverse {
         background-color: $main-theme-lighter;
         border-color: $main-theme-lighter;
-        color: $gray-dark;
+        color: $gray-darker;
 
         &:focus,
         &.focus {
@@ -57,7 +57,7 @@
 
         &:active,
         &.active {
-          background-color: $main-theme-lighter;
+          background-color: #ffffff;
         }
 
         &.disabled {
@@ -72,16 +72,19 @@
       &:focus,
       &.focus {
         background-color: $main-theme;
+        border-color: $main-theme;
       }
 
       &:hover,
       &.hover {
         background-color: $main-theme-dark;
+        border-color: $main-theme-dark;
       }
 
       &:active,
       &.active {
         background-color: $main-theme-darker;
+        border-color: $main-theme-darker;
       }
 
       &.disabled {
@@ -156,18 +159,18 @@
 
       &:hover,
       &.hover {
-        background-color: #ebebeb;
+        background-color: #f4f4f4fa;
       }
 
       &:active,
       &.active {
-        background-color: $gray-light;
+        background-color: #e8e4e4e7;
       }
 
       &.disabled {
         background-color: transparent;
         border-radius: 0.25rem;
-        border: solid 0.2rem $gray-light;
+        border: solid 0.2rem transparent;
         color: $gray-light;
         pointer-events: none;
       }
@@ -386,11 +389,13 @@
 
       &:hover,
       &.hover {
+        text-decoration: underline;
         background-color: transparent;
       }
 
       &:active,
       &.active {
+        text-decoration: underline;
         background-color: transparent;
       }
 
@@ -415,12 +420,14 @@
 
         &:hover,
         &.hover {
+          text-decoration: underline;
           color: $main-theme-lighter;
           background-color: transparent;
         }
 
         &:active,
         &.active {
+          text-decoration: underline;
           color: #ffffff;
           background-color: transparent;
         }
@@ -487,7 +494,6 @@
     flex-flow: row;
 
     span {
-      font-size: 1.2rem;
       padding: 0 0.25rem;
       display: flex;
       justify-content: center;
