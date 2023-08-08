@@ -55,8 +55,11 @@ ul {
 }
 
 .cdc-react {
-  .btn-wrap {
+  &.btn-wrap {
     min-width: 2.58824rem;
     min-height: 2.58824rem;
+    width: auto;
+    height: auto;
+    display: inline-block;
   }
 }

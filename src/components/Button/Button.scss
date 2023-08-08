@@ -48,16 +48,19 @@
         &:focus,
         &.focus {
           background-color: $main-theme-lighter;
+          border-color: $main-theme-lighter;
         }
 
         &:hover,
         &.hover {
           background-color: #dff4ff;
+          border-color: #dff4ff;
         }
 
         &:active,
         &.active {
           background-color: #ffffff;
+          border-color: #ffffff;
         }
 
         &.disabled {
@@ -304,24 +307,24 @@
       &.inverse {
         background: transparent;
         border-color: transparent;
-        color: #bae1f6;
+        color: $main-theme-light;
 
         &:hover,
         &.hover {
           background-color: #3d3d3d;
-          color: #9facb3;
+          color: $main-theme-lighter;
         }
 
         &:active,
         &.active {
-          background-color: #474747;
+          background-color: #5c5b5b;
           color: #ffffff;
         }
 
         &:focus,
         &.focus {
           background-color: #333333;
-          color: #ffffff;
+          color: $main-theme-light;
         }
 
         &.disabled {
