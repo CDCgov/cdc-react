@@ -10,7 +10,7 @@ import {
 } from "../";
 import { Dispatch, SetStateAction } from "react";
 
-describe("Header component for DEX CDC Portal", () => {
+describe("ProfileHeader component", () => {
   it("should render some buttons with the correct text", () => {
     const logo = <ProfileHeaderLogo image="../test.png" />;
 
