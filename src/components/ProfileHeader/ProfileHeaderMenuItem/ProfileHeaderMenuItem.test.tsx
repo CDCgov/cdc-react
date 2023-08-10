@@ -2,7 +2,7 @@ import { render } from "@testing-library/react";
 
 import { ProfileHeaderMenuItem } from "./ProfileHeaderMenuItem";
 
-describe("ProfileHeaderMenuItem component for CDC Component Library", () => {
+describe("ProfileHeaderMenuItem component", () => {
   it("should render a profile header menu item with inner text", () => {
     const classNames = ["profile-header-menu-item"];
 
