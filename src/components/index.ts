@@ -5,3 +5,4 @@ export * from "./ProfileHeader/ProfileHeaderLogo/ProfileHeaderLogo";
 export * from "./ProfileHeader/ProfileHeaderMenuItem/ProfileHeaderMenuItem";
 export * from "./ProfileHeader/ProfileHeaderPopupMenuItem/ProfileHeaderPopupMenuItem";
 export * from "./Icon/Icon";
+export * from "./Button/Button";

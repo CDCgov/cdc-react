@@ -23,62 +23,64 @@ type Story = StoryObj<typeof meta>;
 const logo = <ProfileHeaderLogo classNames={["logo"]} />;
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
+const menuItems: MenuItemType[] = [
+  {
+    badgeCount: 5,
+    icon: "notifications",
+    className: "hide-on-mobile",
+  },
+  {
+    badgeCount: 0,
+    icon: "settings",
+    className: "hide-on-mobile",
+  },
+  {
+    badgeCount: 0,
+    icon: "user",
+    className: "user-profile",
+  },
+];
+
+const popupMenuItems: PopupMenuItemType[] = [
+  {
+    icon: "user",
+    iconPosition: "left",
+    text: "Your Profile",
+    onClick: undefined,
+    badgeCount: 0,
+  },
+  {
+    icon: "notifications",
+    iconPosition: "left",
+    text: "Notifications",
+    onClick: undefined,
+    badgeCount: 1,
+  },
+  {
+    icon: "settings",
+    iconPosition: "left",
+    text: "Settings",
+    onClick: undefined,
+    badgeCount: 0,
+  },
+  {
+    icon: "logout",
+    iconPosition: "left",
+    text: "Logout",
+    onClick: undefined,
+    badgeCount: 0,
+  },
+];
+
+// More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Example: Story = {
   render: (args: ProfileHeaderProps) => {
     const [profileHeaderPopupOpen, setProfileHeaderPopupOpen] = useState(
       args.profileHeaderPopupOpen
     );
 
-    // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
-    const menuItems: MenuItemType[] = [
-      {
-        badgeCount: 5,
-        icon: "notifications",
-        className: "hide-on-mobile",
-      },
-      {
-        badgeCount: 0,
-        icon: "settings",
-        className: "hide-on-mobile",
-      },
-      {
-        badgeCount: 0,
-        icon: "user",
-        onClick: () => setProfileHeaderPopupOpen(!profileHeaderPopupOpen),
-        className: "user-profile",
-      },
-    ];
-
-    const popupMenuItems: PopupMenuItemType[] = [
-      {
-        icon: "user",
-        iconPosition: "left",
-        text: "Your Profile",
-        onClick: undefined,
-        badgeCount: 0,
-      },
-      {
-        icon: "notifications",
-        iconPosition: "left",
-        text: "Notifications",
-        onClick: undefined,
-        badgeCount: 1,
-      },
-      {
-        icon: "settings",
-        iconPosition: "left",
-        text: "Settings",
-        onClick: undefined,
-        badgeCount: 0,
-      },
-      {
-        icon: "logout",
-        iconPosition: "left",
-        text: "Logout",
-        onClick: undefined,
-        badgeCount: 0,
-      },
-    ];
+    menuItems[menuItems.length - 1].onClick = () =>
+      setProfileHeaderPopupOpen(!profileHeaderPopupOpen);
 
     return (
       <ProfileHeader
@@ -93,5 +95,7 @@ export const Example: Story = {
   args: {
     className: "profile-header",
     profileHeaderPopupOpen: false,
+    menuItems: menuItems,
+    popupMenuItems: popupMenuItems,
   },
 };
