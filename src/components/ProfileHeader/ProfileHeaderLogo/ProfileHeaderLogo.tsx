@@ -1,4 +1,4 @@
-import { GlobalEventHandlerType } from '../../../@types';
+import { GlobalEventHandlerType } from "../../../@types";
 
 import "./ProfileHeaderLogo.scss";
 

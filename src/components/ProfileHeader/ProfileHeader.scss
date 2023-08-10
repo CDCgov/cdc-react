@@ -1,4 +1,4 @@
-@import '../../scss/global.scss';
+@import "../../scss/global.scss";
 
 .cdc-react {
   .profile-header {
@@ -9,5 +9,12 @@
     gap: 1.2rem;
     border-bottom: 0.1rem solid #e0e0e0;
     background: #f0f0f0;
+
+    .profile-header-menu {
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      align-items: center;
+    }
   }
 }

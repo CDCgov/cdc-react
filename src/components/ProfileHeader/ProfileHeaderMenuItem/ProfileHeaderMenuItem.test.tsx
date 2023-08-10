@@ -1,15 +1,17 @@
-import { render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 
 import { ProfileHeaderMenuItem } from "./ProfileHeaderMenuItem";
 
 describe("ProfileHeaderMenuItem component", () => {
   it("should render a profile header menu item with inner text", () => {
-    render(
-      <ProfileHeaderMenuItem className="profile-header-menu-item hide-on-mobile">
-        Test
-      </ProfileHeaderMenuItem>
+    const classNames = ["profile-header-menu-item"];
+
+    const { container } = render(
+      <ProfileHeaderMenuItem badgeCount={0} icon="chevron-double-left" />
     );
 
-    expect(screen.getByText("Test")).toBeInTheDocument();
+    const menuItem = container.getElementsByClassName(classNames[0])[0];
+
+    expect(menuItem).toBeInTheDocument();
   });
 });
