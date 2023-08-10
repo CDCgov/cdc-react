@@ -7,37 +7,37 @@
   align-items: center;
 
   &.default {
-    min-width: 9.4rem;
-    min-height: 3.5rem;
+    min-width: 5.5rem;
+    min-height: 2rem;
 
     span {
-      font-size: 1.2rem;
+      font-size: 0.7rem;
     }
   }
 
   &.tiny {
-    min-width: 4.4rem;
-    min-height: 2.4rem;
+    min-width: 2.6rem;
+    min-height: 1.42rem;
 
     span {
-      font-size: 1rem;
+      font-size: 0.6rem;
     }
   }
 
   &.big {
-    min-width: 5.4rem;
-    min-height: 4.5rem;
+    min-width: 3.2rem;
+    min-height: 2.6rem;
 
     span {
-      font-size: 1.3rem;
+      font-size: 0.8rem;
     }
   }
 
   &.primary {
     &.filled {
       background-color: $main-theme;
-      border-radius: 0.25rem;
-      border: solid 0.2rem $main-theme;
+      border-radius: 0.15rem;
+      border: solid 0.15rem $main-theme;
       color: #ffffff;
 
       &.inverse {
@@ -65,8 +65,8 @@
 
         &.disabled {
           background-color: $gray-dark;
-          border-radius: 0.25rem;
-          border: solid 0.2rem $gray-dark;
+          border-radius: 0.15rem;
+          border: solid 0.15rem $gray-dark;
           color: #3e3e3e;
           pointer-events: none;
         }
@@ -92,67 +92,67 @@
 
       &.disabled {
         background-color: $gray-light;
-        border-radius: 0.25rem;
-        border: solid 0.2rem $gray-light;
+        border-radius: 0.2rem;
+        border: solid 0.15rem $gray-light;
         color: #ffffff;
         pointer-events: none;
       }
 
       &.blue {
         background-color: $primary-blue;
-        border: solid 0.2rem $primary-blue;
+        border: solid 0.15rem $primary-blue;
       }
 
       &.brown {
         background-color: $primary-brown;
-        border: solid 0.2rem $primary-brown;
+        border: solid 0.15rem $primary-brown;
       }
 
       &.cyan {
         background-color: $primary-cyan;
-        border: solid 0.2rem $primary-cyan;
+        border: solid 0.15rem $primary-cyan;
       }
 
       &.green {
         background-color: $primary-green;
-        border: solid 0.2rem $primary-green;
+        border: solid 0.15rem $primary-green;
       }
 
       &.indigo {
         background-color: $primary-indigo;
-        border: solid 0.2rem $primary-indigo;
+        border: solid 0.15rem $primary-indigo;
       }
 
       &.orange {
         background-color: $primary-orange;
-        border: solid 0.2rem $primary-orange;
+        border: solid 0.15rem $primary-orange;
       }
 
       &.pink {
         background-color: $primary-pink;
-        border: solid 0.2rem $primary-pink;
+        border: solid 0.15rem $primary-pink;
       }
 
       &.purple {
         background-color: $primary-purple;
-        border: solid 0.2rem $primary-purple;
+        border: solid 0.15rem $primary-purple;
       }
 
       &.slate {
         background-color: $primary-slate;
-        border: solid 0.2rem $primary-slate;
+        border: solid 0.15rem $primary-slate;
       }
 
       &.teal {
         background-color: $primary-teal;
-        border: solid 0.2rem $primary-teal;
+        border: solid 0.15rem $primary-teal;
       }
     }
 
     &.outline {
       background-color: transparent;
-      border-radius: 0.25rem;
-      border: solid 0.2rem $main-theme;
+      border-radius: 0.2rem;
+      border: solid 0.15rem $main-theme;
       color: $main-theme;
 
       &:focus,
@@ -172,8 +172,8 @@
 
       &.disabled {
         background-color: transparent;
-        border-radius: 0.25rem;
-        border: solid 0.2rem transparent;
+        border-radius: 0.2rem;
+        border: solid 0.15rem transparent;
         color: $gray-light;
         pointer-events: none;
       }
@@ -216,68 +216,68 @@
         &.blue {
           background-color: transparent;
           color: $primary-blue;
-          border: solid 0.2rem $primary-blue;
+          border: solid 0.15rem $primary-blue;
         }
 
         &.brown {
           background-color: transparent;
           color: $primary-brown;
-          border: solid 0.2rem $primary-brown;
+          border: solid 0.15rem $primary-brown;
         }
 
         &.cyan {
           background-color: transparent;
           color: $primary-cyan;
-          border: solid 0.2rem $primary-cyan;
+          border: solid 0.15rem $primary-cyan;
         }
 
         &.green {
           background-color: transparent;
           color: $primary-green;
-          border: solid 0.2rem $primary-green;
+          border: solid 0.15rem $primary-green;
         }
 
         &.indigo {
           background-color: transparent;
           color: $primary-indigo;
-          border: solid 0.2rem $primary-indigo;
+          border: solid 0.15rem $primary-indigo;
         }
 
         &.orange {
           background-color: transparent;
           color: $primary-orange;
-          border: solid 0.2rem $primary-orange;
+          border: solid 0.15rem $primary-orange;
         }
 
         &.pink {
           background-color: transparent;
           color: $primary-pink;
-          border: solid 0.2rem $primary-pink;
+          border: solid 0.15rem $primary-pink;
         }
 
         &.purple {
           background-color: transparent;
           color: $primary-purple;
-          border: solid 0.2rem $primary-purple;
+          border: solid 0.15rem $primary-purple;
         }
 
         &.slate {
           background-color: transparent;
           color: $primary-slate;
-          border: solid 0.2rem $primary-slate;
+          border: solid 0.15rem $primary-slate;
         }
 
         &.teal {
           background-color: transparent;
           color: $primary-teal;
-          border: solid 0.2rem $primary-teal;
+          border: solid 0.15rem $primary-teal;
         }
       }
     }
 
     &.text {
       background-color: transparent;
-      border-radius: 0.25rem;
+      border-radius: 0.2rem;
       border: none;
       color: $main-theme;
 
@@ -298,8 +298,8 @@
 
       &.disabled {
         background-color: transparent;
-        border-radius: 0.25rem;
-        border: solid 0.1rem transparent;
+        border-radius: 0.2rem;
+        border: solid 0.15rem transparent;
         color: $gray-light;
         pointer-events: none;
       }
@@ -405,7 +405,7 @@
       &.disabled {
         color: $gray-light;
         background-color: transparent;
-        border: solid 0.1rem transparent;
+        border: solid 0.15rem transparent;
         pointer-events: none;
       }
 
@@ -497,7 +497,7 @@
     flex-flow: row;
 
     span {
-      padding: 0 0.25rem;
+      padding: 0 0.2rem;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -513,62 +513,62 @@
   }
 
   &.tertiary {
-    border-radius: 0.25rem;
+    border-radius: 0.2rem;
 
     &.filled {
       &.amber {
         background-color: $tertiary-amber;
-        border: solid 0.2rem $tertiary-amber;
+        border: solid 0.15rem $tertiary-amber;
       }
 
       &.blue {
         background-color: $tertiary-blue;
-        border: solid 0.2rem $tertiary-blue;
+        border: solid 0.15rem $tertiary-blue;
       }
 
       &.brown {
         background-color: $tertiary-brown;
-        border: solid 0.2rem $tertiary-brown;
+        border: solid 0.15rem $tertiary-brown;
       }
 
       &.cyan {
         background-color: $tertiary-cyan;
-        border: solid 0.2rem $tertiary-cyan;
+        border: solid 0.15rem $tertiary-cyan;
       }
 
       &.green {
         background-color: $tertiary-green;
-        border: solid 0.2rem $tertiary-green;
+        border: solid 0.15rem $tertiary-green;
       }
 
       &.indigo {
         background-color: $tertiary-indigo;
-        border: solid 0.2rem $tertiary-indigo;
+        border: solid 0.15rem $tertiary-indigo;
       }
 
       &.orange {
         background-color: $tertiary-orange;
-        border: solid 0.2rem $tertiary-orange;
+        border: solid 0.15rem $tertiary-orange;
       }
 
       &.pink {
         background-color: $tertiary-pink;
-        border: solid 0.2rem $tertiary-pink;
+        border: solid 0.15rem $tertiary-pink;
       }
 
       &.purple {
         background-color: $tertiary-purple;
-        border: solid 0.2rem $tertiary-purple;
+        border: solid 0.15rem $tertiary-purple;
       }
 
       &.slate {
         background-color: $tertiary-slate;
-        border: solid 0.2rem $tertiary-slate;
+        border: solid 0.15rem $tertiary-slate;
       }
 
       &.teal {
         background-color: $tertiary-teal;
-        border: solid 0.2rem $tertiary-teal;
+        border: solid 0.15rem $tertiary-teal;
       }
     }
 
@@ -576,67 +576,67 @@
       &.blue {
         background-color: $tertiary-amber;
         color: $tertiary-amber;
-        border: solid 0.2rem $tertiary-amber;
+        border: solid 0.15rem $tertiary-amber;
       }
 
       &.blue {
         background-color: transparent;
         color: $tertiary-blue;
-        border: solid 0.2rem $tertiary-blue;
+        border: solid 0.15rem $tertiary-blue;
       }
 
       &.brown {
         background-color: transparent;
         color: $tertiary-brown;
-        border: solid 0.2rem $tertiary-brown;
+        border: solid 0.15rem $tertiary-brown;
       }
 
       &.cyan {
         background-color: transparent;
         color: $tertiary-cyan;
-        border: solid 0.2rem $tertiary-cyan;
+        border: solid 0.15rem $tertiary-cyan;
       }
 
       &.green {
         background-color: transparent;
         color: $tertiary-green;
-        border: solid 0.2rem $tertiary-green;
+        border: solid 0.15rem $tertiary-green;
       }
 
       &.indigo {
         background-color: transparent;
         color: $tertiary-indigo;
-        border: solid 0.2rem $tertiary-indigo;
+        border: solid 0.15rem $tertiary-indigo;
       }
 
       &.orange {
         background-color: transparent;
         color: $tertiary-orange;
-        border: solid 0.2rem $tertiary-orange;
+        border: solid 0.15rem $tertiary-orange;
       }
 
       &.pink {
         background-color: transparent;
         color: $tertiary-pink;
-        border: solid 0.2rem $tertiary-pink;
+        border: solid 0.15rem $tertiary-pink;
       }
 
       &.purple {
         background-color: transparent;
         color: $tertiary-purple;
-        border: solid 0.2rem $tertiary-purple;
+        border: solid 0.15rem $tertiary-purple;
       }
 
       &.slate {
         background-color: transparent;
         color: $tertiary-slate;
-        border: solid 0.2rem $tertiary-slate;
+        border: solid 0.15rem $tertiary-slate;
       }
 
       &.teal {
         background-color: transparent;
         color: $tertiary-teal;
-        border: solid 0.2rem $tertiary-teal;
+        border: solid 0.15rem $tertiary-teal;
       }
     }
 

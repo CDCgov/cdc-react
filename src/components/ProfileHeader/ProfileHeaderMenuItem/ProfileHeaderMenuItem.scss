@@ -5,11 +5,11 @@
   }
 
   .profile-header .profile-header-menu-item {
-    border-radius: 0.4rem;
+    border-radius: 0.175rem;
     border: none;
     display: flex;
-    padding: 0.5rem 0.75rem;
-    margin: 0 0.5rem;
+    padding: 0.26rem 0.45rem;
+    margin: 0 0.26rem;
     background: transparent;
     align-items: center;
     justify-content: center;
@@ -33,7 +33,7 @@
   }
 
   .profile-header .profile-header-menu-item.user-profile .chevron-down {
-    margin-right: -0.4rem;
+    margin-right: -0.2rem;
   }
 
   .profile-header-menu-items {

@@ -13,7 +13,7 @@ import {
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta: Meta<typeof ProfileHeader> = {
-  title: 'Components/ProfileHeader',
+  title: "Components/ProfileHeader",
   component: ProfileHeader,
   argTypes: {},
 };
@@ -107,7 +107,7 @@ const popupMenu = (
                     profileHeaderNotifications.length > 0 ? "flex" : "none",
                 }}
                 alignmentBaseline="middle"
-                x="10"
+                x="10.5"
                 y="12.5"
                 textAnchor="middle">
                 {profileHeaderNotifications.length}

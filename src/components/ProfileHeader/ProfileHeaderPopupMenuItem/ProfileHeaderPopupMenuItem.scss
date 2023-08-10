@@ -1,20 +1,20 @@
 .cdc-react {
   .profile-header-popup {
     display: flex;
-    width: 24rem;
+    width: 14.16rem;
     flex-direction: column;
     align-items: flex-start;
-    border-radius: 0.4rem;
+    border-radius: 0.236rem;
     border: 0.1rem solid #e0e0e0;
     background: #fff;
-    box-shadow: 0rem 0rem 1.2rem 0rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0rem 0rem 0.7rem 0rem rgba(0, 0, 0, 0.1);
   }
 
   .profile-header-popup button.profile-header-popup-menu-item {
     flex-direction: row;
     display: flex;
     min-width: 100%;
-    min-height: 5rem;
+    min-height: 2.95rem;
     align-items: center;
     align-self: stretch;
     background: transparent;
@@ -30,14 +30,14 @@
   }
 
   .profile-header-popup button.profile-header-popup-menu-item svg {
-    margin-right: 0.2rem;
-    margin-left: 0.8rem;
+    margin-right: 0.12rem;
+    margin-left: 0.47rem;
   }
 
   .profile-header-popup-wrap {
     position: absolute;
-    top: 6.25rem;
-    right: 4.4rem;
+    top: 3.6875rem;
+    right: 2.6rem;
   }
 
   .notification-count {
@@ -48,7 +48,7 @@
   .notification-count text {
     display: flex;
     stroke: #fff;
-    font-size: 1rem;
+    font-size: 0.6rem;
   }
 
   .profile-header-popup-menu-item .profile-header-popup-menu-item-left {
@@ -61,11 +61,11 @@
     display: flex;
     justify-content: start;
     flex-grow: 10;
-    font-size: 1.325rem;
+    font-size: 0.8rem;
   }
 
   .profile-header-popup-menu-item .profile-header-popup-menu-item-right {
     display: flex;
-    margin-left: -3.25rem;
+    margin-left: -1.9175rem;
   }
 }
