@@ -36,15 +36,10 @@ $tertiary-teal: #ceece7;
 *,
 html,
 body {
-  --main-theme: $main-theme;
-  --main-light: $main-theme-light;
-  --main-lighter: $main-theme-lighter;
-  --indigo: $primary-indigo;
-  --heading-xl: 3.1rem;
-  font-size: 10px;
+  font-size: 17px;
   box-sizing: border-box;
   font-family: "Open Sans-Regular", Helvetica;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.17rem;
   font-weight: 520;
 }
 

@@ -12,35 +12,35 @@
 
     .menu-item {
       flex-grow: 1;
-      padding: 1.2rem 0;
+      padding: 0.7rem 0;
       color: #fff;
     }
 
     .menu-footer {
       color: #fff;
       margin-top: auto;
-      padding: 1.2rem 0;
+      padding: 0.7rem 0;
     }
   }
 
   .menu-header {
-    padding: 0.8rem 1.6rem;
+    padding: 0.47rem 0.94rem;
   }
 
   .menu-header button {
-    width: 3rem;
+    width: 1.77rem;
     display: flex;
-    height: 2.3rem;
-    padding: 0.25rem;
-    margin: 0.8rem;
-    font-size: 1rem;
+    height: 1.36rem;
+    padding: 0.1475rem;
+    margin: 0.47rem;
+    font-size: 0.59rem;
     justify-content: center;
     align-items: center;
   }
 
   .sidebar {
     background: linear-gradient(225deg, $main-theme 0%, $primary-indigo 100%);
-    width: 20.4rem;
+    width: 12.036rem;
     height: 100vh;
     flex-grow: 1;
     display: flex;
@@ -63,7 +63,7 @@
     }
 
     &.sidebar-collapsed {
-      width: 8rem;
+      width: 4.7rem;
       flex: 0 0;
 
       .chevron-double-left-mobile {
