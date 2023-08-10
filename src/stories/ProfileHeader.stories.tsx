@@ -79,20 +79,26 @@ export const Example: Story = {
       args.profileHeaderPopupOpen
     );
 
-    menuItems[menuItems.length - 1].onClick = () =>
-      setProfileHeaderPopupOpen(!profileHeaderPopupOpen);
+    if (args.menuItems) {
+      args.menuItems[menuItems.length - 1].onClick = () =>
+        setProfileHeaderPopupOpen(() => {
+          args.profileHeaderPopupOpen = !profileHeaderPopupOpen;
+          return !profileHeaderPopupOpen;
+        });
+    }
 
     return (
       <ProfileHeader
         className={args.className}
-        profileHeaderPopupOpen={profileHeaderPopupOpen}
-        logo={logo}
-        menuItems={menuItems}
-        popupMenuItems={popupMenuItems}
+        profileHeaderPopupOpen={args.profileHeaderPopupOpen}
+        logo={args.logo}
+        menuItems={args.menuItems}
+        popupMenuItems={args.popupMenuItems}
       />
     );
   },
   args: {
+    logo: logo,
     className: "profile-header",
     profileHeaderPopupOpen: false,
     menuItems: menuItems,

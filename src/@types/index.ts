@@ -13,7 +13,7 @@ export interface MenuItemType {
   icon: IconNames;
   badgeCount: number;
   className?: string;
-  onClick?: void | MouseEventHandler<HTMLButtonElement> | undefined;
+  onClick?: MouseEventHandler<HTMLButtonElement> | undefined;
 }
 
 export interface PopupMenuItemType {
@@ -22,7 +22,7 @@ export interface PopupMenuItemType {
   text: string;
   badgeCount: number;
   className?: string;
-  onClick?: void | MouseEventHandler<HTMLButtonElement> | undefined;
+  onClick?: MouseEventHandler<HTMLButtonElement> | undefined;
 }
 
 const ButtonAccessibilityThemes = ["primary", "tertiary"] as const;

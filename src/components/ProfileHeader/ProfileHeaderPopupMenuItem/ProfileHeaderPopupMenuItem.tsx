@@ -22,7 +22,7 @@ export const ProfileHeaderPopupMenuItem = ({
   badgeCount,
   className,
   onClick,
-}: ProfileHeaderPopupMenuItemProps) => {
+}: ProfileHeaderPopupMenuItemProps & JSX.IntrinsicElements["button"]) => {
   return (
     <button
       className={`${className} profile-header-popup-menu-item`}
