@@ -1,9 +1,16 @@
-name: "PR Check - Unit Test"
+name: "PR Checks Components - Unit Tests"
 
 on:
   pull_request:
     branches:
       - main
+    paths:
+      - packages/cdc-react/**
+    
+      
+defaults:
+  run:
+    working-directory: packages/cdc-react
 
 jobs:
   unit-test:
