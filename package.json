@@ -1,6 +1,6 @@
 {
   "name": "@us-gov-cdc/cdc-react",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Library for ReactJS components for the CDC",
   "main": "./dist/cdc-react.umd.js",
   "module": "./dist/cdc-react.es.js",
@@ -12,6 +12,7 @@
   "scripts": {
     "lint": "npx eslint --ext .ts,.tsx ./src",
     "format:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx,css,scss,json,md}\"",
+    "format:write": "prettier \"src/**/*.{js,jsx,ts,tsx,css,scss,json,md}\" --write",
     "test": "vitest",
     "build": "vite build",
     "storybook": "storybook dev -p 6006",

@@ -2,6 +2,7 @@
 
 .cdc-react {
   .sidebar-wrap {
+    text-align: left;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -24,7 +25,7 @@
   }
 
   .menu-header {
-    padding: 0.47rem 0.94rem;
+    padding: 0.575rem 0.94rem;
   }
 
   .menu-header button {
@@ -85,7 +86,21 @@
     // }
   }
 
+  .dashboard-icon.icon {
+    margin-right: 0.25rem;
+  }
+
+  &.sidebar-collapsed {
+    .dashboard-icon.icon {
+      margin-right: 0rem;
+    }
+  }
+
   @media (min-width: 600px) {
+    .menu-header {
+      padding: 0.55rem 0.94rem;
+    }
+
     .menu-item,
     .menu-footer {
       display: flex;
