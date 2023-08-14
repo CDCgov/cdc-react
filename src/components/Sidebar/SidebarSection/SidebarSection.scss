@@ -1,11 +1,13 @@
+@import "../../../scss/global.scss";
+
 .cdc-react {
   .sidebar {
     li {
       display: flex;
       align-items: center;
-      padding: 1.6rem 2.4rem;
+      padding: 0.94rem 1.4rem;
       width: 100%;
-      height: 5rem;
+      height: 2.95rem;
     }
 
     li:hover {
@@ -14,27 +16,29 @@
     }
 
     .heading {
-      font-size: 1.35rem;
+      font-size: 0.89rem;
       font-style: normal;
       font-weight: 400;
       line-height: 120%;
       /* 1.2rem */
-      letter-spacing: 0.16rem;
+      letter-spacing: 0.1rem;
       text-transform: uppercase;
-      padding: 0.8rem 2.4rem;
-      color: var(--main-lighter);
-    }
-
-    .dashboard-icon {
-      margin-left: 0.35rem;
+      padding: 0.47rem 1.475rem;
+      color: $main-theme-lighter;
     }
 
     .text {
-      margin-left: 1.2rem;
+      margin-left: 0.7rem;
       font-style: normal;
       font-weight: 100;
       line-height: 120%;
-      font-size: 1.35rem;
+      font-size: 0.7rem;
+    }
+  }
+
+  .sidebar-collapsed {
+    li {
+      justify-content: center;
     }
   }
 }

@@ -36,12 +36,7 @@ $tertiary-teal: #ceece7;
 *,
 html,
 body {
-  --main-theme: $main-theme;
-  --main-light: $main-theme-light;
-  --main-lighter: $main-theme-lighter;
-  --indigo: $primary-indigo;
-  --heading-xl: 3.1rem;
-  font-size: 10px;
+  font-size: 17px;
   box-sizing: border-box;
   font-family: "Open Sans-Regular", Helvetica;
   letter-spacing: 0.1rem;
@@ -52,6 +47,26 @@ ul {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+h1 {
+  font-size: 2.25rem;
+}
+
+h2 {
+  font-size: 1.85rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+h4 {
+  font-size: 1.26rem;
+}
+
+h5 {
+  font-size: 1.13rem;
 }
 
 .cdc-react {

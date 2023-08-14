@@ -55,7 +55,7 @@ export const ProfileHeaderPopupMenuItem = ({
                 display: badgeCount > 0 ? "flex" : "none",
               }}
               alignmentBaseline="middle"
-              x="10"
+              x="10.5"
               y="12.5"
               textAnchor="middle">
               {badgeCount}

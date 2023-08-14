@@ -6,3 +6,4 @@ export * from "./ProfileHeader/ProfileHeaderMenuItem/ProfileHeaderMenuItem";
 export * from "./ProfileHeader/ProfileHeaderPopupMenuItem/ProfileHeaderPopupMenuItem";
 export * from "./Icon/Icon";
 export * from "./Button/Button";
+export * from "./Divider/Divider";
