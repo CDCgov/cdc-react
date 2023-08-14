@@ -2,6 +2,7 @@
 
 .cdc-react {
   .sidebar-wrap {
+    text-align: left;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -86,6 +87,10 @@
   }
 
   @media (min-width: 600px) {
+    .dashboard-icon.icon {
+      margin-right: 0.25rem;
+    }
+
     .menu-item,
     .menu-footer {
       display: flex;
