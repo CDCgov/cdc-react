@@ -11,5 +11,9 @@ export default meta;
 type Story = StoryObj<typeof Divider>;
 
 export const Example: Story = {
-  args: {},
+  args: {
+    width: 100,
+    height: 2,
+    stroke: "#000",
+  },
 };
