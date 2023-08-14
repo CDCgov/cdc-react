@@ -1,4 +1,4 @@
-name: "PR Checks"
+name: "PR Check - Unit Test"
 
 on:
   pull_request:
