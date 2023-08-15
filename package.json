@@ -14,7 +14,6 @@
   },
   "repository": "git@github.com:CDCgov/cdc-react.git",
   "author": "cfarmer <cfarmer@fearless.tech>",
-  "license": "APACHE-2.0",
   "private": true,
   "workspaces": [
     "packages/cdc-react",
