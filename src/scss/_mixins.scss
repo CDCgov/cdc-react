@@ -1,0 +1,53 @@
+@mixin btn-states($focus-clr, $hover-clr, $active-clr, $disabled-clr...) {
+  &:focus,
+  .focus {
+    background-color: $focus-clr;
+    border-color: $focus-clr;
+  }
+
+  &:hover,
+  .hover {
+    background-color: $hover-clr;
+    border-color: $hover-clr;
+  }
+
+  &:active,
+  .active {
+    background-color: $active-clr;
+    border-color: $active-clr;
+  }
+
+  &.disabled {
+    background-color: $disabled-clr !important;
+    border: solid 0.2rem $disabled-clr !important;
+    border-radius: $border-radius;
+    color: #3e3e3e;
+    pointer-events: none;
+  }
+}
+
+@mixin create-button-color($palette) {
+  @each $color-name, $color-val in $palette {
+    &.#{$color-name} {
+      color: $color-val;
+    }
+  }
+}
+
+@mixin create-btn-color-classes($palette) {
+  @each $color-name, $color-val in $palette {
+    &.#{$color-name} {
+      background-color: $color-val;
+      border: 0.2rem solid $color-val;
+    }
+  }
+}
+
+@mixin create-outline-btn-color-classes($palette) {
+  @each $color, $color-val in $palette {
+    &.#{$color} {
+      color: $color-val;
+      border: 0.2rem solid $color-val;
+    }
+  }
+}

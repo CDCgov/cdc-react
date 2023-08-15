@@ -1,37 +1,7 @@
-/* Accessibility Color Variables */
-
-$main-theme: #005eaa;
-$main-theme-dark: #004f8f;
-$main-theme-darker: #004175;
-$main-theme-light: #88c3ea;
-$main-theme-lighter: #c0e9ff;
-
-$gray-dark: #555555;
-$gray-darker: #333333;
-$gray-light: #e0e0e0;
-
-$primary-blue: #196eb3;
-$primary-brown: #705043;
-$primary-cyan: #007b91;
-$primary-green: #497d0c;
-$primary-indigo: #26418f;
-$primary-orange: #bb4d00;
-$primary-pink: #af4448;
-$primary-purple: #712177;
-$primary-slate: #29434e;
-$primary-teal: #00695c;
-
-$tertiary-amber: #ffecb3;
-$tertiary-blue: #c0e9ff;
-$tertiary-brown: #decec6;
-$tertiary-cyan: #cce5e9;
-$tertiary-green: #dcedc8;
-$tertiary-indigo: #dee8ff;
-$tertiary-orange: #ffe97d;
-$tertiary-pink: #ffc2c2;
-$tertiary-purple: #e3d3e4;
-$tertiary-slate: #b6c6d2;
-$tertiary-teal: #ceece7;
+@import "colors";
+@import "typography";
+@import "palettes";
+@import "mixins";
 
 *,
 html,
