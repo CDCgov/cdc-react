@@ -1,13 +1,20 @@
-name: "PR Check - Unit Test"
+name: "PR Check Components - Code Format"
 
 on:
   pull_request:
     branches:
       - main
+    paths:
+      - packages/cdc-react/**
+    
+      
+defaults:
+  run:
+    working-directory: packages/cdc-react
 
 jobs:
   unit-test:
-    name: "Run Vitest"
+    name: "Run Prettier"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -18,5 +25,5 @@ jobs:
           cache: "npm"
       - name: Install dependencies
         run: yarn
-      - name: Vitest
-        run: yarn test
+      - name: Prettier
+        run: yarn format:check
