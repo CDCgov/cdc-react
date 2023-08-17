@@ -1,8 +1,9 @@
 import "./Icon.scss";
 
 const Icons = {
-  "chevron-down": () => (
+  "chevron-down": (hasBadge?: boolean, className?: string) => (
     <svg
+      className={className}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
@@ -15,8 +16,9 @@ const Icons = {
       />
     </svg>
   ),
-  "chevron-up": () => (
+  "chevron-up": (hasBadge?: boolean, className?: string) => (
     <svg
+      className={className}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
@@ -25,8 +27,9 @@ const Icons = {
       <path d="M17 14L12 9L7 14" stroke="currentColor" strokeLinecap="round" />
     </svg>
   ),
-  "chevron-double-left": () => (
+  "chevron-double-left": (hasBadge?: boolean, className?: string) => (
     <svg
+      className={className}
       xmlns="http://www.w3.org/2000/svg"
       width="25"
       height="24"
@@ -39,8 +42,9 @@ const Icons = {
       />
     </svg>
   ),
-  "chevron-double-right": () => (
+  "chevron-double-right": (hasBadge?: boolean, className?: string) => (
     <svg
+      className={className}
       xmlns="http://www.w3.org/2000/svg"
       width="13"
       height="12"
@@ -53,8 +57,9 @@ const Icons = {
       />
     </svg>
   ),
-  dashboard: () => (
+  dashboard: (hasBadge?: boolean, className?: string) => (
     <svg
+      className={className}
       xmlns="http://www.w3.org/2000/svg"
       width="20"
       height="20"
@@ -86,8 +91,9 @@ const Icons = {
       />
     </svg>
   ),
-  logout: () => (
+  logout: (hasBadge?: boolean, className?: string) => (
     <svg
+      className={className}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
@@ -101,8 +107,9 @@ const Icons = {
       />
     </svg>
   ),
-  menu: () => (
+  menu: (hasBadge?: boolean, className?: string) => (
     <svg
+      className={className}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
@@ -115,9 +122,10 @@ const Icons = {
       />
     </svg>
   ),
-  notifications: (hasBadge?: boolean) => {
+  notifications: (hasBadge?: boolean, className?: string) => {
     return (
       <svg
+        className={className}
         xmlns="http://www.w3.org/2000/svg"
         width="24"
         height="24"
@@ -139,8 +147,9 @@ const Icons = {
       </svg>
     );
   },
-  process: () => (
+  process: (hasBadge?: boolean, className?: string) => (
     <svg
+      className={className}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
@@ -154,8 +163,9 @@ const Icons = {
       />
     </svg>
   ),
-  quality: () => (
+  quality: (hasBadge?: boolean, className?: string) => (
     <svg
+      className={className}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
@@ -169,8 +179,9 @@ const Icons = {
       />
     </svg>
   ),
-  settings: () => (
+  settings: (hasBadge?: boolean, className?: string) => (
     <svg
+      className={className}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
@@ -190,8 +201,9 @@ const Icons = {
       />
     </svg>
   ),
-  squareArrowUpRight: () => (
+  squareArrowUpRight: (hasBadge?: boolean, className?: string) => (
     <svg
+      className={className}
       xmlns="http://www.w3.org/2000/svg"
       width="16"
       height="16"
@@ -205,8 +217,9 @@ const Icons = {
       />
     </svg>
   ),
-  support: () => (
+  support: (hasBadge?: boolean, className?: string) => (
     <svg
+      className={className}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
@@ -220,8 +233,9 @@ const Icons = {
       />
     </svg>
   ),
-  user: () => (
+  user: (hasBadge?: boolean, className?: string) => (
     <svg
+      className={className}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
@@ -248,5 +262,7 @@ interface IconProps {
 export const Icon = ({ ...props }: IconProps) => {
   const { name, hasBadge, className } = props;
 
-  return <span className={className}>{Icons[name](hasBadge)}</span>;
+  const icon: JSX.Element = Icons[name](hasBadge, className);
+
+  return icon;
 };

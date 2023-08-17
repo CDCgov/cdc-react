@@ -20,23 +20,23 @@ ul {
 }
 
 h1 {
-  font-size: 2.25rem;
+  font-size: $font-size-h1;
 }
 
 h2 {
-  font-size: 1.85rem;
+  font-size: $font-size-h2;
 }
 
 h3 {
-  font-size: 1.6rem;
+  font-size: $font-size-h3;
 }
 
 h4 {
-  font-size: 1.26rem;
+  font-size: $font-size-h4;
 }
 
 h5 {
-  font-size: 1.13rem;
+  font-size: $font-size-h5;
 }
 
 .cdc-react {
@@ -46,5 +46,14 @@ h5 {
     width: auto;
     height: auto;
     display: inline-block;
+  }
+
+  .sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
   }
 }

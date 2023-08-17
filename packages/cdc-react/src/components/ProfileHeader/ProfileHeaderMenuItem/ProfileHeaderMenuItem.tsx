@@ -7,37 +7,57 @@ import { Icon, IconNames } from "../../Icon/Icon";
 interface ProfileHeaderMenuItemProps {
   icon: IconNames;
   badgeCount: number;
+  srText: string;
+  avatar?: string; // TODO: Create interface for avatar prop
+  popupOpen?: boolean;
   className?: string;
-  onClick?: MouseEventHandler<HTMLButtonElement> | undefined;
+  showChevrons?: boolean;
+  onClick?:
+    | MouseEventHandler<HTMLButtonElement>
+    | (void & MouseEventHandler<HTMLButtonElement>)
+    | undefined;
 }
 
 export const ProfileHeaderMenuItem = ({
   icon,
   badgeCount,
+  srText,
+  avatar,
+  popupOpen,
   className,
+  showChevrons,
   onClick,
 }: ProfileHeaderMenuItemProps & JSX.IntrinsicElements["button"]) => {
   return (
-    <button
-      className={`profile-header-menu-item ${className}`}
-      onClick={onClick}>
-      {(className || "").indexOf("user-profile") > -1 ? (
-        <>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="36"
-            height="36"
-            viewBox="0 0 40 40"
-            fill="none"
-            className="user-image"
-            stroke="#ddd">
-            <circle cx="20" cy="20" r="20"></circle>
-          </svg>
-          <Icon name="chevron-down" className="chevron-down" />
-        </>
-      ) : (
-        <Icon name={icon} hasBadge={badgeCount > 0} />
-      )}
-    </button>
+    <>
+      <span className="sr-only">{srText}</span>
+
+      <button
+        className={`profile-header-menu-item ${className}`}
+        onClick={onClick}>
+        {avatar ? (
+          <>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="36"
+              height="36"
+              viewBox="0 0 40 40"
+              fill="#DDD"
+              className="user-image"
+              stroke="#ddd">
+              <circle cx="20" cy="20" r="20"></circle>
+            </svg>
+            {showChevrons && (
+              <Icon
+                name={popupOpen ? "chevron-up" : "chevron-down"}
+                className={popupOpen ? "chevron-up" : "chevron-down"}
+              />
+            )}
+          </>
+        ) : (
+          <Icon name={icon} hasBadge={badgeCount > 0} />
+        )}
+      </button>
+    </>
   );
 };

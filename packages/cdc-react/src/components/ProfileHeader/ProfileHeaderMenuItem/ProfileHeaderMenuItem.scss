@@ -10,6 +10,7 @@
     display: flex;
     padding: 0.26rem 0.45rem;
     margin: 0 0.26rem;
+    margin-top: 0.1rem;
     background: transparent;
     align-items: center;
     justify-content: center;
@@ -33,6 +34,10 @@
   }
 
   .profile-header .profile-header-menu-item.user-profile .chevron-down {
+    margin-right: -0.2rem;
+  }
+
+  .profile-header .profile-header-menu-item.user-profile .chevron-up {
     margin-right: -0.2rem;
   }
 

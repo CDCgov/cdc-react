@@ -20,7 +20,12 @@
 
   .profile-header-popup-wrap {
     position: absolute;
-    top: 2.6875rem;
+    top: 3.6875rem;
     right: 2.6rem;
+    display: none;
+
+    &.profile-header-popup-wrap-show {
+      display: flex;
+    }
   }
 }

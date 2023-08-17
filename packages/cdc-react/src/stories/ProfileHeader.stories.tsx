@@ -1,7 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { useState } from "react";
-
 import { MenuItemType, PopupMenuItemType } from "../@types";
 
 import {
@@ -28,16 +26,22 @@ const menuItems: MenuItemType[] = [
     badgeCount: 5,
     icon: "notifications",
     className: "hide-on-mobile",
+    srText: "Notifications button",
   },
   {
     badgeCount: 0,
     icon: "settings",
     className: "hide-on-mobile",
+    srText: "Settings button",
   },
   {
     badgeCount: 0,
     icon: "user",
     className: "user-profile",
+    srText: "User profile button",
+    showProfileHeaderPopupMenuOnClick: true,
+    showChevrons: true,
+    avatar: "some avatar src",
   },
 ];
 
@@ -74,33 +78,9 @@ const popupMenuItems: PopupMenuItemType[] = [
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Example: Story = {
-  render: (args: ProfileHeaderProps) => {
-    const [profileHeaderPopupOpen, setProfileHeaderPopupOpen] = useState(
-      args.profileHeaderPopupOpen
-    );
-
-    if (args.menuItems) {
-      args.menuItems[menuItems.length - 1].onClick = () =>
-        setProfileHeaderPopupOpen(() => {
-          args.profileHeaderPopupOpen = !profileHeaderPopupOpen;
-          return !profileHeaderPopupOpen;
-        });
-    }
-
-    return (
-      <ProfileHeader
-        className={args.className}
-        profileHeaderPopupOpen={args.profileHeaderPopupOpen}
-        logo={args.logo}
-        menuItems={args.menuItems}
-        popupMenuItems={args.popupMenuItems}
-      />
-    );
-  },
   args: {
     logo: logo,
     className: "profile-header",
-    profileHeaderPopupOpen: false,
     menuItems: menuItems,
     popupMenuItems: popupMenuItems,
   },

@@ -1,11 +1,11 @@
-import { render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 
 import { MenuItemType, PopupMenuItemType } from "../../@types";
 
 import { ProfileHeader, ProfileHeaderLogo } from "../";
 
 describe("ProfileHeader component", () => {
-  it("should render some buttons with the correct text", () => {
+  it("should render some buttons", () => {
     const logo = <ProfileHeaderLogo image="../test.png" />;
 
     // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
@@ -14,17 +14,19 @@ describe("ProfileHeader component", () => {
         badgeCount: 5,
         icon: "notifications",
         className: "hide-on-mobile",
+        srText: "Notifications button",
       },
       {
         badgeCount: 0,
         icon: "settings",
         className: "hide-on-mobile",
+        srText: "Settings button",
       },
       {
         badgeCount: 0,
         icon: "user",
-        onClick: () => null,
         className: "user-profile",
+        srText: "User profile button",
       },
     ];
 
@@ -69,10 +71,6 @@ describe("ProfileHeader component", () => {
       />
     );
 
-    expect(container.getElementsByTagName("button").length).toBe(7);
-    expect(screen.getByText("Your Profile")).toBeInTheDocument();
-    expect(screen.getByText("Notifications")).toBeInTheDocument();
-    expect(screen.getByText("Settings")).toBeInTheDocument();
-    expect(screen.getByText("Logout")).toBeInTheDocument();
+    expect(container.getElementsByTagName("button").length).toBe(3);
   });
 });

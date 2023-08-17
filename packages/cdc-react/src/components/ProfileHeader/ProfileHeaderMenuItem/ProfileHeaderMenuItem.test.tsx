@@ -7,7 +7,11 @@ describe("ProfileHeaderMenuItem component", () => {
     const classNames = ["profile-header-menu-item"];
 
     const { container } = render(
-      <ProfileHeaderMenuItem badgeCount={0} icon="chevron-double-left" />
+      <ProfileHeaderMenuItem
+        badgeCount={0}
+        icon="chevron-double-left"
+        srText="Go left"
+      />
     );
 
     const menuItem = container.getElementsByClassName(classNames[0])[0];
