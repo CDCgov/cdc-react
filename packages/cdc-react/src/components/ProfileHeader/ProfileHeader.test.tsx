@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 
 import { MenuItemType, PopupMenuItemType } from "../../@types";
 
@@ -61,16 +61,17 @@ describe("ProfileHeader component", () => {
       },
     ];
 
-    const { container } = render(
+    render(
       <ProfileHeader
         className="profile-header"
-        profileHeaderPopupOpen={false}
         logo={logo}
         menuItems={menuItems}
         popupMenuItems={popupMenuItems}
       />
     );
 
-    expect(container.getElementsByTagName("button").length).toBe(3);
+    expect(screen.getByText("Notifications button")).toBeInTheDocument();
+    expect(screen.getByText("Settings button")).toBeInTheDocument();
+    expect(screen.getByText("User profile button")).toBeInTheDocument();
   });
 });

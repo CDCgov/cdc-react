@@ -77,8 +77,6 @@ export const ProfileHeader = ({
             if (index === elements.length - 1) {
               setProfileHeaderPopupOpen(!profileHeaderPopupOpen);
             }
-          default:
-            break;
         }
       }
     }

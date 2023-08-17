@@ -2,11 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 
 import { MenuItemType, PopupMenuItemType } from "../@types";
 
-import {
-  ProfileHeader,
-  ProfileHeaderProps,
-  ProfileHeaderLogo,
-} from "../components";
+import { ProfileHeader, ProfileHeaderLogo } from "../components";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta: Meta<typeof ProfileHeader> = {
