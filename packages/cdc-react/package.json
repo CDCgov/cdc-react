@@ -2,9 +2,9 @@
   "name": "@us-gov-cdc/cdc-react",
   "version": "0.4.1",
   "description": "Library for ReactJS components for the CDC",
-  "main": "./dist/cdc-react.umd.js",
-  "module": "./dist/cdc-react.es.js",
-  "types": "./dist/index.d.ts",
+  "main": "dist/cdc-react.umd.js",
+  "module": "dist/cdc-react.es.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
