@@ -9,10 +9,7 @@ interface ProfileHeaderMenuItemProps {
   badgeCount: number;
   srText: string;
   className?: string;
-  onClick?:
-    | MouseEventHandler<HTMLButtonElement>
-    | (void & MouseEventHandler<HTMLButtonElement>)
-    | undefined;
+  onClick?: MouseEventHandler<HTMLButtonElement> | undefined;
 }
 
 export const ProfileHeaderMenuItem = ({

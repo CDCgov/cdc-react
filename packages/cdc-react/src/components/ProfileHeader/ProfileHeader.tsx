@@ -1,10 +1,9 @@
-import "../../scss/global.scss";
 import "./ProfileHeader.scss";
 
 import { MenuItemType, PopupMenuItemType } from "../../@types";
 
 import { ProfileHeaderMenuItem } from "./ProfileHeaderMenuItem/ProfileHeaderMenuItem";
-import { ProfileHeaderUserProfileMenuItem } from "../ProfileHeaderUserProfileMenuItem/ProfileHeaderUserProfileMenu";
+import { ProfileHeaderUserProfileMenuItem } from "./ProfileHeaderUserProfileMenuItem/ProfileHeaderUserProfileMenuItem";
 
 export interface ProfileHeaderProps {
   className: string;

@@ -29,6 +29,7 @@ interface ButtonProps {
   readonly iconName?: IconNames;
   readonly iconPosition?: ButtonIconPositionTypes;
   readonly iconOnly?: boolean;
+  readonly iconHasBadge?: boolean;
 }
 
 export const Button = ({
@@ -43,6 +44,7 @@ export const Button = ({
   iconName,
   iconPosition,
   iconOnly,
+  iconHasBadge,
   className,
   id,
   ariaLabel,
@@ -105,13 +107,23 @@ export const Button = ({
         className={classes}
         disabled={disabled}>
         {iconName && iconPosition === "left" && (
-          <Icon name={iconName} className="left-icon" />
+          <Icon name={iconName} className="left-icon" hasBadge={iconHasBadge} />
         )}
         {iconOnly !== true
           ? children
-          : iconName && <Icon name={iconName} className="center" />}
+          : iconName && (
+              <Icon
+                name={iconName}
+                className="center"
+                hasBadge={iconHasBadge}
+              />
+            )}
         {iconName && iconPosition === "right" && (
-          <Icon name={iconName} className="right-icon" />
+          <Icon
+            name={iconName}
+            className="right-icon"
+            hasBadge={iconHasBadge}
+          />
         )}
       </button>
     </div>

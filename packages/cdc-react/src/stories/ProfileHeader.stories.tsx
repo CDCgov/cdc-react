@@ -37,28 +37,24 @@ const userProfilePopupMenuItems: PopupMenuItemType[] = [
     icon: "user",
     iconPosition: "left",
     text: "Your Profile",
-    onClick: undefined,
     badgeCount: 0,
   },
   {
     icon: "notifications",
     iconPosition: "left",
     text: "Notifications",
-    onClick: undefined,
     badgeCount: 1,
   },
   {
     icon: "settings",
     iconPosition: "left",
     text: "Settings",
-    onClick: undefined,
     badgeCount: 0,
   },
   {
     icon: "logout",
     iconPosition: "left",
     text: "Logout",
-    onClick: undefined,
     badgeCount: 0,
   },
 ];
