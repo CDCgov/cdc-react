@@ -22,7 +22,7 @@ export const SidebarSection = ({
       {heading && !hideLabels && <p className="heading">{heading}</p>}
       <ul>
         {items.map((item, index) => (
-          <li key={`${item.text}${index}`} role="button">
+          <li key={`${item.text}${index}`}>
             <Icon className={`${item.icon}-icon icon`} name={item.icon} />
             {!hideLabels && <span className="text">{item.text}</span>}
           </li>
