@@ -9,6 +9,7 @@ import { MouseEventHandler } from "react";
 interface ProfileHeaderPopupMenuItemProps {
   icon: IconNames;
   iconPosition: IconPositionsTypes;
+  index: number;
   text: string;
   badgeCount: number;
   className?: string;
@@ -18,6 +19,7 @@ interface ProfileHeaderPopupMenuItemProps {
 export const ProfileHeaderPopupMenuItem = ({
   icon,
   iconPosition,
+  index,
   text,
   badgeCount,
   className,
@@ -25,6 +27,7 @@ export const ProfileHeaderPopupMenuItem = ({
 }: ProfileHeaderPopupMenuItemProps & JSX.IntrinsicElements["button"]) => {
   return (
     <button
+      tabIndex={index}
       className={`${className} profile-header-popup-menu-item`}
       onClick={onClick}>
       <span className="profile-header-popup-menu-item-left">

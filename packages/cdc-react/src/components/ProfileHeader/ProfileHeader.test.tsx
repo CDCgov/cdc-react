@@ -66,12 +66,13 @@ describe("ProfileHeader component", () => {
         className="profile-header"
         logo={logo}
         menuItems={menuItems}
-        popupMenuItems={popupMenuItems}
+        userProfilePopupMenuItems={popupMenuItems}
       />
     );
 
     expect(screen.getByText("Notifications button")).toBeInTheDocument();
     expect(screen.getByText("Settings button")).toBeInTheDocument();
     expect(screen.getByText("User profile button")).toBeInTheDocument();
+    // add test for first focused popup menu item then test tab key for next item focus
   });
 });

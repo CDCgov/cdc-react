@@ -30,18 +30,9 @@ const menuItems: MenuItemType[] = [
     className: "hide-on-mobile",
     srText: "Settings button",
   },
-  {
-    badgeCount: 0,
-    icon: "user",
-    className: "user-profile",
-    srText: "User profile button",
-    showProfileHeaderPopupMenuOnClick: true,
-    showChevrons: true,
-    avatar: "some avatar src",
-  },
 ];
 
-const popupMenuItems: PopupMenuItemType[] = [
+const userProfilePopupMenuItems: PopupMenuItemType[] = [
   {
     icon: "user",
     iconPosition: "left",
@@ -78,6 +69,6 @@ export const Example: Story = {
     logo: logo,
     className: "profile-header",
     menuItems: menuItems,
-    popupMenuItems: popupMenuItems,
+    userProfilePopupMenuItems: userProfilePopupMenuItems,
   },
 };
