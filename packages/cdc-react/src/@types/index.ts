@@ -13,10 +13,7 @@ export interface MenuItemType {
   icon: IconNames;
   badgeCount: number;
   srText: string;
-  showProfileHeaderPopupMenuOnClick?: boolean;
-  avatar?: string;
   className?: string;
-  showChevrons?: boolean;
   onClick?: MouseEventHandler<HTMLButtonElement> | undefined;
 }
 
