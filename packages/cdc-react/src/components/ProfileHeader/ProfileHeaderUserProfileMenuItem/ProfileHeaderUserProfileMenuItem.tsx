@@ -8,9 +8,9 @@ import { ProfileHeaderPopupMenuItem } from "../ProfileHeaderPopupMenuItem/Profil
 import { Icon } from "../../Icon/Icon";
 
 export interface ProfileHeaderUserProfileMenuItemProps {
-  className: string;
+  className?: string;
   avatar?: string | JSX.Element;
-  userProfilePopupMenuItems?: PopupMenuItemType[];
+  userProfilePopupMenuItems: PopupMenuItemType[];
 }
 
 interface PopupKeyCodeObject {

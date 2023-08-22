@@ -1,11 +1,88 @@
-import { render, screen } from "@testing-library/react";
+import { PopupMenuItemType } from "../../../@types";
 
-import { MenuItemType, PopupMenuItemType } from "../../../@types";
+import { render, screen /*, fireEvent*/ } from "@testing-library/react";
 
-import { ProfileHeader, ProfileHeaderLogo } from "../..";
+import { ProfileHeaderUserProfileMenuItem } from "./ProfileHeaderUserProfileMenuItem";
 
-describe("ProfileHeader component", () => {
-  it("should render some buttons", () => {
-    // add test for first focused popup menu item then test tab key for next item focus
+describe("ProfileHeaderUserProfileMenuItem component", () => {
+  const popupMenuItems: PopupMenuItemType[] = [
+    {
+      icon: "user",
+      iconPosition: "left",
+      text: "Your Profile",
+      onClick: undefined,
+      badgeCount: 0,
+    },
+    {
+      icon: "notifications",
+      iconPosition: "left",
+      text: "Notifications",
+      onClick: undefined,
+      badgeCount: 1,
+    },
+    {
+      icon: "settings",
+      iconPosition: "left",
+      text: "Settings",
+      onClick: undefined,
+      badgeCount: 0,
+    },
+    {
+      icon: "logout",
+      iconPosition: "left",
+      text: "Logout",
+      onClick: undefined,
+      badgeCount: 0,
+    },
+  ];
+
+  it("should render the popup menu", () => {
+    render(
+      <ProfileHeaderUserProfileMenuItem
+        key={`profile-header-menu-item-0`}
+        userProfilePopupMenuItems={popupMenuItems}
+        className="test-class-name"
+      />
+    );
+
+    expect(screen.getByText("Your Profile")).toBeInTheDocument();
+    expect(screen.getByText("Notifications")).toBeInTheDocument();
+    expect(screen.getByText("Settings")).toBeInTheDocument();
+    expect(screen.getByText("Logout")).toBeInTheDocument();
+  });
+
+  it(`should set active element as first popup menu item on click of user profile button`, async () => {
+    // tab should be make the second popup menu item the active element
+    render(
+      <ProfileHeaderUserProfileMenuItem
+        key={`profile-header-menu-item-0`}
+        userProfilePopupMenuItems={popupMenuItems}
+        className="test-class-name"
+      />
+    );
+
+    const userProfileButton = screen.getByText("User profile button");
+    const firstPopupMenuItem = screen.getByText("Your Profile");
+    const secondPopupMenuItem = screen.getByText("Notifications");
+
+    expect(firstPopupMenuItem).toBeInTheDocument();
+    expect(secondPopupMenuItem).toBeInTheDocument();
+    expect(userProfileButton).toBeInTheDocument();
+
+    userProfileButton.click();
+
+    expect(firstPopupMenuItem.parentElement).toBe(document.activeElement);
+
+    // fireEvent(
+    //   firstPopupMenuItem,
+    //   new KeyboardEvent("keydown", {
+    //     key: "Tab",
+    //     code: "Tab",
+    //     bubbles: true,
+    //     cancelable: true,
+    //   })
+    // );
+
+    // expect(secondPopupMenuItem.parentElement).toBe(document.activeElement);
   });
 });
