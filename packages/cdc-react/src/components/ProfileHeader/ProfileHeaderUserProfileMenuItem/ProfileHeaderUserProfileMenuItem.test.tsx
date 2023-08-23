@@ -55,7 +55,7 @@ describe("ProfileHeaderUserProfileMenuItem component", () => {
   it(`should set active element as first popup menu item on click of user profile button`, async () => {
     // tab should be make the second popup menu item the active element
 
-    const user = await userEvent.setup();
+    // const user = await userEvent.setup();
 
     render(
       <ProfileHeaderUserProfileMenuItem
