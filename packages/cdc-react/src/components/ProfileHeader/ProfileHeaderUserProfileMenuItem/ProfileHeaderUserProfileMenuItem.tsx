@@ -28,7 +28,8 @@ export const ProfileHeaderUserProfileMenuItem = ({
   userProfilePopupMenuItems = [],
 }: ProfileHeaderUserProfileMenuItemProps) => {
   const [popupOpen, setProfileHeaderPopupOpenState] = useState(false);
-  const [activePopupItemIndex, setProfileHeaderPopupItemIndex] = useState(0);
+  // const [activePopupItemIndex, setProfileHeaderPopupItemIndex] = useState(0);
+  const activePopupItemIndex = useRef(0);
 
   const popupRef = useRef<HTMLDivElement>(null);
   const userProfileMenuItemRef = useRef<HTMLButtonElement>(null);
@@ -50,9 +51,11 @@ export const ProfileHeaderUserProfileMenuItem = ({
   const PopupKeyDownMethods: PopupKeyCodeObject = {
     Tab: (currentButton?: HTMLButtonElement, isLastIndex?: boolean) => {
       if (!isLastIndex) {
-        setProfileHeaderPopupItemIndex(activePopupItemIndex + 1);
+        // setProfileHeaderPopupItemIndex(activePopupItemIndex + 1);
+        activePopupItemIndex.current++;
       } else if (isLastIndex) {
-        setProfileHeaderPopupItemIndex(0);
+        // setProfileHeaderPopupItemIndex(0);
+        activePopupItemIndex.current = 0;
         setProfileHeaderPopupOpenState(false);
       }
     },
@@ -71,11 +74,11 @@ export const ProfileHeaderUserProfileMenuItem = ({
       document.getElementsByClassName("profile-header-popup-menu-item");
 
     const currentButton: HTMLButtonElement = popupMenuButtons[
-      activePopupItemIndex
+      activePopupItemIndex.current
     ] as HTMLButtonElement;
 
     const isLastIndex: boolean =
-      activePopupItemIndex === popupMenuButtons.length - 1;
+      activePopupItemIndex.current === popupMenuButtons.length - 1;
 
     const code: string = ev.code;
     const keys: string[] = Object.keys(PopupKeyDownMethods);
@@ -97,7 +100,7 @@ export const ProfileHeaderUserProfileMenuItem = ({
       setTimeout(() => {
         (
           document.getElementsByClassName("profile-header-popup-menu-item")[
-            activePopupItemIndex
+            activePopupItemIndex.current
           ] as HTMLButtonElement
         ).focus();
       }, 0);
@@ -148,7 +151,7 @@ export const ProfileHeaderUserProfileMenuItem = ({
               text={popupMenuItem.text}
               badgeCount={popupMenuItem.badgeCount}
               tabIndex={index}
-              focused={index === activePopupItemIndex}
+              focused={index === activePopupItemIndex.current}
               onClick={popupMenuItem.onClick}
             />
           ))}
