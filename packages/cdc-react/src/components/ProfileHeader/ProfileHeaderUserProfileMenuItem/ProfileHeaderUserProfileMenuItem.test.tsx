@@ -1,7 +1,7 @@
 import { PopupMenuItemType } from "../../../@types";
 
-// import userEvent from "@testing-library/user-event";
 import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 
 import { ProfileHeaderUserProfileMenuItem } from "./ProfileHeaderUserProfileMenuItem";
 
@@ -53,8 +53,9 @@ describe("ProfileHeaderUserProfileMenuItem component", () => {
   });
 
   it(`should set active element as first popup menu item on click of user profile button`, async () => {
-    // const user = userEvent.setup();
     // tab should be make the second popup menu item the active element
+
+    const user = await userEvent.setup();
 
     render(
       <ProfileHeaderUserProfileMenuItem
@@ -74,10 +75,10 @@ describe("ProfileHeaderUserProfileMenuItem component", () => {
 
     userProfileButton.click();
 
-    expect(firstPopupMenuItem.parentElement).toBe(document.activeElement);
+    expect(firstPopupMenuItem.parentElement).toHaveFocus();
 
-    // await user.keyboard("[Tab]");
+    // await user.tab();
 
-    // expect(secondPopupMenuItem.parentElement).toBe(document.activeElement);
+    // expect(secondPopupMenuItem.parentElement).toHaveFocus();
   });
 });

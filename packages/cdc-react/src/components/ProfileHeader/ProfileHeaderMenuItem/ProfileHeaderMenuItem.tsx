@@ -24,6 +24,7 @@ export const ProfileHeaderMenuItem = ({
       <span className="sr-only">{srText}</span>
 
       <button
+        tabIndex={0}
         className={`profile-header-menu-item ${className}`}
         onClick={onClick}>
         <Icon name={icon} hasBadge={badgeCount > 0} />

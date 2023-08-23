@@ -125,7 +125,7 @@ export const ProfileHeaderUserProfileMenuItem = ({
     <>
       <span className="sr-only">User profile button</span>
 
-      <button className={className} ref={userProfileMenuItemRef}>
+      <button className={className} ref={userProfileMenuItemRef} tabIndex={0}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="36"
@@ -150,7 +150,6 @@ export const ProfileHeaderUserProfileMenuItem = ({
         <div className="profile-header-popup" ref={popupRef}>
           {(userProfilePopupMenuItems || []).map((popupMenuItem, index) => (
             <ProfileHeaderPopupMenuItem
-              index={index}
               key={`profile-header-popup-menu-item-${index}`}
               className={`profile-header-popup-menu-item ${popupMenuItem.className} profile-header-popup-menu-item${index}`}
               icon={popupMenuItem.icon}
