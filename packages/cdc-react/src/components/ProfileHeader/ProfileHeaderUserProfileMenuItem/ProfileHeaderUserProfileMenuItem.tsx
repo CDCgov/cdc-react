@@ -56,7 +56,7 @@ export const ProfileHeaderUserProfileMenuItem = ({
     }
   };
 
-  const PopupKeyCodeMethods: PopupKeyCodeObject = {
+  const PopupKeyDownMethods: PopupKeyCodeObject = {
     Tab: (currentButton?: HTMLButtonElement, isLastIndex?: boolean) => {
       if (!isLastIndex) {
         setProfileHeaderPopupItemIndex(activePopupItemIndex + 1);
@@ -87,10 +87,10 @@ export const ProfileHeaderUserProfileMenuItem = ({
       activePopupItemIndex === popupMenuButtons.length - 1;
 
     const code: string = ev.code;
-    const keys: string[] = Object.keys(PopupKeyCodeMethods);
+    const keys: string[] = Object.keys(PopupKeyDownMethods);
 
     if (popupOpen && keys.includes(code)) {
-      PopupKeyCodeMethods[code](currentButton, isLastIndex);
+      PopupKeyDownMethods[code](currentButton, isLastIndex);
     }
   };
 
