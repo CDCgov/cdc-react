@@ -39,15 +39,6 @@ export const ProfileHeaderUserProfileMenuItem = ({
       userProfileMenuItemRef.current?.contains(ev.target as Node)
     ) {
       setProfileHeaderPopupOpenState(!popupOpen);
-
-      // Utilizes a setTimeout to move event after react hook event
-      setTimeout(() => {
-        (
-          document.getElementsByClassName("profile-header-popup-menu-item")[
-            activePopupItemIndex
-          ] as HTMLButtonElement
-        ).focus();
-      }, 0);
     } else if (
       popupRef.current &&
       !popupRef.current?.contains(ev.target as Node)
@@ -74,7 +65,7 @@ export const ProfileHeaderUserProfileMenuItem = ({
   } as const;
 
   const handlePopupKeyDown = (ev: React.KeyboardEvent) => {
-    ev.preventDefault();
+    // ev.preventDefault();
 
     const popupMenuButtons: HTMLCollectionOf<Element> | HTMLButtonElement[] =
       document.getElementsByClassName("profile-header-popup-menu-item");
@@ -94,23 +85,23 @@ export const ProfileHeaderUserProfileMenuItem = ({
     }
   };
 
-  useLayoutEffect(() => {
-    const popupMenuButtons: HTMLCollectionOf<Element> | HTMLButtonElement[] =
-      document.getElementsByClassName("profile-header-popup-menu-item");
-
-    const buttonToFocus: HTMLButtonElement = popupMenuButtons[
-      activePopupItemIndex
-    ] as HTMLButtonElement;
-
-    buttonToFocus.focus();
-  });
-
   useEffect(() => {
     document.addEventListener(
       "mousedown",
       handleClickOutsidePopup as unknown as EventListenerOrEventListenerObject,
       true
     );
+
+    if (popupOpen) {
+      // Utilizes a setTimeout to move event after react hook event
+      setTimeout(() => {
+        (
+          document.getElementsByClassName("profile-header-popup-menu-item")[
+            activePopupItemIndex
+          ] as HTMLButtonElement
+        ).focus();
+      }, 0);
+    }
 
     return () => {
       document.removeEventListener(
@@ -125,7 +116,7 @@ export const ProfileHeaderUserProfileMenuItem = ({
     <>
       <span className="sr-only">User profile button</span>
 
-      <button className={className} ref={userProfileMenuItemRef} tabIndex={0}>
+      <button className={className} ref={userProfileMenuItemRef}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="36"
@@ -156,6 +147,8 @@ export const ProfileHeaderUserProfileMenuItem = ({
               iconPosition={popupMenuItem.iconPosition}
               text={popupMenuItem.text}
               badgeCount={popupMenuItem.badgeCount}
+              tabIndex={index}
+              focused={index === activePopupItemIndex}
               onClick={popupMenuItem.onClick}
             />
           ))}
