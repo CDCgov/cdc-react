@@ -28,8 +28,7 @@ export const ProfileHeader = ({
           {menuItems.map((menuItem: MenuItemType, index: number) => (
             <li
               role="menuitem"
-              key={`profile-header-menu-item-wrapper-${index}`}
-              tabIndex={index}>
+              key={`profile-header-menu-item-wrapper-${index}`}>
               <ProfileHeaderMenuItem
                 key={`profile-header-menu-item-${index}`}
                 className={`profile-header-menu-item profile-header-menu-item${index} ${menuItem.className}`}
@@ -42,8 +41,7 @@ export const ProfileHeader = ({
           ))}
           <li
             role="menuitem"
-            key={`profile-header-menu-item-wrapper-${menuItems.length}`}
-            tabIndex={menuItems.length}>
+            key={`profile-header-menu-item-wrapper-${menuItems.length}`}>
             <ProfileHeaderUserProfileMenuItem
               key={`profile-header-menu-item-0`}
               userProfilePopupMenuItems={userProfilePopupMenuItems}

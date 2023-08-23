@@ -62,6 +62,7 @@ export const ProfileHeaderUserProfileMenuItem = ({
         setProfileHeaderPopupItemIndex(activePopupItemIndex + 1);
       } else if (isLastIndex) {
         setProfileHeaderPopupItemIndex(0);
+        setProfileHeaderPopupOpenState(false);
       }
     },
     Escape: () => {
@@ -106,24 +107,12 @@ export const ProfileHeaderUserProfileMenuItem = ({
 
   useEffect(() => {
     document.addEventListener(
-      "keydown",
-      handlePopupKeyDown as unknown as EventListenerOrEventListenerObject,
-      true
-    );
-
-    document.addEventListener(
       "mousedown",
       handleClickOutsidePopup as unknown as EventListenerOrEventListenerObject,
       true
     );
 
     return () => {
-      document.removeEventListener(
-        "keydown",
-        handlePopupKeyDown as unknown as EventListenerOrEventListenerObject,
-        true
-      );
-
       document.removeEventListener(
         "mousedown",
         handleClickOutsidePopup as unknown as EventListenerOrEventListenerObject,
@@ -156,7 +145,8 @@ export const ProfileHeaderUserProfileMenuItem = ({
       <div
         className={`profile-header-popup-wrap ${
           popupOpen ? "profile-header-popup-wrap-show" : ""
-        }`}>
+        }`}
+        onKeyDown={handlePopupKeyDown}>
         <div className="profile-header-popup" ref={popupRef}>
           {(userProfilePopupMenuItems || []).map((popupMenuItem, index) => (
             <ProfileHeaderPopupMenuItem

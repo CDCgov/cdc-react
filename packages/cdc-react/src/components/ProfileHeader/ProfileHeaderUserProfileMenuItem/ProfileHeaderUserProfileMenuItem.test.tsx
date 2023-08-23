@@ -1,6 +1,7 @@
 import { PopupMenuItemType } from "../../../@types";
 
-import { render, screen /*, fireEvent*/ } from "@testing-library/react";
+// import userEvent from "@testing-library/user-event";
+import { render, screen } from "@testing-library/react";
 
 import { ProfileHeaderUserProfileMenuItem } from "./ProfileHeaderUserProfileMenuItem";
 
@@ -52,7 +53,9 @@ describe("ProfileHeaderUserProfileMenuItem component", () => {
   });
 
   it(`should set active element as first popup menu item on click of user profile button`, async () => {
+    // const user = userEvent.setup();
     // tab should be make the second popup menu item the active element
+
     render(
       <ProfileHeaderUserProfileMenuItem
         key={`profile-header-menu-item-0`}
@@ -73,15 +76,7 @@ describe("ProfileHeaderUserProfileMenuItem component", () => {
 
     expect(firstPopupMenuItem.parentElement).toBe(document.activeElement);
 
-    // fireEvent(
-    //   firstPopupMenuItem,
-    //   new KeyboardEvent("keydown", {
-    //     key: "Tab",
-    //     code: "Tab",
-    //     bubbles: true,
-    //     cancelable: true,
-    //   })
-    // );
+    // await user.keyboard("[Tab]");
 
     // expect(secondPopupMenuItem.parentElement).toBe(document.activeElement);
   });
