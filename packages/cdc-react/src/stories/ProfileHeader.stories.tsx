@@ -1,14 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { useState } from "react";
-
 import { MenuItemType, PopupMenuItemType } from "../@types";
 
-import {
-  ProfileHeader,
-  ProfileHeaderProps,
-  ProfileHeaderLogo,
-} from "../components";
+import { ProfileHeader, ProfileHeaderLogo } from "../components";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta: Meta<typeof ProfileHeader> = {
@@ -28,80 +22,49 @@ const menuItems: MenuItemType[] = [
     badgeCount: 5,
     icon: "notifications",
     className: "hide-on-mobile",
+    srText: "Notifications button",
   },
   {
     badgeCount: 0,
     icon: "settings",
     className: "hide-on-mobile",
-  },
-  {
-    badgeCount: 0,
-    icon: "user",
-    className: "user-profile",
+    srText: "Settings button",
   },
 ];
 
-const popupMenuItems: PopupMenuItemType[] = [
+const userProfilePopupMenuItems: PopupMenuItemType[] = [
   {
     icon: "user",
     iconPosition: "left",
     text: "Your Profile",
-    onClick: undefined,
     badgeCount: 0,
   },
   {
     icon: "notifications",
     iconPosition: "left",
     text: "Notifications",
-    onClick: undefined,
     badgeCount: 1,
   },
   {
     icon: "settings",
     iconPosition: "left",
     text: "Settings",
-    onClick: undefined,
     badgeCount: 0,
   },
   {
     icon: "logout",
     iconPosition: "left",
     text: "Logout",
-    onClick: undefined,
     badgeCount: 0,
   },
 ];
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Example: Story = {
-  render: (args: ProfileHeaderProps) => {
-    const [profileHeaderPopupOpen, setProfileHeaderPopupOpen] = useState(
-      args.profileHeaderPopupOpen
-    );
-
-    if (args.menuItems) {
-      args.menuItems[menuItems.length - 1].onClick = () =>
-        setProfileHeaderPopupOpen(() => {
-          args.profileHeaderPopupOpen = !profileHeaderPopupOpen;
-          return !profileHeaderPopupOpen;
-        });
-    }
-
-    return (
-      <ProfileHeader
-        className={args.className}
-        profileHeaderPopupOpen={args.profileHeaderPopupOpen}
-        logo={args.logo}
-        menuItems={args.menuItems}
-        popupMenuItems={args.popupMenuItems}
-      />
-    );
-  },
   args: {
     logo: logo,
     className: "profile-header",
-    profileHeaderPopupOpen: false,
     menuItems: menuItems,
-    popupMenuItems: popupMenuItems,
+    userProfilePopupMenuItems: userProfilePopupMenuItems,
   },
 };

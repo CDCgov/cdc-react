@@ -12,6 +12,7 @@ export type IconPositionsTypes = (typeof IconPositions)[number];
 export interface MenuItemType {
   icon: IconNames;
   badgeCount: number;
+  srText: string;
   className?: string;
   onClick?: MouseEventHandler<HTMLButtonElement> | undefined;
 }

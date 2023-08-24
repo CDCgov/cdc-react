@@ -11,6 +11,8 @@ interface ProfileHeaderPopupMenuItemProps {
   iconPosition: IconPositionsTypes;
   text: string;
   badgeCount: number;
+  tabIndex: number;
+  focused: boolean;
   className?: string;
   onClick?: MouseEventHandler<HTMLButtonElement> | undefined;
 }
@@ -20,11 +22,15 @@ export const ProfileHeaderPopupMenuItem = ({
   iconPosition,
   text,
   badgeCount,
+  tabIndex,
+  focused,
   className,
   onClick,
 }: ProfileHeaderPopupMenuItemProps & JSX.IntrinsicElements["button"]) => {
   return (
     <button
+      tabIndex={tabIndex + 1}
+      autoFocus={focused}
       className={`${className} profile-header-popup-menu-item`}
       onClick={onClick}>
       <span className="profile-header-popup-menu-item-left">

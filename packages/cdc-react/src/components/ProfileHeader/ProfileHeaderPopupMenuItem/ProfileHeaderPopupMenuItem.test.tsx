@@ -6,6 +6,8 @@ describe("ProfileHeaderPopupMenuItem component", () => {
   it("should render a profile header popup menu component with inner text", () => {
     render(
       <ProfileHeaderPopupMenuItem
+        tabIndex={1}
+        focused={true}
         badgeCount={0}
         icon="chevron-double-left"
         iconPosition="left"
