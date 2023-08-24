@@ -14,17 +14,14 @@ export interface ProfileHeaderUserProfileMenuItemProps {
 }
 
 interface PopupKeyCodeObject {
-  [key: string]: (
-    currentButton?: HTMLButtonElement | undefined,
-    isLastIndex?: boolean | undefined
-  ) => void;
+  [key: string]: (isLastIndex?: boolean | undefined) => void;
 }
 
 /**
  * Profile Header User Profile Menu Item UI component
  */
 export const ProfileHeaderUserProfileMenuItem = ({
-  className, // avatar,
+  className,
   userProfilePopupMenuItems = [],
 }: ProfileHeaderUserProfileMenuItemProps) => {
   const [popupOpen, setProfileHeaderPopupOpenState] = useState(false);
@@ -48,31 +45,22 @@ export const ProfileHeaderUserProfileMenuItem = ({
   };
 
   const PopupKeyDownMethods: PopupKeyCodeObject = {
-    Tab: (currentButton?: HTMLButtonElement, isLastIndex?: boolean) => {
-      if (!isLastIndex) {
-        activePopupItemIndex.current++;
-      } else if (isLastIndex) {
+    Tab: (isLastIndex?: boolean) => {
+      if (isLastIndex) {
         activePopupItemIndex.current = 0;
         setProfileHeaderPopupOpenState(false);
+      } else {
+        activePopupItemIndex.current++;
       }
     },
     Escape: () => {
       setProfileHeaderPopupOpenState(false);
     },
-    Enter: (currentButton?: HTMLButtonElement) => {
-      currentButton?.click();
-    },
   } as const;
 
   const handlePopupKeyDown = (ev: React.KeyboardEvent) => {
-    // ev.preventDefault();
-
     const popupMenuButtons: HTMLCollectionOf<Element> | HTMLButtonElement[] =
       document.getElementsByClassName("profile-header-popup-menu-item");
-
-    const currentButton: HTMLButtonElement = popupMenuButtons[
-      activePopupItemIndex.current
-    ] as HTMLButtonElement;
 
     const isLastIndex: boolean =
       activePopupItemIndex.current === popupMenuButtons.length - 1;
@@ -81,7 +69,7 @@ export const ProfileHeaderUserProfileMenuItem = ({
     const keys: string[] = Object.keys(PopupKeyDownMethods);
 
     if (popupOpen && keys.includes(code)) {
-      PopupKeyDownMethods[code](currentButton, isLastIndex);
+      PopupKeyDownMethods[code](isLastIndex);
     }
   };
 

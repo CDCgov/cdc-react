@@ -64,12 +64,14 @@ describe("ProfileHeaderUserProfileMenuItem component", () => {
     );
 
     const userProfileButton = screen.getByText("User profile button");
+
+    expect(userProfileButton).toBeInTheDocument();
+
     const firstPopupMenuItem = screen.getByText("Your Profile");
     const secondPopupMenuItem = screen.getByText("Notifications");
 
     expect(firstPopupMenuItem).toBeInTheDocument();
     expect(secondPopupMenuItem).toBeInTheDocument();
-    expect(userProfileButton).toBeInTheDocument();
 
     userProfileButton.click();
 
