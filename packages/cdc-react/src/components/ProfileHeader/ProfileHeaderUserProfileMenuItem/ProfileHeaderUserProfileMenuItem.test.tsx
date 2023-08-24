@@ -52,9 +52,7 @@ describe("ProfileHeaderUserProfileMenuItem component", () => {
     expect(screen.getByText("Logout")).toBeInTheDocument();
   });
 
-  it(`should set active element as first popup menu item on click of user profile button`, async () => {
-    // tab should be make the second popup menu item the active element
-
+  it(`should set active element as first popup menu item on click of user profile button, tab should be make the second popup menu item the active element`, async () => {
     const user = userEvent.setup();
 
     render(
@@ -74,11 +72,11 @@ describe("ProfileHeaderUserProfileMenuItem component", () => {
     expect(userProfileButton).toBeInTheDocument();
 
     userProfileButton.click();
-    // await user.click(userProfileButton);
 
     expect(firstPopupMenuItem.parentElement).toHaveFocus();
 
     await user.tab();
+
     secondPopupMenuItem.focus();
 
     expect(secondPopupMenuItem.parentElement).toHaveFocus();

@@ -2,10 +2,10 @@ import "./ProfileHeaderUserProfileMenuItem.scss";
 
 import { PopupMenuItemType } from "../../../@types";
 
-import { useState, useEffect, useLayoutEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
-import { ProfileHeaderPopupMenuItem } from "../ProfileHeaderPopupMenuItem/ProfileHeaderPopupMenuItem";
 import { Icon } from "../../Icon/Icon";
+import { ProfileHeaderPopupMenuItem } from "../ProfileHeaderPopupMenuItem/ProfileHeaderPopupMenuItem";
 
 export interface ProfileHeaderUserProfileMenuItemProps {
   className?: string;
@@ -28,7 +28,6 @@ export const ProfileHeaderUserProfileMenuItem = ({
   userProfilePopupMenuItems = [],
 }: ProfileHeaderUserProfileMenuItemProps) => {
   const [popupOpen, setProfileHeaderPopupOpenState] = useState(false);
-  // const [activePopupItemIndex, setProfileHeaderPopupItemIndex] = useState(0);
   const activePopupItemIndex = useRef(0);
 
   const popupRef = useRef<HTMLDivElement>(null);
@@ -51,10 +50,8 @@ export const ProfileHeaderUserProfileMenuItem = ({
   const PopupKeyDownMethods: PopupKeyCodeObject = {
     Tab: (currentButton?: HTMLButtonElement, isLastIndex?: boolean) => {
       if (!isLastIndex) {
-        // setProfileHeaderPopupItemIndex(activePopupItemIndex + 1);
         activePopupItemIndex.current++;
       } else if (isLastIndex) {
-        // setProfileHeaderPopupItemIndex(0);
         activePopupItemIndex.current = 0;
         setProfileHeaderPopupOpenState(false);
       }
