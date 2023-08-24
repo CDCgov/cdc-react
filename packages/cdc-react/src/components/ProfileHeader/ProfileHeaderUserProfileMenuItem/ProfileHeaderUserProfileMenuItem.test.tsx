@@ -46,13 +46,17 @@ describe("ProfileHeaderUserProfileMenuItem component", () => {
       />
     );
 
+    const userProfileButton = screen.getByText("User profile button");
+
+    userProfileButton.click();
+
     expect(screen.getByText("Your Profile")).toBeInTheDocument();
     expect(screen.getByText("Notifications")).toBeInTheDocument();
     expect(screen.getByText("Settings")).toBeInTheDocument();
     expect(screen.getByText("Logout")).toBeInTheDocument();
   });
 
-  it(`should set active element as first popup menu item on click of user profile button, tab should be make the second popup menu item the active element`, async () => {
+  it(`should set active element as first popup menu item on click of user profile button`, async () => {
     const user = userEvent.setup();
 
     render(
@@ -68,24 +72,63 @@ describe("ProfileHeaderUserProfileMenuItem component", () => {
     expect(userProfileButton).toBeInTheDocument();
 
     const firstPopupMenuItem = screen.getByText("Your Profile").parentElement;
-    const secondPopupMenuItem = screen.getByText("Notifications").parentElement;
 
     expect(firstPopupMenuItem).toBeInTheDocument();
-    expect(secondPopupMenuItem).toBeInTheDocument();
 
     userProfileButton.click();
 
     expect(firstPopupMenuItem).toHaveFocus();
+  });
+
+  it(`tab should be make the second popup menu item the active element`, async () => {
+    const user = userEvent.setup();
+
+    render(
+      <ProfileHeaderUserProfileMenuItem
+        key={`profile-header-menu-item-0`}
+        userProfilePopupMenuItems={popupMenuItems}
+        className="test-class-name"
+      />
+    );
+
+    const userProfileButton = screen.getByText("User profile button");
+
+    expect(userProfileButton).toBeInTheDocument();
+
+    const secondPopupMenuItem = screen.getByText("Notifications").parentElement;
+
+    expect(secondPopupMenuItem).toBeInTheDocument();
+
+    userProfileButton.click();
 
     await user.tab();
 
-    secondPopupMenuItem?.focus();
-
     expect(secondPopupMenuItem).toHaveFocus();
+  });
+
+  it(`should close popup menu on Escape keyDown`, async () => {
+    const user = userEvent.setup();
+
+    render(
+      <ProfileHeaderUserProfileMenuItem
+        key={`profile-header-menu-item-0`}
+        userProfilePopupMenuItems={popupMenuItems}
+        className="test-class-name"
+      />
+    );
+
+    const userProfileButton = screen.getByText("User profile button");
+
+    expect(userProfileButton).toBeInTheDocument();
+
+    userProfileButton.click();
+
+    const popupMenuItem = screen.getByText("Notifications").parentElement;
+    const popupWrap = popupMenuItem?.parentElement?.parentElement;
+
+    expect(popupWrap).toBeVisible();
 
     await user.keyboard("[Escape]");
-
-    const popupWrap = secondPopupMenuItem?.parentElement?.parentElement;
 
     expect(popupWrap)!.toBeVisible();
   });
