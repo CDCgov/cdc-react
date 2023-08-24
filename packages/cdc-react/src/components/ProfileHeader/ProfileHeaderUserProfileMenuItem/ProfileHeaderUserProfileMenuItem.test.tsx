@@ -67,20 +67,26 @@ describe("ProfileHeaderUserProfileMenuItem component", () => {
 
     expect(userProfileButton).toBeInTheDocument();
 
-    const firstPopupMenuItem = screen.getByText("Your Profile");
-    const secondPopupMenuItem = screen.getByText("Notifications");
+    const firstPopupMenuItem = screen.getByText("Your Profile").parentElement;
+    const secondPopupMenuItem = screen.getByText("Notifications").parentElement;
 
     expect(firstPopupMenuItem).toBeInTheDocument();
     expect(secondPopupMenuItem).toBeInTheDocument();
 
     userProfileButton.click();
 
-    expect(firstPopupMenuItem.parentElement).toHaveFocus();
+    expect(firstPopupMenuItem).toHaveFocus();
 
     await user.tab();
 
-    secondPopupMenuItem.focus();
+    secondPopupMenuItem?.focus();
 
-    expect(secondPopupMenuItem.parentElement).toHaveFocus();
+    expect(secondPopupMenuItem).toHaveFocus();
+
+    await user.keyboard("[Escape]");
+
+    const popupWrap = secondPopupMenuItem?.parentElement?.parentElement;
+
+    expect(popupWrap)!.toBeVisible();
   });
 });
