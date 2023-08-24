@@ -57,8 +57,6 @@ describe("ProfileHeaderUserProfileMenuItem component", () => {
   });
 
   it(`should set active element as first popup menu item on click of user profile button`, async () => {
-    const user = userEvent.setup();
-
     render(
       <ProfileHeaderUserProfileMenuItem
         key={`profile-header-menu-item-0`}
