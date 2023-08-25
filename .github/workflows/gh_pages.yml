@@ -1,7 +1,6 @@
 name: "Deploy: StorybookJS Github Page"
 
 on:
-  workflow_dispatch:
   push:
     branches:
       - main
