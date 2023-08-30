@@ -8,9 +8,7 @@
     "format:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx,css,scss,json,md}\"",
     "format:write": "prettier \"src/**/*.{js,jsx,ts,tsx,css,scss,json,md}\" --write",
     "test": "vitest",
-    "build": "vite build",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build -o docs && touch ./docs/.nojekyll"
+    "build": "vite build"
   },
   "repository": "git@github.com:CDCgov/cdc-react.git",
   "author": "cfarmer <cfarmer@fearless.tech>",
