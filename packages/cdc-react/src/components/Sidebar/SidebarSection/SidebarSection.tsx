@@ -1,9 +1,11 @@
 import { Icon, IconNames } from "../../Icon/Icon";
+import { Link } from "react-router-dom";
 import "./SidebarSection.scss";
 
 interface Item {
   icon: IconNames;
   text: string;
+  route: string;
 }
 
 interface SidebarSectionProps {
@@ -23,10 +25,10 @@ export const SidebarSection = ({
       <ul>
         {items.map((item, index) => (
           <li key={`${item.text}${index}`}>
-            <a href="/">
+            <Link to={item.route}>
               <Icon className={`${item.icon}-icon icon`} name={item.icon} />
               {!hideLabels && <span className="text">{item.text}</span>}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
