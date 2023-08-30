@@ -1,32 +1,9 @@
+import { CheveronDown } from "@us-gov-cdc/cdc-react-icons";
 import "./Icon.scss";
 
 const Icons = {
-  "chevron-down": (hasBadge?: boolean, className?: string) => (
-    <svg
-      className={className}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none">
-      <path
-        d="M7 10L12 14.5455L17 10"
-        stroke="currentColor"
-        strokeLinecap="round"
-      />
-    </svg>
-  ),
-  "chevron-up": (hasBadge?: boolean, className?: string) => (
-    <svg
-      className={className}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none">
-      <path d="M17 14L12 9L7 14" stroke="currentColor" strokeLinecap="round" />
-    </svg>
-  ),
+  "chevron-down": () => <CheveronDown />,
+  "chevron-up": (hasBadge?: boolean, className?: string) => <CheveronUp />,
   "chevron-double-left": (hasBadge?: boolean, className?: string) => (
     <svg
       className={className}

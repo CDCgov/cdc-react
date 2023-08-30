@@ -4,3 +4,4 @@ export interface IconProps {
 }
 
 export * from "./CheveronDown";
+export * from "./CheveronUp";

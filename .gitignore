@@ -2,3 +2,5 @@ node_modules/
 dist/
 .yarnrc
 docs/
+
+**/yarn-error.log
