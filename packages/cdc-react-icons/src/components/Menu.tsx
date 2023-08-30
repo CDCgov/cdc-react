@@ -1,6 +1,6 @@
 import { IconProps } from ".";
 
-export const CheveronUp = ({ className }: IconProps) => {
+export const Menu = ({ className }: IconProps) => {
   return (
     <svg
       className={className}
@@ -9,7 +9,11 @@ export const CheveronUp = ({ className }: IconProps) => {
       height="24"
       viewBox="0 0 24 24"
       fill="none">
-      <path d="M17 14L12 9L7 14" stroke="currentColor" strokeLinecap="round" />
+      <path
+        d="M5 8H19M5 12H19M5 16H19"
+        stroke="currentColor"
+        strokeLinecap="round"
+      />
     </svg>
   );
 };

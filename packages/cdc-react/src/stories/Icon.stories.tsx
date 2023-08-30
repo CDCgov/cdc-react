@@ -1,9 +1,23 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Icon } from "../components";
+import {
+  CheveronDoubleLeft,
+  CheveronDoubleRight,
+  CheveronDown,
+  CheveronUp,
+  Dashboard,
+  Logout,
+  Menu,
+  Notifications,
+  Process,
+  Quality,
+  Settings,
+  SquareArrowUpRight,
+  Support,
+  User,
+} from "@us-gov-cdc/cdc-react-icons";
 
-const meta: Meta<typeof Icon> = {
+const meta: Meta = {
   title: "Components/Icon",
-  component: Icon,
   parameters: {
     backgrounds: {
       default: "default",
@@ -22,37 +36,24 @@ const meta: Meta<typeof Icon> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof Icon>;
 
-export const all: Story = {
+export const all: StoryObj = {
   render: () => (
     <div>
-      <Icon name="chevron-down" />
-      <Icon name="chevron-up" />
-      <Icon name="chevron-double-left" />
-      <Icon name="chevron-double-right" />
-      <Icon name="dashboard" />
-      <Icon name="logout" />
-      <Icon name="menu" />
-      <Icon name="notifications" />
-      <Icon name="process" />
-      <Icon name="quality" />
-      <Icon name="settings" />
-      <Icon name="squareArrowUpRight" />
-      <Icon name="support" />
-      <Icon name="user" />
+      <CheveronDown />
+      <CheveronUp />
+      <CheveronDoubleLeft />
+      <CheveronDoubleRight />
+      <Dashboard />
+      <Logout />
+      <Menu />
+      <Notifications />
+      <Process />
+      <Quality />
+      <Settings />
+      <SquareArrowUpRight />
+      <Support />
+      <User />
     </div>
   ),
-};
-
-export const cheveronDown: Story = {
-  args: {
-    name: "chevron-down",
-  },
-};
-
-export const cheveronUp: Story = {
-  args: {
-    name: "chevron-up",
-  },
 };
