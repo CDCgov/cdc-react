@@ -83,6 +83,7 @@ export const Sidebar = ({ sections, footer }: SidebarProps) => {
             <div className="menu-footer section">
               {footer.map((section, sectionIndex) => (
                 <SidebarSection
+                  key={sectionIndex}
                   heading={section.heading}
                   items={section.items}
                   hideLabels={isCollapsed}
