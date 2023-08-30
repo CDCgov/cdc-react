@@ -10,6 +10,7 @@ const MAX_MOBILE_WIDTH_PX = 600;
 interface Item {
   icon: IconNames;
   text: string;
+  route: string;
 }
 interface Section {
   heading: string;
@@ -17,8 +18,9 @@ interface Section {
 }
 interface SidebarProps {
   sections: Section[];
+  footer?: Section[];
 }
-export const Sidebar = ({ sections }: SidebarProps) => {
+export const Sidebar = ({ sections, footer }: SidebarProps) => {
   const [isCollapsed, setCollapsed] = useState(true);
 
   // Run before initial render and dom calculation to determine defualt state of sidebar.
@@ -77,15 +79,17 @@ export const Sidebar = ({ sections }: SidebarProps) => {
             </div>
           ))}
 
-          <div className="menu-footer section">
-            <SidebarSection
-              items={[
-                { text: "Support", icon: "support" },
-                { text: "Logout", icon: "logout" },
-              ]}
-              hideLabels={isCollapsed}
-            />
-          </div>
+          {footer ? (
+            <div className="menu-footer section">
+              {footer.map((section, sectionIndex) => (
+                <SidebarSection
+                  heading={section.heading}
+                  items={section.items}
+                  hideLabels={isCollapsed}
+                />
+              ))}
+            </div>
+          ) : null}
         </div>
       </div>
     </div>
