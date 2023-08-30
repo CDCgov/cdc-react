@@ -6,10 +6,10 @@ export interface BadgableIconProps extends IconProps {
   hasBadge?: boolean;
 }
 
-export * from "./CheveronDown";
-export * from "./CheveronUp";
-export * from "./CheveronDoubleLeft";
-export * from "./CheveronDoubleRight";
+export * from "./ChevronDown";
+export * from "./ChevronUp";
+export * from "./ChevronDoubleLeft";
+export * from "./ChevronDoubleRight";
 export * from "./Dashboard";
 export * from "./Logout";
 export * from "./Menu";

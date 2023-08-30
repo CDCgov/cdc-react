@@ -1,19 +1,19 @@
 import { Meta, StoryObj } from "@storybook/react";
 import {
-  CheveronDoubleLeft,
-  CheveronDoubleRight,
-  CheveronDown,
-  CheveronUp,
-  Dashboard,
-  Logout,
-  Menu,
-  Notifications,
-  Process,
-  Quality,
-  Settings,
-  SquareArrowUpRight,
-  Support,
-  User,
+  IconChevronDoubleLeft,
+  IconChevronDoubleRight,
+  IconChevronDown,
+  IconChevronUp,
+  IconDashboard,
+  IconLogout,
+  IconMenu,
+  IconNotifications,
+  IconProcess,
+  IconQuality,
+  IconSettings,
+  IconSquareArrowUpRight,
+  IconSupport,
+  IconUser,
 } from "@us-gov-cdc/cdc-react-icons";
 
 const meta: Meta = {
@@ -40,20 +40,20 @@ export default meta;
 export const all: StoryObj = {
   render: () => (
     <div>
-      <CheveronDown />
-      <CheveronUp />
-      <CheveronDoubleLeft />
-      <CheveronDoubleRight />
-      <Dashboard />
-      <Logout />
-      <Menu />
-      <Notifications />
-      <Process />
-      <Quality />
-      <Settings />
-      <SquareArrowUpRight />
-      <Support />
-      <User />
+      <IconChevronDown />
+      <IconChevronUp />
+      <IconChevronDoubleLeft />
+      <IconChevronDoubleRight />
+      <IconDashboard />
+      <IconLogout />
+      <IconMenu />
+      <IconNotifications />
+      <IconProcess />
+      <IconQuality />
+      <IconSettings />
+      <IconSquareArrowUpRight />
+      <IconSupport />
+      <IconUser />
     </div>
   ),
 };

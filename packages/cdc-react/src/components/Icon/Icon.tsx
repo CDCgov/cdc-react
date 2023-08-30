@@ -1,62 +1,63 @@
 import {
-  CheveronDoubleLeft,
-  CheveronDoubleRight,
-  CheveronDown,
-  CheveronUp,
-  Dashboard,
-  Logout,
-  Menu,
-  Notifications,
-  Process,
-  Quality,
-  Settings,
-  SquareArrowUpRight,
-  User,
+  IconChevronDoubleLeft,
+  IconChevronDoubleRight,
+  IconChevronDown,
+  IconChevronUp,
+  IconDashboard,
+  IconLogout,
+  IconMenu,
+  IconNotifications,
+  IconProcess,
+  IconQuality,
+  IconSettings,
+  IconSquareArrowUpRight,
+  IconSupport,
+  IconUser,
 } from "@us-gov-cdc/cdc-react-icons";
 import "./Icon.scss";
 
 const Icons = {
   "chevron-down": (hasBadge?: boolean, className?: string) => (
-    <CheveronDown className={className} />
+    <IconChevronDown className={className} />
   ),
   "chevron-up": (hasBadge?: boolean, className?: string) => (
-    <CheveronUp className={className} />
+    <IconChevronUp className={className} />
   ),
   "chevron-double-left": (hasBadge?: boolean, className?: string) => (
-    <CheveronDoubleLeft className={className} />
+    <IconChevronDoubleLeft className={className} />
   ),
   "chevron-double-right": (hasBadge?: boolean, className?: string) => (
-    <CheveronDoubleRight className={className} />
+    <IconChevronDoubleRight className={className} />
   ),
   dashboard: (hasBadge?: boolean, className?: string) => (
-    <Dashboard className={className} />
+    <IconDashboard className={className} />
   ),
   logout: (hasBadge?: boolean, className?: string) => (
-    <Logout className={className} />
+    <IconLogout className={className} />
   ),
   menu: (hasBadge?: boolean, className?: string) => (
-    <Menu className={className} />
+    <IconMenu className={className} />
   ),
   notifications: (hasBadge?: boolean, className?: string) => (
-    <Notifications hasBadge={hasBadge} className={className} />
+    <IconNotifications hasBadge={hasBadge} className={className} />
   ),
   process: (hasBadge?: boolean, className?: string) => (
-    <Process className={className} />
+    <IconProcess className={className} />
   ),
   quality: (hasBadge?: boolean, className?: string) => (
-    <Quality className={className} />
+    <IconQuality className={className} />
   ),
   settings: (hasBadge?: boolean, className?: string) => (
-    <Settings className={className} />
+    <IconSettings className={className} />
   ),
   squareArrowUpRight: (hasBadge?: boolean, className?: string) => (
-    <SquareArrowUpRight className={className} />
+    <IconSquareArrowUpRight className={className} />
   ),
   support: (hasBadge?: boolean, className?: string) => (
-    <SquareArrowUpRight className={className} />
+    <IconSupport className={className} />
   ),
   user: (hasBadge?: boolean, className?: string) => (
-    <User className={className} />
+    <IconUser className={className} />
   ),
 } as const;
 
