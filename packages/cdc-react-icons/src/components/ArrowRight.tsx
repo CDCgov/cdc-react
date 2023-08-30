@@ -1,17 +1,17 @@
 import { IconProps } from ".";
 
-export const IconChevronDoubleRight = ({ className }: IconProps) => {
+export const IconArrowRight = ({ className }: IconProps) => {
   return (
     <svg
       className={className}
-      xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
       viewBox="0 0 24 24"
-      fill="none">
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
       <path
-        d="M7 11L12 6L7 1M1 11L6 6L1 1"
-        stroke="currentColor"
+        d="M7 12L17 12M17 12L12.1724 17M17 12L12.1724 7"
+        stroke="#333333"
         strokeLinecap="round"
       />
     </svg>

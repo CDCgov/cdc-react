@@ -5,9 +5,9 @@ export const IconDashboard = ({ className }: IconProps) => {
     <svg
       className={className}
       xmlns="http://www.w3.org/2000/svg"
-      width="20"
-      height="20"
-      viewBox="0 0 20 20"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
       fill="none">
       <path
         d="M8 1H1V8H8V1Z"
