@@ -45,6 +45,15 @@ export const all: StoryObj = {
         <Icons.ChevronDoubleRight />
       </div>
       <div>
+        <Icons.Search />
+        <Icons.Check />
+        <Icons.Close />
+        <Icons.Plus />
+        <Icons.Minus />
+        <Icons.CheckSquare />
+        <Icons.CloseSquare />
+      </div>
+      <div>
         <Icons.SquareArrowUpRight />
         <Icons.Logout />
       </div>
