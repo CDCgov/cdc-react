@@ -1,6 +1,6 @@
 import { IconProps } from ".";
 
-export const IconFilter = ({ className }: IconProps) => {
+export const Filter = ({ className }: IconProps) => {
   return (
     <svg
       className={className}

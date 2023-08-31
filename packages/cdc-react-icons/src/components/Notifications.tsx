@@ -1,9 +1,6 @@
-import { BadgableIconProps } from ".";
+import { IconProps } from ".";
 
-export const IconNotifications = ({
-  hasBadge,
-  className,
-}: BadgableIconProps) => {
+export const Notifications = ({ hasBadge, className }: IconProps) => {
   return (
     <svg
       className={className}

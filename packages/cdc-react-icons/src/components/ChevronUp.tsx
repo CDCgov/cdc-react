@@ -1,6 +1,6 @@
 import { IconProps } from ".";
 
-export const IconChevronUp = ({ className }: IconProps) => {
+export const ChevronUp = ({ className }: IconProps) => {
   return (
     <svg
       className={className}
