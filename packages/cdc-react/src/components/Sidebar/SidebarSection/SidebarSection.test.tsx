@@ -1,7 +1,7 @@
 import { cleanup, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { afterEach } from "vitest";
-import { MemoryRouter } from "react-router-dom";
+import { Link, MemoryRouter } from "react-router-dom";
 import { SidebarSection } from "./SidebarSection";
 
 afterEach(() => {
@@ -15,9 +15,30 @@ describe("Sidebar section component", () => {
         <SidebarSection
           heading="test"
           items={[
-            { icon: "dashboard", text: "Dashboard", route: "dashboard" },
-            { icon: "process", text: "Process Status", route: "/" },
-            { icon: "quality", text: "Quality", route: "/" },
+            {
+              componentType: "a",
+              icon: "dashboard",
+              text: "Dashboard",
+              href: "/dashboard",
+            },
+            {
+              componentType: "a",
+              icon: "process",
+              text: "Process Status",
+              href: "/process-status",
+            },
+            {
+              componentType: "a",
+              icon: "quality",
+              text: "Quality",
+              href: "/quality",
+            },
+            {
+              componentType: Link,
+              icon: "quality",
+              text: "Logout",
+              to: "/logout",
+            },
           ]}
         />
       </MemoryRouter>
@@ -33,5 +54,8 @@ describe("Sidebar section component", () => {
 
     await userEvent.tab();
     expect(document.activeElement).toEqual(anchorElements[2]);
+
+    await userEvent.tab();
+    expect(document.activeElement).toEqual(anchorElements[3]);
   });
 });

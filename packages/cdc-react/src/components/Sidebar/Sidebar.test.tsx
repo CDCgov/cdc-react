@@ -21,7 +21,14 @@ describe("Sidebar component", () => {
           sections={[
             {
               heading: "",
-              items: [{ icon: "logout", text: "Logout", route: "/" }],
+              items: [
+                {
+                  componentType: "a",
+                  icon: "logout",
+                  text: "Logout",
+                  href: "/logout",
+                },
+              ],
             },
           ]}
         />
