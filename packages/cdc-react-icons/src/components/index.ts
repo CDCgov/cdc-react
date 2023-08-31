@@ -25,6 +25,11 @@ import { Settings } from "./Settings";
 import { SquareArrowUpRight } from "./SquareArrowUpRight";
 import { Support } from "./Support";
 import { User } from "./User";
+import { Bolt } from "./Bolt";
+import { Building } from "./Building";
+import { Cube } from "./Cube";
+import { Eye } from "./Eye";
+import { Heart } from "./Heart";
 
 export interface IconProps {
   className?: string;
@@ -36,7 +41,8 @@ export const Icons = {
   ArrowLeft,
   ArrowRight,
   ArrowUp,
-  CloseSquare,
+  Bolt,
+  Building,
   Check,
   CheckSquare,
   ChevronDoubleLeft,
@@ -44,9 +50,13 @@ export const Icons = {
   ChevronDown,
   ChevronUp,
   Close,
+  CloseSquare,
+  Cube,
   Dashboard,
   Dots,
+  Eye,
   Filter,
+  Heart,
   Logout,
   Menu,
   Minus,
@@ -58,6 +68,7 @@ export const Icons = {
   Settings,
   SquareArrowUpRight,
   Support,
+  Swatch,
   User,
 };
 

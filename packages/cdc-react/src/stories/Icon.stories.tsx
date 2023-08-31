@@ -59,6 +59,12 @@ export const all: StoryObj = {
       </div>
       <div>
         <Icons.User />
+        <Icons.Eye />
+        <Icons.Building />
+        <Icons.Cube />
+        <Icons.Heart />
+        <Icons.Swatch />
+        <Icons.Bolt />
         <Icons.Notifications />
       </div>
       <div>
