@@ -1,11 +1,13 @@
 import { Icon, IconNames } from "../../Icon/Icon";
-import { Link } from "react-router-dom";
 import "./SidebarSection.scss";
+import { ComponentType } from "react";
 
 interface Item {
-  icon: IconNames;
-  text: string;
-  route: string;
+  icon?: IconNames;
+  text?: string;
+  componentType: string | ComponentType<any>;
+  children?: React.ReactNode;
+  [key: string]: unknown;
 }
 
 interface SidebarSectionProps {
@@ -19,17 +21,23 @@ export const SidebarSection = ({
   heading,
   hideLabels = false,
 }: SidebarSectionProps) => {
+  // Element Factory
+  const generateNavItem = (item: Item) => {
+    const { componentType: Component, children, icon, text, ...rest } = item;
+    return (
+      <Component {...rest}>
+        {icon && <Icon className={`${icon}-icon icon`} name={icon} />}
+        {text && !hideLabels && <span className="text">{text}</span>}
+        {children}
+      </Component>
+    );
+  };
   return (
     <>
       {heading && !hideLabels && <p className="heading">{heading}</p>}
       <ul>
         {items.map((item, index) => (
-          <li key={`${item.text}${index}`}>
-            <Link to={item.route}>
-              <Icon className={`${item.icon}-icon icon`} name={item.icon} />
-              {!hideLabels && <span className="text">{item.text}</span>}
-            </Link>
-          </li>
+          <li key={`${item.text}${index}`}>{generateNavItem(item)}</li>
         ))}
       </ul>
     </>

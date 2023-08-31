@@ -1,6 +1,6 @@
 import "./Sidebar.scss";
 
-import { useLayoutEffect, useState } from "react";
+import { ComponentType, useLayoutEffect, useState } from "react";
 
 import { Icon, IconNames } from "..";
 import { SidebarSection } from "./SidebarSection/SidebarSection";
@@ -8,12 +8,14 @@ import { SidebarSection } from "./SidebarSection/SidebarSection";
 const MAX_MOBILE_WIDTH_PX = 600;
 
 interface Item {
-  icon: IconNames;
-  text: string;
-  route: string;
+  icon?: IconNames;
+  text?: string;
+  componentType: string | ComponentType<any>;
+  children?: React.ReactNode;
+  [key: string]: unknown;
 }
 interface Section {
-  heading: string;
+  heading: string; // should this property be made optional?
   items: Item[];
 }
 interface SidebarProps {
