@@ -15,7 +15,7 @@ interface Item {
   [key: string]: unknown;
 }
 interface Section {
-  heading: string; // should this property be made optional?
+  heading?: string;
   items: Item[];
 }
 interface SidebarProps {
