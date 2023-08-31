@@ -1,6 +1,5 @@
 import { cleanup, fireEvent, render, screen } from "@testing-library/react";
 import { afterEach } from "vitest";
-import { MemoryRouter } from "react-router-dom";
 import { Sidebar } from "./Sidebar";
 
 afterEach(() => {
@@ -16,23 +15,21 @@ describe("Sidebar component", () => {
 
   it("should show logout button by default", () => {
     render(
-      <MemoryRouter initialEntries={["/"]}>
-        <Sidebar
-          sections={[
-            {
-              heading: "",
-              items: [
-                {
-                  componentType: "a",
-                  icon: "logout",
-                  text: "Logout",
-                  href: "/logout",
-                },
-              ],
-            },
-          ]}
-        />
-      </MemoryRouter>
+      <Sidebar
+        sections={[
+          {
+            heading: "",
+            items: [
+              {
+                componentType: "a",
+                icon: "logout",
+                text: "Logout",
+                href: "/logout",
+              },
+            ],
+          },
+        ]}
+      />
     );
 
     expect(screen.getByText("Logout")).toBeInTheDocument();
