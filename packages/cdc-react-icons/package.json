@@ -1,7 +1,6 @@
 {
   "name": "@us-gov-cdc/cdc-react-icons",
-  "private": true,
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "SVG Icon library for CDC web applications",
   "license": "Apache-2.0",
   "repository": "git@github.com:CDCgov/cdc-react.git",
