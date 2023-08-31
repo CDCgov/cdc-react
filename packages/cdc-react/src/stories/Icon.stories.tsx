@@ -78,6 +78,15 @@ export const all: StoryObj = {
         <Icons.CloudArrowUp />
       </div>
       <div>
+        <Icons.TrafficCone />
+        <Icons.HandPointArcs />
+        <Icons.House />
+        <Icons.Lock />
+        <Icons.LockShield />
+        <Icons.SpeechBubble />
+        <Icons.QuestionMarkCircle />
+      </div>
+      <div>
         <Icons.Dashboard />
       </div>
       <div>

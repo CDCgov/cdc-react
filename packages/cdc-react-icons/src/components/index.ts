@@ -37,6 +37,12 @@ import { CloudArrowDown } from "./CloudArrowDown";
 import { CloudArrowUp } from "./CloudArrowUp";
 import { Meter } from "./Meter";
 import { Target } from "./Target";
+import { HandPointArcs } from "./HandPointArcs";
+import { House } from "./House";
+import { LockShield } from "./LockShield";
+import { QuestionMarkCircle } from "./QuestionMarkCircle";
+import { SpeechBubble } from "./SpeechBubble";
+import { TrafficCone } from "./TrafficCone";
 
 export interface IconProps {
   className?: string;
@@ -67,7 +73,11 @@ export const Icons = {
   Dots,
   Eye,
   Filter,
+  HandPointArcs,
   Heart,
+  House,
+  Lock,
+  LockShield,
   Logout,
   Menu,
   Meter,
@@ -76,12 +86,15 @@ export const Icons = {
   Plus,
   Process,
   Quality,
+  QuestionMarkCircle,
   Search,
   Settings,
+  SpeechBubble,
   SquareArrowUpRight,
   Support,
   Swatch,
   Target,
+  TrafficCone,
   User,
 };
 
