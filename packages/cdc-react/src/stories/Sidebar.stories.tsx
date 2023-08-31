@@ -21,20 +21,20 @@ export const Example: Story = {
         heading: "Insights",
         items: [
           {
-            icon: "dashboard",
-            text: "Dashboard",
             componentType: "a",
+            icon: <Icons.Dashboard />,
+            text: "Dashboard",
             href: "/",
           },
           {
             componentType: "a",
-            icon: "process",
+            icon: <Icons.Process />,
             text: "Process Status",
             href: "/",
           },
           {
             componentType: "a",
-            icon: "quality",
+            icon: <Icons.Quality />,
             text: "Quality",
             href: "/",
           },
@@ -45,7 +45,7 @@ export const Example: Story = {
         items: [
           {
             componentType: "a",
-            icon: "user",
+            icon: <Icons.User />,
             text: "Manage Users",
             href: "/",
           },
@@ -58,13 +58,13 @@ export const Example: Story = {
         items: [
           {
             componentType: "a",
-            icon: "support",
+            icon: <Icons.Support />,
             text: "Support",
             href: "/support",
           },
           {
             componentType: "a",
-            icon: "logout",
+            icon: <Icons.Logout />,
             text: "Logout",
             href: "/logout",
           },
