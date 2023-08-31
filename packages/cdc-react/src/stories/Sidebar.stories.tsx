@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { MemoryRouter } from "react-router-dom";
+import { Link, MemoryRouter } from "react-router-dom";
 import { Sidebar } from "../components";
 
 const meta: Meta<typeof Sidebar> = {
@@ -25,22 +25,45 @@ export const Example: Story = {
       {
         heading: "Insights",
         items: [
-          { icon: "dashboard", text: "Dashboard", route: "/" },
-          { icon: "process", text: "Process Status", route: "/" },
-          { icon: "quality", text: "Quality", route: "/" },
+          {
+            icon: "dashboard",
+            text: "Dashboard",
+            componentType: "a",
+            href: "https://google.com",
+            target: "_blank",
+            className: "anchor-dashboard",
+          },
+          {
+            componentType: "button",
+            icon: "process",
+            text: "Process Status",
+            route: "/",
+          },
+          {
+            text: "routing-link",
+            target: "_self",
+            componentType: Link,
+            to: "/sample",
+          },
         ],
-      },
-      {
-        heading: "Admin Tasks",
-        items: [{ icon: "user", text: "Manage Users", route: "/" }],
       },
     ],
     footer: [
       {
         heading: "",
         items: [
-          { icon: "support", text: "Support", route: "/support" },
-          { icon: "logout", text: "Logout", route: "/logout" },
+          {
+            componentType: "a",
+            icon: "support",
+            text: "Support",
+            href: "/support",
+          },
+          {
+            componentType: "a",
+            icon: "logout",
+            text: "Logout",
+            href: "/logout",
+          },
         ],
       },
     ],
