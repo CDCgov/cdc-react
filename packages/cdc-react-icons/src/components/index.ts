@@ -31,6 +31,12 @@ import { Cube } from "./Cube";
 import { Eye } from "./Eye";
 import { Heart } from "./Heart";
 import { Swatch } from "./Swatch";
+import { Calendar } from "./Calendar";
+import { Cloud } from "./Cloud";
+import { CloudArrowDown } from "./CloudArrowDown";
+import { CloudArrowUp } from "./CloudArrowUp";
+import { Meter } from "./Meter";
+import { Target } from "./Target";
 
 export interface IconProps {
   className?: string;
@@ -44,6 +50,7 @@ export const Icons = {
   ArrowUp,
   Bolt,
   Building,
+  Calendar,
   Check,
   CheckSquare,
   ChevronDoubleLeft,
@@ -52,6 +59,9 @@ export const Icons = {
   ChevronUp,
   Close,
   CloseSquare,
+  Cloud,
+  CloudArrowDown,
+  CloudArrowUp,
   Cube,
   Dashboard,
   Dots,
@@ -60,6 +70,7 @@ export const Icons = {
   Heart,
   Logout,
   Menu,
+  Meter,
   Minus,
   Notifications,
   Plus,
@@ -70,6 +81,7 @@ export const Icons = {
   SquareArrowUpRight,
   Support,
   Swatch,
+  Target,
   User,
 };
 
