@@ -1,18 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Link, MemoryRouter } from "react-router-dom";
 import { Sidebar } from "../components";
 
 const meta: Meta<typeof Sidebar> = {
   title: "Components/Sidebar",
   component: Sidebar,
   argTypes: {},
-  decorators: [
-    (Story) => (
-      <MemoryRouter initialEntries={["/"]}>
-        <Story />
-      </MemoryRouter>
-    ),
-  ],
+  decorators: [(Story) => <Story />],
 };
 
 export default meta;
@@ -29,21 +22,30 @@ export const Example: Story = {
             icon: "dashboard",
             text: "Dashboard",
             componentType: "a",
-            href: "https://google.com",
-            target: "_blank",
-            className: "anchor-dashboard",
+            href: "/",
           },
           {
-            componentType: "button",
+            componentType: "a",
             icon: "process",
             text: "Process Status",
-            route: "/",
+            href: "/",
           },
           {
-            text: "routing-link",
-            target: "_self",
-            componentType: Link,
-            to: "/sample",
+            componentType: "a",
+            icon: "quality",
+            text: "Quality",
+            href: "/",
+          },
+        ],
+      },
+      {
+        heading: "Admin Tasks",
+        items: [
+          {
+            componentType: "a",
+            icon: "user",
+            text: "Manage Users",
+            href: "/",
           },
         ],
       },
