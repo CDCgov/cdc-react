@@ -30,6 +30,7 @@ import { Building } from "./Building";
 import { Cube } from "./Cube";
 import { Eye } from "./Eye";
 import { Heart } from "./Heart";
+import { Swatch } from "./Swatch";
 
 export interface IconProps {
   className?: string;
