@@ -1,6 +1,6 @@
 import "./Sidebar.scss";
 
-import { ComponentType, useLayoutEffect, useState } from "react";
+import { ElementType, useLayoutEffect, useState } from "react";
 
 import { Icon, IconNames } from "..";
 import { SidebarSection } from "./SidebarSection/SidebarSection";
@@ -10,7 +10,7 @@ const MAX_MOBILE_WIDTH_PX = 600;
 interface Item {
   icon?: IconNames;
   text?: string;
-  componentType: string | ComponentType<any>;
+  componentType: string | ElementType;
   children?: React.ReactNode;
   [key: string]: unknown;
 }

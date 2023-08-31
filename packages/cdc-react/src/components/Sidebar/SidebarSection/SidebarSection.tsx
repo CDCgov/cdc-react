@@ -1,11 +1,11 @@
 import { Icon, IconNames } from "../../Icon/Icon";
 import "./SidebarSection.scss";
-import { ComponentType } from "react";
+import { ElementType } from "react";
 
 interface Item {
   icon?: IconNames;
   text?: string;
-  componentType: string | ComponentType<any>;
+  componentType: string | ElementType;
   children?: React.ReactNode;
   [key: string]: unknown;
 }
