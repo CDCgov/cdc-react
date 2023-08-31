@@ -13,9 +13,30 @@ describe("Sidebar section component", () => {
       <SidebarSection
         heading="test"
         items={[
-          { icon: "dashboard", text: "Dashboard" },
-          { icon: "process", text: "Process Status" },
-          { icon: "quality", text: "Quality" },
+          {
+            componentType: "a",
+            icon: "dashboard",
+            text: "Dashboard",
+            href: "/dashboard",
+          },
+          {
+            componentType: "a",
+            icon: "process",
+            text: "Process Status",
+            href: "/process-status",
+          },
+          {
+            componentType: "a",
+            icon: "quality",
+            text: "Quality",
+            href: "/quality",
+          },
+          {
+            componentType: "a",
+            icon: "logout",
+            text: "Logout",
+            href: "/logout",
+          },
         ]}
       />
     );
@@ -30,5 +51,8 @@ describe("Sidebar section component", () => {
 
     await userEvent.tab();
     expect(document.activeElement).toEqual(anchorElements[2]);
+
+    await userEvent.tab();
+    expect(document.activeElement).toEqual(anchorElements[3]);
   });
 });

@@ -1,6 +1,6 @@
 import "./Sidebar.scss";
 
-import { useLayoutEffect, useState } from "react";
+import { ElementType, useLayoutEffect, useState } from "react";
 
 import { Icon, IconNames } from "..";
 import { SidebarSection } from "./SidebarSection/SidebarSection";
@@ -8,17 +8,21 @@ import { SidebarSection } from "./SidebarSection/SidebarSection";
 const MAX_MOBILE_WIDTH_PX = 600;
 
 interface Item {
-  icon: IconNames;
-  text: string;
+  icon?: IconNames;
+  text?: string;
+  componentType: string | ElementType;
+  children?: React.ReactNode;
+  [key: string]: unknown;
 }
 interface Section {
-  heading: string;
+  heading?: string;
   items: Item[];
 }
 interface SidebarProps {
   sections: Section[];
+  footer?: Section[];
 }
-export const Sidebar = ({ sections }: SidebarProps) => {
+export const Sidebar = ({ sections, footer }: SidebarProps) => {
   const [isCollapsed, setCollapsed] = useState(true);
 
   // Run before initial render and dom calculation to determine defualt state of sidebar.
@@ -77,15 +81,18 @@ export const Sidebar = ({ sections }: SidebarProps) => {
             </div>
           ))}
 
-          <div className="menu-footer section">
-            <SidebarSection
-              items={[
-                { text: "Support", icon: "support" },
-                { text: "Logout", icon: "logout" },
-              ]}
-              hideLabels={isCollapsed}
-            />
-          </div>
+          {footer ? (
+            <div className="menu-footer section">
+              {footer.map((section, sectionIndex) => (
+                <SidebarSection
+                  key={sectionIndex}
+                  heading={section.heading}
+                  items={section.items}
+                  hideLabels={isCollapsed}
+                />
+              ))}
+            </div>
+          ) : null}
         </div>
       </div>
     </div>

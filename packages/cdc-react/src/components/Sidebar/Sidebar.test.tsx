@@ -14,7 +14,23 @@ describe("Sidebar component", () => {
   });
 
   it("should show logout button by default", () => {
-    render(<Sidebar sections={[]} />);
+    render(
+      <Sidebar
+        sections={[
+          {
+            heading: "",
+            items: [
+              {
+                componentType: "a",
+                icon: "logout",
+                text: "Logout",
+                href: "/logout",
+              },
+            ],
+          },
+        ]}
+      />
+    );
 
     expect(screen.getByText("Logout")).toBeInTheDocument();
   });
