@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { Button } from "../components";
+import { Icons } from "@us-gov-cdc/cdc-react-icons";
 
 const meta: Meta<typeof Button> = {
   title: "Components/Button",
@@ -184,7 +185,7 @@ export const inverseUnstyledButtonDisabled: Story = {
 export const iconOnlyButton: Story = {
   args: {
     ariaLabel: "User button",
-    iconName: "user",
+    icon: <Icons.User />,
     iconOnly: true,
   },
 };
@@ -192,7 +193,7 @@ export const iconOnlyButton: Story = {
 export const buttonWithIconLeft: Story = {
   args: {
     ariaLabel: "Quality page navigation button",
-    iconName: "quality",
+    icon: <Icons.Quality />,
     iconPosition: "left",
     children: <span>Quality</span>,
   },
@@ -201,7 +202,7 @@ export const buttonWithIconLeft: Story = {
 export const buttonWithIconRight: Story = {
   args: {
     ariaLabel: "Process data button",
-    iconName: "process",
+    icon: <Icons.Process />,
     iconPosition: "right",
     children: <span>Process</span>,
   },

@@ -3,6 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { MenuItemType, PopupMenuItemType } from "../@types";
 
 import { ProfileHeader, ProfileHeaderLogo } from "../components";
+import { Icons } from "@us-gov-cdc/cdc-react-icons";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta: Meta<typeof ProfileHeader> = {
@@ -20,13 +21,13 @@ const logo = <ProfileHeaderLogo classNames={["logo"]} />;
 const menuItems: MenuItemType[] = [
   {
     badgeCount: 5,
-    icon: "notifications",
+    icon: <Icons.Notifications hasBadge={true} />,
     className: "hide-on-mobile",
     srText: "Notifications button",
   },
   {
     badgeCount: 0,
-    icon: "settings",
+    icon: <Icons.Settings />,
     className: "hide-on-mobile",
     srText: "Settings button",
   },
@@ -34,25 +35,25 @@ const menuItems: MenuItemType[] = [
 
 const userProfilePopupMenuItems: PopupMenuItemType[] = [
   {
-    icon: "user",
+    icon: <Icons.User />,
     iconPosition: "left",
     text: "Your Profile",
     badgeCount: 0,
   },
   {
-    icon: "notifications",
+    icon: <Icons.Notifications hasBadge={true} />,
     iconPosition: "left",
     text: "Notifications",
     badgeCount: 1,
   },
   {
-    icon: "settings",
+    icon: <Icons.Settings />,
     iconPosition: "left",
     text: "Settings",
     badgeCount: 0,
   },
   {
-    icon: "logout",
+    icon: <Icons.Logout />,
     iconPosition: "left",
     text: "Logout",
     badgeCount: 0,

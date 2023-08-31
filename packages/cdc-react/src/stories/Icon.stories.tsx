@@ -1,26 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import {
-  IconArrowDown,
-  IconArrowLeft,
-  IconArrowRight,
-  IconArrowUp,
-  IconChevronDoubleLeft,
-  IconChevronDoubleRight,
-  IconChevronDown,
-  IconChevronUp,
-  IconDashboard,
-  IconDots,
-  IconFilter,
-  IconLogout,
-  IconMenu,
-  IconNotifications,
-  IconProcess,
-  IconQuality,
-  IconSettings,
-  IconSquareArrowUpRight,
-  IconSupport,
-  IconUser,
-} from "@us-gov-cdc/cdc-react-icons";
+import { Icons } from "@us-gov-cdc/cdc-react-icons";
 
 const meta: Meta = {
   title: "Components/Icon",
@@ -47,44 +26,44 @@ export const all: StoryObj = {
   render: () => (
     <div>
       <div>
-        <IconMenu />
-        <IconDots />
-        <IconFilter />
+        <Icons.Menu />
+        <Icons.Dots />
+        <Icons.Filter />
       </div>
       <div>
-        <IconArrowLeft />
-        <IconArrowRight />
-        <IconArrowUp />
-        <IconArrowDown />
+        <Icons.ArrowLeft />
+        <Icons.ArrowRight />
+        <Icons.ArrowUp />
+        <Icons.ArrowDown />
       </div>
       <div>
-        <IconChevronDown />
-        <IconChevronUp />
+        <Icons.ChevronDown />
+        <Icons.ChevronUp />
       </div>
       <div>
-        <IconChevronDoubleLeft />
-        <IconChevronDoubleRight />
+        <Icons.ChevronDoubleLeft />
+        <Icons.ChevronDoubleRight />
       </div>
       <div>
-        <IconSquareArrowUpRight />
-        <IconLogout />
+        <Icons.SquareArrowUpRight />
+        <Icons.Logout />
       </div>
       <div>
-        <IconUser />
-        <IconNotifications />
+        <Icons.User />
+        <Icons.Notifications />
       </div>
       <div>
-        <IconDashboard />
+        <Icons.Dashboard />
       </div>
       <div>
-        <IconSettings />
-        <IconQuality />
+        <Icons.Settings />
+        <Icons.Quality />
       </div>
       <div>
-        <IconSupport />
+        <Icons.Support />
       </div>
       <div>
-        <IconProcess />
+        <Icons.Process />
       </div>
     </div>
   ),

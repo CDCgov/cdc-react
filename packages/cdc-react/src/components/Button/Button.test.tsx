@@ -1,5 +1,6 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import { Button } from "./Button";
+import { Icons } from "@us-gov-cdc/cdc-react-icons";
 
 describe("Button component", () => {
   it("should render a button with the specified text", () => {
@@ -29,7 +30,7 @@ describe("Button component", () => {
       <Button
         ariaLabel="test button"
         iconOnly={true}
-        iconName="settings"
+        icon={<Icons.Settings />}
         className={className}
       />
     );
@@ -49,7 +50,7 @@ describe("Button component", () => {
       <Button
         ariaLabel={ariaLabel}
         iconOnly={true}
-        iconName="user"
+        icon={<Icons.User />}
         className={className}
       />
     );

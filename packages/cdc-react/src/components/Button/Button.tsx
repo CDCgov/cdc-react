@@ -12,8 +12,6 @@ import {
 
 import { MouseEventHandler } from "react";
 
-import { Icon, IconNames } from "../Icon/Icon";
-
 interface ButtonProps {
   children?: React.ReactNode;
   onClick?: MouseEventHandler<HTMLDivElement> | undefined;
@@ -26,10 +24,9 @@ interface ButtonProps {
   readonly color?: ButtonPrimaryColorTypes | ButtonTertiaryColorTypes;
   readonly state?: ButtonStateTypes;
   readonly inverse?: boolean;
-  readonly iconName?: IconNames;
+  readonly icon?: React.ReactNode;
   readonly iconPosition?: ButtonIconPositionTypes;
   readonly iconOnly?: boolean;
-  readonly iconHasBadge?: boolean;
 }
 
 export const Button = ({
@@ -41,10 +38,9 @@ export const Button = ({
   color,
   state,
   inverse,
-  iconName,
+  icon,
   iconPosition,
   iconOnly,
-  iconHasBadge,
   className,
   id,
   ariaLabel,
@@ -81,8 +77,8 @@ export const Button = ({
     classes += ` inverse`;
   }
 
-  if (iconName !== undefined) {
-    classes += ` has-icon ${iconName}`;
+  if (icon !== undefined) {
+    classes += ` has-icon`;
   }
 
   if (iconPosition !== undefined) {
@@ -106,25 +102,9 @@ export const Button = ({
         id={id}
         className={classes}
         disabled={disabled}>
-        {iconName && iconPosition === "left" && (
-          <Icon name={iconName} className="left-icon" hasBadge={iconHasBadge} />
-        )}
-        {iconOnly !== true
-          ? children
-          : iconName && (
-              <Icon
-                name={iconName}
-                className="center"
-                hasBadge={iconHasBadge}
-              />
-            )}
-        {iconName && iconPosition === "right" && (
-          <Icon
-            name={iconName}
-            className="right-icon"
-            hasBadge={iconHasBadge}
-          />
-        )}
+        {icon && iconPosition === "left" && icon}
+        {iconOnly !== true ? children : icon}
+        {icon && iconPosition === "right" && icon}
       </button>
     </div>
   );

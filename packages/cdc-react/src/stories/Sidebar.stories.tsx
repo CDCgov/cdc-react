@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
+
 import { Sidebar } from "../components";
+import { Icons } from "@us-gov-cdc/cdc-react-icons";
 
 const meta: Meta<typeof Sidebar> = {
   title: "Components/Sidebar",
