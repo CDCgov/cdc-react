@@ -84,16 +84,19 @@ export const all: StoryObj = {
         <Icons.Lock />
         <Icons.LockShield />
         <Icons.SpeechBubble />
-        <Icons.QuestionMarkCircle />
-      </div>
-      <div>
-        <Icons.Dashboard />
-      </div>
-      <div>
         <Icons.Support />
       </div>
       <div>
+        <Icons.Dashboard />
+        <Icons.PageLayout />
+      </div>
+      <div>
+        <Icons.Folder />
+        <Icons.PaperLines />
+      </div>
+      <div>
         <Icons.Process />
+        <Icons.BarGraph />
       </div>
     </div>
   ),

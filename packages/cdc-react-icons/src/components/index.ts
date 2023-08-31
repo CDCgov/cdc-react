@@ -40,9 +40,13 @@ import { Target } from "./Target";
 import { HandPointArcs } from "./HandPointArcs";
 import { House } from "./House";
 import { LockShield } from "./LockShield";
-import { QuestionMarkCircle } from "./QuestionMarkCircle";
+import { Lock } from "./Lock";
 import { SpeechBubble } from "./SpeechBubble";
 import { TrafficCone } from "./TrafficCone";
+import { BarGraph } from "./BarGraph";
+import { Folder } from "./Folder";
+import { PageLayout } from "./PageLayout";
+import { PaperLines } from "./PaperLines";
 
 export interface IconProps {
   className?: string;
@@ -54,6 +58,7 @@ export const Icons = {
   ArrowLeft,
   ArrowRight,
   ArrowUp,
+  BarGraph,
   Bolt,
   Building,
   Calendar,
@@ -73,6 +78,7 @@ export const Icons = {
   Dots,
   Eye,
   Filter,
+  Folder,
   HandPointArcs,
   Heart,
   House,
@@ -83,10 +89,11 @@ export const Icons = {
   Meter,
   Minus,
   Notifications,
+  PageLayout,
+  PaperLines,
   Plus,
   Process,
   Quality,
-  QuestionMarkCircle,
   Search,
   Settings,
   SpeechBubble,
