@@ -1,4 +1,4 @@
-import { IconProps } from ".";
+import { IconProps } from "./Icons";
 
 export const Lock = ({ className }: IconProps) => {
   return (

@@ -1,4 +1,4 @@
-import { IconProps } from ".";
+import { IconProps } from "./Icons";
 
 export const ChevronDoubleLeft = ({ className }: IconProps) => {
   return (
