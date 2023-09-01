@@ -29,21 +29,19 @@ jobs:
         with:
           node-version: 18
           cache: "npm"
-
       - name: Install dependencies
         run: yarn
-
+      - name: Build Icons
+        working-directory: packages/cdc-react-icons
+        run: yarn build
       - name: Build StorybookJS
-        run: |
-          yarn build-storybook
-
+        run: yarn build-storybook
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
           path: "packages/cdc-react/docs"
-
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
