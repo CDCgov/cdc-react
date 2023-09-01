@@ -24,6 +24,6 @@ jobs:
           node-version: 18
           cache: "npm"
       - name: Install dependencies
-        run: yarn
+        run: ls
       - name: ESLint
         run: yarn lint
