@@ -1,0 +1,29 @@
+name: "PR Check Icons - Code Format"
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - packages/cdc-react-icons/**
+    
+      
+defaults:
+  run:
+    working-directory: packages/cdc-react-icons
+
+jobs:
+  unit-test:
+    name: "Run Prettier"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: "npm"
+      - name: Install dependencies
+        run: yarn
+      - name: Prettier
+        run: yarn format:check
