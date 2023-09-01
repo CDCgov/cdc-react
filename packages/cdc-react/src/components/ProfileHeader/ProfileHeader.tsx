@@ -1,7 +1,5 @@
 import "./ProfileHeader.scss";
-
 import { MenuItemType, PopupMenuItemType } from "../../@types";
-
 import { ProfileHeaderMenuItem } from "./ProfileHeaderMenuItem/ProfileHeaderMenuItem";
 import { ProfileHeaderUserProfileMenuItem } from "./ProfileHeaderUserProfileMenuItem/ProfileHeaderUserProfileMenuItem";
 
@@ -33,7 +31,6 @@ export const ProfileHeader = ({
                 key={`profile-header-menu-item-${index}`}
                 className={`profile-header-menu-item profile-header-menu-item${index} ${menuItem.className}`}
                 icon={menuItem.icon}
-                badgeCount={menuItem.badgeCount}
                 onClick={menuItem.onClick}
                 srText={menuItem.srText}
               />
