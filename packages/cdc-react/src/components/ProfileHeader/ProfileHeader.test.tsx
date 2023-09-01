@@ -1,8 +1,7 @@
 import { render, screen } from "@testing-library/react";
-
 import { MenuItemType, PopupMenuItemType } from "../../@types";
-
 import { ProfileHeader, ProfileHeaderLogo } from "../";
+import { Icons } from "@us-gov-cdc/cdc-react-icons";
 
 describe("ProfileHeader component", () => {
   it("should render some buttons", () => {
@@ -12,19 +11,19 @@ describe("ProfileHeader component", () => {
     const menuItems: MenuItemType[] = [
       {
         badgeCount: 5,
-        icon: "notifications",
+        icon: <Icons.Notifications />,
         className: "hide-on-mobile",
         srText: "Notifications button",
       },
       {
         badgeCount: 0,
-        icon: "settings",
+        icon: <Icons.Settings />,
         className: "hide-on-mobile",
         srText: "Settings button",
       },
       {
         badgeCount: 0,
-        icon: "user",
+        icon: <Icons.User />,
         className: "user-profile",
         srText: "User profile button",
       },
@@ -32,28 +31,28 @@ describe("ProfileHeader component", () => {
 
     const popupMenuItems: PopupMenuItemType[] = [
       {
-        icon: "user",
+        icon: <Icons.User />,
         iconPosition: "left",
         text: "Your Profile",
         onClick: undefined,
         badgeCount: 0,
       },
       {
-        icon: "notifications",
+        icon: <Icons.Notifications />,
         iconPosition: "left",
         text: "Notifications",
         onClick: undefined,
         badgeCount: 1,
       },
       {
-        icon: "settings",
+        icon: <Icons.Settings />,
         iconPosition: "left",
         text: "Settings",
         onClick: undefined,
         badgeCount: 0,
       },
       {
-        icon: "logout",
+        icon: <Icons.Logout />,
         iconPosition: "left",
         text: "Logout",
         onClick: undefined,

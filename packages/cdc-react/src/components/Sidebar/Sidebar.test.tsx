@@ -1,6 +1,7 @@
 import { cleanup, fireEvent, render, screen } from "@testing-library/react";
 import { afterEach } from "vitest";
 import { Sidebar } from "./Sidebar";
+import { Icons } from "@us-gov-cdc/cdc-react-icons";
 
 afterEach(() => {
   cleanup();
@@ -22,7 +23,7 @@ describe("Sidebar component", () => {
             items: [
               {
                 componentType: "a",
-                icon: "logout",
+                icon: <Icons.Logout />,
                 text: "Logout",
                 href: "/logout",
               },
