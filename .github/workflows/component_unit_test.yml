@@ -7,11 +7,6 @@ on:
     paths:
       - packages/cdc-react/**
     
-      
-defaults:
-  run:
-    working-directory: packages/cdc-react
-
 jobs:
   unit-test:
     name: "Run Vitest"
@@ -25,5 +20,8 @@ jobs:
           cache: "npm"
       - name: Install dependencies
         run: yarn
+      - name: Build Icons
+        run: yarn build:cdc-react-icons
       - name: Vitest
+        working-directory: packages/cdc-react
         run: yarn test
