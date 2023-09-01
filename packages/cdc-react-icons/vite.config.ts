@@ -12,7 +12,7 @@ export default defineConfig({
   ],
   build: {
     lib: {
-      entry: path.resolve(__dirname, "src/components/index.ts"),
+      entry: path.resolve(__dirname, "src/index.ts"),
       name: "CDCReactIcons",
       formats: ["es", "umd"],
       fileName: (format) => `cdc-react-icons.${format}.js`,
