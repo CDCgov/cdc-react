@@ -54,6 +54,6 @@
   },
   "dependencies": {
     "@uswds/uswds": "^3.5.0",
-    "@us-gov-cdc/cdc-react-icons": "^1.0.4"
+    "@us-gov-cdc/cdc-react-icons": "^1.0.5"
   }
 }
