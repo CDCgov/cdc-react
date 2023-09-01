@@ -1,5 +1,4 @@
 import { MouseEventHandler } from "react";
-import { IconNames } from "../components/Icon/Icon";
 
 export type GlobalEventHandlerType =
   | ((this: GlobalEventHandlers, ev: Event) => unknown)
@@ -10,7 +9,7 @@ const IconPositions = ["left", "right"] as const;
 export type IconPositionsTypes = (typeof IconPositions)[number];
 
 export interface MenuItemType {
-  icon: IconNames;
+  icon: React.ReactNode;
   badgeCount: number;
   srText: string;
   className?: string;
@@ -18,7 +17,7 @@ export interface MenuItemType {
 }
 
 export interface PopupMenuItemType {
-  icon: IconNames;
+  icon: React.ReactNode;
   iconPosition: IconPositionsTypes;
   text: string;
   badgeCount: number;

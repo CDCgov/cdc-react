@@ -1,11 +1,8 @@
 import "./ProfileHeaderUserProfileMenuItem.scss";
-
 import { PopupMenuItemType } from "../../../@types";
-
 import { useEffect, useRef, useState } from "react";
-
-import { Icon } from "../../Icon/Icon";
 import { ProfileHeaderPopupMenuItem } from "../ProfileHeaderPopupMenuItem/ProfileHeaderPopupMenuItem";
+import { Icons } from "@us-gov-cdc/cdc-react-icons";
 
 export interface ProfileHeaderUserProfileMenuItemProps {
   className?: string;
@@ -115,10 +112,11 @@ export const ProfileHeaderUserProfileMenuItem = ({
           stroke="#ddd">
           <circle cx="20" cy="20" r="20"></circle>
         </svg>
-        <Icon
-          name={popupOpen ? "chevron-up" : "chevron-down"}
-          className={popupOpen ? "chevron-up" : "chevron-down"}
-        />
+        {popupOpen ? (
+          <Icons.ChevronUp className="chevron-up" />
+        ) : (
+          <Icons.ChevronDown className="chevron-down" />
+        )}
       </button>
 
       <div

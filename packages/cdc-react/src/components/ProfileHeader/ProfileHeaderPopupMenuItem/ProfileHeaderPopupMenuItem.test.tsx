@@ -9,7 +9,6 @@ describe("ProfileHeaderPopupMenuItem component", () => {
         tabIndex={1}
         focused={true}
         badgeCount={0}
-        icon="chevron-double-left"
         iconPosition="left"
         text="Test"
         className="profile-header-popup-menu-item"

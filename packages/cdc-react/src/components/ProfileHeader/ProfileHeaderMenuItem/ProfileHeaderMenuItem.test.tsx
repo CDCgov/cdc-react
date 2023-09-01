@@ -6,13 +6,7 @@ describe("ProfileHeaderMenuItem component", () => {
   it("should render a profile header menu item with inner text", () => {
     const classNames = ["profile-header-menu-item"];
 
-    const { container } = render(
-      <ProfileHeaderMenuItem
-        badgeCount={0}
-        icon="chevron-double-left"
-        srText="Go left"
-      />
-    );
+    const { container } = render(<ProfileHeaderMenuItem srText="Go left" />);
 
     const menuItem = container.getElementsByClassName(classNames[0])[0];
 

@@ -1,11 +1,10 @@
-import { Icon, IconNames } from "../../Icon/Icon";
 import "./SidebarSection.scss";
 import { ElementType } from "react";
 
 interface Item {
-  icon?: IconNames;
-  text?: string;
   componentType: string | ElementType;
+  text?: string;
+  icon?: React.ReactNode;
   children?: React.ReactNode;
   [key: string]: unknown;
 }
@@ -26,7 +25,7 @@ export const SidebarSection = ({
     const { componentType: Component, children, icon, text, ...rest } = item;
     return (
       <Component {...rest}>
-        {icon && <Icon className={`${icon}-icon icon`} name={icon} />}
+        {icon}
         {text && !hideLabels && <span className="text">{text}</span>}
         {children}
       </Component>

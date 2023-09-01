@@ -1,6 +1,35 @@
 {
   "name": "@us-gov-cdc/cdc-react-icons",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "SVG Icon library for CDC web applications",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "repository": "git@github.com:CDCgov/cdc-react.git",
+  "author": "cfarmer <cfarmer@fearless.tech>",
+  "main": "./dist/cdc-react-icons.umd.js",
+  "module": "./dist/cdc-react-icons.es.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "lint": "npx eslint --ext .ts,.tsx ./src",
+    "format:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx,css,scss,json,md}\"",
+    "format:write": "prettier \"src/**/*.{js,jsx,ts,tsx,css,scss,json,md}\" --write",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@vitejs/plugin-react": "^4.0.4",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5",
+    "vite-plugin-dts": "^3.5.3"
+  }
 }

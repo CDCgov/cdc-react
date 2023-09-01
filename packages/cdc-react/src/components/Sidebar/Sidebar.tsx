@@ -1,16 +1,14 @@
 import "./Sidebar.scss";
-
 import { ElementType, useLayoutEffect, useState } from "react";
-
-import { Icon, IconNames } from "..";
 import { SidebarSection } from "./SidebarSection/SidebarSection";
+import { Icons } from "@us-gov-cdc/cdc-react-icons";
 
 const MAX_MOBILE_WIDTH_PX = 600;
 
 interface Item {
-  icon?: IconNames;
-  text?: string;
   componentType: string | ElementType;
+  icon?: React.ReactNode;
+  text?: string;
   children?: React.ReactNode;
   [key: string]: unknown;
 }
@@ -50,23 +48,14 @@ export const Sidebar = ({ sections, footer }: SidebarProps) => {
               className="usa-button usa-button--outline usa-button--inverse"
               onClick={toggleVisibility}
               aria-label="toggle">
-              <Icon className="menu" name="menu" />
-              <Icon
-                className="chevron-double-left-mobile"
-                name="chevron-double-left"
-              />
+              <Icons.Menu className="menu" />
+              <Icons.ChevronDoubleLeft className="chevron-double-left-mobile" />
 
               {!isCollapsed ? (
-                <Icon
-                  className="chevron-double-left"
-                  name="chevron-double-left"
-                />
+                <Icons.ChevronDoubleLeft className="chevron-double-left" />
               ) : (
                 <>
-                  <Icon
-                    className="chevron-double-right"
-                    name="chevron-double-right"
-                  />
+                  <Icons.ChevronDoubleRight className="chevron-double-right" />
                 </>
               )}
             </button>

@@ -2,19 +2,15 @@ import "./ProfileHeaderMenuItem.scss";
 
 import { MouseEventHandler } from "react";
 
-import { Icon, IconNames } from "../../Icon/Icon";
-
 interface ProfileHeaderMenuItemProps {
-  icon: IconNames;
-  badgeCount: number;
   srText: string;
+  icon?: React.ReactNode;
   className?: string;
   onClick?: MouseEventHandler<HTMLButtonElement> | undefined;
 }
 
 export const ProfileHeaderMenuItem = ({
   icon,
-  badgeCount,
   srText,
   className,
   onClick,
@@ -27,7 +23,7 @@ export const ProfileHeaderMenuItem = ({
         tabIndex={0}
         className={`profile-header-menu-item ${className}`}
         onClick={onClick}>
-        <Icon name={icon} hasBadge={badgeCount > 0} />
+        {icon}
       </button>
     </>
   );

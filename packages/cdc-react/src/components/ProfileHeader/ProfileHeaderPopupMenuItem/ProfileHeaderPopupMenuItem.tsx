@@ -1,29 +1,25 @@
 import "./ProfileHeaderPopupMenuItem.scss";
-
 import { IconPositionsTypes } from "../../../@types";
-
-import { Icon, IconNames } from "../../Icon/Icon";
-
 import { MouseEventHandler } from "react";
 
 interface ProfileHeaderPopupMenuItemProps {
-  icon: IconNames;
   iconPosition: IconPositionsTypes;
   text: string;
   badgeCount: number;
   tabIndex: number;
   focused: boolean;
+  icon?: React.ReactNode;
   className?: string;
   onClick?: MouseEventHandler<HTMLButtonElement> | undefined;
 }
 
 export const ProfileHeaderPopupMenuItem = ({
-  icon,
   iconPosition,
   text,
   badgeCount,
   tabIndex,
   focused,
+  icon,
   className,
   onClick,
 }: ProfileHeaderPopupMenuItemProps & JSX.IntrinsicElements["button"]) => {
@@ -34,11 +30,11 @@ export const ProfileHeaderPopupMenuItem = ({
       className={`${className} profile-header-popup-menu-item`}
       onClick={onClick}>
       <span className="profile-header-popup-menu-item-left">
-        {iconPosition === "left" ? <Icon name={icon} /> : <></>}
+        {iconPosition === "left" ? icon : <></>}
       </span>
       <span className="profile-header-popup-menu-item-center">{text}</span>
       {iconPosition === "right" ? (
-        <Icon name={icon} />
+        icon
       ) : badgeCount > 0 ? (
         <span className="profile-header-popup-menu-item-right">
           <svg
