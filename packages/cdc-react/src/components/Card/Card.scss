@@ -1,0 +1,76 @@
+@import "../../scss/global.scss";
+
+.card-wrapper {
+  border-radius: 0.4rem;
+  border: 0.1rem solid $gray-light;
+  overflow: hidden;
+  font-family: $font-family;
+  color: #1b1b1b;
+
+  .card-content {
+    border-top: 0.3rem solid $main-theme;
+    font-family: $font-family;
+
+    .card-header {
+      background: $main-theme-lighter;
+      padding: 0.47059rem 1.05882rem;
+      font-size: $font-size-h4;
+      font-style: normal;
+      font-weight: $font-weight-medium;
+      line-height: 120%;
+    }
+    .card-body {
+      font-style: normal;
+      font-weight: $font-weight-regular;
+
+      .card-section-title {
+        padding: 1.41rem 1.41rem 0.47rem 1.41rem;
+        font-size: $font-size-h5;
+        line-height: 120%;
+        font-weight: $font-weight-regular;
+      }
+      .card-section-media {
+        padding: 0rem 1.41rem 1.41rem 1.41rem;
+      }
+      .card-section-media.media-fill {
+        padding: 0;
+      }
+      .card-section-text {
+        padding: 0.47rem 1.41rem;
+        margin-bottom: 1.41rem;
+        span {
+          font-size: $font-size-base;
+          font-weight: $font-weight-regular;
+          line-height: 120%;
+        }
+      }
+      .card-section-footer {
+        padding: 0.47rem 1.41rem 1.41rem 1.41rem;
+      }
+    }
+    .card-body.horizontal {
+      display: flex;
+      flex-direction: column;
+      .card-section-media,
+      .card-body-content {
+        width: 100%;
+      }
+    }
+    .card-body.vertical-left {
+      display: flex;
+      flex-direction: row;
+      .card-section-media,
+      .card-body-content {
+        flex: 1;
+      }
+    }
+    .card-body.vertical-right {
+      display: flex;
+      flex-direction: row-reverse;
+      .card-section-media,
+      .card-body-content {
+        flex: 1;
+      }
+    }
+  }
+}
