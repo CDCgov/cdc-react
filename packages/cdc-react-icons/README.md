@@ -21,3 +21,5 @@ function MyApp() {
   )
 }
 ```
+
+See the [Storybook Icon Page](https://cdcgov.github.io/cdc-react/?path=/story/components-icon--all) for a list of all icons and their names.
