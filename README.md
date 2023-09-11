@@ -13,13 +13,23 @@ This table maps the souce code for each package within this monorepo to the loca
 | CDC React       | Library for CDC-styled ReactJS components.                                    | packages/cdc-react       | [@us-gov-cdc/cdc-react](https://www.npmjs.com/package/@us-gov-cdc/cdc-react)             |
 | CDC React Icons | Icon library for CDC-styled icons, packaged as individual ReactJS components. | packages/cdc-react-icons | [@us-gov-cdc/cdc-react-icons](https://www.npmjs.com/package/@us-gov-cdc/cdc-react-icons) |
 
+## Development Environment Setup
+
+Download and install the following software in order to develop and build packages from source:
+
+1. NodeJS latest LTS
+2. Yarn is the main package manager for this monorepo. After installing NodeJS and NPM, install Yarn globally with `npm install -g yarn`.
+3. Install all package dependencies by running `yarn install` at the root level.
+
+**Note: Because this project uses Yarn Workspaces, each package and the root will get a `node_modules` directory. Common dependencies will be placed in the root level `node_modules` directory, and package specific dependencies will get installed in the `node_modules` directory under the package specific's directory.**
+
 ## Running Storybook
 
 This project uses Storybook to create a sandbox environment for its components. You can run the Storybook instance with the command `yarn storybook`.
 
-## Running Unit Tests
+## Linting and Code Style
 
-This project uses Vitest to run unit tests against its components and utilties. Run unit tests with the command `yarn test`.
+All packages use ESLint and Prettier to enforce lint and code formatting rules. You can run `yarn lint` at the root level to run ESLint on all source code files across all packages, or at the package level to scan files for a specific package. This also applies to code style checks, which can be run with `yarn format:check`.
 
 ## Contributing
 
