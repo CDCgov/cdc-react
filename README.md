@@ -31,6 +31,20 @@ This project uses Storybook to create a sandbox environment for its components. 
 
 All packages use ESLint and Prettier to enforce lint and code formatting rules. You can run `yarn lint` at the root level to run ESLint on all source code files across all packages, or at the package level to scan files for a specific package. This also applies to code style checks, which can be run with `yarn format:check`.
 
+## Building a Package
+
+Each package will have a build script that will be defined in their espected `package.json` file. This script will typically envolve running the TypeScript compiler against the typescript code, and performing any JS minifying and bundling steps. Vite is used here to take care of this process.
+
+To build a package, you can run `yarn build:<package name>` at the root level, or `yarn build` at the package level.
+
+## Publishing a Package
+
+Every package within this monorepo is published to a separate package on NPM. To publish a package, you will first need to create an NPM account and be added to the `us-goc-cdc` NPM organization. Next, you need to update the version of the package within the package's `package.json` file, as NPM does not allow previous versions to be overwritten.
+
+Finally, you can perform a manual publish by running `npm publish` at the package level. This command will upload all files and directories listed in the `files` property of the package's `package.json`. This is typically everything in the `dist` directory.
+
+**Note: A CI/CD process will be built in the near-future to automate this publishing process. Once it is complete, it should be the main mechanism for publishing a package. Manual publishing should only be done if the CI/CD pipeline is not usable.**
+
 ## Contributing
 
 If you are external to the CDC and would like to contribute, please fork this repo and propose changes via a Pull Request against the main branch of the upstream repo.
