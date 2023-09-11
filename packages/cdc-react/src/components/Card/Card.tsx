@@ -1,14 +1,18 @@
+import { ButtonIconPositionTypes, ButtonVariationsTypes } from "src/@types";
 import { Button } from "../Button/Button";
 import "./Card.scss";
-
 interface CardProps {
   cardLayout: "horizontal" | "vertical-left" | "vertical-right";
-  showTitleTop?: boolean; // only works for horizontal layout
-  cardSectionText?: string;
-  cardAction: string; // cannot be optional according to the design system
+  showTitleTop?: boolean;
+  cardAction: string;
   cardMediaSource?: string;
   cardHeader?: string;
   cardSectionTitle?: string;
+  actionButtonVariation?: ButtonVariationsTypes;
+  actionButtonText?: string;
+  actionButtonIcon?: React.ReactNode;
+  actionButtonIconPosition?: ButtonIconPositionTypes;
+  children: React.ReactNode;
 }
 
 export const Card = (props: CardProps) => {
@@ -36,11 +40,15 @@ export const Card = (props: CardProps) => {
             {!props.showTitleTop && (
               <div className="card-section-title">{props.cardSectionTitle}</div>
             )}
-            <div className="card-section-text">
-              <span>{props.cardSectionText}</span>
-            </div>
+            <div className="card-section-text">{props.children}</div>
             <div className="card-section-footer">
-              <Button ariaLabel="action">Action</Button>
+              <Button
+                ariaLabel={props.actionButtonText || "action"}
+                variation={props.actionButtonVariation}
+                icon={props.actionButtonIcon}
+                iconPosition={props.actionButtonIconPosition}>
+                {props.actionButtonText}
+              </Button>
             </div>
           </div>
         </div>

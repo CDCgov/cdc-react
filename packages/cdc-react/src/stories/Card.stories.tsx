@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { Card } from "../components/Card/Card";
+import { Icons } from "@us-gov-cdc/cdc-react-icons";
 
 const meta: Meta<typeof Card> = {
   title: "Components/Card",
@@ -13,11 +14,27 @@ type Story = StoryObj<typeof Card>;
 export const Example: Story = {
   args: {
     cardLayout: "horizontal",
+    cardMediaSource:
+      "https://images.unsplash.com/photo-1517135071804-3d5fb6c45486?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c25vdyUyMGJyaWRnZSUyMHBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D",
     showTitleTop: false,
-    cardSectionText:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     cardAction: "Action",
     cardHeader: "Card Header",
     cardSectionTitle: "Section Title",
+    actionButtonVariation: "text",
+    actionButtonText: "Click to filter",
+    actionButtonIcon: <Icons.Filter />,
+    actionButtonIconPosition: "left",
+    children: (
+      <>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <p>
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat.
+        </p>
+      </>
+    ),
   },
 };

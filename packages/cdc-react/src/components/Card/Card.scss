@@ -13,7 +13,7 @@
 
     .card-header {
       background: $main-theme-lighter;
-      padding: 0.47059rem 1.05882rem;
+      padding: 0.47rem 1.05rem;
       font-size: $font-size-h4;
       font-style: normal;
       font-weight: $font-weight-medium;
@@ -38,6 +38,7 @@
       .card-section-text {
         padding: 0.47rem 1.41rem;
         margin-bottom: 1.41rem;
+        p,
         span {
           font-size: $font-size-base;
           font-weight: $font-weight-regular;
