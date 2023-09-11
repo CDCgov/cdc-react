@@ -2,12 +2,12 @@ import { ButtonIconPositionTypes, ButtonVariationsTypes } from "src/@types";
 import { Button } from "../Button/Button";
 import "./Card.scss";
 interface CardProps {
-  cardLayout: "horizontal" | "vertical-left" | "vertical-right";
+  layout: "horizontal" | "vertical-left" | "vertical-right";
+  action: string;
+  mediaSource?: string;
+  header?: string;
+  sectionTitle?: string;
   showTitleTop?: boolean;
-  cardAction: string;
-  cardMediaSource?: string;
-  cardHeader?: string;
-  cardSectionTitle?: string;
   actionButtonVariation?: ButtonVariationsTypes;
   actionButtonText?: string;
   actionButtonIcon?: React.ReactNode;
@@ -19,26 +19,22 @@ export const Card = (props: CardProps) => {
   return (
     <div className="card-wrapper">
       <div className="card-content">
-        {props.cardHeader && (
-          <div className="card-header">{props.cardHeader}</div>
-        )}
-        <div className={`card-body ${props.cardLayout}`}>
-          {props.cardLayout === "horizontal" && props.showTitleTop && (
-            <div className="card-section-title">{props.cardSectionTitle}</div>
+        {props.header && <div className="card-header">{props.header}</div>}
+        <div className={`card-body ${props.layout}`}>
+          {props.layout === "horizontal" && props.showTitleTop && (
+            <div className="card-section-title">{props.sectionTitle}</div>
           )}
-
           <div
             className={`card-section-media ${
               props.showTitleTop ? "" : "media-fill"
             }`}>
-            {props.cardMediaSource && (
-              <img src={props.cardMediaSource} alt={props.cardSectionTitle} />
+            {props.mediaSource && (
+              <img src={props.mediaSource} alt={props.sectionTitle} />
             )}
           </div>
-
           <div className="card-body-content">
             {!props.showTitleTop && (
-              <div className="card-section-title">{props.cardSectionTitle}</div>
+              <div className="card-section-title">{props.sectionTitle}</div>
             )}
             <div className="card-section-text">{props.children}</div>
             <div className="card-section-footer">
