@@ -7,7 +7,7 @@ interface CardProps {
   mediaSource?: string;
   header?: string;
   sectionTitle?: string;
-  showTitleTop?: boolean;
+  setMediaBanner?: boolean; // only works for horizontal layout
   actionButtonVariation?: ButtonVariationsTypes;
   actionButtonText?: string;
   actionButtonIcon?: React.ReactNode;
@@ -21,19 +21,19 @@ export const Card = (props: CardProps) => {
       <div className="card-content">
         {props.header && <div className="card-header">{props.header}</div>}
         <div className={`card-body ${props.layout}`}>
-          {props.layout === "horizontal" && props.showTitleTop && (
+          {props.layout === "horizontal" && !props.setMediaBanner && (
             <div className="card-section-title">{props.sectionTitle}</div>
           )}
           <div
             className={`card-section-media ${
-              props.showTitleTop ? "" : "media-fill"
+              !props.setMediaBanner ? "" : "media-fill"
             }`}>
             {props.mediaSource && (
               <img src={props.mediaSource} alt={props.sectionTitle} />
             )}
           </div>
           <div className="card-body-content">
-            {!props.showTitleTop && (
+            {props.setMediaBanner && (
               <div className="card-section-title">{props.sectionTitle}</div>
             )}
             <div className="card-section-body">{props.children}</div>
