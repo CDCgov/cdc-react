@@ -16,7 +16,6 @@ export const Example: Story = {
     layout: "horizontal",
     mediaSource:
       "https://images.unsplash.com/photo-1517135071804-3d5fb6c45486?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c25vdyUyMGJyaWRnZSUyMHBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D",
-    action: "Action",
     header: "Card Header",
     sectionTitle: "Section Title",
     showTitleTop: false,
