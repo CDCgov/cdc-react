@@ -1,9 +1,9 @@
 import { ButtonIconPositionTypes, ButtonVariationsTypes } from "src/@types";
 import { Button } from "../Button/Button";
 import "./Card.scss";
+
 interface CardProps {
   layout: "horizontal" | "vertical-left" | "vertical-right";
-  action: string;
   mediaSource?: string;
   header?: string;
   sectionTitle?: string;
@@ -36,7 +36,7 @@ export const Card = (props: CardProps) => {
             {!props.showTitleTop && (
               <div className="card-section-title">{props.sectionTitle}</div>
             )}
-            <div className="card-section-text">{props.children}</div>
+            <div className="card-section-body">{props.children}</div>
             <div className="card-section-footer">
               <Button
                 ariaLabel={props.actionButtonText || "action"}
