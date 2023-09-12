@@ -1,7 +1,6 @@
 {
-  "name": "storybook",
+  "name": "@us-gov-cdc/cdc-react-storybook",
   "version": "1.0.0",
-  "main": "index.js",
   "private": true,
   "scripts": {
     "storybook": "storybook dev -p 6006",
