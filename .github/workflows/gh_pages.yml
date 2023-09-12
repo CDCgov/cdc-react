@@ -12,7 +12,7 @@ permissions:
 
 defaults:
   run:
-    working-directory: packages/cdc-react
+    working-directory: packages/storybook
 
 jobs:
   storybook:
@@ -31,9 +31,6 @@ jobs:
           cache: "npm"
       - name: Install dependencies
         run: yarn
-      - name: Build Icons
-        working-directory: packages/cdc-react-icons
-        run: yarn build
       - name: Build StorybookJS
         run: yarn build-storybook
       - name: Setup Pages
