@@ -1,0 +1,23 @@
+name: "Publish CDC React Components to NPM"
+
+on:
+  push:
+    tags:
+      - cdc-react_*
+
+defaults:
+  run:
+    working-directory: packages/cdc-react
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set release version
+        run: |
+          tag=${GITHUB_REF#refs/*/}
+          OLDIFS="$IFS"
+          IFS='_' tokens=( $tag )
+          echo "RELEASE_VERSION=${tokens[1]}" >> $GITHUB_ENV
+          IFS="$OLDIFS"
