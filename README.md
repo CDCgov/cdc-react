@@ -1,22 +1,49 @@
-# CDC React Component Library
+# CDC React Design System
 
-This is a React component library for official CDC sites. At its core, it uses the official USWDS styles. It is written in TypeScript and built with Vite.
+This is a monorepo for the official CDC Design System catered for ReactJS applications. The overall goal of this project is to create open source, reusable components and libraries to be used across all ReactJS-based web applications built for the CDC.
 
 **General disclaimer** This repository was created for use by CDC programs to collaborate on public health related projects in support of the [CDC mission](https://www.cdc.gov/about/organization/mission.htm). GitHub is not hosted by the CDC, but is a third party website used by CDC and its partners to share information and collaborate on software. CDC use of GitHub does not imply an endorsement of any one particular service, product, or enterprise.
 
-## Setup
+## Packages
 
-1. Install the latest version of Node.js.
-2. Install the Yarn package manager globally by running the command `npm install -g yarn`.
-3. In the root of the project, run the command `yarn install` to install all project dependencies.
+This table maps the souce code for each package within this monorepo to the location where it is published to:
+
+| Package         | Description                                                                   | Source code location     | NPM Page                                                                                 |
+| --------------- | ----------------------------------------------------------------------------- | ------------------------ | ---------------------------------------------------------------------------------------- |
+| CDC React       | Library for CDC-styled ReactJS components.                                    | packages/cdc-react       | [@us-gov-cdc/cdc-react](https://www.npmjs.com/package/@us-gov-cdc/cdc-react)             |
+| CDC React Icons | Icon library for CDC-styled icons, packaged as individual ReactJS components. | packages/cdc-react-icons | [@us-gov-cdc/cdc-react-icons](https://www.npmjs.com/package/@us-gov-cdc/cdc-react-icons) |
+
+## Development Environment Setup
+
+Download and install the following software in order to develop and build packages from source:
+
+1. NodeJS latest LTS
+2. Yarn is the main package manager for this monorepo. After installing NodeJS and NPM, install Yarn globally with `npm install -g yarn`.
+3. Install all package dependencies by running `yarn install` at the root level.
+
+**Note: Because this project uses Yarn Workspaces, each package and the root will get a `node_modules` directory. Common dependencies will be placed in the root level `node_modules` directory, and package specific dependencies will get installed in the `node_modules` directory under the package specific's directory.**
 
 ## Running Storybook
 
 This project uses Storybook to create a sandbox environment for its components. You can run the Storybook instance with the command `yarn storybook`.
 
-## Running Unit Tests
+## Linting and Code Style
 
-This project uses Vitest to run unit tests against its components and utilties. Run unit tests with the command `yarn test`.
+All packages use ESLint and Prettier to enforce lint and code formatting rules. You can run `yarn lint` at the root level to run ESLint on all source code files across all packages, or at the package level to scan files for a specific package. This also applies to code style checks, which can be run with `yarn format:check`.
+
+## Building a Package
+
+Each package will have a build script that will be defined in their espected `package.json` file. This script will typically envolve running the TypeScript compiler against the typescript code, and performing any JS minifying and bundling steps. Vite is used here to take care of this process.
+
+To build a package, you can run `yarn build:<package name>` at the root level, or `yarn build` at the package level.
+
+## Publishing a Package
+
+Every package within this monorepo is published to a separate package on NPM. To publish a package, you will first need to create an NPM account and be added to the `us-goc-cdc` NPM organization. Next, you need to update the version of the package within the package's `package.json` file, as NPM does not allow previous versions to be overwritten.
+
+Finally, you can perform a manual publish by running `npm publish` at the package level. This command will upload all files and directories listed in the `files` property of the package's `package.json`. This is typically everything in the `dist` directory.
+
+**Note: A CI/CD process will be built in the near-future to automate this publishing process. Once it is complete, it should be the main mechanism for publishing a package. Manual publishing should only be done if the CI/CD pipeline is not usable.**
 
 ## Contributing
 
