@@ -1,8 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-
-import { MenuItemType, PopupMenuItemType } from "../@types";
-
-import { ProfileHeader, ProfileHeaderLogo } from "../components";
+import { ProfileHeader, ProfileHeaderLogo } from "@us-gov-cdc/cdc-react";
 import { Icons } from "@us-gov-cdc/cdc-react-icons";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction

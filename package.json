@@ -10,13 +10,14 @@
     "test:cdc-react": "yarn workspace @us-gov-cdc/cdc-react vitest",
     "build:cdc-react": "yarn workspace @us-gov-cdc/cdc-react vite build",
     "build:cdc-react-icons": "yarn workspace @us-gov-cdc/cdc-react-icons vite build",
-    "storybook": "yarn workspace @us-gov-cdc/cdc-react storybook"
+    "storybook": "yarn workspace @us-gov-cdc/cdc-react-storybook storybook"
   },
   "repository": "git@github.com:CDCgov/cdc-react.git",
   "author": "cfarmer <cfarmer@fearless.tech>",
   "private": true,
   "workspaces": [
     "packages/cdc-react",
-    "packages/cdc-react-icons"
+    "packages/cdc-react-icons",
+    "packages/storybook"
   ]
 }
