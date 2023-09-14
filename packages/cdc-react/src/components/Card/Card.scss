@@ -12,13 +12,31 @@
     font-family: $font-family;
 
     .card-header {
-      background: $main-theme-lighter;
+      background: $main-theme;
+      color: #fff;
       padding: 0.47rem 1.05rem;
       font-size: $font-size-h4;
       font-style: normal;
       font-weight: $font-weight-medium;
       line-height: 120%;
+
+      &.theme-dark {
+        background-color: $main-theme-dark;
+        color: #fff;
+      }
+      &.theme-darker {
+        background-color: $main-theme-darker;
+      }
+      &.theme-light {
+        background-color: $main-theme-light;
+        color: $gray-darker;
+      }
+      &.theme-lighter {
+        background-color: $main-theme-lighter;
+        color: $gray-darker;
+      }
     }
+
     .card-body {
       font-style: normal;
       font-weight: $font-weight-regular;
