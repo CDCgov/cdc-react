@@ -25,4 +25,4 @@ jobs:
       - name: Publish to NPM
         run: yarn npm publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.CDC_REACT_NPM_TOKEN }}
