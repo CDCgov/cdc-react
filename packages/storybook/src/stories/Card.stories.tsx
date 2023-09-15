@@ -1,11 +1,12 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Card } from "../components/Card/Card";
+import { Card } from "../../../cdc-react/src/components/Card/Card";
 import { Icons } from "@us-gov-cdc/cdc-react-icons";
+import { action } from "@storybook/addon-actions";
 
 const meta: Meta<typeof Card> = {
   title: "Components/Card",
   component: Card,
-  argTypes: {},
+  argTypes: { actionButtonOnClick: { action: "clicked" } },
 };
 
 export default meta;
@@ -17,12 +18,14 @@ export const Example: Story = {
     mediaSource:
       "https://images.unsplash.com/photo-1517135071804-3d5fb6c45486?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c25vdyUyMGJyaWRnZSUyMHBlcnNvbnxlbnwwfHwwfHx8MA%3D%3D",
     header: "Card Header",
+    headerTheme: "lighter",
     sectionTitle: "Section Title",
     setMediaBanner: true,
     actionButtonVariation: "text",
     actionButtonText: "Click to filter",
     actionButtonIcon: <Icons.Filter />,
     actionButtonIconPosition: "left",
+    actionButtonOnClick: action("button-click"),
     children: (
       <>
         <p>

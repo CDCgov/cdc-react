@@ -8,3 +8,4 @@ export * from "./ProfileHeader/ProfileHeaderPopupMenuItem/ProfileHeaderPopupMenu
 export * from "./ProfileHeader/ProfileHeaderUserProfileMenuItem/ProfileHeaderUserProfileMenuItem";
 export * from "./Button/Button";
 export * from "./Divider/Divider";
+export * from "./Card/Card";
