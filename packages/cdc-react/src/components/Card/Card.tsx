@@ -7,7 +7,7 @@ interface CardProps {
   layout: "horizontal" | "vertical-left" | "vertical-right";
   mediaSource?: string;
   header?: string;
-  headerTheme?: string;
+  headerTheme?: "default" | "dark" | "darker" | "light" | "lighter";
   sectionTitle?: string;
   setMediaBanner?: boolean; // only works for horizontal layout
   actionButtonVariation?: ButtonVariationsTypes;
