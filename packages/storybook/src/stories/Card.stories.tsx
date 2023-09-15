@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Card } from "@us-gov-cdc/cdc-react";
+import { Card } from "../../../cdc-react/src/components/Card/Card";
 import { Icons } from "@us-gov-cdc/cdc-react-icons";
 import { action } from "@storybook/addon-actions";
 
