@@ -1,6 +1,6 @@
 {
   "name": "@us-gov-cdc/cdc-react-icons",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "SVG Icon library for CDC web applications",
   "license": "Apache-2.0",
   "repository": "git@github.com:CDCgov/cdc-react.git",
@@ -9,7 +9,8 @@
   "module": "./dist/cdc-react-icons.es.js",
   "types": "./dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "README.md"
   ],
   "scripts": {
     "lint": "npx eslint --ext .ts,.tsx ./src",
