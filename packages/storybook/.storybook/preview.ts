@@ -1,7 +1,7 @@
 import type { Preview } from "@storybook/react";
 
 import "../src/stories/storybook.css";
-import "@us-gov-cdc/cdc-react/dist/style.css";
+// import "@us-gov-cdc/cdc-react/dist/style.css";
 
 const preview: Preview = {
   parameters: {
