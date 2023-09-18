@@ -21,6 +21,6 @@
     "storybook": "^7.4.1"
   },
   "dependencies": {
-    "@us-gov-cdc/cdc-react": "^0.4.4"
+    "@us-gov-cdc/cdc-react": "^0.5.0"
   }
 }

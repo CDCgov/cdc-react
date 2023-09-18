@@ -23,6 +23,20 @@ describe("Button component", () => {
     expect(didGetCalled).toBeTruthy();
   });
 
+  it("should execute onClick callback when enter key pressed", () => {
+    const clickHandler = () => undefined;
+
+    render(
+      <Button ariaLabel="test button" onClick={clickHandler}>
+        test button
+      </Button>
+    );
+    const btn = screen.getByText("test button");
+    btn.focus();
+    fireEvent.keyDown(btn, { key: "Enter", code: "Enter", charCode: 13 });
+    expect(clickHandler).toHaveBeenCalled;
+  });
+
   it("should have an icon svg", () => {
     const className = "settings-btn";
 
