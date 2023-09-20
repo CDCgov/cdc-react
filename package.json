@@ -4,11 +4,14 @@
   "description": "Parent project for the CDC Web Design System",
   "homepage": "https://CDCGov.github.io/cdc-react",
   "scripts": {
-    "lint": "npx eslint --ext .ts,.tsx ./src",
-    "format:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx,css,scss,json,md}\"",
-    "format:write": "prettier \"src/**/*.{js,jsx,ts,tsx,css,scss,json,md}\" --write",
+    "format:check:cdc-react": "yarn workspace @us-gov-cdc/cdc-react format:check",
+    "format:write:cdc-react": "yarn workspace @us-gov-cdc/cdc-react format:write",
+    "format:check:cdc-react-icons": "yarn workspace @us-gov-cdc/cdc-react-icons format:check",
+    "format:write:cdc-react-icons": "yarn workspace @us-gov-cdc/cdc-react-icons format:write",
+    "lint:cdc-react": "yarn workspace @us-gov-cdc/cdc-react lint",
+    "lint:cdc-react-icons": "yarn workspace @us-gov-cdc/cdc-react-icons lint",
     "test:cdc-react": "yarn workspace @us-gov-cdc/cdc-react vitest",
-    "build:cdc-react": "yarn workspace @us-gov-cdc/cdc-react vite build",
+    "build:cdc-react": "yarn workspace @us-gov-cdc/cdc-react vite build && cp -r packages/cdc-react/dist/src/@types packages/cdc-react/dist/",
     "build:cdc-react-icons": "yarn workspace @us-gov-cdc/cdc-react-icons vite build",
     "storybook": "yarn workspace @us-gov-cdc/cdc-react-storybook storybook"
   },

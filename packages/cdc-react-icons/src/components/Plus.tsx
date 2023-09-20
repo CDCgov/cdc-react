@@ -11,7 +11,7 @@ export const Plus = ({ className }: IconProps) => {
       xmlns="http://www.w3.org/2000/svg">
       <path
         d="M12 5V12M12 12V19M12 12H19M12 12H5"
-        stroke="#333333"
+        stroke="currentColor"
         strokeLinecap="round"
       />
     </svg>

@@ -6,6 +6,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 
     &.default {
       min-width: 5.5rem;
@@ -64,12 +65,13 @@
             border-color: #ffffff;
           }
 
-          &.disabled {
+          &.disabled,
+          &:disabled {
             background-color: $gray-dark;
             border-radius: 0.15rem;
             border: solid 0.15rem $gray-dark;
             color: #3e3e3e;
-            pointer-events: none;
+            cursor: not-allowed;
           }
         }
 
@@ -91,12 +93,13 @@
           border-color: $main-theme-darker;
         }
 
-        &.disabled {
+        &.disabled,
+        &:disabled {
           background-color: $gray-light;
           border-radius: 0.2rem;
           border: solid 0.15rem $gray-light;
           color: #ffffff;
-          pointer-events: none;
+          cursor: not-allowed;
         }
 
         &.blue {
@@ -171,12 +174,13 @@
           background-color: #e8e4e4e7;
         }
 
-        &.disabled {
+        &.disabled,
+        &:disabled {
           background-color: transparent;
           border-radius: 0.2rem;
           border: solid 0.15rem transparent;
           color: $gray-light;
-          pointer-events: none;
+          cursor: not-allowed;
         }
 
         &.inverse {
@@ -205,11 +209,12 @@
             background-color: transparent;
           }
 
-          &.disabled {
+          &.disabled,
+          &:disabled {
             border-color: $gray-dark;
             color: $gray-dark;
             background-color: transparent;
-            pointer-events: none;
+            cursor: not-allowed;
           }
         }
 
@@ -297,12 +302,13 @@
           background-color: #ebebeb;
         }
 
-        &.disabled {
+        &.disabled,
+        &:disabled {
           background-color: transparent;
           border-radius: 0.2rem;
           border: solid 0.15rem transparent;
           color: $gray-light;
-          pointer-events: none;
+          cursor: not-allowed;
         }
 
         &.inverse {
@@ -328,11 +334,12 @@
             color: $main-theme-light;
           }
 
-          &.disabled {
+          &.disabled,
+          &:disabled {
             background-color: transparent;
             border-color: transparent;
             color: $gray-dark;
-            pointer-events: none;
+            cursor: not-allowed;
           }
         }
 
@@ -403,11 +410,12 @@
           background-color: transparent;
         }
 
-        &.disabled {
+        &.disabled,
+        &:disabled {
           color: $gray-light;
           background-color: transparent;
           border: solid 0.15rem transparent;
-          pointer-events: none;
+          cursor: not-allowed;
         }
 
         &.inverse {
@@ -436,9 +444,10 @@
             background-color: transparent;
           }
 
-          &.disabled {
+          &.disabled,
+          &:disabled {
             color: $gray-dark;
-            pointer-events: none;
+            cursor: not-allowed;
           }
         }
 

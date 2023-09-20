@@ -13,7 +13,7 @@ export const House = ({ className }: IconProps) => {
         fillRule="evenodd"
         clipRule="evenodd"
         d="M10.5 20V15H13.5V20H19V13H22L12 3L2 13H5V20H10.5Z"
-        stroke="#333333"
+        stroke="currentColor"
         strokeLinejoin="round"
       />
     </svg>
