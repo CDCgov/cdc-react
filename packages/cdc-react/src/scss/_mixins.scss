@@ -18,8 +18,8 @@
   }
 
   &.disabled {
-    background-color: $disabled-clr !important;
-    border: solid 0.2rem $disabled-clr !important;
+    background-color: $disabled-clr;
+    border: solid 0.2rem $disabled-clr;
     border-radius: $border-radius;
     color: #3e3e3e;
     pointer-events: none;

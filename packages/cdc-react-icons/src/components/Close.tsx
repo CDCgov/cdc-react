@@ -9,7 +9,11 @@ export const Close = ({ className }: IconProps) => {
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg">
-      <path d="M7 7L17 17M17 7L7 17" stroke="#333333" strokeLinecap="round" />
+      <path
+        d="M7 7L17 17M17 7L7 17"
+        stroke="currentColor"
+        strokeLinecap="round"
+      />
     </svg>
   );
 };

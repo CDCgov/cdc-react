@@ -11,19 +11,19 @@ export const PageLayout = ({ className }: IconProps) => {
       xmlns="http://www.w3.org/2000/svg">
       <path
         d="M21 3H3V7.5H21V3Z"
-        stroke="#333333"
+        stroke="currentColor"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M21 10.5H10.5V21H21V10.5Z"
-        stroke="#333333"
+        stroke="currentColor"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M7.5 10.5H3V21H7.5V10.5Z"
-        stroke="#333333"
+        stroke="currentColor"
         strokeLinecap="round"
         strokeLinejoin="round"
       />

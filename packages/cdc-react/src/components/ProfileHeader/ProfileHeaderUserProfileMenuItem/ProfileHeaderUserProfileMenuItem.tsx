@@ -72,9 +72,8 @@ export const ProfileHeaderUserProfileMenuItem = ({
 
   const handleEnter = (e: KeyboardEvent) => {
     if (e.key === "Enter") {
-      const button: HTMLButtonElement | undefined =
-        document?.activeElement?.getElementsByTagName("button")[0];
-      button?.click();
+      const button: HTMLButtonElement | null | EventTarget = e.target;
+      (button as HTMLButtonElement).getElementsByTagName("button")[0]?.click();
     }
   };
 

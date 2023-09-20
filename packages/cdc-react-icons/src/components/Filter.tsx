@@ -11,7 +11,7 @@ export const Filter = ({ className }: IconProps) => {
       xmlns="http://www.w3.org/2000/svg">
       <path
         d="M5 8H19M8 12H16M11 16H13"
-        stroke="#333333"
+        stroke="currentColor"
         strokeLinecap="round"
       />
     </svg>

@@ -9,7 +9,6 @@
 
     li:hover {
       background-color: #00407a;
-      cursor: pointer;
     }
 
     li a {
@@ -20,6 +19,7 @@
       color: inherit;
       padding: 0.94rem 1.4rem;
       font-size: 0.7rem;
+      cursor: pointer;
 
       .text {
         margin-left: 0.7rem;
