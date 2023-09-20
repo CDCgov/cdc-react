@@ -130,4 +130,29 @@ describe("ProfileHeaderUserProfileMenuItem component", () => {
 
     expect(popupWrap)!.toBeVisible();
   });
+
+  it(`should open popup menu on Enter keyDown of user profile button`, async () => {
+    const user = userEvent.setup();
+
+    render(
+      <ProfileHeaderUserProfileMenuItem
+        key={`profile-header-menu-item-0`}
+        userProfilePopupMenuItems={popupMenuItems}
+        className="test-class-name"
+      />
+    );
+
+    const userProfileButton = screen.getByText("User profile button");
+
+    expect(userProfileButton).toBeInTheDocument();
+
+    userProfileButton.focus();
+
+    const popupMenuItem = screen.getByText("Notifications").parentElement;
+    const popupWrap = popupMenuItem?.parentElement?.parentElement;
+
+    await user.keyboard("[Enter]");
+
+    expect(popupWrap).toBeVisible();
+  });
 });
