@@ -160,7 +160,7 @@
   }
 }
 
-@mixin create-btn-color-classes($palette) {
+@mixin create-button-filled($palette) {
   @each $color-name, $color-val in $palette {
     &.#{$color-name} {
       border-radius: 0.1rem;
@@ -175,7 +175,7 @@
   }
 }
 
-@mixin create-outline-btn-color-classes($palette) {
+@mixin create-button-outline($palette) {
   @each $color, $color-val in $palette {
     &.#{$color} {
       color: $color-val;

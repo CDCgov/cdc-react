@@ -73,6 +73,7 @@
             border: solid 0.15rem $gray-dark;
             color: #3e3e3e;
             cursor: not-allowed;
+            text-decoration: none;
           }
         }
 
@@ -101,9 +102,10 @@
           border: solid 0.15rem $gray-light;
           color: #ffffff;
           cursor: not-allowed;
+          text-decoration: none;
         }
 
-        @include create-btn-color-classes($base-btn-palette);
+        @include create-button-filled($base-btn-palette);
       }
 
       &.outline {
@@ -129,10 +131,10 @@
         &.disabled,
         &:disabled {
           background-color: transparent;
-          border-radius: 0.2rem;
-          border: solid 0.15rem transparent;
-          color: $gray-light;
+          border: solid 0.15rem #e0e0e0;
+          color: #e0e0e0;
           cursor: not-allowed;
+          text-decoration: none;
         }
 
         &.inverse {
@@ -167,10 +169,11 @@
             color: $gray-dark;
             background-color: transparent;
             cursor: not-allowed;
+            text-decoration: none;
           }
         }
 
-        @include create-outline-btn-color-classes($base-btn-palette);
+        @include create-button-outline($base-btn-palette);
       }
 
       &.text {
@@ -201,6 +204,7 @@
           border: solid 0.15rem transparent;
           color: $gray-light;
           cursor: not-allowed;
+          text-decoration: none;
         }
 
         &.inverse {
@@ -232,6 +236,7 @@
             border-color: transparent;
             color: $gray-dark;
             cursor: not-allowed;
+            text-decoration: none;
           }
         }
 
@@ -270,6 +275,7 @@
           background-color: transparent;
           border: solid 0.15rem transparent;
           cursor: not-allowed;
+          text-decoration: none;
         }
 
         &.inverse {
@@ -302,6 +308,7 @@
           &:disabled {
             color: $gray-dark;
             cursor: not-allowed;
+            text-decoration: none;
           }
         }
 
@@ -332,11 +339,19 @@
       border-radius: 0.2rem;
 
       &.filled {
-        @include create-btn-color-classes($tertiary-btn-palette);
+        @include create-button-filled($tertiary-btn-palette);
       }
 
       &.outline {
-        @include create-outline-btn-color-classes($tertiary-btn-palette);
+        &.disabled,
+        &:disabled {
+          background-color: transparent;
+          border: solid 0.15rem #e0e0e0;
+          color: #e0e0e0;
+          cursor: not-allowed;
+          text-decoration: none;
+        }
+        @include create-button-outline($tertiary-btn-palette);
       }
 
       &.text {
