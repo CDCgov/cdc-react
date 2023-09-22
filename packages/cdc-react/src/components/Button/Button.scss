@@ -7,9 +7,10 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    border-width: 0.15rem;
 
     &.default {
-      min-width: 5.5rem;
+      min-width: 5rem;
       min-height: 2rem;
 
       span {
@@ -27,7 +28,7 @@
     }
 
     &.big {
-      min-width: 3.2rem;
+      min-width: 6rem;
       min-height: 2.6rem;
 
       span {
@@ -38,8 +39,8 @@
     &.primary {
       &.filled {
         background-color: $main-theme;
+        border: solid 0.2rem $main-theme;
         border-radius: 0.15rem;
-        border: solid 0.15rem $main-theme;
         color: #ffffff;
 
         &.inverse {
@@ -102,61 +103,12 @@
           cursor: not-allowed;
         }
 
-        &.blue {
-          background-color: $primary-blue;
-          border: solid 0.15rem $primary-blue;
-        }
-
-        &.brown {
-          background-color: $primary-brown;
-          border: solid 0.15rem $primary-brown;
-        }
-
-        &.cyan {
-          background-color: $primary-cyan;
-          border: solid 0.15rem $primary-cyan;
-        }
-
-        &.green {
-          background-color: $primary-green;
-          border: solid 0.15rem $primary-green;
-        }
-
-        &.indigo {
-          background-color: $primary-indigo;
-          border: solid 0.15rem $primary-indigo;
-        }
-
-        &.orange {
-          background-color: $primary-orange;
-          border: solid 0.15rem $primary-orange;
-        }
-
-        &.pink {
-          background-color: $primary-pink;
-          border: solid 0.15rem $primary-pink;
-        }
-
-        &.purple {
-          background-color: $primary-purple;
-          border: solid 0.15rem $primary-purple;
-        }
-
-        &.slate {
-          background-color: $primary-slate;
-          border: solid 0.15rem $primary-slate;
-        }
-
-        &.teal {
-          background-color: $primary-teal;
-          border: solid 0.15rem $primary-teal;
-        }
+        @include create-btn-color-classes($base-btn-palette);
       }
 
       &.outline {
         background-color: transparent;
         border-radius: 0.2rem;
-        border: solid 0.15rem $main-theme;
         color: $main-theme;
 
         &:focus,
@@ -218,67 +170,7 @@
           }
         }
 
-        &.outline {
-          &.blue {
-            background-color: transparent;
-            color: $primary-blue;
-            border: solid 0.15rem $primary-blue;
-          }
-
-          &.brown {
-            background-color: transparent;
-            color: $primary-brown;
-            border: solid 0.15rem $primary-brown;
-          }
-
-          &.cyan {
-            background-color: transparent;
-            color: $primary-cyan;
-            border: solid 0.15rem $primary-cyan;
-          }
-
-          &.green {
-            background-color: transparent;
-            color: $primary-green;
-            border: solid 0.15rem $primary-green;
-          }
-
-          &.indigo {
-            background-color: transparent;
-            color: $primary-indigo;
-            border: solid 0.15rem $primary-indigo;
-          }
-
-          &.orange {
-            background-color: transparent;
-            color: $primary-orange;
-            border: solid 0.15rem $primary-orange;
-          }
-
-          &.pink {
-            background-color: transparent;
-            color: $primary-pink;
-            border: solid 0.15rem $primary-pink;
-          }
-
-          &.purple {
-            background-color: transparent;
-            color: $primary-purple;
-            border: solid 0.15rem $primary-purple;
-          }
-
-          &.slate {
-            background-color: transparent;
-            color: $primary-slate;
-            border: solid 0.15rem $primary-slate;
-          }
-
-          &.teal {
-            background-color: transparent;
-            color: $primary-teal;
-            border: solid 0.15rem $primary-teal;
-          }
-        }
+        @include create-outline-btn-color-classes($base-btn-palette);
       }
 
       &.text {
@@ -343,45 +235,7 @@
           }
         }
 
-        &.blue {
-          color: $primary-blue;
-        }
-
-        &.brown {
-          color: $primary-brown;
-        }
-
-        &.cyan {
-          color: $primary-cyan;
-        }
-
-        &.green {
-          color: $primary-green;
-        }
-
-        &.indigo {
-          color: $primary-indigo;
-        }
-
-        &.orange {
-          color: $primary-orange;
-        }
-
-        &.pink {
-          color: $primary-pink;
-        }
-
-        &.purple {
-          color: $primary-purple;
-        }
-
-        &.slate {
-          color: $primary-slate;
-        }
-
-        &.teal {
-          color: $primary-teal;
-        }
+        @include create-button-text($base-btn-palette);
       }
 
       &.unstyled {
@@ -451,55 +305,7 @@
           }
         }
 
-        &.blue {
-          color: $primary-blue;
-        }
-
-        &.brown {
-          color: $primary-brown;
-        }
-
-        &.cyan {
-          color: $primary-cyan;
-        }
-
-        &.green {
-          color: $primary-green;
-        }
-
-        &.indigo {
-          color: $primary-indigo;
-        }
-
-        &.orange {
-          color: $primary-orange;
-        }
-
-        &.pink {
-          color: $primary-pink;
-        }
-
-        &.purple {
-          color: $primary-purple;
-        }
-
-        &.slate {
-          color: $primary-slate;
-        }
-
-        &.teal {
-          color: $primary-teal;
-        }
-      }
-    }
-
-    &.icon-only {
-      min-width: 5.4rem;
-      min-height: 4.5rem;
-
-      span {
-        width: 2.4rem;
-        height: 2.4rem;
+        @include create-button-unstyled($base-btn-palette);
       }
     }
 
@@ -526,245 +332,30 @@
       border-radius: 0.2rem;
 
       &.filled {
-        &.amber {
-          background-color: $tertiary-amber;
-          border: solid 0.15rem $tertiary-amber;
-        }
-
-        &.blue {
-          background-color: $tertiary-blue;
-          border: solid 0.15rem $tertiary-blue;
-        }
-
-        &.brown {
-          background-color: $tertiary-brown;
-          border: solid 0.15rem $tertiary-brown;
-        }
-
-        &.cyan {
-          background-color: $tertiary-cyan;
-          border: solid 0.15rem $tertiary-cyan;
-        }
-
-        &.green {
-          background-color: $tertiary-green;
-          border: solid 0.15rem $tertiary-green;
-        }
-
-        &.indigo {
-          background-color: $tertiary-indigo;
-          border: solid 0.15rem $tertiary-indigo;
-        }
-
-        &.orange {
-          background-color: $tertiary-orange;
-          border: solid 0.15rem $tertiary-orange;
-        }
-
-        &.pink {
-          background-color: $tertiary-pink;
-          border: solid 0.15rem $tertiary-pink;
-        }
-
-        &.purple {
-          background-color: $tertiary-purple;
-          border: solid 0.15rem $tertiary-purple;
-        }
-
-        &.slate {
-          background-color: $tertiary-slate;
-          border: solid 0.15rem $tertiary-slate;
-        }
-
-        &.teal {
-          background-color: $tertiary-teal;
-          border: solid 0.15rem $tertiary-teal;
-        }
+        @include create-btn-color-classes($tertiary-btn-palette);
       }
 
       &.outline {
-        &.blue {
-          background-color: $tertiary-amber;
-          color: $tertiary-amber;
-          border: solid 0.15rem $tertiary-amber;
-        }
-
-        &.blue {
-          background-color: transparent;
-          color: $tertiary-blue;
-          border: solid 0.15rem $tertiary-blue;
-        }
-
-        &.brown {
-          background-color: transparent;
-          color: $tertiary-brown;
-          border: solid 0.15rem $tertiary-brown;
-        }
-
-        &.cyan {
-          background-color: transparent;
-          color: $tertiary-cyan;
-          border: solid 0.15rem $tertiary-cyan;
-        }
-
-        &.green {
-          background-color: transparent;
-          color: $tertiary-green;
-          border: solid 0.15rem $tertiary-green;
-        }
-
-        &.indigo {
-          background-color: transparent;
-          color: $tertiary-indigo;
-          border: solid 0.15rem $tertiary-indigo;
-        }
-
-        &.orange {
-          background-color: transparent;
-          color: $tertiary-orange;
-          border: solid 0.15rem $tertiary-orange;
-        }
-
-        &.pink {
-          background-color: transparent;
-          color: $tertiary-pink;
-          border: solid 0.15rem $tertiary-pink;
-        }
-
-        &.purple {
-          background-color: transparent;
-          color: $tertiary-purple;
-          border: solid 0.15rem $tertiary-purple;
-        }
-
-        &.slate {
-          background-color: transparent;
-          color: $tertiary-slate;
-          border: solid 0.15rem $tertiary-slate;
-        }
-
-        &.teal {
-          background-color: transparent;
-          color: $tertiary-teal;
-          border: solid 0.15rem $tertiary-teal;
-        }
+        @include create-outline-btn-color-classes($tertiary-btn-palette);
       }
 
       &.text {
-        background-color: transparent;
         border: none;
-
-        &.amber {
-          color: $tertiary-amber;
-        }
-
-        &.blue {
-          color: $tertiary-blue;
-        }
-
-        &.brown {
-          color: $tertiary-brown;
-        }
-
-        &.cyan {
-          color: $tertiary-cyan;
-        }
-
-        &.green {
-          color: $tertiary-green;
-        }
-
-        &.indigo {
-          color: $tertiary-indigo;
-        }
-
-        &.orange {
-          color: $tertiary-orange;
-        }
-
-        &.pink {
-          color: $tertiary-pink;
-        }
-
-        &.purple {
-          color: $tertiary-purple;
-        }
-
-        &.slate {
-          color: $tertiary-slate;
-        }
-
-        &.teal {
-          color: $tertiary-teal;
-        }
+        @include create-button-text($tertiary-btn-palette);
       }
 
       &.unstyled {
         min-width: auto;
         min-height: auto;
-        background-color: transparent;
         border-radius: 0rem;
         border: none;
 
         &:focus,
         &.focus {
           text-decoration: underline;
-          background-color: transparent;
         }
 
-        &:hover,
-        &.hover {
-          background-color: transparent;
-        }
-
-        &:active,
-        &.active {
-          background-color: transparent;
-        }
-
-        &.amber {
-          color: $tertiary-amber;
-        }
-
-        &.blue {
-          color: $tertiary-blue;
-        }
-
-        &.brown {
-          color: $tertiary-brown;
-        }
-
-        &.cyan {
-          color: $tertiary-cyan;
-        }
-
-        &.green {
-          color: $tertiary-green;
-        }
-
-        &.indigo {
-          color: $tertiary-indigo;
-        }
-
-        &.orange {
-          color: $tertiary-orange;
-        }
-
-        &.pink {
-          color: $tertiary-pink;
-        }
-
-        &.purple {
-          color: $tertiary-purple;
-        }
-
-        &.slate {
-          color: $tertiary-slate;
-        }
-
-        &.teal {
-          color: $tertiary-teal;
-        }
+        @include create-button-unstyled($tertiary-btn-palette);
       }
     }
   }

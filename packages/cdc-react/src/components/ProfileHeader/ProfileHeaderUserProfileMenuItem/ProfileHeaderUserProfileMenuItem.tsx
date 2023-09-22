@@ -70,13 +70,6 @@ export const ProfileHeaderUserProfileMenuItem = ({
     }
   };
 
-  const handleEnter = (e: React.KeyboardEvent<HTMLButtonElement>) => {
-    if (e.key === "Enter") {
-      const button: HTMLButtonElement | null | EventTarget = e.target;
-      (button as HTMLButtonElement).getElementsByTagName("button")[0]?.click();
-    }
-  };
-
   useEffect(() => {
     document.addEventListener(
       "mousedown",
@@ -108,13 +101,7 @@ export const ProfileHeaderUserProfileMenuItem = ({
     <>
       <span className="sr-only">User profile button</span>
 
-      <button
-        className={className}
-        ref={userProfileMenuItemRef}
-        onClick={() => setProfileHeaderPopupOpenState(!popupOpen)}
-        onKeyDown={(ev: React.KeyboardEvent<HTMLButtonElement>) =>
-          handleEnter(ev)
-        }>
+      <button className={className} ref={userProfileMenuItemRef}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="36"
