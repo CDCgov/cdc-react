@@ -96,15 +96,16 @@ export const Button = ({
   const disabled: boolean = state === "disabled" ? true : false;
 
   return (
-    <button
-      aria-label={ariaLabel}
-      onClick={onClick}
-      id={id}
-      className={`cdc-react ${classes}`}
-      disabled={disabled}>
-      {icon && iconPosition === "left" && icon}
-      {iconOnly !== true ? children : icon}
-      {icon && iconPosition === "right" && icon}
-    </button>
+    <div className="cdc-react btn-wrap" onClick={onClick}>
+      <button
+        aria-label={ariaLabel}
+        id={id}
+        className={classes}
+        disabled={disabled}>
+        {icon && iconPosition === "left" && icon}
+        {iconOnly !== true ? children : icon}
+        {icon && iconPosition === "right" && icon}
+      </button>
+    </div>
   );
 };
