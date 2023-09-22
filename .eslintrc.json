@@ -18,5 +18,7 @@
     "project": ["./tsconfig.json"]
   },
   "plugins": ["@typescript-eslint", "react", "jsx-a11y"],
-  "rules": {}
+  "rules": {
+    "jsx-a11y/no-autofocus": "off"
+  }
 }
