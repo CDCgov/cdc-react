@@ -10,14 +10,14 @@ import {
   ButtonVariationsTypes,
 } from "../../@types";
 
-import { MouseEventHandler } from "react";
-
 interface ButtonProps {
   children?: React.ReactNode;
-  onClick?: MouseEventHandler<HTMLDivElement> | undefined;
+  onClick?: React.MouseEventHandler<HTMLDivElement> | undefined;
+  onKeyDown?: React.KeyboardEventHandler<HTMLDivElement> | undefined;
   ariaLabel: string;
   className?: string;
   id?: string;
+  tabIndex?: number;
   readonly theme?: ButtonAccessibilityThemeTypes;
   readonly size?: ButtonSizeTypes;
   readonly variation?: ButtonVariationsTypes;
@@ -32,6 +32,7 @@ interface ButtonProps {
 export const Button = ({
   children,
   onClick,
+  onKeyDown,
   size,
   theme,
   variation,
@@ -44,6 +45,7 @@ export const Button = ({
   className,
   id,
   ariaLabel,
+  tabIndex,
 }: ButtonProps & JSX.IntrinsicElements["button"]) => {
   let classes: string = "btn";
 
@@ -96,7 +98,12 @@ export const Button = ({
   const disabled: boolean = state === "disabled" ? true : false;
 
   return (
-    <div className="cdc-react btn-wrap" onClick={onClick}>
+    <div
+      className="cdc-react btn-wrap"
+      onClick={onClick}
+      onKeyDown={onKeyDown}
+      role="button"
+      tabIndex={tabIndex || 0}>
       <button
         aria-label={ariaLabel}
         id={id}
