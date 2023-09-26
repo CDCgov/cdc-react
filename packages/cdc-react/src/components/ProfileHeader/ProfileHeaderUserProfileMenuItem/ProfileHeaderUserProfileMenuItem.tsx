@@ -136,7 +136,9 @@ export const ProfileHeaderUserProfileMenuItem = ({
         className={`profile-header-popup-wrap ${
           popupOpen ? "profile-header-popup-wrap-show" : ""
         }`}
-        onKeyDown={handlePopupKeyDown}>
+        onKeyDown={handlePopupKeyDown}
+        role="menu"
+        tabIndex={0}>
         <div className="profile-header-popup" ref={popupRef}>
           {(userProfilePopupMenuItems || []).map((popupMenuItem, index) => (
             <ProfileHeaderPopupMenuItem
