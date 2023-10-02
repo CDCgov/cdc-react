@@ -18,9 +18,14 @@
   "repository": "git@github.com:CDCgov/cdc-react.git",
   "author": "cfarmer <cfarmer@fearless.tech>",
   "private": true,
-  "workspaces": [
-    "packages/cdc-react",
-    "packages/cdc-react-icons",
-    "packages/storybook"
-  ]
+  "workspaces": {
+    "packages": [
+      "packages/cdc-react",
+      "packages/cdc-react-icons",
+      "packages/storybook"
+    ],
+    "nohoist": [
+      "**/@uswds/uswds"
+    ]
+  }
 }
