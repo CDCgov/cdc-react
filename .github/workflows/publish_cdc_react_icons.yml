@@ -3,7 +3,7 @@ name: "Publish CDC React Components to NPM"
 on:
   push:
     tags:
-      - cdc-react_icons_*
+      - cdc-react-icons_*
 
 defaults:
   run:
