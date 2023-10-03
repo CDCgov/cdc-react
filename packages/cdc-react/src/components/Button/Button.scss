@@ -16,25 +16,25 @@
     min-height: units(4);
 
     span {
-      font-size: 0.7rem;
+      font-size: units(1.5);
     }
   }
 
   &.tiny {
-    min-width: 2.6rem;
-    min-height: 1.42rem;
+    min-width: units(5);
+    min-height: units(3);
 
     span {
-      font-size: 0.6rem;
+      font-size: units(1);
     }
   }
 
   &.big {
-    min-width: 6rem;
-    min-height: 2.6rem;
+    min-width: units(7);
+    min-height: units(5);
 
     span {
-      font-size: 0.8rem;
+      font-size: units(2);
     }
   }
 
