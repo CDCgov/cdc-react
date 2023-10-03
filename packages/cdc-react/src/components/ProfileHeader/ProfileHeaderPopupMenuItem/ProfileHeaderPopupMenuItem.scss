@@ -1,7 +1,9 @@
+@use "uswds-core" as *;
+
 .cdc-react {
   .profile-header-popup {
     display: flex;
-    width: 14.16rem;
+    width: units("card-lg");
     flex-direction: column;
     align-items: flex-start;
     border-radius: 0.236rem;

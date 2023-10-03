@@ -1,12 +1,13 @@
 @use "../../scss/global.scss";
+@use "uswds-core" as *;
 
 .cdc-react {
   .profile-header {
     display: flex;
-    height: 3.54rem;
-    padding: 0rem 0.236rem;
+    height: units(7);
+    padding: 0 units(0.5);
     align-items: center;
-    gap: 0.7rem;
+    gap: units(1);
     border-bottom: 0.1rem solid #e0e0e0;
     background: #f0f0f0;
 
@@ -20,8 +21,8 @@
 
   .profile-header-popup-wrap {
     position: absolute;
-    top: 2.6875rem;
-    right: 2.6rem;
+    top: units(8);
+    right: units(5);
     display: none;
 
     &.profile-header-popup-wrap-show {
