@@ -1,4 +1,5 @@
 @use "../../scss/global.scss";
+@use "uswds-core" as *;
 
 .card-wrapper {
   border-radius: 0.4rem;
@@ -14,7 +15,7 @@
     .card-header {
       background: global.$main-theme;
       color: #fff;
-      padding: 0.47rem 1.05rem;
+      padding: units(1) units(2);
       font-size: global.$font-size-h4;
       font-style: normal;
       font-weight: global.$font-weight-medium;
@@ -42,13 +43,13 @@
       font-weight: global.$font-weight-regular;
 
       .card-section-title {
-        padding: 1.41rem 1.41rem 0.47rem 1.41rem;
+        padding: units(3) units(3) units(1) units(3);
         font-size: global.$font-size-h5;
         line-height: 120%;
         font-weight: global.$font-weight-regular;
       }
       .card-section-media {
-        padding: 0rem 1.41rem 1.41rem 1.41rem;
+        padding: 0 units(3) units(3) units(3);
       }
       .card-section-media.media-fill {
         padding: 0;
@@ -59,8 +60,8 @@
         }
       }
       .card-section-body {
-        padding: 0.47rem 1.41rem;
-        margin-bottom: 1.41rem;
+        padding: units(1) units(3);
+        margin-bottom: units(3);
         p,
         span {
           font-size: global.$font-size-base;
@@ -69,7 +70,7 @@
         }
       }
       .card-section-footer {
-        padding: 0.47rem 1.41rem 1.41rem 1.41rem;
+        padding: units(1) units(3) units(3) units(3);
       }
     }
     .card-body.horizontal {
