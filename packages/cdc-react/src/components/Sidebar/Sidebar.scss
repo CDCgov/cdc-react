@@ -1,4 +1,4 @@
-@import "../../scss/global.scss";
+@use "../../scss/global.scss";
 
 .cdc-react {
   .sidebar-wrap {
@@ -39,7 +39,11 @@
   }
 
   .sidebar {
-    background: linear-gradient(225deg, $main-theme 0%, $primary-indigo 100%);
+    background: linear-gradient(
+      225deg,
+      global.$main-theme 0%,
+      global.$primary-indigo 100%
+    );
     width: 12.036rem;
     height: 100vh;
     flex-grow: 1;

@@ -1,4 +1,4 @@
-@import "../../../scss/global.scss";
+@use "../../../scss/global.scss";
 
 .cdc-react {
   .sidebar {
@@ -38,7 +38,7 @@
       letter-spacing: 0.1rem;
       text-transform: uppercase;
       padding: 0.47rem 1.475rem;
-      color: $main-theme-lighter;
+      color: global.$main-theme-lighter;
     }
   }
 
