@@ -28,7 +28,7 @@
       display: none;
     }
 
-    @media (min-width: 600px) {
+    @media (min-width: units("tablet")) {
       .profile-header-menu-item.hide-on-mobile {
         display: flex;
       }

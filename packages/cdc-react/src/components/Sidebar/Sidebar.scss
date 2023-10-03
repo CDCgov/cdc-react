@@ -101,7 +101,7 @@
     }
   }
 
-  @media (min-width: 600px) {
+  @media (min-width: units("tablet")) {
     .menu-header {
       padding: units(1) units(2);
     }
