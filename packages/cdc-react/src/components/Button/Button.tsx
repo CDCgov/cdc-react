@@ -47,7 +47,7 @@ export const Button = ({
   ariaLabel,
   tabIndex,
 }: ButtonProps & JSX.IntrinsicElements["button"]) => {
-  let classes: string = "btn";
+  let classes: string = "cdc-react btn";
 
   if (size !== undefined) {
     classes += ` ${size}`;
@@ -98,21 +98,17 @@ export const Button = ({
   const disabled: boolean = state === "disabled" ? true : false;
 
   return (
-    <div
-      className="cdc-react btn-wrap"
+    <button
       onClick={onClick}
       onKeyDown={onKeyDown}
-      role="button"
-      tabIndex={tabIndex || 0}>
-      <button
-        aria-label={ariaLabel}
-        id={id}
-        className={classes}
-        disabled={disabled}>
-        {icon && iconPosition === "left" && icon}
-        {iconOnly !== true ? children : icon}
-        {icon && iconPosition === "right" && icon}
-      </button>
-    </div>
+      tabIndex={tabIndex || 0}
+      aria-label={ariaLabel}
+      id={id}
+      className={classes}
+      disabled={disabled}>
+      {icon && iconPosition === "left" && icon}
+      {iconOnly !== true ? children : icon}
+      {icon && iconPosition === "right" && icon}
+    </button>
   );
 };

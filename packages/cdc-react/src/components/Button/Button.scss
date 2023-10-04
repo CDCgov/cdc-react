@@ -1,258 +1,295 @@
 @import "../../scss/global.scss";
 
-.cdc-react {
-  .btn {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    border-width: 0.15rem;
+.cdc-react.btn {
+  min-width: 2.58824rem;
+  min-height: 2.58824rem;
+  width: auto;
+  height: auto;
+  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-width: 0.15rem;
 
-    &.default {
-      min-width: 5rem;
-      min-height: 2rem;
+  &.default {
+    min-width: 5rem;
+    min-height: 2rem;
 
-      span {
-        font-size: 0.7rem;
-      }
+    span {
+      font-size: 0.7rem;
     }
+  }
 
-    &.tiny {
-      min-width: 2.6rem;
-      min-height: 1.42rem;
+  &.tiny {
+    min-width: 2.6rem;
+    min-height: 1.42rem;
 
-      span {
-        font-size: 0.6rem;
-      }
+    span {
+      font-size: 0.6rem;
     }
+  }
 
-    &.big {
-      min-width: 6rem;
-      min-height: 2.6rem;
+  &.big {
+    min-width: 6rem;
+    min-height: 2.6rem;
 
-      span {
-        font-size: 0.8rem;
-      }
+    span {
+      font-size: 0.8rem;
     }
+  }
 
-    &.primary {
-      &.filled {
-        background-color: $main-theme;
-        border: solid 0.2rem $main-theme;
-        border-radius: 0.15rem;
-        color: #ffffff;
+  &.primary {
+    &.filled {
+      background-color: $main-theme;
+      border: solid 0.2rem $main-theme;
+      border-radius: 0.15rem;
+      color: #ffffff;
 
-        &.inverse {
+      &.inverse {
+        background-color: $main-theme-lighter;
+        border-color: $main-theme-lighter;
+        color: $gray-darker;
+
+        &:focus,
+        &.focus {
           background-color: $main-theme-lighter;
           border-color: $main-theme-lighter;
-          color: $gray-darker;
-
-          &:focus,
-          &.focus {
-            background-color: $main-theme-lighter;
-            border-color: $main-theme-lighter;
-          }
-
-          &:hover,
-          &.hover {
-            background-color: #dff4ff;
-            border-color: #dff4ff;
-          }
-
-          &:active,
-          &.active {
-            background-color: #ffffff;
-            border-color: #ffffff;
-          }
-
-          &.disabled,
-          &:disabled {
-            background-color: $gray-dark;
-            border-radius: 0.15rem;
-            border: solid 0.15rem $gray-dark;
-            color: #3e3e3e;
-            cursor: not-allowed;
-            text-decoration: none;
-          }
-        }
-
-        &:focus,
-        &.focus {
-          background-color: $main-theme;
-          border-color: $main-theme;
         }
 
         &:hover,
         &.hover {
-          background-color: $main-theme-dark;
-          border-color: $main-theme-dark;
+          background-color: #dff4ff;
+          border-color: #dff4ff;
         }
 
         &:active,
         &.active {
-          background-color: $main-theme-darker;
-          border-color: $main-theme-darker;
+          background-color: #ffffff;
+          border-color: #ffffff;
         }
 
         &.disabled,
         &:disabled {
-          background-color: $gray-light;
-          border-radius: 0.2rem;
-          border: solid 0.15rem $gray-light;
-          color: #ffffff;
+          background-color: $gray-dark;
+          border-radius: 0.15rem;
+          border: solid 0.15rem $gray-dark;
+          color: #3e3e3e;
           cursor: not-allowed;
           text-decoration: none;
         }
-
-        @include create-button-filled($base-btn-palette);
       }
 
-      &.outline {
-        background-color: transparent;
-        border-radius: 0.2rem;
-        color: $main-theme;
+      &:focus,
+      &.focus {
+        background-color: $main-theme;
+        border-color: $main-theme;
+      }
 
-        &:focus,
-        &.focus {
-          background-color: transparent;
-        }
+      &:hover,
+      &.hover {
+        background-color: $main-theme-dark;
+        border-color: $main-theme-dark;
+      }
+
+      &:active,
+      &.active {
+        background-color: $main-theme-darker;
+        border-color: $main-theme-darker;
+      }
+
+      &.disabled,
+      &:disabled {
+        background-color: $gray-light;
+        border-radius: 0.2rem;
+        border: solid 0.15rem $gray-light;
+        color: #ffffff;
+        cursor: not-allowed;
+        text-decoration: none;
+      }
+
+      @include create-button-filled($base-btn-palette);
+    }
+
+    &.outline {
+      background-color: transparent;
+      border-radius: 0.2rem;
+      color: $main-theme;
+
+      &:focus,
+      &.focus {
+        background-color: transparent;
+      }
+
+      &:hover,
+      &.hover {
+        background-color: #f4f4f4fa;
+      }
+
+      &:active,
+      &.active {
+        background-color: #e8e4e4e7;
+      }
+
+      &.disabled,
+      &:disabled {
+        background-color: transparent;
+        border: solid 0.15rem #e0e0e0;
+        color: #e0e0e0;
+        cursor: not-allowed;
+        text-decoration: none;
+      }
+
+      &.inverse {
+        background-color: transparent;
+        color: $main-theme-lighter;
+        border-color: $main-theme-lighter;
 
         &:hover,
         &.hover {
-          background-color: #f4f4f4fa;
+          background-color: #3d3d3d;
+          border-color: $main-theme-lighter;
+          color: $main-theme-lighter;
         }
 
         &:active,
         &.active {
-          background-color: #e8e4e4e7;
+          border-color: #ffffff;
+          color: #ffffff;
+          background-color: #474747;
         }
 
-        &.disabled,
-        &:disabled {
-          background-color: transparent;
-          border: solid 0.15rem #e0e0e0;
-          color: #e0e0e0;
-          cursor: not-allowed;
-          text-decoration: none;
-        }
-
-        &.inverse {
-          background-color: transparent;
+        &:focus,
+        &.focus {
           color: $main-theme-lighter;
           border-color: $main-theme-lighter;
-
-          &:hover,
-          &.hover {
-            background-color: #3d3d3d;
-            border-color: $main-theme-lighter;
-            color: $main-theme-lighter;
-          }
-
-          &:active,
-          &.active {
-            border-color: #ffffff;
-            color: #ffffff;
-            background-color: #474747;
-          }
-
-          &:focus,
-          &.focus {
-            color: $main-theme-lighter;
-            border-color: $main-theme-lighter;
-            background-color: transparent;
-          }
-
-          &.disabled,
-          &:disabled {
-            border-color: $gray-dark;
-            color: $gray-dark;
-            background-color: transparent;
-            cursor: not-allowed;
-            text-decoration: none;
-          }
+          background-color: transparent;
         }
 
-        @include create-button-outline($base-btn-palette);
+        &.disabled,
+        &:disabled {
+          border-color: $gray-dark;
+          color: $gray-dark;
+          background-color: transparent;
+          cursor: not-allowed;
+          text-decoration: none;
+        }
       }
 
-      &.text {
+      @include create-button-outline($base-btn-palette);
+    }
+
+    &.text {
+      background-color: transparent;
+      border-radius: 0.2rem;
+      border: none;
+      color: $main-theme;
+
+      &:focus,
+      &.focus {
+        background-color: #f5f5f5;
+      }
+
+      &:hover,
+      &.hover {
+        background-color: #f5f5f5;
+      }
+
+      &:active,
+      &.active {
+        background-color: #ebebeb;
+      }
+
+      &.disabled,
+      &:disabled {
         background-color: transparent;
         border-radius: 0.2rem;
-        border: none;
-        color: $main-theme;
+        border: solid 0.15rem transparent;
+        color: $gray-light;
+        cursor: not-allowed;
+        text-decoration: none;
+      }
 
-        &:focus,
-        &.focus {
-          background-color: #f5f5f5;
-        }
+      &.inverse {
+        background: transparent;
+        border-color: transparent;
+        color: $main-theme-light;
 
         &:hover,
         &.hover {
-          background-color: #f5f5f5;
+          background-color: #3d3d3d;
+          color: $main-theme-lighter;
         }
 
         &:active,
         &.active {
-          background-color: #ebebeb;
+          background-color: #5c5b5b;
+          color: #ffffff;
+        }
+
+        &:focus,
+        &.focus {
+          background-color: #333333;
+          color: $main-theme-light;
         }
 
         &.disabled,
         &:disabled {
           background-color: transparent;
-          border-radius: 0.2rem;
-          border: solid 0.15rem transparent;
-          color: $gray-light;
+          border-color: transparent;
+          color: $gray-dark;
           cursor: not-allowed;
           text-decoration: none;
         }
-
-        &.inverse {
-          background: transparent;
-          border-color: transparent;
-          color: $main-theme-light;
-
-          &:hover,
-          &.hover {
-            background-color: #3d3d3d;
-            color: $main-theme-lighter;
-          }
-
-          &:active,
-          &.active {
-            background-color: #5c5b5b;
-            color: #ffffff;
-          }
-
-          &:focus,
-          &.focus {
-            background-color: #333333;
-            color: $main-theme-light;
-          }
-
-          &.disabled,
-          &:disabled {
-            background-color: transparent;
-            border-color: transparent;
-            color: $gray-dark;
-            cursor: not-allowed;
-            text-decoration: none;
-          }
-        }
-
-        @include create-button-text($base-btn-palette);
       }
 
-      &.unstyled {
-        min-width: auto;
-        min-height: auto;
+      @include create-button-text($base-btn-palette);
+    }
+
+    &.unstyled {
+      min-width: auto;
+      min-height: auto;
+      background-color: transparent;
+      border-radius: 0rem;
+      border: none;
+      color: $main-theme;
+
+      &:focus,
+      &.focus {
+        text-decoration: underline;
         background-color: transparent;
-        border-radius: 0rem;
-        border: none;
-        color: $main-theme;
+      }
+
+      &:hover,
+      &.hover {
+        text-decoration: underline;
+        background-color: transparent;
+      }
+
+      &:active,
+      &.active {
+        text-decoration: underline;
+        background-color: transparent;
+      }
+
+      &.disabled,
+      &:disabled {
+        color: $gray-light;
+        background-color: transparent;
+        border: solid 0.15rem transparent;
+        cursor: not-allowed;
+        text-decoration: none;
+      }
+
+      &.inverse {
+        color: $main-theme-light;
+        background-color: transparent;
+        border-color: transparent;
 
         &:focus,
         &.focus {
+          color: #ffffff;
           text-decoration: underline;
           background-color: transparent;
         }
@@ -260,118 +297,84 @@
         &:hover,
         &.hover {
           text-decoration: underline;
+          color: $main-theme-lighter;
           background-color: transparent;
         }
 
         &:active,
         &.active {
           text-decoration: underline;
+          color: #ffffff;
           background-color: transparent;
         }
 
         &.disabled,
         &:disabled {
-          color: $gray-light;
-          background-color: transparent;
-          border: solid 0.15rem transparent;
+          color: $gray-dark;
           cursor: not-allowed;
           text-decoration: none;
         }
-
-        &.inverse {
-          color: $main-theme-light;
-          background-color: transparent;
-          border-color: transparent;
-
-          &:focus,
-          &.focus {
-            color: #ffffff;
-            text-decoration: underline;
-            background-color: transparent;
-          }
-
-          &:hover,
-          &.hover {
-            text-decoration: underline;
-            color: $main-theme-lighter;
-            background-color: transparent;
-          }
-
-          &:active,
-          &.active {
-            text-decoration: underline;
-            color: #ffffff;
-            background-color: transparent;
-          }
-
-          &.disabled,
-          &:disabled {
-            color: $gray-dark;
-            cursor: not-allowed;
-            text-decoration: none;
-          }
-        }
-
-        @include create-button-unstyled($base-btn-palette);
       }
+
+      @include create-button-unstyled($base-btn-palette);
+    }
+  }
+
+  &.has-icon {
+    flex-flow: row;
+
+    span {
+      padding: 0 0.2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    &.has-icon {
-      flex-flow: row;
-
-      span {
-        padding: 0 0.2rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      &.left span:last-child {
-        padding-right: 0.5rem;
-      }
-
-      &.right span:first-child {
-        padding-left: 0.5rem;
-      }
+    &.left span:last-child {
+      padding-right: 0.5rem;
     }
 
-    &.tertiary {
-      border-radius: 0.2rem;
+    &.right span:first-child {
+      padding-left: 0.5rem;
+    }
+  }
 
-      &.filled {
-        @include create-button-filled($tertiary-btn-palette);
+  &.tertiary {
+    border-radius: 0.2rem;
+
+    &.filled {
+      @include create-button-filled($tertiary-btn-palette);
+    }
+
+    &.outline {
+      &.disabled,
+      &:disabled {
+        background-color: transparent;
+        border: solid 0.15rem #e0e0e0;
+        color: #e0e0e0;
+        cursor: not-allowed;
+        text-decoration: none;
+      }
+      @include create-button-outline($tertiary-btn-palette);
+    }
+
+    &.text {
+      border: none;
+      @include create-button-text($tertiary-btn-palette);
+    }
+
+    &.unstyled {
+      min-width: auto;
+      min-height: auto;
+      border-radius: 0rem;
+      border: none;
+
+      &:focus,
+      &.focus {
+        text-decoration: underline;
       }
 
-      &.outline {
-        &.disabled,
-        &:disabled {
-          background-color: transparent;
-          border: solid 0.15rem #e0e0e0;
-          color: #e0e0e0;
-          cursor: not-allowed;
-          text-decoration: none;
-        }
-        @include create-button-outline($tertiary-btn-palette);
-      }
-
-      &.text {
-        border: none;
-        @include create-button-text($tertiary-btn-palette);
-      }
-
-      &.unstyled {
-        min-width: auto;
-        min-height: auto;
-        border-radius: 0rem;
-        border: none;
-
-        &:focus,
-        &.focus {
-          text-decoration: underline;
-        }
-
-        @include create-button-unstyled($tertiary-btn-palette);
-      }
+      @include create-button-unstyled($tertiary-btn-palette);
     }
   }
 }
