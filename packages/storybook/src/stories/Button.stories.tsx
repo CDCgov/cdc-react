@@ -29,8 +29,6 @@ type Story = StoryObj<typeof Button>;
 export const defaultButton: Story = {
   args: {
     ariaLabel: "Default button",
-    theme: "primary",
-    color: "blue",
     children: <span>Default</span>,
   },
 };
@@ -39,8 +37,6 @@ export const tinyButton: Story = {
   args: {
     ariaLabel: "Tiny button",
     size: "tiny",
-    theme: "primary",
-    color: "blue",
     children: <span>Tiny</span>,
   },
 };
@@ -49,8 +45,6 @@ export const bigButton: Story = {
   args: {
     ariaLabel: "Big button",
     size: "big",
-    theme: "primary",
-    color: "blue",
     children: <span>Big</span>,
   },
 };
@@ -67,8 +61,6 @@ export const outlineButton: Story = {
   args: {
     ariaLabel: "Outline button",
     variation: "outline",
-    theme: "primary",
-    color: "blue",
     children: <span>Outline</span>,
   },
 };
@@ -86,8 +78,6 @@ export const textButton: Story = {
   args: {
     ariaLabel: "Text button",
     variation: "text",
-    theme: "primary",
-    color: "blue",
     children: <span>Text</span>,
   },
 };
@@ -105,8 +95,6 @@ export const unstyledButton: Story = {
   args: {
     ariaLabel: "Unstyled button",
     variation: "unstyled",
-    theme: "primary",
-    color: "blue",
     children: <span>Unstyled</span>,
   },
 };
