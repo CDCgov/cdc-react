@@ -1,18 +1,27 @@
-@mixin btn-states($focus-clr, $hover-clr, $active-clr, $disabled-clr...) {
+@mixin btn-filled-states(
+  $default-clr,
+  $focus-clr,
+  $hover-clr,
+  $active-clr,
+  $disabled-clr...
+) {
+  background-color: $default-clr;
+  border: $default-clr;
+
   &:focus,
-  .focus {
+  &.focus {
     background-color: $focus-clr;
     border-color: $focus-clr;
   }
 
   &:hover,
-  .hover {
+  &.hover {
     background-color: $hover-clr;
     border-color: $hover-clr;
   }
 
   &:active,
-  .active {
+  &.active {
     background-color: $active-clr;
     border-color: $active-clr;
   }
@@ -20,34 +29,166 @@
   &.disabled {
     background-color: $disabled-clr;
     border: solid 0.2rem $disabled-clr;
-    border-radius: $border-radius;
-    color: #3e3e3e;
-    pointer-events: none;
+    color: #fff;
+    pointer-events: not-allowed;
   }
 }
 
-@mixin create-button-color($palette) {
+@mixin btn-outline-states(
+  $default-clr,
+  $focus-clr,
+  $hover-clr,
+  $active-clr,
+  $disabled-clr...
+) {
+  border: solid 0.2rem $default-clr;
+
+  &:focus,
+  &.focus {
+    background-color: $focus-clr;
+  }
+
+  &:hover,
+  &.hover {
+    background-color: $hover-clr;
+  }
+
+  &:active,
+  &.active {
+    background-color: $active-clr;
+  }
+
+  &.disabled,
+  &:disabled {
+    background-color: transparent;
+    border: solid 0.15rem #e0e0e0;
+    color: #e0e0e0;
+    pointer-events: not-allowed;
+  }
+}
+
+@mixin btn-text-states(
+  $default-clr,
+  $focus-clr,
+  $hover-clr,
+  $active-clr,
+  $disabled-clr...
+) {
+  &:focus,
+  &.focus {
+    background-color: $focus-clr;
+  }
+
+  &:hover,
+  &.hover {
+    background-color: $hover-clr;
+  }
+
+  &:active,
+  &.active {
+    background-color: $active-clr;
+  }
+
+  &.disabled {
+    background-color: transparent;
+    border-color: transparent;
+    color: #e0e0e0;
+    pointer-events: not-allowed;
+  }
+}
+
+@mixin btn-unstyled-states(
+  $default-clr,
+  $focus-clr,
+  $hover-clr,
+  $active-clr,
+  $disabled-clr...
+) {
+  &:focus,
+  &.focus {
+    background-color: $focus-clr;
+  }
+
+  &:hover,
+  &.hover {
+    background-color: $hover-clr;
+  }
+
+  &:active,
+  &.active {
+    background-color: $active-clr;
+  }
+
+  &.disabled {
+    background-color: transparent;
+    border-color: transparent;
+    color: #e0e0e0;
+    pointer-events: not-allowed;
+  }
+}
+
+@mixin create-button-text($palette) {
   @each $color-name, $color-val in $palette {
     &.#{$color-name} {
+      background-color: transparent;
       color: $color-val;
+      @include btn-text-states(
+        #{$color-val},
+        #{$color-val}1a,
+        #{$color-val}12,
+        #{$color-val}29,
+        #ddd
+      );
     }
   }
 }
 
-@mixin create-btn-color-classes($palette) {
+@mixin create-button-unstyled($palette) {
   @each $color-name, $color-val in $palette {
     &.#{$color-name} {
-      background-color: $color-val;
-      border: 0.2rem solid $color-val;
+      background-color: transparent;
+      color: $color-val;
+      border-radius: 0.2rem;
+      @include btn-unstyled-states(
+        #{$color-val},
+        #{$color-val}1a,
+        #{$color-val}12,
+        #{$color-val}29,
+        #ddd
+      );
     }
   }
 }
 
-@mixin create-outline-btn-color-classes($palette) {
+@mixin create-button-filled($palette) {
+  @each $color-name, $color-val in $palette {
+    &.#{$color-name} {
+      border-radius: 0.1rem;
+      @include btn-filled-states(
+        #{$color-val}d6,
+        #{$color-val}ed,
+        #{$color-val}e3,
+        #{$color-val},
+        #e0e0e0
+      );
+    }
+  }
+}
+
+@mixin create-button-outline($palette) {
   @each $color, $color-val in $palette {
     &.#{$color} {
       color: $color-val;
       border: 0.2rem solid $color-val;
+      border-radius: 0.2rem;
+      background-color: transparent;
+      @include btn-outline-states(
+        #{$color-val},
+        #{$color-val}1a,
+        #{$color-val}12,
+        #{$color-val}29,
+        #656565
+      );
     }
   }
 }

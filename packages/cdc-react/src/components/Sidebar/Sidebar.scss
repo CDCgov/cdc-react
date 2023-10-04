@@ -124,6 +124,11 @@
     }
 
     .sidebar {
+      .chevron-double-right {
+        margin-right: -0.675rem;
+        margin-bottom: -0.65rem;
+      }
+
       &.sidebar-collapsed {
         flex-grow: 1;
 
