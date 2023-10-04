@@ -107,7 +107,7 @@
         text-decoration: none;
       }
 
-      @include create-button-filled($base-btn-palette);
+      @include global.create-button-filled(global.$base-btn-palette);
     }
 
     &.outline {
@@ -177,7 +177,7 @@
         }
       }
 
-      @include create-button-outline($base-btn-palette);
+      @include global.create-button-outline(global.$base-btn-palette);
     }
 
     &.text {
@@ -244,7 +244,7 @@
         }
       }
 
-      @include create-button-text($base-btn-palette);
+      @include global.create-button-text(global.$base-btn-palette);
     }
 
     &.unstyled {
@@ -316,7 +316,7 @@
         }
       }
 
-      @include create-button-unstyled($base-btn-palette);
+      @include global.create-button-unstyled(global.$base-btn-palette);
     }
   }
 
@@ -343,7 +343,7 @@
     border-radius: 0.2rem;
 
     &.filled {
-      @include create-button-filled($tertiary-btn-palette);
+      @include global.create-button-filled(global.$tertiary-btn-palette);
     }
 
     &.outline {
@@ -355,12 +355,12 @@
         cursor: not-allowed;
         text-decoration: none;
       }
-      @include create-button-outline($tertiary-btn-palette);
+      @include global.create-button-outline(global.$tertiary-btn-palette);
     }
 
     &.text {
       border: none;
-      @include create-button-text($tertiary-btn-palette);
+      @include global.create-button-text(global.$tertiary-btn-palette);
     }
 
     &.unstyled {
@@ -374,7 +374,7 @@
         text-decoration: underline;
       }
 
-      @include create-button-unstyled($tertiary-btn-palette);
+      @include global.create-button-unstyled(global.$tertiary-btn-palette);
     }
   }
 }
