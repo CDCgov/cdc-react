@@ -1,3 +1,6 @@
+@use "../../../scss/global.scss";
+@use "uswds-core" as *;
+
 .cdc-react {
   .profile-header {
     .profile-header-menu-item {
@@ -9,9 +12,9 @@
       border-radius: 0.175rem;
       border: none;
       display: flex;
-      padding: 0.26rem 0.45rem;
-      margin: 0 0.26rem;
-      margin-top: 0.1rem;
+      padding: units(0.5);
+      margin: 0 units(0.5);
+      margin-top: units(0.5);
       background: transparent;
       align-items: center;
       justify-content: center;
@@ -26,7 +29,7 @@
       display: none;
     }
 
-    @media (min-width: 600px) {
+    @media (min-width: units("tablet")) {
       .profile-header-menu-item.hide-on-mobile {
         display: flex;
       }

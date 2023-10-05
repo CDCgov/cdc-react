@@ -15,6 +15,13 @@ export default defineConfig({
     environment: "jsdom",
     setupFiles: "./src/tests/setup.ts",
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        includePaths: ["./node_modules/@uswds/uswds/packages"],
+      },
+    },
+  },
   build: {
     lib: {
       entry: path.resolve(__dirname, "src/components/index.ts"),

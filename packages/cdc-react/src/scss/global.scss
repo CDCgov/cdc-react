@@ -1,7 +1,10 @@
-@import "colors";
-@import "typography";
-@import "palettes";
-@import "mixins";
+@forward "uswds-theme";
+@forward "colors";
+@forward "typography";
+@forward "palettes";
+@forward "mixins";
+
+@use "typography";
 
 *,
 html,
@@ -20,23 +23,23 @@ ul {
 }
 
 h1 {
-  font-size: $font-size-h1;
+  font-size: typography.$font-size-h1;
 }
 
 h2 {
-  font-size: $font-size-h2;
+  font-size: typography.$font-size-h2;
 }
 
 h3 {
-  font-size: $font-size-h3;
+  font-size: typography.$font-size-h3;
 }
 
 h4 {
-  font-size: $font-size-h4;
+  font-size: typography.$font-size-h4;
 }
 
 h5 {
-  font-size: $font-size-h5;
+  font-size: typography.$font-size-h5;
 }
 
 .cdc-react {

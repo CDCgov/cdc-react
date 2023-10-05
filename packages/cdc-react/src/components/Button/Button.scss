@@ -1,4 +1,5 @@
-@import "../../scss/global.scss";
+@use "../../scss/global.scss";
+@use "uswds-core" as *;
 
 .cdc-react.btn {
   display: flex;
@@ -11,48 +12,48 @@
   border-width: 0.15rem;
 
   &.default {
-    min-width: 5rem;
-    min-height: 2rem;
+    min-width: units(10);
+    min-height: units(4);
 
     span {
-      font-size: 0.7rem;
+      font-size: units(1.5);
     }
   }
 
   &.tiny {
-    min-width: 2.6rem;
-    min-height: 1.42rem;
+    min-width: units(5);
+    min-height: units(3);
 
     span {
-      font-size: 0.6rem;
+      font-size: units(1);
     }
   }
 
   &.big {
-    min-width: 6rem;
-    min-height: 2.6rem;
+    min-width: units(7);
+    min-height: units(5);
 
     span {
-      font-size: 0.8rem;
+      font-size: units(2);
     }
   }
 
   &.primary {
     &.filled {
-      background-color: $main-theme;
-      border: solid 0.2rem $main-theme;
+      background-color: global.$main-theme;
       border-radius: 0.15rem;
+      border: solid 0.15rem global.$main-theme;
       color: #ffffff;
 
       &.inverse {
-        background-color: $main-theme-lighter;
-        border-color: $main-theme-lighter;
-        color: $gray-darker;
+        background-color: global.$main-theme-lighter;
+        border-color: global.$main-theme-lighter;
+        color: global.$gray-darker;
 
         &:focus,
         &.focus {
-          background-color: $main-theme-lighter;
-          border-color: $main-theme-lighter;
+          background-color: global.$main-theme-lighter;
+          border-color: global.$main-theme-lighter;
         }
 
         &:hover,
@@ -69,9 +70,9 @@
 
         &.disabled,
         &:disabled {
-          background-color: $gray-dark;
+          background-color: global.$gray-dark;
           border-radius: 0.15rem;
-          border: solid 0.15rem $gray-dark;
+          border: solid 0.15rem global.$gray-dark;
           color: #3e3e3e;
           cursor: not-allowed;
           text-decoration: none;
@@ -80,39 +81,40 @@
 
       &:focus,
       &.focus {
-        background-color: $main-theme;
-        border-color: $main-theme;
+        background-color: global.$main-theme;
+        border-color: global.$main-theme;
       }
 
       &:hover,
       &.hover {
-        background-color: $main-theme-dark;
-        border-color: $main-theme-dark;
+        background-color: global.$main-theme-dark;
+        border-color: global.$main-theme-dark;
       }
 
       &:active,
       &.active {
-        background-color: $main-theme-darker;
-        border-color: $main-theme-darker;
+        background-color: global.$main-theme-darker;
+        border-color: global.$main-theme-darker;
       }
 
       &.disabled,
       &:disabled {
-        background-color: $gray-light;
+        background-color: global.$gray-light;
         border-radius: 0.2rem;
-        border: solid 0.15rem $gray-light;
+        border: solid 0.15rem global.$gray-light;
         color: #ffffff;
         cursor: not-allowed;
         text-decoration: none;
       }
 
-      @include create-button-filled($base-btn-palette);
+      @include global.create-button-filled(global.$base-btn-palette);
     }
 
     &.outline {
       background-color: transparent;
       border-radius: 0.2rem;
-      color: $main-theme;
+      border: solid 0.15rem global.$main-theme;
+      color: global.$main-theme;
 
       &:focus,
       &.focus {
@@ -132,22 +134,23 @@
       &.disabled,
       &:disabled {
         background-color: transparent;
-        border: solid 0.15rem #e0e0e0;
-        color: #e0e0e0;
+        border-radius: 0.2rem;
+        border: solid 0.15rem transparent;
+        color: global.$gray-light;
         cursor: not-allowed;
         text-decoration: none;
       }
 
       &.inverse {
         background-color: transparent;
-        color: $main-theme-lighter;
-        border-color: $main-theme-lighter;
+        color: global.$main-theme-lighter;
+        border-color: global.$main-theme-lighter;
 
         &:hover,
         &.hover {
           background-color: #3d3d3d;
-          border-color: $main-theme-lighter;
-          color: $main-theme-lighter;
+          border-color: global.$main-theme-lighter;
+          color: global.$main-theme-lighter;
         }
 
         &:active,
@@ -159,29 +162,29 @@
 
         &:focus,
         &.focus {
-          color: $main-theme-lighter;
-          border-color: $main-theme-lighter;
+          color: global.$main-theme-lighter;
+          border-color: global.$main-theme-lighter;
           background-color: transparent;
         }
 
         &.disabled,
         &:disabled {
-          border-color: $gray-dark;
-          color: $gray-dark;
+          border-color: global.$gray-dark;
+          color: global.$gray-dark;
           background-color: transparent;
           cursor: not-allowed;
           text-decoration: none;
         }
       }
 
-      @include create-button-outline($base-btn-palette);
+      @include global.create-button-outline(global.$base-btn-palette);
     }
 
     &.text {
       background-color: transparent;
       border-radius: 0.2rem;
       border: none;
-      color: $main-theme;
+      color: global.$main-theme;
 
       &:focus,
       &.focus {
@@ -203,7 +206,7 @@
         background-color: transparent;
         border-radius: 0.2rem;
         border: solid 0.15rem transparent;
-        color: $gray-light;
+        color: global.$gray-light;
         cursor: not-allowed;
         text-decoration: none;
       }
@@ -211,12 +214,12 @@
       &.inverse {
         background: transparent;
         border-color: transparent;
-        color: $main-theme-light;
+        color: global.$main-theme-light;
 
         &:hover,
         &.hover {
           background-color: #3d3d3d;
-          color: $main-theme-lighter;
+          color: global.$main-theme-lighter;
         }
 
         &:active,
@@ -228,20 +231,20 @@
         &:focus,
         &.focus {
           background-color: #333333;
-          color: $main-theme-light;
+          color: global.$main-theme-light;
         }
 
         &.disabled,
         &:disabled {
           background-color: transparent;
           border-color: transparent;
-          color: $gray-dark;
+          color: global.$gray-dark;
           cursor: not-allowed;
           text-decoration: none;
         }
       }
 
-      @include create-button-text($base-btn-palette);
+      @include global.create-button-text(global.$base-btn-palette);
     }
 
     &.unstyled {
@@ -250,7 +253,7 @@
       background-color: transparent;
       border-radius: 0rem;
       border: none;
-      color: $main-theme;
+      color: global.$main-theme;
 
       &:focus,
       &.focus {
@@ -272,7 +275,7 @@
 
       &.disabled,
       &:disabled {
-        color: $gray-light;
+        color: global.$gray-light;
         background-color: transparent;
         border: solid 0.15rem transparent;
         cursor: not-allowed;
@@ -280,7 +283,7 @@
       }
 
       &.inverse {
-        color: $main-theme-light;
+        color: global.$main-theme-light;
         background-color: transparent;
         border-color: transparent;
 
@@ -294,7 +297,7 @@
         &:hover,
         &.hover {
           text-decoration: underline;
-          color: $main-theme-lighter;
+          color: global.$main-theme-lighter;
           background-color: transparent;
         }
 
@@ -307,13 +310,13 @@
 
         &.disabled,
         &:disabled {
-          color: $gray-dark;
+          color: global.$gray-dark;
           cursor: not-allowed;
           text-decoration: none;
         }
       }
 
-      @include create-button-unstyled($base-btn-palette);
+      @include global.create-button-unstyled(global.$base-btn-palette);
     }
   }
 
@@ -340,7 +343,7 @@
     border-radius: 0.2rem;
 
     &.filled {
-      @include create-button-filled($tertiary-btn-palette);
+      @include global.create-button-filled(global.$tertiary-btn-palette);
     }
 
     &.outline {
@@ -352,12 +355,12 @@
         cursor: not-allowed;
         text-decoration: none;
       }
-      @include create-button-outline($tertiary-btn-palette);
+      @include global.create-button-outline(global.$tertiary-btn-palette);
     }
 
     &.text {
       border: none;
-      @include create-button-text($tertiary-btn-palette);
+      @include global.create-button-text(global.$tertiary-btn-palette);
     }
 
     &.unstyled {
@@ -371,7 +374,7 @@
         text-decoration: underline;
       }
 
-      @include create-button-unstyled($tertiary-btn-palette);
+      @include global.create-button-unstyled(global.$tertiary-btn-palette);
     }
   }
 }

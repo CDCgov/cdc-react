@@ -9,7 +9,8 @@ export default defineConfig({
   resolve: {
     alias: {
       '@us-gov-cdc/cdc-react': path.resolve(__dirname, '../cdc-react/src/components/index.ts'),
-      '@us-gov-cdc/cdc-react-icons': path.resolve(__dirname, '../cdc-react-icons/src/components/index.ts')
+      '@us-gov-cdc/cdc-react-icons': path.resolve(__dirname, '../cdc-react-icons/src/components/index.ts'),
+      'uswds-core': path.resolve(__dirname, '../cdc-react/node_modules/@uswds/uswds/packages/uswds-core')
     }
   }
 });

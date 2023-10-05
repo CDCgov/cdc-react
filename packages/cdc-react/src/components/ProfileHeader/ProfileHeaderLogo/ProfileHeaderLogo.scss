@@ -1,9 +1,12 @@
+@use "../../../scss/global.scss";
+@use "uswds-core" as *;
+
 .cdc-react {
   .profile-header .logo {
     align-self: stretch;
     fill: #005eaa;
-    margin-left: 0.38rem;
-    max-width: 18.29rem;
+    margin-left: units(0.5);
+    max-width: units("mobile");
   }
 
   .profile-header-logo-wrap {

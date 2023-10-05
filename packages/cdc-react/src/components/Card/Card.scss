@@ -1,54 +1,55 @@
-@import "../../scss/global.scss";
+@use "../../scss/global.scss";
+@use "uswds-core" as *;
 
 .card-wrapper {
   border-radius: 0.4rem;
-  border: 0.1rem solid $gray-light;
+  border: 0.1rem solid global.$gray-light;
   overflow: hidden;
-  font-family: $font-family;
+  font-family: global.$font-family;
   color: #1b1b1b;
 
   .card-content {
-    border-top: 0.3rem solid $main-theme;
-    font-family: $font-family;
+    border-top: 0.3rem solid global.$main-theme;
+    font-family: global.$font-family;
 
     .card-header {
-      background: $main-theme;
+      background: global.$main-theme;
       color: #fff;
-      padding: 0.47rem 1.05rem;
-      font-size: $font-size-h4;
+      padding: units(1) units(2);
+      font-size: global.$font-size-h4;
       font-style: normal;
-      font-weight: $font-weight-medium;
+      font-weight: global.$font-weight-medium;
       line-height: 120%;
 
       &.theme-dark {
-        background-color: $main-theme-dark;
+        background-color: global.$main-theme-dark;
         color: #fff;
       }
       &.theme-darker {
-        background-color: $main-theme-darker;
+        background-color: global.$main-theme-darker;
       }
       &.theme-light {
-        background-color: $main-theme-light;
-        color: $gray-darker;
+        background-color: global.$main-theme-light;
+        color: global.$gray-darker;
       }
       &.theme-lighter {
-        background-color: $main-theme-lighter;
-        color: $gray-darker;
+        background-color: global.$main-theme-lighter;
+        color: global.$gray-darker;
       }
     }
 
     .card-body {
       font-style: normal;
-      font-weight: $font-weight-regular;
+      font-weight: global.$font-weight-regular;
 
       .card-section-title {
-        padding: 1.41rem 1.41rem 0.47rem 1.41rem;
-        font-size: $font-size-h5;
+        padding: units(3) units(3) units(1) units(3);
+        font-size: global.$font-size-h5;
         line-height: 120%;
-        font-weight: $font-weight-regular;
+        font-weight: global.$font-weight-regular;
       }
       .card-section-media {
-        padding: 0rem 1.41rem 1.41rem 1.41rem;
+        padding: 0 units(3) units(3) units(3);
       }
       .card-section-media.media-fill {
         padding: 0;
@@ -59,17 +60,17 @@
         }
       }
       .card-section-body {
-        padding: 0.47rem 1.41rem;
-        margin-bottom: 1.41rem;
+        padding: units(1) units(3);
+        margin-bottom: units(3);
         p,
         span {
-          font-size: $font-size-base;
-          font-weight: $font-weight-regular;
+          font-size: global.$font-size-base;
+          font-weight: global.$font-weight-regular;
           line-height: 120%;
         }
       }
       .card-section-footer {
-        padding: 0.47rem 1.41rem 1.41rem 1.41rem;
+        padding: units(1) units(3) units(3) units(3);
       }
     }
     .card-body.horizontal {

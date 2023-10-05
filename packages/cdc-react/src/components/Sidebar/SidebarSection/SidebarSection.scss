@@ -1,4 +1,5 @@
-@import "../../../scss/global.scss";
+@use "../../../scss/global.scss";
+@use "uswds-core" as *;
 
 .cdc-react {
   .sidebar {
@@ -17,28 +18,27 @@
       display: flex;
       align-items: center;
       color: inherit;
-      padding: 0.94rem 1.4rem;
-      font-size: 0.7rem;
+      padding: units(2) units(3);
+      font-size: units(1.5);
       cursor: pointer;
 
       .text {
-        margin-left: 0.7rem;
+        margin-left: units(1.5);
         font-style: normal;
         font-weight: 100;
-        font-size: 0.7rem;
+        font-size: units(1.5);
       }
     }
 
     .heading {
-      font-size: 0.89rem;
+      font-size: units(2);
       font-style: normal;
       font-weight: 400;
       line-height: 120%;
-      /* 1.2rem */
-      letter-spacing: 0.1rem;
+      letter-spacing: units(2px);
       text-transform: uppercase;
-      padding: 0.47rem 1.475rem;
-      color: $main-theme-lighter;
+      padding: units(1) units(3);
+      color: global.$main-theme-lighter;
     }
   }
 

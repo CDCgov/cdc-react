@@ -1,4 +1,5 @@
-@import "../../scss/global.scss";
+@use "../../scss/global.scss";
+@use "uswds-core" as *;
 
 .cdc-react {
   .sidebar-wrap {
@@ -12,35 +13,39 @@
     }
 
     .menu-item {
-      padding: 0.7rem 0;
+      padding: units(0.5) 0;
       color: #fff;
     }
 
     .menu-footer {
       color: #fff;
       margin-top: auto;
-      padding: 0.7rem 0;
+      padding: units(0.5) 0;
     }
   }
 
   .menu-header {
-    padding: 0.575rem 0.94rem;
+    padding: units(0.5) units(1);
   }
 
   .menu-header button {
-    width: 1.77rem;
+    width: units(4);
     display: flex;
-    height: 1.36rem;
-    padding: 0.1475rem;
-    margin: 0.47rem;
-    font-size: 0.59rem;
+    height: units(3);
+    padding: units(0.5);
+    margin: units(1);
+    font-size: units(1);
     justify-content: center;
     align-items: center;
   }
 
   .sidebar {
-    background: linear-gradient(225deg, $main-theme 0%, $primary-indigo 100%);
-    width: 12.036rem;
+    background: linear-gradient(
+      225deg,
+      global.$main-theme 0%,
+      global.$primary-indigo 100%
+    );
+    width: units("card-lg");
     height: 100vh;
     flex-grow: 1;
     display: flex;
@@ -49,7 +54,7 @@
 
     .chevron-double-left-mobile {
       display: flex;
-      margin-left: -0.125rem;
+      margin-left: units(-0.5);
     }
 
     .chevron-double-right {
@@ -65,7 +70,7 @@
     }
 
     &.sidebar-collapsed {
-      width: 4.7rem;
+      width: units(8);
       flex: 0 0;
       overflow-y: unset;
 
@@ -87,18 +92,18 @@
   }
 
   .dashboard-icon.icon {
-    margin-right: 0.25rem;
+    margin-right: units(0.5);
   }
 
   &.sidebar-collapsed {
     .dashboard-icon.icon {
-      margin-right: 0rem;
+      margin-right: 0;
     }
   }
 
-  @media (min-width: 600px) {
+  @media (min-width: units("tablet")) {
     .menu-header {
-      padding: 0.55rem 0.94rem;
+      padding: units(1) units(2);
     }
 
     .menu-item,
