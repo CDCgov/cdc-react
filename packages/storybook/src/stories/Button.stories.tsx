@@ -1,8 +1,13 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Button } from "@us-gov-cdc/cdc-react";
+import {
+  ButtonPrimaryColorTypes,
+  ButtonTertiaryColorTypes,
+  Button,
+  ButtonPrimaryColors,
+  ButtonTertiaryColors,
+} from "@us-gov-cdc/cdc-react";
 import { Icons } from "@us-gov-cdc/cdc-react-icons";
-import { ButtonProps } from "../../../cdc-react/src/components";
 
 const meta: Meta<typeof Button> = {
   title: "Components/Button",
@@ -255,6 +260,48 @@ export const inverseDisabledButtons: Story = {
           state={state}>
           <span>Inverse</span>
         </Button>
+      </>
+    );
+  },
+};
+
+export const buttonsPrimaryColorPalette: Story = {
+  render: (args) => {
+    return (
+      <>
+        {ButtonPrimaryColors.map((color: ButtonPrimaryColorTypes) => (
+          <>
+            <h5>
+              {color.slice(0, 1).toUpperCase() + color.slice(1, color.length)}
+            </h5>
+            <Button ariaLabel="Default Button" color={color}>
+              <span>Button</span>
+            </Button>
+          </>
+        ))}
+      </>
+    );
+  },
+};
+export const buttonsTertiaryColorPalette: Story = {
+  parameters: {
+    backgrounds: {
+      default: "inverse",
+    },
+  },
+  render: (args) => {
+    return (
+      <>
+        {ButtonTertiaryColors.map((color: ButtonTertiaryColorTypes) => (
+          <>
+            <h5 style={{ color: "#fff" }}>
+              {color.slice(0, 1).toUpperCase() + color.slice(1, color.length)}
+            </h5>
+            <Button ariaLabel="Default Button" color={color}>
+              <span>Button</span>
+            </Button>
+          </>
+        ))}
       </>
     );
   },
