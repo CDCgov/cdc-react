@@ -23,4 +23,3 @@ jobs:
           token: ${{secrets.GITHUB_TOKEN}}
           path: packages/cdc-react-icons
           monorepo-tags: true
-          release-as: "1.1.0"
