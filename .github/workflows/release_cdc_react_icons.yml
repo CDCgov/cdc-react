@@ -1,6 +1,7 @@
 name: "Release CDC React Icons Library"
 
 on:
+  workflow_dispatch:
   push:
     branches: 
       - main
