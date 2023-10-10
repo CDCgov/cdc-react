@@ -68,6 +68,7 @@ export const ButtonPrimaryColors = [
 export type ButtonPrimaryColorTypes = (typeof ButtonPrimaryColors)[number];
 
 export const ButtonTertiaryColors = [
+  "amber",
   "blue",
   "brown",
   "cyan",

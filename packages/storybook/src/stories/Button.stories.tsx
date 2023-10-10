@@ -274,7 +274,10 @@ export const buttonsPrimaryColorPalette: Story = {
             <h5>
               {color.slice(0, 1).toUpperCase() + color.slice(1, color.length)}
             </h5>
-            <Button ariaLabel="Default Button" color={color}>
+            <Button
+              ariaLabel="Default Button"
+              color={color}
+              variation={args.variation}>
               <span>Button</span>
             </Button>
           </>
@@ -284,6 +287,9 @@ export const buttonsPrimaryColorPalette: Story = {
   },
 };
 export const buttonsTertiaryColorPalette: Story = {
+  args: {
+    theme: "tertiary",
+  },
   parameters: {
     backgrounds: {
       default: "inverse",
@@ -297,7 +303,11 @@ export const buttonsTertiaryColorPalette: Story = {
             <h5 style={{ color: "#fff" }}>
               {color.slice(0, 1).toUpperCase() + color.slice(1, color.length)}
             </h5>
-            <Button ariaLabel="Default Button" color={color}>
+            <Button
+              ariaLabel="Default Button"
+              color={color}
+              variation={args.variation}
+              theme={args.theme}>
               <span>Button</span>
             </Button>
           </>
