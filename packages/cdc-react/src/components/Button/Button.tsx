@@ -10,7 +10,7 @@ import {
   ButtonVariationsTypes,
 } from "../../@types";
 
-interface ButtonProps {
+export interface ButtonProps {
   children?: React.ReactNode;
   onClick?: React.MouseEventHandler<HTMLDivElement> | undefined;
   onKeyDown?: React.KeyboardEventHandler<HTMLDivElement> | undefined;
