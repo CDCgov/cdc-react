@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.1](https://github.com/CDCgov/cdc-react/compare/cdc-react-v0.7.0...cdc-react-v0.7.1) (2023-10-10)
+
+
+### Bug Fixes
+
+* readme typo ([d999139](https://github.com/CDCgov/cdc-react/commit/d99913985876af865e52c20ce632cb436a80e650))
+
 ## 0.7.0 (2023-10-10)
 
 
