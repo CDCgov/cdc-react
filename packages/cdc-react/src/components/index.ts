@@ -9,3 +9,5 @@ export * from "./ProfileHeader/ProfileHeaderUserProfileMenuItem/ProfileHeaderUse
 export * from "./Button/Button";
 export * from "./Divider/Divider";
 export * from "./Card/Card";
+
+export * from "../@types";

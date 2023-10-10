@@ -52,7 +52,7 @@ const ButtonIconPositions = ["left", "right"] as const;
 
 export type ButtonIconPositionTypes = (typeof ButtonIconPositions)[number];
 
-const ButtonPrimaryColors = [
+export const ButtonPrimaryColors = [
   "blue",
   "brown",
   "cyan",
@@ -67,7 +67,7 @@ const ButtonPrimaryColors = [
 
 export type ButtonPrimaryColorTypes = (typeof ButtonPrimaryColors)[number];
 
-const ButtonTertiaryColors = [
+export const ButtonTertiaryColors = [
   "amber",
   "blue",
   "brown",

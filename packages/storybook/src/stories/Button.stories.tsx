@@ -1,6 +1,12 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Button } from "@us-gov-cdc/cdc-react";
+import {
+  ButtonPrimaryColorTypes,
+  ButtonTertiaryColorTypes,
+  Button,
+  ButtonPrimaryColors,
+  ButtonTertiaryColors,
+} from "@us-gov-cdc/cdc-react";
 import { Icons } from "@us-gov-cdc/cdc-react-icons";
 
 const meta: Meta<typeof Button> = {
@@ -26,184 +32,287 @@ const meta: Meta<typeof Button> = {
 export default meta;
 type Story = StoryObj<typeof Button>;
 
-export const defaultButton: Story = {
+export const buttonSizes: Story = {
   args: {
-    ariaLabel: "Default button",
-    children: <span>Default</span>,
+    size: "default",
+    ariaLabel: "Default Button",
+  },
+  render: (args) => {
+    const { ariaLabel, size } = args;
+
+    return (
+      <>
+        <h5>Default Button:</h5>
+        <Button ariaLabel={ariaLabel} size={size}>
+          <span>Default</span>
+        </Button>
+        <h5>Tiny Button:</h5>
+        <Button ariaLabel="Tiny Button" size="tiny">
+          <span>Tiny</span>
+        </Button>
+        <h5>Big Button:</h5>
+        <Button ariaLabel="Big Button" size="big">
+          <span>Big</span>
+        </Button>
+      </>
+    );
   },
 };
 
-export const tinyButton: Story = {
-  args: {
-    ariaLabel: "Tiny button",
-    size: "tiny",
-    children: <span>Tiny</span>,
+export const buttonVariations: Story = {
+  render: (args) => {
+    return (
+      <>
+        <h5>Default Button:</h5>
+        <Button ariaLabel="Default Button">
+          <span>Button</span>
+        </Button>
+        <h5>Outline Button:</h5>
+        <Button ariaLabel="Outline Button" variation="outline">
+          <span>Button</span>
+        </Button>
+        <h5>Text Button:</h5>
+        <Button ariaLabel="Text Button" variation="text">
+          <span>Button</span>
+        </Button>
+        <h5>Unstyled Button:</h5>
+        <Button ariaLabel="Unstyled Button" variation="unstyled">
+          <span>Button</span>
+        </Button>
+      </>
+    );
   },
 };
 
-export const bigButton: Story = {
+export const iconButtons: Story = {
   args: {
-    ariaLabel: "Big button",
-    size: "big",
-    children: <span>Big</span>,
+    size: "default",
+    ariaLabel: "Icon Button",
+  },
+  render: (args) => {
+    const { ariaLabel, size } = args;
+
+    return (
+      <>
+        <h5>Icon Only Button:</h5>
+        <Button
+          ariaLabel={ariaLabel}
+          size={size}
+          iconOnly={true}
+          icon={<Icons.User />}></Button>
+        <h5>Icon Left Button:</h5>
+        <Button
+          ariaLabel={ariaLabel}
+          size={size}
+          icon={<Icons.Quality />}
+          iconPosition="left">
+          <span>Quality</span>
+        </Button>
+        <h5>Icon Right Button:</h5>
+        <Button
+          ariaLabel={ariaLabel}
+          size={size}
+          icon={<Icons.Process />}
+          iconPosition="right">
+          <span>Process</span>
+        </Button>
+      </>
+    );
   },
 };
 
-export const defaultButtonDisabled: Story = {
+export const disabledButtons: Story = {
   args: {
-    ariaLabel: "Default button disabled",
+    size: "default",
+    ariaLabel: "Disabled Button",
     state: "disabled",
-    children: <span>Disabled</span>,
+  },
+  render: (args) => {
+    const { ariaLabel, size, state } = args;
+
+    return (
+      <>
+        <h5>Default Disabled Button:</h5>
+        <Button ariaLabel={ariaLabel} size={size} state={state}>
+          <span>Disabled</span>
+        </Button>
+        <h5>Outline Disabled Button:</h5>
+        <Button
+          ariaLabel={ariaLabel}
+          size={size}
+          state={state}
+          variation="outline">
+          <span>Disabled</span>
+        </Button>
+        <h5>Text Disabled Button:</h5>
+        <Button
+          ariaLabel={ariaLabel}
+          size={size}
+          state={state}
+          variation="text">
+          <span>Disabled</span>
+        </Button>
+        <h5>Unstyled Disabled Button:</h5>
+        <Button
+          ariaLabel={ariaLabel}
+          size={size}
+          state={state}
+          variation="unstyled">
+          <span>Disabled</span>
+        </Button>
+      </>
+    );
   },
 };
 
-export const outlineButton: Story = {
+export const inverseButtons: Story = {
   args: {
-    ariaLabel: "Outline button",
-    variation: "outline",
-    children: <span>Outline</span>,
+    size: "default",
+    ariaLabel: "Inverse Button",
+  },
+  parameters: {
+    backgrounds: {
+      default: "inverse",
+    },
+  },
+  render: (args) => {
+    const { ariaLabel, size } = args;
+
+    return (
+      <>
+        <h5 style={{ color: "#fff" }}>Default Inverse Button:</h5>
+        <Button ariaLabel={ariaLabel} size={size} inverse={true}>
+          <span>Inverse</span>
+        </Button>
+        <h5 style={{ color: "#fff" }}>Outline Inverse Button:</h5>
+        <Button
+          ariaLabel={ariaLabel}
+          size={size}
+          inverse={true}
+          variation="outline">
+          <span>Inverse</span>
+        </Button>
+        <h5 style={{ color: "#fff" }}>Text Inverse Button:</h5>
+        <Button
+          ariaLabel={ariaLabel}
+          size={size}
+          inverse={true}
+          variation="text">
+          <span>Inverse</span>
+        </Button>
+        <h5 style={{ color: "#fff" }}>Unstyled Inverse Button:</h5>
+        <Button
+          ariaLabel={ariaLabel}
+          size={size}
+          inverse={true}
+          variation="unstyled">
+          <span>Inverse</span>
+        </Button>
+      </>
+    );
   },
 };
 
-export const outlineButtonDisabled: Story = {
+export const inverseDisabledButtons: Story = {
   args: {
-    ariaLabel: "Outline button disabled",
-    variation: "outline",
+    size: "default",
+    ariaLabel: "Inverse Disabled Button",
     state: "disabled",
-    children: <span>Outline</span>,
+  },
+  parameters: {
+    backgrounds: {
+      default: "inverse",
+    },
+  },
+  render: (args) => {
+    const { ariaLabel, size, state } = args;
+
+    return (
+      <>
+        <h5 style={{ color: "#fff" }}>Default Disabled Inverse Button:</h5>
+        <Button ariaLabel={ariaLabel} size={size} inverse={true} state={state}>
+          <span>Inverse</span>
+        </Button>
+        <h5 style={{ color: "#fff" }}>Outline Disabled Inverse Button:</h5>
+        <Button
+          ariaLabel={ariaLabel}
+          size={size}
+          inverse={true}
+          variation="outline"
+          state={state}>
+          <span>Inverse</span>
+        </Button>
+        <h5 style={{ color: "#fff" }}>Text Disabled Inverse Button:</h5>
+        <Button
+          ariaLabel={ariaLabel}
+          size={size}
+          inverse={true}
+          variation="text"
+          state={state}>
+          <span>Inverse</span>
+        </Button>
+        <h5 style={{ color: "#fff" }}>Unstyled Disabled Inverse Button:</h5>
+        <Button
+          ariaLabel={ariaLabel}
+          size={size}
+          inverse={true}
+          variation="unstyled"
+          state={state}>
+          <span>Inverse</span>
+        </Button>
+      </>
+    );
   },
 };
 
-export const textButton: Story = {
-  args: {
-    ariaLabel: "Text button",
-    variation: "text",
-    children: <span>Text</span>,
+export const buttonsPrimaryColorPalette: Story = {
+  render: (args) => {
+    return (
+      <>
+        {ButtonPrimaryColors.map((color: ButtonPrimaryColorTypes) => (
+          <>
+            <h5>
+              {color.slice(0, 1).toUpperCase() + color.slice(1, color.length)}
+            </h5>
+            <Button
+              ariaLabel="Default Button"
+              color={color}
+              variation={args.variation}>
+              <span>Button</span>
+            </Button>
+          </>
+        ))}
+      </>
+    );
   },
 };
-
-export const textButtonDisabled: Story = {
+export const buttonsTertiaryColorPalette: Story = {
   args: {
-    ariaLabel: "Text button disabled",
-    variation: "text",
-    state: "disabled",
-    children: <span>Text</span>,
+    theme: "tertiary",
   },
-};
-
-export const unstyledButton: Story = {
-  args: {
-    ariaLabel: "Unstyled button",
-    variation: "unstyled",
-    children: <span>Unstyled</span>,
+  parameters: {
+    backgrounds: {
+      default: "inverse",
+    },
   },
-};
-
-export const unstyledButtonDisabled: Story = {
-  args: {
-    ariaLabel: "Unstyled button disabled",
-    variation: "unstyled",
-    state: "disabled",
-    children: <span>Unstyled</span>,
-  },
-};
-
-export const inverseButton: Story = {
-  args: {
-    ariaLabel: "Inverse button",
-    inverse: true,
-    children: <span>Inverse</span>,
-  },
-};
-
-export const inverseButtonDisabled: Story = {
-  args: {
-    ariaLabel: "Inverse button disabled",
-    inverse: true,
-    state: "disabled",
-    children: <span>Disabled</span>,
-  },
-};
-
-export const inverseOutlineButton: Story = {
-  args: {
-    ariaLabel: "Inverse outline button",
-    inverse: true,
-    variation: "outline",
-    children: <span>Outline</span>,
-  },
-};
-
-export const inverseOutlineButtonDisabled: Story = {
-  args: {
-    ariaLabel: "Inverse outline button disabled",
-    inverse: true,
-    variation: "outline",
-    state: "disabled",
-    children: <span>Outline</span>,
-  },
-};
-
-export const inverseTextButton: Story = {
-  args: {
-    ariaLabel: "Inverse text button",
-    inverse: true,
-    variation: "text",
-    children: <span>Text</span>,
-  },
-};
-
-export const inverseTextButtonDisabled: Story = {
-  args: {
-    ariaLabel: "Inverse outline button disabled",
-    inverse: true,
-    variation: "text",
-    state: "disabled",
-    children: <span>Text</span>,
-  },
-};
-
-export const inverseUnstyledButton: Story = {
-  args: {
-    ariaLabel: "Inverse unstyled button",
-    inverse: true,
-    variation: "unstyled",
-    children: <span>Unstyled</span>,
-  },
-};
-
-export const inverseUnstyledButtonDisabled: Story = {
-  args: {
-    ariaLabel: "Inverse unstyled button disabled",
-    inverse: true,
-    variation: "unstyled",
-    state: "disabled",
-    children: <span>Unstyled</span>,
-  },
-};
-
-export const iconOnlyButton: Story = {
-  args: {
-    ariaLabel: "User button",
-    icon: <Icons.User />,
-    iconOnly: true,
-  },
-};
-
-export const buttonWithIconLeft: Story = {
-  args: {
-    ariaLabel: "Quality page navigation button",
-    icon: <Icons.Quality />,
-    iconPosition: "left",
-    children: <span>Quality</span>,
-  },
-};
-
-export const buttonWithIconRight: Story = {
-  args: {
-    ariaLabel: "Process data button",
-    icon: <Icons.Process />,
-    iconPosition: "right",
-    children: <span>Process</span>,
+  render: (args) => {
+    return (
+      <>
+        {ButtonTertiaryColors.map((color: ButtonTertiaryColorTypes) => (
+          <>
+            <h5 style={{ color: "#fff" }}>
+              {color.slice(0, 1).toUpperCase() + color.slice(1, color.length)}
+            </h5>
+            <Button
+              ariaLabel="Default Button"
+              color={color}
+              variation={args.variation}
+              theme={args.theme}>
+              <span>Button</span>
+            </Button>
+          </>
+        ))}
+      </>
+    );
   },
 };

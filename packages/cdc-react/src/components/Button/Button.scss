@@ -135,7 +135,7 @@
       &:disabled {
         background-color: transparent;
         border-radius: 0.2rem;
-        border: solid 0.15rem transparent;
+        border: solid 0.15rem global.$gray-light;
         color: global.$gray-light;
         cursor: not-allowed;
         text-decoration: none;
