@@ -22,3 +22,4 @@ jobs:
           token: ${{secrets.GITHUB_TOKEN}}
           path: packages/cdc-react
           monorepo-tags: true
+          release-as: "0.7.0"
