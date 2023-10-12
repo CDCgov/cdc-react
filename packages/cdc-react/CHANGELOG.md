@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.2](https://github.com/CDCgov/cdc-react/compare/cdc-react-v0.7.1...cdc-react-v0.7.2) (2023-10-12)
+
+
+### Bug Fixes
+
+* chevron padding and collapse width tweaks ([3211d04](https://github.com/CDCgov/cdc-react/commit/3211d049871e05382c38024fd41221b21a99d352))
+
 ## [0.7.1](https://github.com/CDCgov/cdc-react/compare/cdc-react-v0.7.0...cdc-react-v0.7.1) (2023-10-10)
 
 
