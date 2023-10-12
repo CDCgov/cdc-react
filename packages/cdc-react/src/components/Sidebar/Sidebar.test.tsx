@@ -1,6 +1,7 @@
 import { cleanup, fireEvent, render, screen } from "@testing-library/react";
 import { afterEach } from "vitest";
 import { Sidebar } from "./Sidebar";
+import { ScreenSize, resizeView } from "../../tests/mediaQueryUtils";
 
 afterEach(() => {
   cleanup();
@@ -42,5 +43,46 @@ describe("Sidebar component", () => {
     fireEvent.click(toggleBtn);
 
     expect(screen.queryByText("Logout")).not.toBeInTheDocument();
+  });
+});
+
+describe("Responsiveness", () => {
+  describe("Media Query Breakpoint Mocks", () => {
+    const mockScreenSize = (size: ScreenSize) => {
+      resizeView(size);
+      render(
+        <Sidebar
+          sections={[
+            {
+              heading: "",
+              items: [
+                {
+                  componentType: "a",
+                  icon: "logout",
+                  text: "Logout",
+                  href: "/logout",
+                },
+              ],
+            },
+          ]}
+        />
+      );
+      expect(screen.getByText("logout")).toBeInTheDocument();
+    };
+
+    it("mocks mobile breakpoint width", () => {
+      mockScreenSize("mobile-lg");
+      expect(screen.queryByText("Logout")).not.toBeInTheDocument();
+    });
+
+    it("mocks mobile breakpoint tablet", () => {
+      mockScreenSize("tablet");
+      expect(screen.queryByText("Logout")).toBeInTheDocument();
+    });
+
+    it("mocks mobile breakpoint desktop", () => {
+      mockScreenSize("desktop");
+      expect(screen.queryByText("Logout")).toBeInTheDocument();
+    });
   });
 });
