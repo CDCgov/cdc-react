@@ -70,7 +70,7 @@
     }
 
     &.sidebar-collapsed {
-      width: units(8);
+      width: units(10);
       flex: 0 0;
       overflow-y: unset;
 
@@ -129,11 +129,6 @@
     }
 
     .sidebar {
-      .chevron-double-right {
-        margin-right: -0.675rem;
-        margin-bottom: -0.65rem;
-      }
-
       &.sidebar-collapsed {
         flex-grow: 1;
 
