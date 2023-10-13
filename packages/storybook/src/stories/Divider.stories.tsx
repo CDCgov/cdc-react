@@ -3,6 +3,7 @@ import { Divider } from "@us-gov-cdc/cdc-react";
 
 const meta: Meta<typeof Divider> = {
   title: "Components/Divider",
+  tags: ['autodocs'],
   component: Divider,
   argTypes: {},
 };

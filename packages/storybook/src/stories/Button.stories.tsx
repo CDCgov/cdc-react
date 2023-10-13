@@ -11,6 +11,7 @@ import { Icons } from "@us-gov-cdc/cdc-react-icons";
 
 const meta: Meta<typeof Button> = {
   title: "Components/Button",
+  tags: ['autodocs'],
   component: Button,
   parameters: {
     backgrounds: {

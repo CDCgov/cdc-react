@@ -3,6 +3,7 @@ import { Icons } from "@us-gov-cdc/cdc-react-icons";
 
 const meta: Meta = {
   title: "Components/Icon",
+  tags: ['autodocs'],
   parameters: {
     backgrounds: {
       default: "default",

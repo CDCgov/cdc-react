@@ -5,6 +5,7 @@ import { action } from "@storybook/addon-actions";
 
 const meta: Meta<typeof Card> = {
   title: "Components/Card",
+  tags: ['autodocs'],
   component: Card,
   argTypes: { actionButtonOnClick: { action: "clicked" } },
 };
