@@ -4,6 +4,7 @@ import { Icons } from "@us-gov-cdc/cdc-react-icons";
 
 const meta: Meta<typeof Sidebar> = {
   title: "Components/Sidebar",
+  tags: ['autodocs'],
   component: Sidebar,
   argTypes: {},
   decorators: [(Story) => <Story />],
