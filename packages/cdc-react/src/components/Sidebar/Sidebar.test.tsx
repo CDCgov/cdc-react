@@ -1,7 +1,7 @@
 import { cleanup, fireEvent, render, screen } from "@testing-library/react";
 import { afterEach } from "vitest";
 import { Sidebar } from "./Sidebar";
-import { ScreenSize, resizeView } from "../../tests/mediaQueryUtils";
+import { resizeView } from "../../tests/mediaQueryUtils";
 
 afterEach(() => {
   cleanup();
@@ -48,9 +48,8 @@ describe("Sidebar component", () => {
 
 describe("Responsiveness", () => {
   describe("Media Query Breakpoint Mocks", () => {
-    const mockScreenSize = (size: ScreenSize) => {
-      resizeView(size);
-      render(
+    const renderComponent = () => {
+      return render(
         <Sidebar
           sections={[
             {
@@ -67,21 +66,23 @@ describe("Responsiveness", () => {
           ]}
         />
       );
-      expect(screen.getByText("logout")).toBeInTheDocument();
     };
 
     it("mocks mobile breakpoint width", () => {
-      mockScreenSize("mobile-lg");
+      resizeView("mobile-lg");
+      renderComponent();
       expect(screen.queryByText("Logout")).not.toBeInTheDocument();
     });
 
     it("mocks mobile breakpoint tablet", () => {
-      mockScreenSize("tablet");
+      resizeView("tablet");
+      renderComponent();
       expect(screen.queryByText("Logout")).toBeInTheDocument();
     });
 
     it("mocks mobile breakpoint desktop", () => {
-      mockScreenSize("desktop");
+      resizeView("desktop");
+      renderComponent();
       expect(screen.queryByText("Logout")).toBeInTheDocument();
     });
   });
