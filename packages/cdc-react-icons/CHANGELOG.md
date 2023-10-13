@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.4](https://github.com/CDCgov/cdc-react/compare/cdc-react-icons-v1.1.3...cdc-react-icons-v1.1.4) (2023-10-13)
+
+
+### Bug Fixes
+
+* typo ([1794834](https://github.com/CDCgov/cdc-react/commit/1794834f3443dddfca521ca0b154524ffb632b66))
+
 ## [1.1.3](https://github.com/CDCgov/cdc-react/compare/cdc-react-icons-v1.1.2...cdc-react-icons-v1.1.3) (2023-10-13)
 
 
