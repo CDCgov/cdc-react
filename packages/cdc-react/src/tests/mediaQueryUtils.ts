@@ -1,4 +1,4 @@
-const breakpoints = {
+const breakpointPixels = {
   mobile: 0,
   "mobile-lg": 480,
   tablet: 640,
@@ -7,11 +7,9 @@ const breakpoints = {
   "desktop-lg": 1200,
   widescreen: 1400,
 };
-export type ScreenSize = keyof typeof breakpoints;
+export type ScreenSize = keyof typeof breakpointPixels;
 
-const resizeView = (size: ScreenSize) => {
-  window.innerWidth = breakpoints[size];
+export const resizeView = (screenSize: ScreenSize) => {
+  window.innerWidth = breakpointPixels[screenSize];
   window.dispatchEvent(new Event("resize"));
 };
-
-export { resizeView };
