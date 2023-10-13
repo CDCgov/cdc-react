@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.3](https://github.com/CDCgov/cdc-react/compare/cdc-react-icons-v1.1.2...cdc-react-icons-v1.1.3) (2023-10-13)
+
+
+### Bug Fixes
+
+* publish condition ([b8d3af4](https://github.com/CDCgov/cdc-react/commit/b8d3af4235ac60a526b6da42378bbdc1c753aa10))
+
 ## [1.1.2](https://github.com/CDCgov/cdc-react/compare/cdc-react-icons-v1.1.1...cdc-react-icons-v1.1.2) (2023-10-12)
 
 
