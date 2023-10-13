@@ -24,4 +24,4 @@ This project uses Vitest to run unit tests against its components and utilties. 
 
 ## Building the Project
 
-This project uses Vite to compile and build the TypeScript. Simply run `yarn build` to start this process. This will create a `dist` subdirectory with the production-ready JS code..
+This project uses Vite to compile and build the TypeScript. Simply run `yarn build` to start this process. This will create a `dist` subdirectory with the production-ready JS code.

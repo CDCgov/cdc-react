@@ -19,6 +19,7 @@ jobs:
       released: ${{ steps.release.outputs.releases_created }}
     steps:
       - uses: google-github-actions/release-please-action@v3
+        id: release
         with: 
           release-type: node
           package-name: cdc-react-icons
