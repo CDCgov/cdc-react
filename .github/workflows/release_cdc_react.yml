@@ -39,8 +39,10 @@ jobs:
       - name: Install dependencies  
         run: yarn install
       - name: Build package
+        working-directory: packages/cdc-react
         run: yarn build
       - name: Publish to NPM
+        working-directory: packages/cdc-react
         env:
           NODE_AUTH_TOKEN: ${{ secrets.CDC_REACT_NPM_TOKEN }}
         run: npm publish
