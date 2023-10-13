@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.4](https://github.com/CDCgov/cdc-react/compare/cdc-react-v0.7.3...cdc-react-v0.7.4) (2023-10-13)
+
+
+### Bug Fixes
+
+* publish condition ([b8d3af4](https://github.com/CDCgov/cdc-react/commit/b8d3af4235ac60a526b6da42378bbdc1c753aa10))
+
 ## [0.7.3](https://github.com/CDCgov/cdc-react/compare/cdc-react-v0.7.2...cdc-react-v0.7.3) (2023-10-12)
 
 
