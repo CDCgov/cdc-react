@@ -23,3 +23,21 @@ jobs:
           token: ${{secrets.GITHUB_TOKEN}}
           path: packages/cdc-react
           monorepo-tags: true
+  publish-to-npm:
+    runs-on: ubuntu-latest
+    needs: release-please
+    if: ${{ needs.release-please.outputs.release_created }}
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          registry-url: "https://registry.npmjs.org" # Allows NPM credentials to properly be configured.
+      - name: Install dependencies  
+        run: yarn install
+      - name: Build package
+        run: yarn build
+      - name: Publish to NPM
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.CDC_REACT_NPM_TOKEN }}
+        run: npm publish
