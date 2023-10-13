@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.7](https://github.com/CDCgov/cdc-react/compare/cdc-react-v0.7.6...cdc-react-v0.7.7) (2023-10-13)
+
+
+### Bug Fixes
+
+* icons version ([34cb6d5](https://github.com/CDCgov/cdc-react/commit/34cb6d5c5c20394d434037590d79bfb3f1c7f836))
+
 ## [0.7.6](https://github.com/CDCgov/cdc-react/compare/cdc-react-v0.7.5...cdc-react-v0.7.6) (2023-10-13)
 
 
