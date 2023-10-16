@@ -48,7 +48,7 @@ const ButtonStates = [
 
 export type ButtonStateTypes = (typeof ButtonStates)[number];
 
-const ButtonIconPositions = ["left", "right"] as const;
+const ButtonIconPositions = ["left", "right", "both"] as const;
 
 export type ButtonIconPositionTypes = (typeof ButtonIconPositions)[number];
 
