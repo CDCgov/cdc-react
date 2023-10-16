@@ -1,6 +1,6 @@
 import { IconProps } from ".";
 
-export const Process = ({ className }: IconProps) => {
+export const ZigZag = ({ className }: IconProps) => {
   return (
     <svg
       className={className}

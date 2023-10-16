@@ -18,7 +18,7 @@ import { Menu } from "./Menu";
 import { Minus } from "./Minus";
 import { Notifications } from "./Notifications";
 import { Plus } from "./Plus";
-import { Process } from "./Process";
+import { ZigZag } from "./ZigZag";
 import { Quality } from "./Quality";
 import { Search } from "./Search";
 import { Settings } from "./Settings";
@@ -92,7 +92,7 @@ export const Icons = {
   PageLayout,
   PaperLines,
   Plus,
-  Process,
+  ZigZag,
   Quality,
   Search,
   Settings,
