@@ -90,7 +90,7 @@ describe("Button component", () => {
       const { getByText, container } = render(TestButtonComponent);
 
       const btnText = getByText("Data");
-      const btnIcon = container.querySelector("svg")!;
+      const btnIcon = container.querySelector("svg");
       const textPrevSibling = btnText.previousSibling;
 
       expect(btnText).toBeInTheDocument();
@@ -111,7 +111,7 @@ describe("Button component", () => {
       const { getByText, container } = render(TestButtonComponent);
 
       const btnText = getByText("Data");
-      const btnIcon = container.querySelector("svg")!;
+      const btnIcon = container.querySelector("svg");
       const textNextSibling = btnText.nextSibling;
 
       expect(btnText).toBeInTheDocument();
@@ -132,7 +132,7 @@ describe("Button component", () => {
       const { getByText, container } = render(TestButtonComponent);
 
       const btnText = getByText("Data");
-      const btnIcon = container.querySelector("svg")!;
+      const btnIcon = container.querySelector("svg");
       const textPrevSibling = btnText.previousSibling!;
       const textNextSibling = btnText.nextSibling!;
 
