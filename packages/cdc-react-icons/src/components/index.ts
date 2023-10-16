@@ -8,6 +8,7 @@ import { CheckSquare } from "./CheckSquare";
 import { ChevronDoubleLeft } from "./ChevronDoubleLeft";
 import { ChevronDoubleRight } from "./ChevronDoubleRight";
 import { ChevronDown } from "./ChevronDown";
+import { ChevronLeft } from "./ChevronLeft";
 import { ChevronUp } from "./ChevronUp";
 import { Close } from "./Close";
 import { Dashboard } from "./Dashboard";
@@ -67,6 +68,7 @@ export const Icons = {
   ChevronDoubleLeft,
   ChevronDoubleRight,
   ChevronDown,
+  ChevronLeft,
   ChevronUp,
   Close,
   CloseSquare,
