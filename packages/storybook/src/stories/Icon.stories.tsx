@@ -89,6 +89,10 @@ export const all: StoryObj = {
           <Icons.ChevronDoubleUp />
           <pre>ChevronDoubleUp</pre>
         </span>
+        <span className="icon-story">
+          <Icons.ChevronDoubleDown />
+          <pre>ChevronDoubleDown</pre>
+        </span>
       </div>
       <div>
         <span className="icon-story">
