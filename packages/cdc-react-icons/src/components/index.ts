@@ -7,6 +7,7 @@ import { Check } from "./Check";
 import { CheckSquare } from "./CheckSquare";
 import { ChevronDoubleLeft } from "./ChevronDoubleLeft";
 import { ChevronDoubleRight } from "./ChevronDoubleRight";
+import { ChevronDoubleUp } from "./ChevronDoubleUp";
 import { ChevronDown } from "./ChevronDown";
 import { ChevronLeft } from "./ChevronLeft";
 import { ChevronRight } from "./ChevronRight";
@@ -68,6 +69,7 @@ export const Icons = {
   CheckSquare,
   ChevronDoubleLeft,
   ChevronDoubleRight,
+  ChevronDoubleUp,
   ChevronDown,
   ChevronLeft,
   ChevronRight,
