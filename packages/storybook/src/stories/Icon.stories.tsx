@@ -113,13 +113,13 @@ export const all: StoryObj = {
           <pre>SquareArrowUpRight</pre>
         </span>
         <span className="icon-story">
-          <Icons.Logout />
+          <Icons.SquareHalfArrowRight />
           <pre>SquareHalfArrowRight</pre>
         </span>
       </div>
       <div>
         <span className="icon-story">
-          <Icons.User />
+          <Icons.Person />
           <pre>Person</pre>
         </span>
         <span className="icon-story">
@@ -147,7 +147,7 @@ export const all: StoryObj = {
           <pre>Bolt</pre>
         </span>
         <span className="icon-story">
-          <Icons.Notifications />
+          <Icons.Bell />
           <pre>Bell</pre>
         </span>
       </div>
@@ -161,7 +161,7 @@ export const all: StoryObj = {
           <pre>Calendar</pre>
         </span>
         <span className="icon-story">
-          <Icons.Quality />
+          <Icons.Star />
           <pre>Star</pre>
         </span>
         <span className="icon-story">
@@ -237,7 +237,7 @@ export const all: StoryObj = {
       </div>
       <div>
         <span className="icon-story">
-          <Icons.Process />
+          <Icons.ZigZag />
           <pre>ZigZag</pre>
         </span>
         <span className="icon-story">
