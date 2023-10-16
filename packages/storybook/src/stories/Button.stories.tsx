@@ -11,7 +11,7 @@ import { Icons } from "@us-gov-cdc/cdc-react-icons";
 
 const meta: Meta<typeof Button> = {
   title: "Components/Button",
-  tags: ['autodocs'],
+  tags: ["autodocs"],
   component: Button,
   parameters: {
     backgrounds: {
@@ -116,6 +116,14 @@ export const iconButtons: Story = {
           icon={<Icons.Process />}
           iconPosition="right">
           <span>Process</span>
+        </Button>
+        <h5>Icon Both Sides Button:</h5>
+        <Button
+          ariaLabel={ariaLabel}
+          size={size}
+          icon={<Icons.Menu />}
+          iconPosition="both">
+          <span>Menu</span>
         </Button>
       </>
     );
