@@ -64,6 +64,10 @@ export const all: StoryObj = {
           <pre>ChevronDown</pre>
         </span>
         <span className="icon-story">
+          <Icons.ChevronLeft />
+          <pre>ChevronLeft</pre>
+        </span>
+        <span className="icon-story">
           <Icons.ChevronUp />
           <pre>ChevronUp</pre>
         </span>
