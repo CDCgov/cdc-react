@@ -13,7 +13,7 @@ import { Close } from "./Close";
 import { Dashboard } from "./Dashboard";
 import { Dots } from "./Dots";
 import { Filter } from "./Filter";
-import { Logout } from "./Logout";
+import { SquareHalfArrowRight } from "./SquareHalfArrowRight";
 import { Menu } from "./Menu";
 import { Minus } from "./Minus";
 import { Bell } from "./Bell";
@@ -84,7 +84,7 @@ export const Icons = {
   House,
   Lock,
   LockShield,
-  Logout,
+  SquareHalfArrowRight,
   Menu,
   Meter,
   Minus,
