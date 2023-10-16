@@ -19,7 +19,7 @@ import { Minus } from "./Minus";
 import { Notifications } from "./Notifications";
 import { Plus } from "./Plus";
 import { ZigZag } from "./ZigZag";
-import { Quality } from "./Quality";
+import { Star } from "./Star";
 import { Search } from "./Search";
 import { Settings } from "./Settings";
 import { SquareArrowUpRight } from "./SquareArrowUpRight";
@@ -93,7 +93,7 @@ export const Icons = {
   PaperLines,
   Plus,
   ZigZag,
-  Quality,
+  Star,
   Search,
   Settings,
   SpeechBubble,
