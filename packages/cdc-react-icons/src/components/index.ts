@@ -24,7 +24,7 @@ import { Search } from "./Search";
 import { Settings } from "./Settings";
 import { SquareArrowUpRight } from "./SquareArrowUpRight";
 import { Support } from "./Support";
-import { User } from "./User";
+import { Person } from "./Person";
 import { Bolt } from "./Bolt";
 import { Building } from "./Building";
 import { Cube } from "./Cube";
@@ -102,7 +102,7 @@ export const Icons = {
   Swatch,
   Target,
   TrafficCone,
-  User,
+  Person,
 };
 
 export type IconNames = keyof typeof Icons;
