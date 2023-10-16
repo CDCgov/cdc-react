@@ -27,13 +27,13 @@ export const Example: Story = {
           },
           {
             componentType: "a",
-            icon: <Icons.Process />,
+            icon: <Icons.ZigZag />,
             text: "Process Status",
             href: "/",
           },
           {
             componentType: "a",
-            icon: <Icons.Quality />,
+            icon: <Icons.Star />,
             text: "Quality",
             href: "/",
           },
@@ -44,7 +44,7 @@ export const Example: Story = {
         items: [
           {
             componentType: "a",
-            icon: <Icons.User />,
+            icon: <Icons.Person />,
             text: "Manage Users",
             href: "/",
           },
@@ -63,7 +63,7 @@ export const Example: Story = {
           },
           {
             componentType: "a",
-            icon: <Icons.Logout />,
+            icon: <Icons.SquareHalfArrowRight />,
             text: "Logout",
             href: "/logout",
           },
