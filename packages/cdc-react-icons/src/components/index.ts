@@ -5,6 +5,7 @@ import { ArrowUp } from "./ArrowUp";
 import { CloseSquare } from "./CloseSquare";
 import { Check } from "./Check";
 import { CheckSquare } from "./CheckSquare";
+import { ChevronDoubleDown } from "./ChevronDoubleDown";
 import { ChevronDoubleLeft } from "./ChevronDoubleLeft";
 import { ChevronDoubleRight } from "./ChevronDoubleRight";
 import { ChevronDoubleUp } from "./ChevronDoubleUp";
@@ -67,6 +68,7 @@ export const Icons = {
   Calendar,
   Check,
   CheckSquare,
+  ChevronDoubleDown,
   ChevronDoubleLeft,
   ChevronDoubleRight,
   ChevronDoubleUp,
