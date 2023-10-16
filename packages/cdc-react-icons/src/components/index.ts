@@ -16,7 +16,7 @@ import { Filter } from "./Filter";
 import { Logout } from "./Logout";
 import { Menu } from "./Menu";
 import { Minus } from "./Minus";
-import { Notifications } from "./Notifications";
+import { Bell } from "./Bell";
 import { Plus } from "./Plus";
 import { ZigZag } from "./ZigZag";
 import { Star } from "./Star";
@@ -88,7 +88,7 @@ export const Icons = {
   Menu,
   Meter,
   Minus,
-  Notifications,
+  Bell,
   PageLayout,
   PaperLines,
   Plus,
