@@ -64,7 +64,7 @@ describe("Button component", () => {
       <Button
         ariaLabel={ariaLabel}
         iconOnly={true}
-        icon={<Icons.User />}
+        icon={<Icons.Person />}
         className={className}
       />
     );
