@@ -3,7 +3,7 @@ import { Icons } from "@us-gov-cdc/cdc-react-icons";
 
 const meta: Meta = {
   title: "Components/Icon",
-  tags: ['autodocs'],
+  tags: ["autodocs"],
   parameters: {
     backgrounds: {
       default: "default",
@@ -66,6 +66,10 @@ export const all: StoryObj = {
         <span className="icon-story">
           <Icons.ChevronLeft />
           <pre>ChevronLeft</pre>
+        </span>
+        <span className="icon-story">
+          <Icons.ChevronRight />
+          <pre>ChevronRight</pre>
         </span>
         <span className="icon-story">
           <Icons.ChevronUp />

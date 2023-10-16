@@ -9,7 +9,7 @@ export const ChevronRight = ({ className }: IconProps) => {
       height="24"
       viewBox="0 0 24 24"
       fill="none">
-      <path d="M9 17L14 12L9 7" stroke="#333333" strokeLinecap="round" />
+      <path d="M9 17L14 12L9 7" stroke="currentColor" strokeLinecap="round" />
     </svg>
   );
 };
