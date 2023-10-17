@@ -17,18 +17,18 @@ import { Close } from "./Close";
 import { Dashboard } from "./Dashboard";
 import { Dots } from "./Dots";
 import { Filter } from "./Filter";
-import { Logout } from "./Logout";
+import { SquareHalfArrowRight } from "./SquareHalfArrowRight";
 import { Menu } from "./Menu";
 import { Minus } from "./Minus";
-import { Notifications } from "./Notifications";
+import { Bell } from "./Bell";
 import { Plus } from "./Plus";
-import { Process } from "./Process";
-import { Quality } from "./Quality";
+import { ZigZag } from "./ZigZag";
+import { Star } from "./Star";
 import { Search } from "./Search";
 import { Settings } from "./Settings";
 import { SquareArrowUpRight } from "./SquareArrowUpRight";
 import { Support } from "./Support";
-import { User } from "./User";
+import { Person } from "./Person";
 import { Bolt } from "./Bolt";
 import { Building } from "./Building";
 import { Cube } from "./Cube";
@@ -92,16 +92,16 @@ export const Icons = {
   House,
   Lock,
   LockShield,
-  Logout,
+  SquareHalfArrowRight,
   Menu,
   Meter,
   Minus,
-  Notifications,
+  Bell,
   PageLayout,
   PaperLines,
   Plus,
-  Process,
-  Quality,
+  ZigZag,
+  Star,
   Search,
   Settings,
   SpeechBubble,
@@ -110,7 +110,7 @@ export const Icons = {
   Swatch,
   Target,
   TrafficCone,
-  User,
+  Person,
 };
 
 export type IconNames = keyof typeof Icons;

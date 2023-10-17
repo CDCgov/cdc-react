@@ -100,12 +100,12 @@ export const iconButtons: Story = {
           ariaLabel={ariaLabel}
           size={size}
           iconOnly={true}
-          icon={<Icons.User />}></Button>
+          icon={<Icons.Person />}></Button>
         <h5>Icon Left Button:</h5>
         <Button
           ariaLabel={ariaLabel}
           size={size}
-          icon={<Icons.Quality />}
+          icon={<Icons.Star />}
           iconPosition="left">
           <span>Quality</span>
         </Button>
@@ -113,7 +113,7 @@ export const iconButtons: Story = {
         <Button
           ariaLabel={ariaLabel}
           size={size}
-          icon={<Icons.Process />}
+          icon={<Icons.ZigZag />}
           iconPosition="right">
           <span>Process</span>
         </Button>

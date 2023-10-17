@@ -19,7 +19,7 @@ const logo = <ProfileHeaderLogo classNames={["logo"]} />;
 const menuItems: MenuItemType[] = [
   {
     badgeCount: 5,
-    icon: <Icons.Notifications hasBadge={true} />,
+    icon: <Icons.Bell hasBadge={true} />,
     className: "hide-on-mobile",
     srText: "Notifications button",
   },
@@ -33,13 +33,13 @@ const menuItems: MenuItemType[] = [
 
 const userProfilePopupMenuItems: PopupMenuItemType[] = [
   {
-    icon: <Icons.User />,
+    icon: <Icons.Person />,
     iconPosition: "left",
     text: "Your Profile",
     badgeCount: 0,
   },
   {
-    icon: <Icons.Notifications hasBadge={true} />,
+    icon: <Icons.Bell hasBadge={true} />,
     iconPosition: "left",
     text: "Notifications",
     badgeCount: 1,
@@ -51,7 +51,7 @@ const userProfilePopupMenuItems: PopupMenuItemType[] = [
     badgeCount: 0,
   },
   {
-    icon: <Icons.Logout />,
+    icon: <Icons.SquareHalfArrowRight />,
     iconPosition: "left",
     text: "Logout",
     badgeCount: 0,

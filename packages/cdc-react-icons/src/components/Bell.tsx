@@ -1,6 +1,6 @@
 import { IconProps } from ".";
 
-export const Notifications = ({ hasBadge, className }: IconProps) => {
+export const Bell = ({ hasBadge, className }: IconProps) => {
   return (
     <svg
       className={className}
