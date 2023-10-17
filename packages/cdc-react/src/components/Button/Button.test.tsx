@@ -75,4 +75,71 @@ describe("Button component", () => {
     expect(btn).toBeInTheDocument();
     expect(btnAriaLabel).toEqual(ariaLabel);
   });
+
+  describe("Display Button Icons", () => {
+    it("should show icon to the left of the button text", () => {
+      const TestButtonComponent = (
+        <Button
+          ariaLabel="test button"
+          icon={<Icons.BarGraph />}
+          iconPosition="left">
+          <span>Data</span>
+        </Button>
+      );
+
+      const { getByText, container } = render(TestButtonComponent);
+
+      const btnText = getByText("Data");
+      const btnIcon = container.querySelector("svg");
+      const textPrevSibling = btnText.previousSibling;
+
+      expect(btnText).toBeInTheDocument();
+      expect(btnIcon).toBeInTheDocument();
+      expect(textPrevSibling).toEqual(btnIcon);
+    });
+
+    it("should show icon to the right of the button text", () => {
+      const TestButtonComponent = (
+        <Button
+          ariaLabel="test button"
+          icon={<Icons.BarGraph />}
+          iconPosition="right">
+          <span>Data</span>
+        </Button>
+      );
+
+      const { getByText, container } = render(TestButtonComponent);
+
+      const btnText = getByText("Data");
+      const btnIcon = container.querySelector("svg");
+      const textNextSibling = btnText.nextSibling;
+
+      expect(btnText).toBeInTheDocument();
+      expect(btnIcon).toBeInTheDocument();
+      expect(textNextSibling).toEqual(btnIcon);
+    });
+
+    it("should show icons on both sides of the button text", () => {
+      const TestButtonComponent = (
+        <Button
+          ariaLabel="test button"
+          icon={<Icons.BarGraph />}
+          iconPosition="both">
+          <span>Data</span>
+        </Button>
+      );
+
+      const { getByText, container } = render(TestButtonComponent);
+
+      const btnText = getByText("Data");
+      const btnIcon = container.querySelector("svg");
+      const textPrevSibling = btnText.previousSibling!;
+      const textNextSibling = btnText.nextSibling!;
+
+      expect(btnText).toBeInTheDocument();
+      expect(btnIcon).toBeInTheDocument();
+      expect(textPrevSibling).toEqual(btnIcon);
+      expect(textNextSibling).toEqual(btnIcon);
+    });
+  });
 });

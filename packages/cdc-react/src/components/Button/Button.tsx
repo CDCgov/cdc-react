@@ -106,9 +106,9 @@ export const Button = ({
       id={id}
       className={classes}
       disabled={disabled}>
-      {icon && iconPosition === "left" && icon}
+      {icon && (iconPosition === "left" || iconPosition === "both") && icon}
       {iconOnly !== true ? children : icon}
-      {icon && iconPosition === "right" && icon}
+      {icon && (iconPosition === "right" || iconPosition === "both") && icon}
     </button>
   );
 };
