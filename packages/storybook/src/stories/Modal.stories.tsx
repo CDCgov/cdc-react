@@ -11,4 +11,9 @@ const meta: Meta<typeof Modal> = {
 export default meta;
 type Story = StoryObj<typeof Modal>;
 
-export const Example: Story = {};
+export const Example: Story = {
+  args: {
+    modalTitle: "Are you sure you want to continue?",
+    modalBody: "You have unsaved changes that will be lost.",
+  },
+};
