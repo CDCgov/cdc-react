@@ -1,10 +1,10 @@
 import "./Modal.scss";
 import { Button } from "@us-gov-cdc/cdc-react";
 import { Icons } from "@us-gov-cdc/cdc-react-icons";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 export interface ModalProps {
   isOpen: boolean;
-  onClose?: () => void;
+  onClose: () => void;
   children?: React.ReactNode;
   isForcedAction?: boolean;
 }
@@ -13,6 +13,14 @@ export interface ModalChildrenProps {
 }
 
 export const Modal = (props: ModalProps) => {
+  const overlayRef = useRef(null);
+
+  const handleOverlayClick = (event: React.MouseEvent<HTMLDivElement>) => {
+    if (event.target === overlayRef.current) {
+      props.onClose();
+    }
+  };
+
   useEffect(() => {
     if (props.isOpen) {
       document.body.style.overflow = "hidden";
@@ -31,18 +39,14 @@ export const Modal = (props: ModalProps) => {
       setBackgroundColor("rgba(0,0,0,0.5)");
     }
   }, [props.isOpen]);
+
   if (!props.isOpen) return null;
-  useEffect(() => {
-    if (props.isOpen) {
-      document.body.style.overflow = "hidden";
-    }
-    return () => {
-      document.body.style.overflow = "unset";
-    };
-  }, [props.isOpen]);
 
   return (
     <div
+      ref={overlayRef}
+      onClick={handleOverlayClick}
+      role="presentation"
       className="modal-overlay"
       style={{
         position: "fixed",
@@ -54,7 +58,7 @@ export const Modal = (props: ModalProps) => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        backdropFilter: "blur(5px)", // Blurred background
+        backdropFilter: "blur(5px)",
         backgroundColor,
       }}>
       <div
