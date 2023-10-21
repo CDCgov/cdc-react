@@ -13,10 +13,35 @@ export interface ModalChildrenProps {
 }
 
 export const Modal = (props: ModalProps) => {
-  const overlayRef = useRef(null);
+  const overlayRef = useRef<HTMLDivElement>(null);
+  const modalRef = useRef<HTMLDivElement>(null);
+
+  // Close modal when clicking outside (optional based on prop)
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        !props.isForcedAction &&
+        props.isOpen &&
+        modalRef.current &&
+        !modalRef.current.contains(event.target)
+      ) {
+        props.onClose();
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [props.isOpen, props.isForcedAction, props.onClose]);
+
+  // Focus the modal when it opens
+  useEffect(() => {
+    if (props.isOpen) {
+      modalRef.current?.focus();
+    }
+  }, [props.isOpen]);
 
   const handleOverlayClick = (event: React.MouseEvent<HTMLDivElement>) => {
-    if (event.target === overlayRef.current) {
+    if (event.target === overlayRef.current && !props.isForcedAction) {
       props.onClose();
     }
   };
@@ -62,7 +87,11 @@ export const Modal = (props: ModalProps) => {
         backgroundColor,
       }}>
       <div
+        ref={modalRef}
         className="modal usa-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle"
         style={{
           maxWidth: "600px",
           margin: "100px auto",
