@@ -1,7 +1,7 @@
 import "./Modal.scss";
 import { Button } from "@us-gov-cdc/cdc-react";
 import { Icons } from "@us-gov-cdc/cdc-react-icons";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 export interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -16,13 +16,14 @@ export const Modal = (props: ModalProps) => {
   const overlayRef = useRef<HTMLDivElement>(null);
   const modalRef = useRef<HTMLDivElement>(null);
 
+  // Hook: determine whether to close the modal once overlay is clicked. - Optional
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (
         !props.isForcedAction &&
         props.isOpen &&
         modalRef.current &&
-        !modalRef.current.contains(event.target)
+        !modalRef.current.contains(event.target as Node)
       ) {
         props.onClose();
       }
@@ -32,36 +33,12 @@ export const Modal = (props: ModalProps) => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [props.isOpen, props.isForcedAction, props.onClose]);
 
-  useEffect(() => {
-    if (props.isOpen) {
-      modalRef.current?.focus();
-    }
-  }, [props.isOpen]);
-
+  // Event Handler: close the modal if overlay is clicked
   const handleOverlayClick = (event: React.MouseEvent<HTMLDivElement>) => {
     if (event.target === overlayRef.current && !props.isForcedAction) {
       props.onClose();
     }
   };
-
-  useEffect(() => {
-    if (props.isOpen) {
-      document.body.style.overflow = "hidden";
-    }
-    return () => {
-      document.body.style.overflow = "unset";
-    };
-  }, [props.isOpen]);
-
-  const [backgroundColor, setBackgroundColor] = useState("rgba(0,0,0,0.5)");
-
-  useEffect(() => {
-    if (!props.isOpen) {
-      setBackgroundColor("rgba(255,0,0,0.5)");
-    } else {
-      setBackgroundColor("rgba(0,0,0,0.5)");
-    }
-  }, [props.isOpen]);
 
   if (!props.isOpen) return null;
 
@@ -71,32 +48,12 @@ export const Modal = (props: ModalProps) => {
       onClick={handleOverlayClick}
       role="presentation"
       className="modal-overlay"
-      style={{
-        position: "fixed",
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        background: "rgba(255, 105, 180, 0.8)",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        backdropFilter: "blur(5px)",
-        backgroundColor,
-      }}>
+      style={{}}>
       <div
         ref={modalRef}
         className="modal usa-modal"
         role="dialog"
-        aria-modal="true"
-        aria-labelledby="modalTitle"
-        style={{
-          maxWidth: "600px",
-          margin: "100px auto",
-          background: "white",
-          padding: "20px",
-          borderRadius: "5px",
-        }}>
+        aria-modal="true">
         <div className="usa-modal__content">
           <div className="usa-modal__main">{props.children}</div>
           <Button
@@ -113,6 +70,7 @@ export const Modal = (props: ModalProps) => {
   );
 };
 
+// TODO: extract these components to their own files
 export const ModalTitle = (props: ModalChildrenProps) => {
   return <h2 className="modal-title usa-modal__heading">{props.children}</h2>;
 };
