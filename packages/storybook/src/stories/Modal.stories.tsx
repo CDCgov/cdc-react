@@ -22,33 +22,62 @@ type Story = StoryObj<typeof Modal>;
 export const Example: Story = {
   args: {
     isOpen: false,
+    isForcedAction: false,
   },
   render: function Render(args) {
     const [{ isOpen }, updateArgs] = useArgs();
 
-    function handleOpenModal() {
+    function toggleModal() {
       updateArgs({ isOpen: !isOpen });
     }
 
-    const handleCloseModal = () => {
-      updateArgs({ isOpen: !isOpen });
-      alert("Modal closed!");
-    };
+    // const handleCloseModal = () => {
+    //   updateArgs({ isOpen: !isOpen });
+    //   alert("Modal closed!");
+    // };
 
     return (
       <>
-        <button onClick={handleOpenModal}>Open Modal</button>
-        <Modal {...args} isOpen={isOpen} onClose={handleCloseModal}>
+        <button onClick={toggleModal}>Open Modal</button>
+        <Modal {...args} isOpen={isOpen} onClose={toggleModal}>
           <ModalTitle>Are you sure you want to continue?</ModalTitle>
           <ModalBody>You have unsaved changes that will be lost.</ModalBody>
           <ModalFooter>
-            <Button ariaLabel="continue" onClick={handleCloseModal}>
+            <Button ariaLabel="continue" onClick={toggleModal}>
               Continue without saving
             </Button>
-            <Button
-              ariaLabel="go back"
-              variation="text"
-              onClick={handleCloseModal}>
+            <Button ariaLabel="go back" variation="text" onClick={toggleModal}>
+              Go back
+            </Button>
+          </ModalFooter>
+        </Modal>
+      </>
+    );
+  },
+};
+
+export const LockedBackground: Story = {
+  args: {
+    isOpen: false,
+    isForcedAction: true,
+  },
+  render: function Render(args) {
+    const [{ isOpen }, updateArgs] = useArgs();
+
+    function toggleModal() {
+      updateArgs({ isOpen: !isOpen });
+    }
+    return (
+      <>
+        <button onClick={toggleModal}>Open Modal</button>
+        <Modal {...args} isOpen={isOpen} onClose={toggleModal}>
+          <ModalTitle>Are you sure you want to continue?</ModalTitle>
+          <ModalBody>You have unsaved changes that will be lost.</ModalBody>
+          <ModalFooter>
+            <Button ariaLabel="continue" onClick={toggleModal}>
+              Continue without saving
+            </Button>
+            <Button ariaLabel="go back" variation="text" onClick={toggleModal}>
               Go back
             </Button>
           </ModalFooter>
