@@ -16,7 +16,6 @@ export const Modal = (props: ModalProps) => {
   const overlayRef = useRef<HTMLDivElement>(null);
   const modalRef = useRef<HTMLDivElement>(null);
 
-  // Close modal when clicking outside (optional based on prop)
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (
@@ -33,7 +32,6 @@ export const Modal = (props: ModalProps) => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [props.isOpen, props.isForcedAction, props.onClose]);
 
-  // Focus the modal when it opens
   useEffect(() => {
     if (props.isOpen) {
       modalRef.current?.focus();
