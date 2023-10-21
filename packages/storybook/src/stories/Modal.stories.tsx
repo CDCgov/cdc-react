@@ -86,3 +86,65 @@ export const LockedBackground: Story = {
     );
   },
 };
+export const CDCExampleUSWDSStyles: Story = {
+  args: {
+    isOpen: false,
+    isForcedAction: true,
+  },
+  render: function Render(args) {
+    const [{ isOpen }, updateArgs] = useArgs();
+
+    function toggleModal() {
+      updateArgs({ isOpen: !isOpen });
+    }
+    return (
+      <>
+        <button onClick={toggleModal}>Open Modal</button>
+        <Modal {...args} isOpen={isOpen} onClose={toggleModal}>
+          <ModalTitle>You are about to leave the CDC website</ModalTitle>
+          <ModalBody>Links with this icon indicate that you are about to leave the CDC website.</ModalBody>
+          <ModalFooter>
+            <Button ariaLabel="continue" onClick={toggleModal}>
+              Continue without saving
+            </Button>
+            <Button ariaLabel="go back" variation="text" onClick={toggleModal}>
+              Go back
+            </Button>
+          </ModalFooter>
+        </Modal>
+      </>
+    );
+  },
+};
+
+export const CDCExample: Story = {
+  args: {
+    isOpen: false,
+    isForcedAction: true,
+  },
+  render: function Render(args) {
+    const [{ isOpen }, updateArgs] = useArgs();
+
+    function toggleModal() {
+      updateArgs({ isOpen: !isOpen });
+    }
+    return (
+      <>
+        <button onClick={toggleModal}>Open Modal</button>
+        <Modal {...args} isOpen={isOpen} onClose={toggleModal}>
+          <ModalTitle>You are about to leave the CDC website</ModalTitle>
+          <ModalBody>Links with this icon indicate that you are about to leave the CDC website.</ModalBody>
+          <ModalFooter>
+            <Button ariaLabel="continue" onClick={toggleModal}>
+              Continue without saving
+            </Button>
+            <Button ariaLabel="go back" variation="text" onClick={toggleModal}>
+              Go back
+            </Button>
+          </ModalFooter>
+        </Modal>
+      </>
+    );
+  },
+};
+
