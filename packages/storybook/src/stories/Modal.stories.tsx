@@ -23,6 +23,7 @@ export const Example: Story = {
   args: {
     isOpen: false,
     isForcedAction: false,
+    size: "default",
   },
   render: function Render(args) {
     const [{ isOpen }, updateArgs] = useArgs();
@@ -102,7 +103,10 @@ export const CDCExampleUSWDSStyles: Story = {
         <button onClick={toggleModal}>Open Modal</button>
         <Modal {...args} isOpen={isOpen} onClose={toggleModal}>
           <ModalTitle>You are about to leave the CDC website</ModalTitle>
-          <ModalBody>Links with this icon indicate that you are about to leave the CDC website.</ModalBody>
+          <ModalBody>
+            Links with this icon indicate that you are about to leave the CDC
+            website.
+          </ModalBody>
           <ModalFooter>
             <Button ariaLabel="continue" onClick={toggleModal}>
               Continue without saving
@@ -133,13 +137,16 @@ export const CDCExample: Story = {
         <button onClick={toggleModal}>Open Modal</button>
         <Modal {...args} isOpen={isOpen} onClose={toggleModal}>
           <ModalTitle>You are about to leave the CDC website</ModalTitle>
-          <ModalBody>Links with this icon indicate that you are about to leave the CDC website.</ModalBody>
+          <ModalBody>
+            Links with this icon indicate that you are about to leave the CDC
+            website.
+          </ModalBody>
           <ModalFooter>
             <Button ariaLabel="continue" onClick={toggleModal}>
-              Continue without saving
+              Action
             </Button>
             <Button ariaLabel="go back" variation="text" onClick={toggleModal}>
-              Go back
+              Cancel
             </Button>
           </ModalFooter>
         </Modal>
@@ -147,4 +154,3 @@ export const CDCExample: Story = {
     );
   },
 };
-

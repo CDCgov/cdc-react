@@ -7,6 +7,7 @@ export interface ModalProps {
   onClose: () => void;
   children?: React.ReactNode;
   isForcedAction?: boolean;
+  size: "default" | "large";
 }
 export interface ModalChildrenProps {
   children: React.ReactNode;
@@ -47,22 +48,17 @@ export const Modal = (props: ModalProps) => {
       ref={overlayRef}
       onClick={handleOverlayClick}
       role="presentation"
-      className="modal-overlay"
-      style={{}}>
-      <div
-        ref={modalRef}
-        className="modal usa-modal"
-        role="dialog"
-        aria-modal="true">
-        <div className="usa-modal__content">
-          <div className="usa-modal__main">{props.children}</div>
+      className="modal-overlay">
+      <div ref={modalRef} className="modal" role="dialog" aria-modal="true">
+        <div className="modal-content usa-modal__content">
+          <div className="modal-main">{props.children}</div>
           <Button
             ariaLabel="Close this window"
             size="tiny"
             iconOnly={true}
             icon={<Icons.Close />}
             variation="unstyled"
-            className="usa-button usa-modal__close"
+            className="usa-button usa-modal__close modal-close-btn"
             onClick={props.onClose}></Button>
         </div>
       </div>
@@ -72,7 +68,11 @@ export const Modal = (props: ModalProps) => {
 
 // TODO: extract these components to their own files
 export const ModalTitle = (props: ModalChildrenProps) => {
-  return <h2 className="modal-title usa-modal__heading">{props.children}</h2>;
+  return (
+    <div className="modal-header">
+      <h2 className="modal-title">{props.children}</h2>
+    </div>
+  );
 };
 
 export const ModalBody = (props: ModalChildrenProps) => {
