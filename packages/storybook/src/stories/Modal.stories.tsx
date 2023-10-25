@@ -13,7 +13,12 @@ const meta: Meta<typeof Modal> = {
   title: "Components/Modal",
   tags: ["autodocs"],
   component: Modal,
-  argTypes: {},
+  argTypes: {
+    size: {
+      options: ["default", "lg"],
+      control: { type: "inline-radio" },
+    },
+  },
 };
 
 export default meta;
