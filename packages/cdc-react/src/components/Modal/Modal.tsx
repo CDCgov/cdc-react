@@ -22,24 +22,6 @@ export const Modal = (props: ModalProps) => {
   const uswdsSizeClass =
     props.size === "large" ? "usa-modal usa-modal--lg" : "usa-modal";
 
-  // Hook: determine whether to close the modal once overlay is clicked. - Optional
-  useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
-      if (
-        !props.isForcedAction &&
-        props.isOpen &&
-        modalRef.current &&
-        !modalRef.current.contains(event.target as Node)
-      ) {
-        props.onClose();
-      }
-    }
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, [props.isOpen, props.isForcedAction, props.onClose]);
-
-  // Event Handler: close the modal if overlay is clicked
   const handleOverlayClick = (event: React.MouseEvent<HTMLDivElement>) => {
     if (event.target === overlayRef.current && !props.isForcedAction) {
       props.onClose();
