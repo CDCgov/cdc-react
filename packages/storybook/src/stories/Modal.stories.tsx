@@ -15,7 +15,7 @@ const meta: Meta<typeof Modal> = {
   component: Modal,
   argTypes: {
     size: {
-      options: ["default", "lg"],
+      options: ["default", "large"],
       control: { type: "inline-radio" },
     },
   },
@@ -143,8 +143,29 @@ export const CDCExample: Story = {
         <Modal {...args} isOpen={isOpen} onClose={toggleModal}>
           <ModalTitle>You are about to leave the CDC website</ModalTitle>
           <ModalBody>
-            Links with this icon indicate that you are about to leave the CDC
-            website.
+            <h6>
+              Links with this icon indicate that you are about to leave the CDC
+              website.
+            </h6>
+            <ul>
+              <li>
+                The Centers for Disease Control and Prevention (CDC) cannot
+                attest to the accuracy of a non-federal website.
+              </li>
+              <li>
+                Linking to a non-federal website does not constitute an
+                endorsement by CDC or any of its employees of the sponsors or
+                the information and products presented on the website.
+              </li>
+              <li>
+                You will be subject to the destination website’s privacy policy
+                when you follow the link.
+              </li>
+              <li>
+                CDC is not responsible for Section 508 compliance
+                (accessibility) on other federal or private websites.
+              </li>
+            </ul>
           </ModalBody>
           <ModalFooter>
             <Button ariaLabel="continue" onClick={toggleModal}>

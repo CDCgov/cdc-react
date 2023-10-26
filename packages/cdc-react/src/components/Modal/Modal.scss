@@ -14,19 +14,11 @@
   backdrop-filter: blur(5px);
 }
 .modal {
-  background-color: pink;
-  position: relative;
-  width: 320px;
-  border: 1px solid #ccc;
-  // padding: 20px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-  &.default {
-    background-color: red;
-  }
-  &.large {
-    background-color: blue;
-  }
+  border-radius: 0.23529rem;
+  border: 1px solid var(--system-gray-gray-light, #e0e0e0);
+  background: var(--system-gray-white, #fff);
   .modal-content {
+    position: relative;
     .modal-main {
       .modal-header {
         display: flex;
@@ -35,6 +27,7 @@
         gap: 0.70588rem;
         display: flex;
         justify-content: space-between;
+        border-bottom: 1px solid var(--system-gray-gray-light, #e0e0e0);
         .modal-title {
           margin: 0;
           color: global.$gray-darker;
@@ -45,7 +38,6 @@
         }
       }
       .modal-body {
-        margin: 10px 0;
         display: flex;
         padding: 1.41176rem;
         flex-direction: column;
@@ -55,27 +47,25 @@
       }
       .modal-footer {
         margin-top: 10px;
+        border-top: 1px solid var(--system-gray-gray-light, #e0e0e0);
+        display: flex;
+        padding: 0.70588rem 1.41176rem;
+        justify-content: flex-end;
+        align-items: flex-start;
+        gap: 0.70588rem;
+        align-self: stretch;
       }
     }
     .modal-close-btn {
-      background-color: #f44336;
-      color: #fff;
-      border: none;
-      border-radius: 50%;
-      width: 25px;
-      height: 25px;
-      line-height: 25px;
-      text-align: center;
-      cursor: pointer;
       position: absolute;
-      top: 10px;
-      right: 10px;
+      top: 2.5rem;
+      right: 1.41rem;
     }
   }
 }
 
 .wrapper {
-  position: relative;
+  // position: relative;
   width: 320px;
   border: 1px solid #ccc;
   padding: 20px;
@@ -102,17 +92,14 @@
   margin-top: 10px;
 }
 
-.close-btn {
-  background-color: #f44336;
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 25px;
-  height: 25px;
-  line-height: 25px;
-  text-align: center;
-  cursor: pointer;
-  position: absolute;
-  top: 10px;
-  right: 10px;
+ul,
+li {
+  font-size: 0.9rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+.usa-modal__content {
+  position: relative;
+  padding-top: 0 !important;
 }
