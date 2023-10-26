@@ -1,15 +1,12 @@
 import "./Modal.scss";
 import { Button } from "@us-gov-cdc/cdc-react";
 import { Icons } from "@us-gov-cdc/cdc-react-icons";
-import { useEffect, useRef } from "react";
-
-type ModalSize = "default" | "large";
+import { useRef } from "react";
 export interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
   children?: React.ReactNode;
   isForcedAction?: boolean;
-  size?: ModalSize;
 }
 export interface ModalChildrenProps {
   children: React.ReactNode;
@@ -18,9 +15,6 @@ export interface ModalChildrenProps {
 export const Modal = (props: ModalProps) => {
   const overlayRef = useRef<HTMLDivElement>(null);
   const modalRef = useRef<HTMLDivElement>(null);
-
-  const uswdsSizeClass =
-    props.size === "large" ? "usa-modal usa-modal--lg" : "usa-modal";
 
   const handleOverlayClick = (event: React.MouseEvent<HTMLDivElement>) => {
     if (event.target === overlayRef.current && !props.isForcedAction) {
@@ -38,7 +32,7 @@ export const Modal = (props: ModalProps) => {
       className="modal-overlay">
       <div
         ref={modalRef}
-        className={`modal ${uswdsSizeClass}`}
+        className="modal usa-modal"
         role="dialog"
         aria-modal="true">
         <div className="modal-content usa-modal__content">

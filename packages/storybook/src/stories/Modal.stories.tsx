@@ -13,12 +13,7 @@ const meta: Meta<typeof Modal> = {
   title: "Components/Modal",
   tags: ["autodocs"],
   component: Modal,
-  argTypes: {
-    size: {
-      options: ["default", "large"],
-      control: { type: "inline-radio" },
-    },
-  },
+  argTypes: {},
 };
 
 export default meta;
@@ -28,7 +23,6 @@ export const Example: Story = {
   args: {
     isOpen: false,
     isForcedAction: false,
-    size: "default",
   },
   render: function Render(args) {
     const [{ isOpen }, updateArgs] = useArgs();
@@ -36,11 +30,6 @@ export const Example: Story = {
     function toggleModal() {
       updateArgs({ isOpen: !isOpen });
     }
-
-    // const handleCloseModal = () => {
-    //   updateArgs({ isOpen: !isOpen });
-    //   alert("Modal closed!");
-    // };
 
     return (
       <>
