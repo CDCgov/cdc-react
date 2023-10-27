@@ -33,7 +33,9 @@ export const Example: Story = {
 
     return (
       <>
-        <button onClick={toggleModal}>Open Modal</button>
+        <Button ariaLabel="open modal" onClick={toggleModal}>
+          Open Modal
+        </Button>
         <Modal {...args} isOpen={isOpen} onClose={toggleModal}>
           <ModalTitle>Are you sure you want to continue?</ModalTitle>
           <ModalBody>You have unsaved changes that will be lost.</ModalBody>
@@ -64,43 +66,12 @@ export const LockedBackground: Story = {
     }
     return (
       <>
-        <button onClick={toggleModal}>Open Modal</button>
+        <Button ariaLabel="open modal" onClick={toggleModal}>
+          Open Modal
+        </Button>
         <Modal {...args} isOpen={isOpen} onClose={toggleModal}>
           <ModalTitle>Are you sure you want to continue?</ModalTitle>
           <ModalBody>You have unsaved changes that will be lost.</ModalBody>
-          <ModalFooter>
-            <Button ariaLabel="continue" onClick={toggleModal}>
-              Continue without saving
-            </Button>
-            <Button ariaLabel="go back" variation="text" onClick={toggleModal}>
-              Go back
-            </Button>
-          </ModalFooter>
-        </Modal>
-      </>
-    );
-  },
-};
-export const CDCExampleUSWDSStyles: Story = {
-  args: {
-    isOpen: false,
-    isForcedAction: true,
-  },
-  render: function Render(args) {
-    const [{ isOpen }, updateArgs] = useArgs();
-
-    function toggleModal() {
-      updateArgs({ isOpen: !isOpen });
-    }
-    return (
-      <>
-        <button onClick={toggleModal}>Open Modal</button>
-        <Modal {...args} isOpen={isOpen} onClose={toggleModal}>
-          <ModalTitle>You are about to leave the CDC website</ModalTitle>
-          <ModalBody>
-            Links with this icon indicate that you are about to leave the CDC
-            website.
-          </ModalBody>
           <ModalFooter>
             <Button ariaLabel="continue" onClick={toggleModal}>
               Continue without saving
@@ -128,7 +99,9 @@ export const CDCExample: Story = {
     }
     return (
       <>
-        <button onClick={toggleModal}>Open Modal</button>
+        <Button ariaLabel="open modal" onClick={toggleModal}>
+          Open Modal
+        </Button>
         <Modal {...args} isOpen={isOpen} onClose={toggleModal}>
           <ModalTitle>You are about to leave the CDC website</ModalTitle>
           <ModalBody>
