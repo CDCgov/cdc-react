@@ -39,4 +39,32 @@ describe("Modal component", () => {
 
     expect(onCloseMock).toHaveBeenCalledTimes(1);
   });
+
+  it("should call onClose when presentation overlay is clicked and isForced is false", () => {
+    const onCloseMock = vi.fn();
+
+    const screen = render(
+      <Modal isOpen={true} onClose={onCloseMock}>
+        Modal
+      </Modal>
+    );
+    const presentationOverlay = screen.getByRole("presentation");
+    fireEvent.click(presentationOverlay);
+
+    expect(onCloseMock).toHaveBeenCalledTimes(1);
+  });
+
+  it("should not call onClose when presentation overlay is clicked and isForced is true", () => {
+    const onCloseMock = vi.fn();
+
+    const screen = render(
+      <Modal isOpen={true} onClose={onCloseMock} isForcedAction={true}>
+        Modal
+      </Modal>
+    );
+    const presentationOverlay = screen.getByRole("presentation");
+    fireEvent.click(presentationOverlay);
+
+    expect(onCloseMock).toHaveBeenCalledTimes(0);
+  });
 });
