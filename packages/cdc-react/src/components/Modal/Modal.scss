@@ -13,91 +13,77 @@
   align-items: center;
   backdrop-filter: blur(5px);
 }
+
 .modal {
-  border-radius: 0.23529rem;
-  border: 1px solid var(--system-gray-gray-light, #e0e0e0);
-  background: var(--system-gray-white, #fff);
+  border-radius: 0.236rem;
+  border: 1px solid global.$gray-light;
+  background: #fff;
+
   .modal-content {
     position: relative;
+
     .modal-main {
       .modal-header {
         display: flex;
-        padding: 0.70588rem 1.41176rem;
+        padding: units(1.5) units(3);
         align-items: flex-start;
-        gap: 0.70588rem;
         display: flex;
         justify-content: space-between;
-        border-bottom: 1px solid var(--system-gray-gray-light, #e0e0e0);
+        border-bottom: 1px solid global.$gray-light;
+
         .modal-title {
           margin: 0;
           color: global.$gray-darker;
-          font-size: 1.26rem;
+          font-size: global.$font-size-h4;
           font-style: normal;
-          font-weight: 500;
+          font-weight: global.$font-weight-medium;
           line-height: 120%;
         }
       }
+
       .modal-body {
+        font-family: global.$font-family;
+        font-size: global.$font-size-small;
+        font-weight: global.$font-weight-regular;
         display: flex;
-        padding: 1.41176rem;
+        padding: units(3);
         flex-direction: column;
-        align-items: flex-start;
-        gap: 1.41176rem;
-        align-self: stretch;
+        line-height: 140%;
       }
+
       .modal-footer {
+        font-weight: global.$font-weight-regular;
         margin-top: 10px;
-        border-top: 1px solid var(--system-gray-gray-light, #e0e0e0);
+        border-top: 1px solid global.$gray-light;
         display: flex;
-        padding: 0.70588rem 1.41176rem;
+        padding: units(1.5) units(3);
         justify-content: flex-end;
         align-items: flex-start;
-        gap: 0.70588rem;
+        gap: units(1.5);
         align-self: stretch;
+
+        button {
+          font-weight: global.$font-weight-regular;
+        }
       }
     }
+
     .modal-close-btn {
       position: absolute;
       top: 2.5rem;
-      right: 1.41rem;
+      right: 0.71rem;
     }
   }
 }
 
-.wrapper {
-  width: 320px;
-  border: 1px solid #ccc;
-  padding: 20px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.container {
-  width: 100%;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-}
-.title {
-  margin: 0;
-}
-
-.body {
-  margin: 10px 0;
-}
-
-.footer {
-  margin-top: 10px;
-}
-
 ul,
 li {
-  font-size: 0.9rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 140%;
+  list-style-type: initial;
+  font-family: global.$font-family;
+  font-size: global.$font-size-small;
+  font-weight: global.$font-weight-regular;
 }
+
 .usa-modal__content {
   position: relative;
   padding-top: 0 !important;

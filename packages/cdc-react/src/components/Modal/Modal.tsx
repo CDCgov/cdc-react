@@ -61,11 +61,7 @@ export const ModalTitle = (props: ModalChildrenProps) => {
 };
 
 export const ModalBody = (props: ModalChildrenProps) => {
-  return (
-    <div className="modal-body usa-prose">
-      <p>{props.children}</p>
-    </div>
-  );
+  return <div className="modal-body">{props.children}</div>;
 };
 
 export const ModalFooter = (props: ModalChildrenProps) => {
