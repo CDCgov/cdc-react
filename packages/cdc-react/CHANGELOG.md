@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.0.0](https://github.com/CDCgov/cdc-react/compare/cdc-react-v0.7.7...cdc-react-v1.0.0) (2023-10-17)
+
+
+### ⚠ BREAKING CHANGES
+
+* 4 icons have been renamed
+
+### Features
+
+* Portal-1072 - Update icon naming in Storybook ([#91](https://github.com/CDCgov/cdc-react/issues/91)) ([696ea1d](https://github.com/CDCgov/cdc-react/commit/696ea1dda52711e784f37b3230326e729bc38259))
+
 ## [0.7.7](https://github.com/CDCgov/cdc-react/compare/cdc-react-v0.7.6...cdc-react-v0.7.7) (2023-10-13)
 
 
