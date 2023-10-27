@@ -1,11 +1,14 @@
-import { IconNames, Icons } from "@us-gov-cdc/cdc-react-icons";
 import "./Dropdown.scss";
+
+import { Icons } from "@us-gov-cdc/cdc-react-icons";
+import { useState } from "react";
 
 export interface DropdownProps {
   label: string;
   labelIcon?: React.ReactNode;
   items: string[];
   srText: string;
+  id: string;
 }
 
 /**
@@ -16,18 +19,25 @@ export const Dropdown = ({
   label,
   items = [],
   srText,
+  id,
 }: DropdownProps) => {
+  const [dropdownOpen, setDropdownVisibility] = useState(false);
+
   return (
-    <div className="cdc-react">
+    <div className="cdc-react" id={id}>
       <div className="dropdown">
-        <div aria-label={srText} className="dropdown-label-wrap">
+        <div
+          onClick={() => setDropdownVisibility(!dropdownOpen)}
+          aria-label={srText}
+          className="dropdown-label-wrap">
           <span className="dropdown-label-icon">{labelIcon}</span>
           <span className="dropdown-label">{label}</span>
           <span className="dropdown-arrow">
-            <Icons.ChevronDown />
+            {dropdownOpen ? <Icons.ChevronUp /> : <Icons.ChevronDown />}
           </span>
         </div>
-        <div className="dropdown-items">
+        <div className={`dropdown-items ${dropdownOpen && "show"}`}>
+          {/* <div className="arrowUp"></div> */}
           {items.map((item: string, index: number) => {
             return (
               <div
