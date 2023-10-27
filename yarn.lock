@@ -3523,6 +3523,11 @@
     "@typescript-eslint/types" "6.7.0"
     eslint-visitor-keys "^3.4.1"
 
+"@us-gov-cdc/cdc-react-icons@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@us-gov-cdc/cdc-react-icons/-/cdc-react-icons-2.0.0.tgz#e23c01533cc79a37afeaa837d27b1e9414c761e7"
+  integrity sha512-0b2XzA2RI8zC2AT4ij7CnUkAajaRW1cOh3RckY0b1cnQMXxNh9pwm4c9l9r5iiPv7gu+veVIDw0qeEFAiUREnw==
+
 "@us-gov-cdc/cdc-react@^0.4.4":
   version "0.4.4"
   resolved "https://registry.yarnpkg.com/@us-gov-cdc/cdc-react/-/cdc-react-0.4.4.tgz#70038c36c799259167bc4b12c71c662c22df612f"
