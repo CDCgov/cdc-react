@@ -1,0 +1,49 @@
+@use "../../scss/global.scss";
+@use "uswds-core" as *;
+
+.cdc-react {
+  .dropdown-label-wrap {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0.5rem;
+    width: 250px;
+    align-items: center;
+    border: solid 1px;
+
+    span {
+      display: flex;
+
+      &.dropdown-label-icon {
+        flex-grow: 0.5;
+        padding: 0.5rem;
+      }
+
+      &.dropdown-label {
+        font-size: 0.875rem;
+        flex-grow: 0.25;
+      }
+
+      &.dropdown-arrow {
+        flex: 1;
+        flex-grow: 1;
+        justify-content: end;
+        padding-right: 0.5rem;
+      }
+    }
+  }
+
+  .dropdown-items {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+    width: 250px;
+
+    .dropdown-item {
+      display: flex;
+      width: 100%;
+      padding: 0.5rem;
+      border-radius: 0px;
+      font-size: 0.875rem;
+    }
+  }
+}
