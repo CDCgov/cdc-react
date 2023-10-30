@@ -22,6 +22,7 @@ export const Dropdown = ({
   id,
 }: DropdownProps) => {
   const [dropdownOpen, setDropdownVisibility] = useState(false);
+  const [dropdownCurrentItem, setDropdownCurrentItem] = useState(label);
 
   return (
     <div className="cdc-react" id={id}>
@@ -31,16 +32,19 @@ export const Dropdown = ({
           aria-label={srText}
           className="dropdown-label-wrap">
           <span className="dropdown-label-icon">{labelIcon}</span>
-          <span className="dropdown-label">{label}</span>
+          <span className="dropdown-label">{dropdownCurrentItem}</span>
           <span className="dropdown-arrow">
             {dropdownOpen ? <Icons.ChevronUp /> : <Icons.ChevronDown />}
           </span>
         </div>
         <div className={`dropdown-items ${dropdownOpen && "show"}`}>
-          {/* <div className="arrowUp"></div> */}
           {items.map((item: string, index: number) => {
             return (
               <div
+                onClick={() => {
+                  setDropdownCurrentItem(item);
+                  setDropdownVisibility(!dropdownOpen);
+                }}
                 className="dropdown-item"
                 key={`cdc-react-dropdown-option-${index}`}>
                 {item}
