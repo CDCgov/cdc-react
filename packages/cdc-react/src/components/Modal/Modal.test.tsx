@@ -5,7 +5,7 @@ import { vi } from "vitest";
 describe("Modal component", () => {
   it("should render the modal component with text inside", () => {
     const { getByText } = render(
-      <Modal isOpen={true} onClose={() => {}}>
+      <Modal modalTitle="" isOpen={true} onClose={() => {}}>
         Modal
       </Modal>
     );
@@ -15,7 +15,7 @@ describe("Modal component", () => {
 
   it("should not render the modal component when isOpen is false", () => {
     const { queryByText } = render(
-      <Modal isOpen={false} onClose={() => {}}>
+      <Modal modalTitle="" isOpen={false} onClose={() => {}}>
         Modal
       </Modal>
     );
@@ -26,7 +26,7 @@ describe("Modal component", () => {
     const onCloseMock = vi.fn();
 
     const { container } = render(
-      <Modal isOpen={true} onClose={onCloseMock}>
+      <Modal modalTitle="" isOpen={true} onClose={onCloseMock}>
         Modal
       </Modal>
     );
@@ -44,7 +44,7 @@ describe("Modal component", () => {
     const onCloseMock = vi.fn();
 
     const screen = render(
-      <Modal isOpen={true} onClose={onCloseMock}>
+      <Modal modalTitle="" isOpen={true} onClose={onCloseMock}>
         Modal
       </Modal>
     );
@@ -58,7 +58,11 @@ describe("Modal component", () => {
     const onCloseMock = vi.fn();
 
     const screen = render(
-      <Modal isOpen={true} onClose={onCloseMock} isForcedAction={true}>
+      <Modal
+        modalTitle=""
+        isOpen={true}
+        onClose={onCloseMock}
+        isForcedAction={true}>
         Modal
       </Modal>
     );
