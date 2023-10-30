@@ -56,12 +56,3 @@ export const Modal = (props: ModalProps) => {
     </div>
   );
 };
-
-// TODO: extract these components to their own files
-export const ModalBody = (props: ModalChildrenProps) => {
-  return <div className="modal-body">{props.children}</div>;
-};
-
-export const ModalFooter = (props: ModalChildrenProps) => {
-  return <div className="modal-footer usa-modal__footer">{props.children}</div>;
-};
