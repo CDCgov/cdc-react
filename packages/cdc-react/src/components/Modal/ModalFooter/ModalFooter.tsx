@@ -1,4 +1,4 @@
-export interface ModalChildrenProps {
+interface ModalChildrenProps {
   children: React.ReactNode;
 }
 export const ModalFooter = (props: ModalChildrenProps) => {

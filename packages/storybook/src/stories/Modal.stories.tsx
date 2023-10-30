@@ -1,10 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { useArgs } from "@storybook/preview-api";
-// import { Modal } from "@us-gov-cdc/cdc-react";
-import { Modal } from "../../../cdc-react/src/components/Modal/Modal";
-import { ModalFooter } from "../../../cdc-react/src/components/Modal/ModalFooter/ModalFooter";
-import { ModalBody } from "../../../cdc-react/src/components/Modal/ModalBody/ModalBody";
-import { Button } from "@us-gov-cdc/cdc-react";
+import { Button, Modal, ModalBody, ModalFooter  } from "@us-gov-cdc/cdc-react";
 
 const meta: Meta<typeof Modal> = {
   title: "Components/Modal",
