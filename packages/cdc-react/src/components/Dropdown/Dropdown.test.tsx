@@ -1,76 +1,31 @@
 import { render, screen } from "@testing-library/react";
 
-import { MenuItemType, PopupMenuItemType } from "../../@types";
+import { Dropdown } from "..";
+import { Icons } from "@us-gov-cdc/cdc-react-icons";
 
-import { ProfileHeader, ProfileHeaderLogo } from "..";
-
-describe("ProfileHeader component", () => {
-  it("should render some buttons", () => {
-    const logo = <ProfileHeaderLogo image="../test.png" />;
-
-    // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
-    const menuItems: MenuItemType[] = [
-      {
-        badgeCount: 5,
-        icon: "notifications",
-        className: "hide-on-mobile",
-        srText: "Notifications button",
-      },
-      {
-        badgeCount: 0,
-        icon: "settings",
-        className: "hide-on-mobile",
-        srText: "Settings button",
-      },
-      {
-        badgeCount: 0,
-        icon: "user",
-        className: "user-profile",
-        srText: "User profile button",
-      },
-    ];
-
-    const popupMenuItems: PopupMenuItemType[] = [
-      {
-        icon: "user",
-        iconPosition: "left",
-        text: "Your Profile",
-        onClick: undefined,
-        badgeCount: 0,
-      },
-      {
-        icon: "notifications",
-        iconPosition: "left",
-        text: "Notifications",
-        onClick: undefined,
-        badgeCount: 1,
-      },
-      {
-        icon: "settings",
-        iconPosition: "left",
-        text: "Settings",
-        onClick: undefined,
-        badgeCount: 0,
-      },
-      {
-        icon: "logout",
-        iconPosition: "left",
-        text: "Logout",
-        onClick: undefined,
-        badgeCount: 0,
-      },
-    ];
-
+describe("Dropdown component", () => {
+  it("should render the Dropdown UI component and click actions work", () => {
     render(
-      <ProfileHeader
-        className="profile-header"
-        logo={logo}
-        menuItems={menuItems}
-        userProfilePopupMenuItems={popupMenuItems}
+      <Dropdown
+        srText="Dropdown Screen Reader text"
+        label="Dropdown Label"
+        items={["Item One", "Item Two", "Item Three"]}
+        labelIcon={<Icons.Calendar />}
       />
     );
 
-    expect(screen.getByText("Notifications button")).toBeInTheDocument();
-    expect(screen.getByText("Settings button")).toBeInTheDocument();
+    expect(screen.getByText("Dropdown Label")).toBeInTheDocument();
+
+    const dropdown = screen.getByText("Dropdown Label");
+
+    dropdown.click();
+
+    expect(screen.getByText("Item One")).toBeInTheDocument();
+
+    const dropdownItemOne = screen.getByText("Item One");
+
+    dropdownItemOne.click();
+
+    expect(screen.getByText("Item One")).toBeInTheDocument();
   });
 });

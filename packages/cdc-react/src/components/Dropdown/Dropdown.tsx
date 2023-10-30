@@ -8,7 +8,7 @@ export interface DropdownProps {
   labelIcon?: React.ReactNode;
   items: string[];
   srText: string;
-  id: string;
+  id?: string;
 }
 
 /**
