@@ -53,7 +53,7 @@
 
       .modal-footer {
         font-weight: global.$font-weight-regular;
-        margin-top: 10px;
+        margin-top: units(1);
         border-top: 1px solid global.$gray-light;
         display: flex;
         padding: units(1.5) units(3);
