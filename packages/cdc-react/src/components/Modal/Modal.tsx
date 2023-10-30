@@ -1,5 +1,5 @@
 import "./Modal.scss";
-import { Button } from "@us-gov-cdc/cdc-react";
+import { Button } from "../Button/Button";
 import { Icons } from "@us-gov-cdc/cdc-react-icons";
 import { useRef } from "react";
 export interface ModalProps {
