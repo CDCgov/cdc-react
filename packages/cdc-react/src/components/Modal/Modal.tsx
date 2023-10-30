@@ -9,9 +9,6 @@ export interface ModalProps {
   children?: React.ReactNode;
   isForcedAction?: boolean;
 }
-// export interface ModalChildrenProps {
-//   children: React.ReactNode;
-// }
 
 export const Modal = (props: ModalProps) => {
   const overlayRef = useRef<HTMLDivElement>(null);
