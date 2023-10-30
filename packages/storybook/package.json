@@ -20,7 +20,5 @@
     "react-dom": "^18.2.0",
     "storybook": "^7.4.1"
   },
-  "dependencies": {
-    "@us-gov-cdc/cdc-react": "^0.4.4"
-  }
+  "dependencies": {}
 }

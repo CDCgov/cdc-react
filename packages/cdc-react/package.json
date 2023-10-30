@@ -1,6 +1,6 @@
 {
   "name": "@us-gov-cdc/cdc-react",
-  "version": "0.7.7",
+  "version": "1.0.0",
   "description": "Library for ReactJS components for the CDC",
   "main": "./dist/cdc-react.umd.js",
   "module": "./dist/cdc-react.es.js",
@@ -42,7 +42,7 @@
     "vitest": "^0.33.0"
   },
   "dependencies": {
-    "@us-gov-cdc/cdc-react-icons": "^1.1.5",
+    "@us-gov-cdc/cdc-react-icons": "^2.0.0",
     "@uswds/uswds": "^3.5.0"
   },
   "peerDependencies": {
