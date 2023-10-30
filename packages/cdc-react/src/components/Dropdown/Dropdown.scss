@@ -5,7 +5,7 @@
   .dropdown-label-wrap {
     display: flex;
     flex-direction: row;
-    width: 250px;
+    max-width: 18.125rem;
     align-items: center;
     border: solid 0.1rem global.$gray-light;
     cursor: pointer;
@@ -14,22 +14,23 @@
 
     span {
       display: flex;
+      color: global.$gray-darker;
 
       &.dropdown-label-icon {
         flex-grow: 0.05;
-        padding: 0.25rem;
+        padding: units("05");
       }
 
       &.dropdown-label {
         font-size: 0.875rem;
-        flex-grow: 0.25;
+        flex-grow: units("05");
       }
 
       &.dropdown-arrow {
         flex: 1;
         flex-grow: 1;
         justify-content: end;
-        padding-right: 0.5rem;
+        padding-right: units(1);
       }
     }
   }
@@ -38,13 +39,13 @@
     display: none;
     cursor: pointer;
     flex-direction: column;
-    margin-top: -0.25rem;
-    width: 250px;
+    margin-top: units("neg-05");
+    max-width: 18.125rem;
     box-shadow: 0 0 0.1rem 0.1rem #e7e6e6;
     border-radius: 0.2rem;
     position: relative;
     background: #fff;
-    max-height: 250px;
+    max-height: 18.125rem;
 
     &.show {
       display: flex;
@@ -56,8 +57,8 @@
       }
       display: flex;
       width: 100%;
-      padding: 0.5rem;
-      border-radius: 0px;
+      padding: units(1);
+      border-radius: none;
       font-size: 0.875rem;
     }
   }
