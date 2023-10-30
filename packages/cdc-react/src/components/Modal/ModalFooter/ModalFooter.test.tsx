@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 import { ModalFooter } from "./ModalFooter";
-import { Button } from "@us-gov-cdc/cdc-react";
+import { Button } from "../../Button/Button";
 
 describe("ModalFooter", () => {
   it("should render text as a child", () => {
