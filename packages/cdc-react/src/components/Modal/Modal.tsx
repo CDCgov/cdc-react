@@ -5,6 +5,7 @@ import { useRef } from "react";
 export interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
+  modalTitle: string;
   children?: React.ReactNode;
   isForcedAction?: boolean;
 }
@@ -36,7 +37,12 @@ export const Modal = (props: ModalProps) => {
         role="dialog"
         aria-modal="true">
         <div className="modal-content usa-modal__content">
-          <div className="modal-main">{props.children}</div>
+          <div className="modal-main">
+            <div className="modal-header">
+              <h2 className="modal-title">{props.modalTitle}</h2>
+            </div>
+            {props.children}
+          </div>
           <Button
             ariaLabel="Close this window"
             size="tiny"
@@ -52,14 +58,6 @@ export const Modal = (props: ModalProps) => {
 };
 
 // TODO: extract these components to their own files
-export const ModalTitle = (props: ModalChildrenProps) => {
-  return (
-    <div className="modal-header">
-      <h2 className="modal-title">{props.children}</h2>
-    </div>
-  );
-};
-
 export const ModalBody = (props: ModalChildrenProps) => {
   return <div className="modal-body">{props.children}</div>;
 };

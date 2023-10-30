@@ -5,7 +5,6 @@ import {
   Modal,
   ModalBody,
   ModalFooter,
-  ModalTitle,
 } from "../../../cdc-react/src/components/Modal/Modal";
 import { Button } from "@us-gov-cdc/cdc-react";
 
@@ -23,6 +22,7 @@ export const Example: Story = {
   args: {
     isOpen: false,
     isForcedAction: false,
+    modalTitle: "Are you sure you want to continue?",
   },
   render: function Render(args) {
     const [{ isOpen }, updateArgs] = useArgs();
@@ -37,7 +37,6 @@ export const Example: Story = {
           Open Modal
         </Button>
         <Modal {...args} isOpen={isOpen} onClose={toggleModal}>
-          <ModalTitle>Are you sure you want to continue?</ModalTitle>
           <ModalBody>You have unsaved changes that will be lost.</ModalBody>
           <ModalFooter>
             <Button ariaLabel="continue" onClick={toggleModal}>
@@ -57,6 +56,7 @@ export const LockedBackground: Story = {
   args: {
     isOpen: false,
     isForcedAction: true,
+    modalTitle: "Are you sure you want to continue?",
   },
   render: function Render(args) {
     const [{ isOpen }, updateArgs] = useArgs();
@@ -70,7 +70,6 @@ export const LockedBackground: Story = {
           Open Modal
         </Button>
         <Modal {...args} isOpen={isOpen} onClose={toggleModal}>
-          <ModalTitle>Are you sure you want to continue?</ModalTitle>
           <ModalBody>You have unsaved changes that will be lost.</ModalBody>
           <ModalFooter>
             <Button ariaLabel="continue" onClick={toggleModal}>
@@ -90,6 +89,7 @@ export const CDCExample: Story = {
   args: {
     isOpen: false,
     isForcedAction: true,
+    modalTitle: "Are you sure you want to continue?",
   },
   render: function Render(args) {
     const [{ isOpen }, updateArgs] = useArgs();
@@ -103,7 +103,6 @@ export const CDCExample: Story = {
           Open Modal
         </Button>
         <Modal {...args} isOpen={isOpen} onClose={toggleModal}>
-          <ModalTitle>You are about to leave the CDC website</ModalTitle>
           <ModalBody>
             <h6>
               Links with this icon indicate that you are about to leave the CDC
