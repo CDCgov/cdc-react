@@ -20,5 +20,8 @@ export const Example: Story = {
     label: "Dropdown Label",
     items: ["Item One", "Item Two", "Item Three"],
     labelIcon: <Icons.Calendar />,
+    onSelect: (item: string) => {
+      console.log(item);
+    },
   },
 };

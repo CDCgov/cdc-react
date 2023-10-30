@@ -8,6 +8,13 @@ export interface DropdownProps {
   labelIcon?: React.ReactNode;
   items: string[];
   srText: string;
+  onSelect: (item: string) => void;
+  onKeyDownDropdownLabel?:
+    | React.KeyboardEventHandler<HTMLDivElement>
+    | undefined;
+  onKeyDownDropdownItems?:
+    | React.KeyboardEventHandler<HTMLDivElement>
+    | undefined;
   id?: string;
 }
 
@@ -19,6 +26,9 @@ export const Dropdown = ({
   label,
   items = [],
   srText,
+  onSelect,
+  onKeyDownDropdownLabel,
+  onKeyDownDropdownItems,
   id,
 }: DropdownProps) => {
   const [dropdownOpen, setDropdownVisibility] = useState(false);
@@ -28,6 +38,8 @@ export const Dropdown = ({
     <div className="cdc-react" id={id}>
       <div className="dropdown">
         <div
+          role="presentation"
+          onKeyDown={onKeyDownDropdownLabel}
           onClick={() => setDropdownVisibility(!dropdownOpen)}
           aria-label={srText}
           className="dropdown-label-wrap">
@@ -41,9 +53,12 @@ export const Dropdown = ({
           {items.map((item: string, index: number) => {
             return (
               <div
+                role="presentation"
+                onKeyDown={onKeyDownDropdownItems}
                 onClick={() => {
                   setDropdownCurrentItem(item);
                   setDropdownVisibility(!dropdownOpen);
+                  onSelect(item);
                 }}
                 className="dropdown-item"
                 key={`cdc-react-dropdown-option-${index}`}>

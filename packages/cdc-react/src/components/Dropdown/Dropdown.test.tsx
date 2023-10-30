@@ -11,6 +11,9 @@ describe("Dropdown component", () => {
         label="Dropdown Label"
         items={["Item One", "Item Two", "Item Three"]}
         labelIcon={<Icons.Calendar />}
+        onSelect={(item) => {
+          console.log(item);
+        }}
       />
     );
 
