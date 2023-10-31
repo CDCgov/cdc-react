@@ -1,0 +1,90 @@
+@use "../../scss/global.scss";
+@use "uswds-core" as *;
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(global.$gray-darker, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+}
+
+.modal {
+  border-radius: 0.236rem;
+  border: 1px solid global.$gray-light;
+  background: #fff;
+
+  .modal-content {
+    position: relative;
+
+    .modal-main {
+      .modal-header {
+        display: flex;
+        padding: units(1.5) units(3);
+        align-items: flex-start;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid global.$gray-light;
+
+        .modal-title {
+          margin: 0;
+          color: global.$gray-darker;
+          font-size: global.$font-size-h4;
+          font-style: normal;
+          font-weight: global.$font-weight-medium;
+          line-height: 120%;
+        }
+      }
+
+      .modal-body {
+        font-family: global.$font-family;
+        font-size: global.$font-size-small;
+        font-weight: global.$font-weight-regular;
+        display: flex;
+        padding: units(3);
+        flex-direction: column;
+        line-height: 140%;
+      }
+
+      .modal-footer {
+        font-weight: global.$font-weight-regular;
+        margin-top: units(1);
+        border-top: 1px solid global.$gray-light;
+        display: flex;
+        padding: units(1.5) units(3);
+        justify-content: flex-end;
+        align-items: flex-start;
+        gap: units(1.5);
+        align-self: stretch;
+
+        button {
+          font-weight: global.$font-weight-regular;
+        }
+      }
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 2.5rem;
+      right: 0.71rem;
+    }
+  }
+}
+
+ul,
+li {
+  list-style-type: initial;
+  font-family: global.$font-family;
+  font-size: global.$font-size-small;
+  font-weight: global.$font-weight-regular;
+}
+
+.usa-modal__content {
+  position: relative;
+  padding-top: 0 !important;
+}
