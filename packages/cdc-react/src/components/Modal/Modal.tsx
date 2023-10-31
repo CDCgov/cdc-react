@@ -40,8 +40,9 @@ export const Modal = (props: ModalProps) => {
             </div>
             {props.children}
           </div>
+          {/* The close button is the last element to allow for expected tabbing behavior */}
           <Button
-            ariaLabel="Close this window"
+            ariaLabel="Close modal"
             size="tiny"
             iconOnly={true}
             icon={<Icons.Close />}
