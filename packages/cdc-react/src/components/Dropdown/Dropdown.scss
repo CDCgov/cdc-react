@@ -5,7 +5,7 @@
   .dropdown-label-wrap {
     display: flex;
     flex-direction: row;
-    max-width: units("card");
+    max-width: units("card-lg");
     align-items: center;
     border: solid 0.1rem global.$gray-light;
     cursor: pointer;
@@ -40,7 +40,7 @@
     cursor: pointer;
     flex-direction: column;
     margin-top: units("neg-05");
-    max-width: units("card");
+    max-width: units("card-lg");
     box-shadow: 0 0 0.1rem 0.1rem #e7e6e6;
     border-radius: 0.2rem;
     position: relative;
