@@ -5,10 +5,10 @@ import { useState } from "react";
 
 export interface DropdownProps {
   label: string;
-  labelIcon?: React.ReactNode;
   items: string[];
   srText: string;
   onSelect: (item: string) => void;
+  labelIcon?: React.ReactNode;
   onKeyDownDropdownLabel?:
     | React.KeyboardEventHandler<HTMLDivElement>
     | undefined;
@@ -50,22 +50,20 @@ export const Dropdown = ({
           </span>
         </div>
         <div className={`dropdown-items ${dropdownOpen && "show"}`}>
-          {items.map((item: string, index: number) => {
-            return (
-              <div
-                role="presentation"
-                onKeyDown={onKeyDownDropdownItems}
-                onClick={() => {
-                  setDropdownCurrentItem(item);
-                  setDropdownVisibility(!dropdownOpen);
-                  onSelect(item);
-                }}
-                className="dropdown-item"
-                key={`cdc-react-dropdown-option-${index}`}>
-                {item}
-              </div>
-            );
-          })}
+          {items.map((item: string, index: number) => (
+            <div
+              role="presentation"
+              onKeyDown={onKeyDownDropdownItems}
+              onClick={() => {
+                setDropdownCurrentItem(item);
+                setDropdownVisibility(!dropdownOpen);
+                onSelect(item);
+              }}
+              className="dropdown-item"
+              key={`cdc-react-dropdown-option-${index}`}>
+              {item}
+            </div>
+          ))}
         </div>
       </div>
     </div>
