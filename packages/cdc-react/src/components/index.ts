@@ -8,6 +8,7 @@ export * from "./ProfileHeader/ProfileHeaderPopupMenuItem/ProfileHeaderPopupMenu
 export * from "./ProfileHeader/ProfileHeaderUserProfileMenuItem/ProfileHeaderUserProfileMenuItem";
 export * from "./Button/Button";
 export * from "./Divider/Divider";
+export * from "./Dropdown/Dropdown";
 export * from "./Card/Card";
 export * from "./Modal/Modal";
 export * from "./Modal/ModalBody/ModalBody";

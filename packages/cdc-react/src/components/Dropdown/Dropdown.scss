@@ -1,0 +1,65 @@
+@use "../../scss/global.scss";
+@use "uswds-core" as *;
+
+.cdc-react {
+  .dropdown-label-wrap {
+    display: flex;
+    flex-direction: row;
+    max-width: units("card-lg");
+    align-items: center;
+    border: solid 0.1rem global.$gray-light;
+    cursor: pointer;
+    background: global.$gray-lighter;
+    border-radius: 0.2rem;
+
+    span {
+      display: flex;
+      color: global.$gray-darker;
+
+      &.dropdown-label-icon {
+        flex-grow: 0.05;
+        padding: units("05");
+      }
+
+      &.dropdown-label {
+        font-size: 0.875rem;
+        flex-grow: units("05");
+      }
+
+      &.dropdown-arrow {
+        flex: 1;
+        flex-grow: 1;
+        justify-content: end;
+        padding-right: units(1);
+      }
+    }
+  }
+
+  .dropdown-items {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    margin-top: units("neg-05");
+    max-width: units("card-lg");
+    box-shadow: 0 0 0.1rem 0.1rem #e7e6e6;
+    border-radius: 0.2rem;
+    position: relative;
+    background: #fff;
+    max-height: units("card");
+
+    &.show {
+      display: flex;
+    }
+
+    .dropdown-item {
+      &:hover {
+        background: #d5d5d5;
+      }
+      display: flex;
+      width: 100%;
+      padding: units(1);
+      border-radius: none;
+      font-size: 0.875rem;
+    }
+  }
+}

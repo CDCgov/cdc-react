@@ -99,6 +99,7 @@ export const Icons = {
   Bell,
   PageLayout,
   PaperLines,
+  Person,
   Plus,
   ZigZag,
   Star,
@@ -110,7 +111,6 @@ export const Icons = {
   Swatch,
   Target,
   TrafficCone,
-  Person,
 };
 
 export type IconNames = keyof typeof Icons;
