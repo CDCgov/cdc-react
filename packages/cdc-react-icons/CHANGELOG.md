@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/CDCgov/cdc-react/compare/cdc-react-icons-v2.0.0...cdc-react-icons-v2.1.0) (2023-11-03)
+
+
+### Features
+
+* Portal-1135: Dropdown UI Component ([#99](https://github.com/CDCgov/cdc-react/issues/99)) ([594195d](https://github.com/CDCgov/cdc-react/commit/594195d3bd659643266cf28e828ee5db808f08f6))
+
 ## [2.0.0](https://github.com/CDCgov/cdc-react/compare/cdc-react-icons-v1.1.5...cdc-react-icons-v2.0.0) (2023-10-17)
 
 
