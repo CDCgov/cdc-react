@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.0](https://github.com/CDCgov/cdc-react/compare/cdc-react-v1.0.0...cdc-react-v1.1.0) (2023-11-03)
+
+
+### Features
+
+* Portal 1127/create modal component ([#97](https://github.com/CDCgov/cdc-react/issues/97)) ([97d57d7](https://github.com/CDCgov/cdc-react/commit/97d57d7621d02001ba5e8a91ab8309a4599d6db0))
+* Portal-1135: Dropdown UI Component ([#99](https://github.com/CDCgov/cdc-react/issues/99)) ([594195d](https://github.com/CDCgov/cdc-react/commit/594195d3bd659643266cf28e828ee5db808f08f6))
+
 ## [1.0.0](https://github.com/CDCgov/cdc-react/compare/cdc-react-v0.7.7...cdc-react-v1.0.0) (2023-10-17)
 
 
