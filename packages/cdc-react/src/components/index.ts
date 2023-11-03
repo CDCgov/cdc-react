@@ -13,5 +13,6 @@ export * from "./Card/Card";
 export * from "./Modal/Modal";
 export * from "./Modal/ModalBody/ModalBody";
 export * from "./Modal/ModalFooter/ModalFooter";
+export * from "./Table/Table";
 
 export * from "../@types";
