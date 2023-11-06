@@ -1,4 +1,4 @@
-import { StoryObj } from "@storybook/react";
+import { StoryObj, Meta } from "@storybook/react";
 import { Table, getColumnHelper } from "@us-gov-cdc/cdc-react";
 
 const meta: Meta<typeof Table> = {

@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@us-gov-cdc/cdc-react": ["../cdc-react/src/components/index.ts"],
+      "@us-gov-cdc/cdc-react-icons": ["../cdc-react-icons/src/components/index.ts"]
+    }
+  }
+}
