@@ -1,0 +1,24 @@
+@use "../../scss/global.scss";
+@use "uswds-core" as *;
+
+.cdc-react {
+  border-collapse: collapse;
+
+  th {
+    padding: units(1) units(1) units(0.5) units(0.5);
+  }
+
+  td {
+    font-weight: 480;
+    border: 1px solid global.$gray-light;
+    * {
+      font-weight: 480;
+    }
+  }
+
+  &.default {
+    thead {
+      background-color: global.$gray-lighter;
+    }
+  }
+}

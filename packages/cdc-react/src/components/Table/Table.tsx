@@ -1,3 +1,4 @@
+import "./Table.scss";
 import {
   ColumnDef,
   flexRender,
@@ -23,7 +24,7 @@ export function Table<T>({ data, columnDefs }: TableProps<T>) {
   });
 
   return (
-    <table>
+    <table className="cdc-react default">
       <thead>
         {table.getHeaderGroups().map((headerGroup) => (
           <tr key={headerGroup.id}>
