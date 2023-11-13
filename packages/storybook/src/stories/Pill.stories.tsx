@@ -18,7 +18,16 @@ type Story = StoryObj<typeof Pill>;
 
 export const example: Story = {
   args: {
-    text: "This is a pill",
+    label: "This is a pill",
     shape: "slot",
+    togglable: false,
+  },
+};
+
+export const togglable: Story = {
+  args: {
+    label: "This is a selectable pill",
+    shape: "slot",
+    togglable: true,
   },
 };
