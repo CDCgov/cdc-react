@@ -1,5 +1,7 @@
 import "./Pill.scss";
 
+const TRUNCATE_LENGTH = 27;
+
 export const pillShapes = ["slot", "roundCorners"];
 type PillShape = (typeof pillShapes)[number];
 
@@ -9,6 +11,7 @@ export interface PillProps {
 }
 
 export const Pill = ({ text, shape = "slot" }: PillProps) => {
+  const showTitle = text.length > TRUNCATE_LENGTH;
   let classes = "cdc-react";
 
   if (shape == "roundCorners") {
@@ -18,8 +21,8 @@ export const Pill = ({ text, shape = "slot" }: PillProps) => {
   }
 
   return (
-    <span className={classes}>
-      <span className="content">{text}</span>
+    <span className={classes} title={showTitle ? text : undefined}>
+      <span className="content truncate">{text}</span>
     </span>
   );
 };

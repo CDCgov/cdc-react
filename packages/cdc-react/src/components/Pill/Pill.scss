@@ -6,6 +6,8 @@
   justify-content: center;
   align-items: center;
   border: 1px solid black;
+  min-width: units(4);
+  min-height: units(4);
 }
 
 .slot {
@@ -18,4 +20,11 @@
 
 .content {
   padding: units(1);
+}
+
+.truncate {
+  max-width: units("card-lg");
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
