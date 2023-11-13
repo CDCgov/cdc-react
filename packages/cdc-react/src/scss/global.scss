@@ -6,13 +6,14 @@
 
 @use "typography";
 
-*,
-html,
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-size: 17px;
-  box-sizing: border-box;
-  font-family: "Open Sans-Regular", Helvetica;
-  font-weight: 520;
+  font-family: "Open Sans", Helvetica;
+  font-weight: 400;
 }
 
 ul {
