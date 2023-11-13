@@ -29,5 +29,6 @@ export const togglable: Story = {
     label: "This is a selectable pill",
     shape: "slot",
     togglable: true,
+    onClick: () => {},
   },
 };
