@@ -2,13 +2,20 @@
 @use "uswds-core" as *;
 
 .cdc-react {
-  border: 1px solid black;
-  border-radius: 50px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  border: 1px solid black;
+}
+
+.slot {
+  border-radius: 50px;
+}
+
+.roundCorners {
+  border-radius: 4px;
 }
 
 .content {
-  padding: units(0.5);
+  padding: units(1);
 }
