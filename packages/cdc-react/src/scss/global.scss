@@ -1,4 +1,5 @@
 @forward "uswds-theme";
+@forward "fonts";
 @forward "colors";
 @forward "typography";
 @forward "palettes";
@@ -9,10 +10,10 @@
 *,
 html,
 body {
-  font-size: 17px;
   box-sizing: border-box;
-  font-family: "Open Sans-Regular", Helvetica;
-  font-weight: 520;
+  font-size: typography.$font-size-base-px;
+  font-family: typography.$font-family-sans;
+  font-weight: typography.$font-weight-regular;
 }
 
 ul {
