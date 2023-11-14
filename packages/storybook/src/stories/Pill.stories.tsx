@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Pill, pillShapes } from "@us-gov-cdc/cdc-react";
+import { pillVariations } from "@us-gov-cdc/cdc-react/src/components";
 
 const meta: Meta<typeof Pill> = {
   title: "Components/Pill",
@@ -9,6 +10,10 @@ const meta: Meta<typeof Pill> = {
     shape: {
       control: { type: "radio" },
       options: [...pillShapes],
+    },
+    variation: {
+      control: { type: "radio" },
+      options: [...pillVariations],
     },
   },
 };
@@ -20,15 +25,15 @@ export const example: Story = {
   args: {
     label: "This is a pill",
     shape: "slot",
-    togglable: false,
+    variation: "default",
   },
 };
 
 export const togglable: Story = {
   args: {
-    label: "This is a selectable pill",
+    label: "Click Me!",
     shape: "slot",
-    togglable: true,
+    variation: "toggle",
     onClick: () => {},
   },
 };

@@ -19,7 +19,7 @@ describe("Pill Component", () => {
       let didGetCalled = false;
       const callback = () => (didGetCalled = true);
 
-      render(<Pill label="click me" togglable={true} onClick={callback} />);
+      render(<Pill label="click me" variation="toggle" onClick={callback} />);
 
       const pill = screen.getByText("click me");
       fireEvent.click(pill);

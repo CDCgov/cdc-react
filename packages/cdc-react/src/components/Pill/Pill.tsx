@@ -3,24 +3,32 @@ import "./Pill.scss";
 
 const TRUNCATE_LENGTH = 27;
 
+export const pillVariations = ["default", "toggle", "input"];
+type PillVariation = (typeof pillVariations)[number];
+
 export const pillShapes = ["slot", "roundCorners"];
 type PillShape = (typeof pillShapes)[number];
 
 export type PillProps = (
   | {
-      togglable: true;
+      variation: "toggle";
       onClick: (state: boolean) => void;
     }
   | {
-      togglable?: false;
+      variation: "input";
+    }
+  | {
+      variation: "default";
     }
 ) & {
   label: string;
+  variation?: PillVariation;
   shape?: PillShape;
 };
 
 const defaultProps: PillProps = {
   label: "",
+  variation: "default",
   shape: "slot",
 };
 
@@ -36,7 +44,7 @@ export const Pill = (props: PillProps) => {
     classes += ` slot`;
   }
 
-  if (props.togglable) {
+  if (props.variation === "toggle") {
     const handleClick = () => {
       setIsToggled(!isToggled);
       props.onClick(!isToggled);
