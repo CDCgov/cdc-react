@@ -27,4 +27,11 @@ describe("Pill Component", () => {
       expect(didGetCalled).toBeTruthy;
     });
   });
+
+  describe("Input", () => {
+    it("should render close icon", () => {
+      render(<Pill label="option 1" variation="input" />);
+      const pill = screen.getByText("option 1");
+    });
+  });
 });

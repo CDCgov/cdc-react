@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./Pill.scss";
+import { Icons } from "@us-gov-cdc/cdc-react-icons";
+import { Button } from "../Button/Button";
 
 const TRUNCATE_LENGTH = 27;
 
@@ -16,6 +18,7 @@ export type PillProps = (
     }
   | {
       variation: "input";
+      onClose: () => void;
     }
   | {
       variation: "default";
@@ -63,6 +66,17 @@ export const Pill = (props: PillProps) => {
   return (
     <span className={classes} title={showTitle ? props.label : undefined}>
       <span className="content truncate">{props.label}</span>
+      {props.variation === "input" && (
+        <Button
+          ariaLabel="Close modal"
+          size="tiny"
+          iconOnly={true}
+          icon={<Icons.Close />}
+          variation="unstyled"
+          className="usa-button usa-modal__close modal-close-btn"
+          onClick={props.onClose}
+        />
+      )}
     </span>
   );
 };
