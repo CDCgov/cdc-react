@@ -1,0 +1,120 @@
+@use "typography" as *;
+
+@font-face {
+  font-family: "Open Sans";
+  src:
+    url("/fonts/opensans-light-webfont.woff2") format("woff2"),
+    url("/fonts/opensans-light-webfont.woff") format("woff");
+  font-weight: $font-weight-light;
+  font-style: normal;
+}
+
+//Light Italic
+@font-face {
+  font-family: "Open Sans";
+  src:
+    url("/fonts/opensans-lightitalic-webfont.woff2") format("woff2"),
+    url("/fonts/opensans-lightitalic-webfont.woff") format("woff");
+  font-weight: $font-weight-light;
+  font-style: italic;
+}
+
+//Regular
+@font-face {
+  font-family: "Open Sans";
+  src:
+    url("/fonts/opensans-regular-webfont.woff2") format("woff2"),
+    url("/fonts/opensans-regular-webfont.woff") format("woff");
+  font-weight: $font-weight-regular;
+  font-style: normal;
+}
+
+//Regular Italic
+@font-face {
+  font-family: "Open Sans";
+  src:
+    url("/fonts/opensans-italic-webfont.woff2") format("woff2"),
+    url("/fonts/opensans-italic-webfont.woff") format("woff");
+  font-weight: $font-weight-regular;
+  font-style: italic;
+}
+
+//Medium
+//TO DO: Generate the .woff file for this font
+@font-face {
+  font-family: "Open Sans";
+  src: url("/fonts/opensans-medium-webfont.woff2") format("woff2");
+  font-weight: $font-weight-medium;
+  font-style: normal;
+}
+
+//Medium Italic
+//Note: This font is a duplicate of the non-italic medium font.
+//TO DO: Locate and use the correct medium italic font file.
+//TO DO: Generate the .woff file for this font
+@font-face {
+  font-family: "Open Sans";
+  src: url("/fonts/opensans-mediumitalic-webfont.woff2") format("woff2");
+  font-weight: $font-weight-medium;
+  font-style: italic;
+}
+
+//Semibold
+@font-face {
+  font-family: "Open Sans";
+  src:
+    url("/fonts/opensans-semibold-webfont.woff2") format("woff2"),
+    url("/fonts/opensans-semibold-webfont.woff") format("woff");
+  font-weight: $font-weight-semibold;
+  font-style: normal;
+}
+
+//Semibold Italic
+@font-face {
+  font-family: "Open Sans";
+  src:
+    url("/fonts/opensans-semibolditalic-webfont.woff2") format("woff2"),
+    url("/fonts/opensans-semibolditalic-webfont.woff") format("woff");
+  font-weight: $font-weight-semibold;
+  font-style: italic;
+}
+
+//Bold
+@font-face {
+  font-family: "Open Sans";
+  src:
+    url("/fonts/opensans-bold-webfont.woff2") format("woff2"),
+    url("/fonts/opensans-bold-webfont.woff") format("woff");
+  font-weight: $font-weight-bold;
+  font-style: normal;
+}
+
+//Bold Italic
+@font-face {
+  font-family: "Open Sans";
+  src:
+    url("/fonts/opensans-bolditalic-webfont.woff2") format("woff2"),
+    url("/fonts/opensans-bolditalic-webfont.woff") format("woff");
+  font-weight: $font-weight-bold;
+  font-style: italic;
+}
+
+//Extra Bold
+@font-face {
+  font-family: "Open Sans";
+  src:
+    url("/fonts/opensans-extrabold-webfont.woff2") format("woff2"),
+    url("/fonts/opensans-extrabold-webfont.woff") format("woff");
+  font-weight: $font-weight-extrabold;
+  font-style: normal;
+}
+
+//Extra Bold Italic
+@font-face {
+  font-family: "Open Sans";
+  src:
+    url("/fonts/opensans-extrabolditalic-webfont.woff2") format("woff2"),
+    url("/fonts/opensans-extrabolditalic-webfont.woff") format("woff");
+  font-weight: $font-weight-extrabold;
+  font-style: italic;
+}
