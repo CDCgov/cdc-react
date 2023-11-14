@@ -18,13 +18,13 @@
   border-radius: 4px;
 }
 
-.active {
-  background-color: black;
-  color: white;
-}
+// .active {
+//   background-color: black;
+//   color: white;
+// }
 
 .content {
-  padding: units(1);
+  padding: units(0.5);
 }
 
 .truncate {
@@ -36,8 +36,18 @@
 
 button {
   background-color: white;
-}
+  cursor: pointer;
 
-button:hover {
-  background-color: #f5f5f5;
+  &:hover {
+    background-color: #f5f5f5;
+  }
+
+  &.active {
+    background-color: #333333;
+    color: white;
+  }
+
+  &.active:hover {
+    background-color: #423939;
+  }
 }
