@@ -7,7 +7,18 @@
   align-items: center;
   border: 1px solid #333333;
   min-width: units(4);
-  min-height: units(4);
+  height: units(4);
+  padding: units(0.5);
+
+  .img-container {
+    display: flex;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+      height: units(3);
+    }
+  }
 }
 
 .slot {

@@ -7,6 +7,7 @@ import {
   pillVariations,
 } from "@us-gov-cdc/cdc-react";
 import { FormEvent, useState, useRef } from "react";
+import { Icons } from "@us-gov-cdc/cdc-react-icons";
 
 const meta: Meta<typeof Pill> = {
   title: "Components/Pill",
@@ -98,5 +99,24 @@ export const input: Story = {
         </div>
       </>
     );
+  },
+};
+
+export const infoIcon: Story = {
+  args: {
+    label: "Anonymous User 1234",
+    shape: "slot",
+    icon: <Icons.Person />,
+    variation: "info",
+  },
+};
+
+export const infoImage: Story = {
+  args: {
+    label: "CDC Scientist 1234",
+    shape: "slot",
+    variation: "info",
+    avatar:
+      "https://cdn.pixabay.com/photo/2020/05/25/03/37/doctor-5216835_1280.png",
   },
 };

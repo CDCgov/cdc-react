@@ -5,7 +5,7 @@ import { Button } from "../Button/Button";
 
 const TRUNCATE_LENGTH = 27;
 
-export const pillVariations = ["default", "toggle", "input"];
+export const pillVariations = ["default", "toggle", "input", "info"];
 type PillVariation = (typeof pillVariations)[number];
 
 export const pillShapes = ["slot", "roundCorners"];
@@ -21,8 +21,24 @@ export type PillProps = (
       onClose: () => void;
     }
   | {
-      variation: "default";
+      variation: "info";
+      altText: string;
+      icon: React.ReactNode;
+      avatar?: undefined;
     }
+  | {
+      variation: "info";
+      avatar: string;
+      altText: string;
+      icon?: undefined;
+    }
+  | {
+      variation: "info";
+      avatar: React.ReactNode;
+      altText?: undefined;
+      icon?: undefined;
+    }
+  | { variation: "default" }
 ) & {
   label: string;
   variation?: PillVariation;
@@ -65,6 +81,16 @@ export const Pill = (props: PillProps) => {
 
   return (
     <span className={classes} title={showTitle ? props.label : undefined}>
+      {props.variation === "info" && props.icon}
+      {props.variation === "info" &&
+        props.avatar &&
+        (typeof props.avatar === "string" ? (
+          <span className="img-container">
+            <img src={props.avatar} alt={props.altText} />
+          </span>
+        ) : (
+          props.avatar
+        ))}
       <span className="content truncate">{props.label}</span>
       {props.variation === "input" && (
         <Button

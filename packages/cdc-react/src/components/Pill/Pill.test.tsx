@@ -38,13 +38,57 @@ describe("Pill Component", () => {
           onClose={() => (testVal = true)}
         />
       );
-      // const pill = screen.getByText("option 1");
       const closeBtn = container.getElementsByTagName("button")[0];
       expect(closeBtn).toBeInTheDocument();
 
       fireEvent.click(closeBtn);
 
       expect(testVal).toBeTruthy();
+    });
+  });
+
+  describe("Info", () => {
+    it("should render image when string provided for avatar", () => {
+      render(
+        <Pill
+          variation="info"
+          label="some info"
+          avatar="dummy image url"
+          altText="dummy alt text"
+        />
+      );
+
+      const img = screen.getByAltText("dummy alt text");
+
+      expect(img).toBeInTheDocument;
+    });
+
+    it("should render custom image when custom image provided", () => {
+      render(
+        <Pill
+          variation="info"
+          label="some info"
+          avatar={<img src="doesn't matter" alt="dummy alt text" />}
+        />
+      );
+
+      const img = screen.getByAltText("dummy alt text");
+
+      expect(img).toBeInTheDocument;
+    });
+
+    it("should render svg when icon provided", () => {
+      const { container } = render(
+        <Pill
+          variation="info"
+          label="some info"
+          icon={<svg></svg>}
+          altText="dummy alt text"
+        />
+      );
+
+      const svg = container.getElementsByTagName("svg")[0];
+      expect(svg).toBeInTheDocument;
     });
   });
 });
