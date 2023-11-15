@@ -74,7 +74,7 @@ export const Pill = (props: PillProps) => {
         className={`${classes} ${isToggled ? "active" : ""}`}
         title={showTitle ? props.label : undefined}
         onClick={handleClick}>
-        <span className="content truncate">{props.label}</span>
+        <span className="label truncate">{props.label}</span>
       </button>
     );
   }
@@ -91,7 +91,7 @@ export const Pill = (props: PillProps) => {
         ) : (
           props.avatar
         ))}
-      <span className="content truncate">{props.label}</span>
+      <span className="label truncate">{props.label}</span>
       {props.variation === "input" && (
         <Button
           ariaLabel="Close modal"
