@@ -40,21 +40,21 @@
 }
 
 //Medium
-//TO DO: Generate the .woff file for this font
 @font-face {
   font-family: "Open Sans";
-  src: url("/fonts/opensans-medium-webfont.woff2") format("woff2");
+  src: 
+    url("/fonts/opensans-medium-webfont.woff2") format("woff2"),
+    url("/fonts/opensans-medium-webfont.woff") format("woff");
   font-weight: $font-weight-medium;
   font-style: normal;
 }
 
 //Medium Italic
-//Note: This font is a duplicate of the non-italic medium font.
-//TO DO: Locate and use the correct medium italic font file.
-//TO DO: Generate the .woff file for this font
 @font-face {
   font-family: "Open Sans";
-  src: url("/fonts/opensans-mediumitalic-webfont.woff2") format("woff2");
+  src: 
+    url("/fonts/opensans-mediumitalic-webfont.woff2") format("woff2"),
+    url("/fonts/opensans-mediumitalic-webfont.woff") format("woff");
   font-weight: $font-weight-medium;
   font-style: italic;
 }
