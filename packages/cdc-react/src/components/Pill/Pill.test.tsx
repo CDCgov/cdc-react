@@ -30,8 +30,21 @@ describe("Pill Component", () => {
 
   describe("Input", () => {
     it("should render close icon", () => {
-      render(<Pill label="option 1" variation="input" />);
-      const pill = screen.getByText("option 1");
+      let testVal = false;
+      const { container } = render(
+        <Pill
+          label="option 1"
+          variation="input"
+          onClose={() => (testVal = true)}
+        />
+      );
+      // const pill = screen.getByText("option 1");
+      const closeBtn = container.getElementsByTagName("button")[0];
+      expect(closeBtn).toBeInTheDocument();
+
+      fireEvent.click(closeBtn);
+
+      expect(testVal).toBeTruthy();
     });
   });
 });
