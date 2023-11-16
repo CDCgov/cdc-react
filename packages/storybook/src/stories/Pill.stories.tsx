@@ -23,6 +23,21 @@ const meta: Meta<typeof Pill> = {
       options: [...pillVariations],
     },
   },
+  parameters: {
+    backgrounds: {
+      default: "default",
+      values: [
+        {
+          name: "default",
+          value: "#fff",
+        },
+        {
+          name: "inverse",
+          value: "#333333",
+        },
+      ],
+    },
+  },
 };
 
 export default meta;
@@ -34,6 +49,7 @@ export const example: Story = {
     shape: "slot",
     variation: "default",
     outline: false,
+    inverse: false,
   },
 };
 
@@ -42,6 +58,7 @@ export const togglable: Story = {
     label: "Click Me!",
     shape: "slot",
     variation: "toggle",
+    inverse: false,
     onToggle: () => {},
   },
 };
@@ -51,6 +68,7 @@ export const input: Story = {
     shape: "slot",
     variation: "input",
     outline: true,
+    inverse: false,
   },
   render: function Render(args) {
     const [{ shape, outline }] = useArgs();
@@ -112,6 +130,7 @@ export const infoIcon: Story = {
     icon: <Icons.Person />,
     variation: "info",
     outline: false,
+    inverse: false,
   },
 };
 
@@ -121,7 +140,22 @@ export const infoImage: Story = {
     shape: "slot",
     variation: "info",
     outline: false,
+    inverse: false,
     avatar:
       "https://cdn.pixabay.com/photo/2020/05/25/03/37/doctor-5216835_1280.png",
+  },
+};
+
+export const inverse: Story = {
+  args: {
+    label: "This is a pill",
+    shape: "slot",
+    outline: false,
+    inverse: true,
+  },
+  parameters: {
+    backgrounds: {
+      default: "inverse",
+    },
   },
 };

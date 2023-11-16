@@ -44,6 +44,7 @@ export type PillProps = (
   variation?: PillVariation;
   shape?: PillShape;
   outline?: boolean;
+  inverse?: boolean;
 };
 
 const defaultProps: PillProps = {
@@ -51,6 +52,7 @@ const defaultProps: PillProps = {
   variation: "default",
   shape: "slot",
   outline: false,
+  inverse: false,
 };
 
 export const Pill = (props: PillProps) => {
@@ -69,6 +71,10 @@ export const Pill = (props: PillProps) => {
     classes += ` outline`;
   } else {
     classes += ` default`;
+  }
+
+  if (props.inverse) {
+    classes += ` inverse`;
   }
 
   if (props.variation === "toggle") {
