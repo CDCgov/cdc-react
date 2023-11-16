@@ -15,11 +15,11 @@ describe("Pill Component", () => {
   });
 
   describe("Togglable", () => {
-    it("should call onClick callback", () => {
+    it("should call onToggle callback", () => {
       let didGetCalled = false;
       const callback = () => (didGetCalled = true);
 
-      render(<Pill label="click me" variation="toggle" onClick={callback} />);
+      render(<Pill label="click me" variation="toggle" onToggle={callback} />);
 
       const pill = screen.getByText("click me");
       fireEvent.click(pill);

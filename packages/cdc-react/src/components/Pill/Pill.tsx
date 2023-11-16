@@ -14,7 +14,7 @@ type PillShape = (typeof pillShapes)[number];
 export type PillProps = (
   | {
       variation: "toggle";
-      onClick: (state: boolean) => void;
+      onToggle: (state: boolean) => void;
     }
   | {
       variation: "input";
@@ -74,16 +74,16 @@ export const Pill = (props: PillProps) => {
   if (props.variation === "toggle") {
     classes += ` toggle`;
 
-    const handleClick = () => {
+    const handleToggle = () => {
       setIsToggled(!isToggled);
-      props.onClick(!isToggled);
+      props.onToggle(!isToggled);
     };
 
     return (
       <button
         className={`${classes} ${isToggled ? "active" : ""}`}
         title={showTitle ? props.label : undefined}
-        onClick={handleClick}>
+        onClick={handleToggle}>
         <span className="label truncate">{props.label}</span>
       </button>
     );

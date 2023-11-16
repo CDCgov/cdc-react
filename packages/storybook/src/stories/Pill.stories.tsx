@@ -42,7 +42,7 @@ export const togglable: Story = {
     label: "Click Me!",
     shape: "slot",
     variation: "toggle",
-    onClick: () => {},
+    onToggle: () => {},
   },
 };
 
