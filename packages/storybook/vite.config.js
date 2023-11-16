@@ -20,7 +20,6 @@ export default defineConfig({
         __dirname,
         "../cdc-react/node_modules/@uswds/uswds/packages/uswds-core"
       ),
-      "/fonts": path.resolve(__dirname, "../cdc-react/public/fonts"),
     },
   },
 });
