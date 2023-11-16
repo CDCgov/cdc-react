@@ -192,3 +192,62 @@
     }
   }
 }
+
+// Pill
+@mixin pill-filled-states($default-clr, $hover-clr, $active-clr) {
+  background-color: $default-clr;
+
+  &:hover {
+    background-color: $hover-clr;
+  }
+
+  &:active,
+  &.active {
+    background-color: $active-clr;
+  }
+}
+
+@mixin pill-outlined-states($default-clr, $hover-clr, $active-clr) {
+  border: solid 1px $default-clr;
+
+  &:hover,
+  &.hover {
+    background-color: $hover-clr;
+  }
+
+  &:active,
+  &.active {
+    background-color: $active-clr;
+  }
+}
+
+@mixin create-pill-filled($bg-palette, $text-palette) {
+  @each $color-name, $color-val in $bg-palette {
+    &.#{$color-name} {
+      @include pill-filled-states(
+        #{$color-val},
+        #{$color-val}ed,
+        #{$color-val}e3
+      );
+    }
+  }
+  @each $color-name, $color-val in $text-palette {
+    &.#{$color-name} {
+      color: $color-val;
+    }
+  }
+}
+
+@mixin create-pill-outline($palette) {
+  @each $color, $color-val in $palette {
+    &.#{$color} {
+      color: $color-val;
+      border: 1px solid $color-val;
+      @include pill-outlined-states(
+        #{$color-val},
+        #{$color-val}1a,
+        #{$color-val}12
+      );
+    }
+  }
+}

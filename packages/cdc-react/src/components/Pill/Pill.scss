@@ -10,15 +10,25 @@
   padding: units(0.5);
 
   &.default {
-    border: 1px solid global.$main-theme;
+    // border: 1px solid global.$main-theme;
     background-color: global.$main-theme;
     color: white;
+
+    @include global.create-pill-filled(
+      global.$status-palette,
+      global.$status-dark-palette
+    );
   }
 
   &.outline {
-    border: 1px solid global.$main-theme;
     background-color: transparent;
-    color: global.$main-theme;
+
+    &.primary {
+      border: 1px solid global.$main-theme;
+      color: global.$main-theme;
+    }
+
+    @include global.create-pill-outline(global.$status-dark-palette);
   }
 
   &.toggle {

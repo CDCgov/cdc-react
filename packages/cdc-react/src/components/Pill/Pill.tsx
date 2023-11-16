@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./Pill.scss";
 import { Icons } from "@us-gov-cdc/cdc-react-icons";
 import { Button } from "../Button/Button";
+import { ColorVariationTypes } from "..";
 
 const TRUNCATE_LENGTH = 27;
 
@@ -45,6 +46,7 @@ export type PillProps = (
   shape?: PillShape;
   outline?: boolean;
   inverse?: boolean;
+  color?: ColorVariationTypes;
 };
 
 const defaultProps: PillProps = {
@@ -53,6 +55,7 @@ const defaultProps: PillProps = {
   shape: "slot",
   outline: false,
   inverse: false,
+  color: "primary",
 };
 
 export const Pill = (props: PillProps) => {
@@ -87,7 +90,7 @@ export const Pill = (props: PillProps) => {
 
     return (
       <button
-        className={`${classes} ${isToggled ? "active" : ""}`}
+        className={`${classes} ${isToggled ? "active" : ""} ${props.color}`}
         title={showTitle ? props.label : undefined}
         onClick={handleToggle}>
         <span className="label truncate">{props.label}</span>
@@ -96,7 +99,9 @@ export const Pill = (props: PillProps) => {
   }
 
   return (
-    <span className={classes} title={showTitle ? props.label : undefined}>
+    <span
+      className={`${classes} ${props.color}`}
+      title={showTitle ? props.label : undefined}>
       {props.variation === "info" && props.icon}
       {props.variation === "info" &&
         props.avatar &&

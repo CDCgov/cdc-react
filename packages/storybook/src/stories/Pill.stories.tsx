@@ -5,6 +5,7 @@ import {
   Pill,
   pillShapes,
   pillVariations,
+  ColorVariations,
 } from "@us-gov-cdc/cdc-react";
 import { FormEvent, useState, useRef } from "react";
 import { Icons } from "@us-gov-cdc/cdc-react-icons";
@@ -21,6 +22,10 @@ const meta: Meta<typeof Pill> = {
     variation: {
       control: { type: "radio" },
       options: [...pillVariations],
+    },
+    color: {
+      control: { type: "radio" },
+      options: [...ColorVariations],
     },
   },
   parameters: {
@@ -143,6 +148,33 @@ export const infoImage: Story = {
     inverse: false,
     avatar:
       "https://cdn.pixabay.com/photo/2020/05/25/03/37/doctor-5216835_1280.png",
+  },
+};
+
+export const colors: Story = {
+  args: {
+    label: "This is a pill",
+    shape: "slot",
+    variation: "default",
+    outline: false,
+    inverse: false,
+  },
+  render: function Render(args) {
+    const [{ label, shape, outline }] = useArgs();
+
+    return (
+      <>
+        {ColorVariations.map((color, i) => (
+          <Pill
+            key={i}
+            label={label}
+            color={color}
+            shape={shape}
+            outline={outline}
+          />
+        ))}
+      </>
+    );
   },
 };
 
