@@ -153,7 +153,6 @@ export const infoImage: Story = {
 
 export const colors: Story = {
   args: {
-    label: "This is a pill",
     shape: "slot",
     variation: "default",
     outline: false,
@@ -163,17 +162,23 @@ export const colors: Story = {
     const [{ label, shape, outline }] = useArgs();
 
     return (
-      <>
+      <span
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "flex-start",
+          gap: "4px",
+        }}>
         {ColorVariations.map((color, i) => (
           <Pill
             key={i}
-            label={label}
+            label={`This is a ${color} pill`}
             color={color}
             shape={shape}
             outline={outline}
           />
         ))}
-      </>
+      </span>
     );
   },
 };
