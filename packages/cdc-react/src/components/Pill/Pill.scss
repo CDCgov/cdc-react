@@ -21,7 +21,6 @@
     color: global.$main-theme;
   }
 
-  // TODO: Inverse toggle
   &.toggle {
     background-color: transparent;
     color: global.$main-theme;
@@ -40,6 +39,28 @@
     &.active:hover {
       background-color: global.$main-theme-dark;
       border-color: global.$main-theme-dark;
+    }
+
+    &.inverse {
+      background-color: transparent;
+      color: global.$main-theme-lighter;
+      border: 1px solid global.$main-theme-lighter;
+
+      &:hover {
+        background-color: global.$gray-dark;
+        border-color: global.$main-theme-lighter;
+        color: global.$main-theme-lighter;
+      }
+
+      &.active {
+        background-color: global.$main-theme-lighter;
+        color: global.$gray-darker;
+      }
+
+      &.active:hover {
+        background-color: global.$gray-lighter;
+        border-color: global.$gray-lighter;
+      }
     }
   }
 

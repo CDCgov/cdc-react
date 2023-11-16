@@ -160,3 +160,18 @@ export const inverse: Story = {
     },
   },
 };
+
+export const inverseToggle: Story = {
+  args: {
+    variation: "toggle",
+    label: "Click me!",
+    shape: "slot",
+    outline: false,
+    inverse: true,
+  },
+  parameters: {
+    backgrounds: {
+      default: "inverse",
+    },
+  },
+};
