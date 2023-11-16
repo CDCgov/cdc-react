@@ -148,6 +148,7 @@ export const infoImage: Story = {
 
 export const inverse: Story = {
   args: {
+    variation: "default",
     label: "This is a pill",
     shape: "slot",
     outline: false,
