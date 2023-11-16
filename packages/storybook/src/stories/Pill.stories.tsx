@@ -33,6 +33,7 @@ export const example: Story = {
     label: "This is a pill",
     shape: "slot",
     variation: "default",
+    outline: false,
   },
 };
 
@@ -49,9 +50,10 @@ export const input: Story = {
   args: {
     shape: "slot",
     variation: "input",
+    outline: true,
   },
   render: function Render(args) {
-    const [{ shape }] = useArgs();
+    const [{ shape, outline }] = useArgs();
     const [items, setItems] = useState(["apple", "orange"]);
     const inputRef = useRef<HTMLInputElement | null>(null);
 
@@ -92,6 +94,7 @@ export const input: Story = {
                 label={item}
                 shape={shape}
                 variation="input"
+                outline={outline}
                 onClose={() => removeItem(index)}
               />
             </span>
@@ -108,6 +111,7 @@ export const infoIcon: Story = {
     shape: "slot",
     icon: <Icons.Person />,
     variation: "info",
+    outline: false,
   },
 };
 
@@ -116,6 +120,7 @@ export const infoImage: Story = {
     label: "CDC Scientist 1234",
     shape: "slot",
     variation: "info",
+    outline: false,
     avatar:
       "https://cdn.pixabay.com/photo/2020/05/25/03/37/doctor-5216835_1280.png",
   },

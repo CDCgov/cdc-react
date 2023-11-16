@@ -43,12 +43,14 @@ export type PillProps = (
   label: string;
   variation?: PillVariation;
   shape?: PillShape;
+  outline?: boolean;
 };
 
 const defaultProps: PillProps = {
   label: "",
   variation: "default",
   shape: "slot",
+  outline: false,
 };
 
 export const Pill = (props: PillProps) => {
@@ -63,7 +65,15 @@ export const Pill = (props: PillProps) => {
     classes += ` slot`;
   }
 
+  if (props.outline) {
+    classes += ` outline`;
+  } else {
+    classes += ` default`;
+  }
+
   if (props.variation === "toggle") {
+    classes += ` toggle`;
+
     const handleClick = () => {
       setIsToggled(!isToggled);
       props.onClick(!isToggled);
@@ -99,7 +109,7 @@ export const Pill = (props: PillProps) => {
           iconOnly={true}
           icon={<Icons.Close />}
           variation="unstyled"
-          className="usa-button usa-modal__close modal-close-btn"
+          className="usa-button usa-modal__close pill-delete-btn"
           onClick={props.onClose}
         />
       )}
