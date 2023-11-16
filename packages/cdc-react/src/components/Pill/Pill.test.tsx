@@ -35,7 +35,7 @@ describe("Pill Component", () => {
         <Pill
           label="option 1"
           variation="input"
-          onClose={() => (testVal = true)}
+          onDelete={() => (testVal = true)}
         />
       );
       const closeBtn = container.getElementsByTagName("button")[0];

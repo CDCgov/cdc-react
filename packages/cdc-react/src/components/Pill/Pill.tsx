@@ -18,7 +18,7 @@ export type PillProps = (
     }
   | {
       variation: "input";
-      onClose: () => void;
+      onDelete: () => void;
     }
   | {
       variation: "info";
@@ -110,7 +110,7 @@ export const Pill = (props: PillProps) => {
           icon={<Icons.Close />}
           variation="unstyled"
           className="usa-button usa-modal__close pill-delete-btn"
-          onClick={props.onClose}
+          onClick={props.onDelete}
         />
       )}
     </span>

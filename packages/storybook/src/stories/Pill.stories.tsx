@@ -95,7 +95,7 @@ export const input: Story = {
                 shape={shape}
                 variation="input"
                 outline={outline}
-                onClose={() => removeItem(index)}
+                onDelete={() => removeItem(index)}
               />
             </span>
           ))}
