@@ -1,5 +1,6 @@
 @forward "uswds-theme";
-@forward "fonts";
+@use "uswds-core" as *;
+// @forward "fonts";
 @forward "colors";
 @forward "typography";
 @forward "palettes";
@@ -13,7 +14,7 @@
 
 body {
   font-size: typography.$font-size-base-px;
-  font-family: typography.$font-family-sans;
+  font-family: family("sans");
   font-weight: typography.$font-weight-regular;
 }
 
