@@ -10,44 +10,48 @@
   padding: units(0.5);
 
   &.default {
-    border: 1px solid #333333;
-    background-color: #333333;
+    border: 1px solid global.$main-theme;
+    background-color: global.$main-theme;
     color: white;
   }
 
   &.outline {
-    border: 1px solid #333333;
+    border: 1px solid global.$main-theme;
     background-color: transparent;
-    color: #333333;
+    color: global.$main-theme;
   }
 
+  // TODO: Inverse toggle
   &.toggle {
-    background-color: white;
-    color: #333333;
+    background-color: transparent;
+    color: global.$main-theme;
+    border: 1px solid global.$main-theme;
     cursor: pointer;
 
     &:hover {
-      background-color: #f5f5f5;
+      background-color: #dff4ff;
     }
 
     &.active {
-      background-color: #333333;
+      background-color: global.$main-theme;
       color: white;
     }
 
     &.active:hover {
-      background-color: #423939;
+      background-color: global.$main-theme-dark;
+      border-color: global.$main-theme-dark;
     }
   }
 
   &.inverse {
-    background-color: #f0f0f0;
-    color: #333;
+    background-color: global.$main-theme-lighter;
+    border-color: global.$main-theme-lighter;
+    color: global.$gray-darker;
 
     &.outline {
       background-color: transparent;
-      border: 1px solid #f0f0f0;
-      color: #f0f0f0;
+      border: 1px solid global.$main-theme-lighter;
+      color: global.$main-theme-lighter;
     }
   }
 
