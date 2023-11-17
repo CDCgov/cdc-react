@@ -83,14 +83,27 @@ export const ButtonTertiaryColors = [
 
 export type ButtonTertiaryColorTypes = (typeof ButtonTertiaryColors)[number];
 
+export const ColorVariations = [
+  "primary",
+  "busy",
+  "info",
+  "success",
+  "error",
+  "warning",
+];
+export type ColorVariationTypes = (typeof ColorVariations)[number];
+
 export interface TableModel {
   readonly index: number;
   readonly fileName: string;
   readonly event: string;
-  readonly uploadStatus: string;
+  readonly uploadStatus: {
+    color: ColorVariationTypes;
+    label: string;
+  };
   readonly submitted: {
     when: string;
     timestamp: string;
   };
-  readonly details: string;
+  readonly details: string | React.ReactNode;
 }

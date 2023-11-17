@@ -18,13 +18,16 @@ const data = mockIndexes.map((item: number) => {
   return {
     index: item,
     fileName: "Test file Name " + (item + 1),
-    event: "Test Event Name",
-    uploadStatus: "",
+    event: "Test Event Name " + (item + 1),
+    uploadStatus: {
+      color: "busy",
+      label: "Uploading",
+    },
     submitted: {
       when: "Just Now",
       timestamp: "3:45pm 11/17/2023",
     },
-    details: "",
+    details: "detailed info",
   };
 });
 
@@ -41,8 +44,6 @@ export const table: Story = {
     return (
       <Table
         data={data}
-        pageSize={10}
-        pageIndex={0}
         detailSelect={(data: TableModel[]) => {
           console.log(data);
         }}></Table>

@@ -1,27 +1,32 @@
 import "./Table.scss";
 
-import { TableModel } from "../../@types";
+import { ColorVariationTypes, TableModel } from "../../@types";
 
 import React from "react";
 
 import {
-  Column,
-  Table as ReactTable,
-  PaginationState,
   useReactTable,
+  Table as ReactTable,
   getCoreRowModel,
-  getFilteredRowModel,
   getPaginationRowModel,
+  getFilteredRowModel,
   ColumnDef,
-  OnChangeFn,
   flexRender,
   createColumnHelper,
 } from "@tanstack/react-table";
+
+import { Pill } from "..";
+import { Icons } from "@us-gov-cdc/cdc-react-icons";
 
 export interface TableProps {
   detailSelect: (data: TableModel[]) => void;
   data: TableModel[];
   columns: ColumnDef<TableModel>[];
+}
+
+export interface submittedType {
+  when: string;
+  timestamp: string;
 }
 
 export const Table = ({
@@ -39,33 +44,66 @@ export const Table = ({
   const columns = React.useMemo<ColumnDef<TableModel>[]>(
     () => [
       {
-        accessorKey: "checked",
-        header: () => "",
+        accessorKey: "index",
+        header: () => <input type="checkbox" />,
+        cell: () => <input type="checkbox" />,
         footer: (props) => props.column.id,
       },
       {
         accessorKey: "fileName",
-        header: () => "File Name",
+        header: () => (
+          <>
+            <Icons.SortArrow></Icons.SortArrow>
+            File Name
+          </>
+        ),
         footer: (props) => props.column.id,
       },
       {
         accessorKey: "event",
-        header: () => "Event",
+        header: () => (
+          <>
+            <Icons.SortArrow></Icons.SortArrow>
+            Event
+          </>
+        ),
         footer: (props) => props.column.id,
       },
       {
         accessorKey: "uploadStatus",
-        header: () => "Upload Status",
+        header: () => (
+          <>
+            <Icons.SortArrow></Icons.SortArrow>
+            Upload Status
+          </>
+        ),
+        cell: (info) => {
+          const status = info.getValue();
+
+          return (
+            <>
+              <Pill
+                label={status.label}
+                shape="slot"
+                color={status.color}
+                outline={false}
+                inverse={false}
+              />
+            </>
+          );
+        },
         footer: (props) => props.column.id,
       },
       {
         accessorKey: "submitted",
-        header: () => "Submitted",
+        header: () => (
+          <>
+            <Icons.SortArrow></Icons.SortArrow>
+            Submitted
+          </>
+        ),
         cell: (info) => {
-          const cell: {
-            when: string;
-            timestamp: string;
-          } = info.getValue();
+          const cell = info.getValue();
 
           return (
             <>
@@ -78,7 +116,12 @@ export const Table = ({
       },
       {
         accessorKey: "details",
-        header: () => "Details",
+        header: () => (
+          <>
+            <Icons.SortArrow></Icons.SortArrow>
+            Details
+          </>
+        ),
         footer: (props) => props.column.id,
       },
     ],
@@ -91,6 +134,7 @@ export const Table = ({
     data: defaultData,
     columns,
     getCoreRowModel: getCoreRowModel(),
+    getFilteredRowModel: getFilteredRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
   });
 
@@ -177,7 +221,6 @@ export const Table = ({
               const page = e.target.value ? Number(e.target.value) - 1 : 0;
               table.setPageIndex(page);
             }}
-            className="border p-1 rounded w-16"
           />
         </span>
         <select
