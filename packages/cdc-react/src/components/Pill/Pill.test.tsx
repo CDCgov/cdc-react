@@ -20,6 +20,11 @@ describe("Pill Component", () => {
     expect(truncatedText).toBeInTheDocument();
   });
 
+  it("should render aria label when aria label provided", () => {
+    render(<Pill label="hello" ariaLabel="hello aria" />);
+    expect(screen.getByLabelText("hello aria")).toBeInTheDocument();
+  });
+
   describe("Togglable", () => {
     it("should call onToggle callback", () => {
       let didGetCalled = false;

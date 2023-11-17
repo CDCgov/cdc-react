@@ -42,6 +42,7 @@ export type PillProps = (
   | { variation: "default" }
 ) & {
   label: string;
+  ariaLabel: string;
   variation?: PillVariation;
   shape?: PillShape;
   outline?: boolean;
@@ -51,6 +52,7 @@ export type PillProps = (
 
 const defaultProps: PillProps = {
   label: "",
+  ariaLabel: "",
   variation: "default",
   shape: "slot",
   outline: false,
@@ -84,6 +86,7 @@ export const Pill = (props: PillProps) => {
       <button
         className={`${classes} ${isToggled ? "active" : ""} ${props.color}`}
         title={showTitle ? props.label : undefined}
+        aria-label={props.ariaLabel}
         onClick={handleToggle}>
         <span className="label truncate">{props.label}</span>
       </button>
@@ -95,6 +98,7 @@ export const Pill = (props: PillProps) => {
   return (
     <span
       className={`${classes} ${props.color}`}
+      aria-label={props.ariaLabel}
       title={showTitle ? props.label : undefined}>
       {props.variation === "info" && props.icon}
       {props.variation === "info" &&
