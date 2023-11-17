@@ -159,7 +159,7 @@ export const colors: Story = {
     inverse: false,
   },
   render: function Render(args) {
-    const [{ label, shape, outline }] = useArgs();
+    const [{ shape, outline }] = useArgs();
 
     return (
       <span
