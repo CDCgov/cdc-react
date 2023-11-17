@@ -25,7 +25,8 @@
       "packages/storybook"
     ],
     "nohoist": [
-      "**/@uswds/uswds"
+      "**/@uswds/uswds",
+      "**/unplugin-fonts"
     ]
   }
 }

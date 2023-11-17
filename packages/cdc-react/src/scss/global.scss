@@ -14,7 +14,7 @@
 
 body {
   font-size: typography.$font-size-base-px;
-  font-family: family("sans");
+  font-family: typography.$font-family-sans;
   font-weight: typography.$font-weight-regular;
 }
 

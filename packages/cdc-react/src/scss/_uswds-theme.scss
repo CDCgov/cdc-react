@@ -1,11 +1,3 @@
 @use "uswds-core" with (
-  $theme-font-path: "@uswds/uswds/fonts",
-  $theme-font-type-cond: false,
-  $theme-font-type-icon: false,
-  $theme-font-type-lang: false,
-  $theme-font-type-mono: "roboto-mono",
-  $theme-font-type-sans: "open-sans",
-  $theme-font-type-serif: "merriweather",
-  $theme-show-notifications: false,
-  $theme-font-role-ui: "sans"
+  $theme-show-notifications: false
 );
