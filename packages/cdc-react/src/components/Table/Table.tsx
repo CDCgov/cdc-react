@@ -5,18 +5,23 @@ import { TableModel } from "../../@types";
 import React from "react";
 
 import {
+  Column,
+  Table as ReactTable,
   PaginationState,
   useReactTable,
   getCoreRowModel,
-  createColumnHelper,
+  getFilteredRowModel,
+  getPaginationRowModel,
+  ColumnDef,
+  OnChangeFn,
   flexRender,
+  createColumnHelper,
 } from "@tanstack/react-table";
 
 export interface TableProps {
-  pageSize: number;
-  pageIndex: number;
   detailSelect: (data: TableModel[]) => void;
   data: TableModel[];
+  columns: ColumnDef<TableModel>[];
 }
 
 export const Table = ({
@@ -24,80 +29,69 @@ export const Table = ({
   detailSelect,
 }: TableProps & JSX.IntrinsicElements["table"]) => {
   const columnHelper = createColumnHelper<TableModel>();
+
   const toggle: React.ChangeEventHandler<HTMLInputElement> | undefined = (
     event: React.ChangeEvent
   ) => {
     console.log(event);
   };
 
-  const columns = [
-    columnHelper.accessor("index", {
-      header: () => <span></span>,
-      cell: (info) => (
-        <input type="checkbox" onChange={toggle} value={info.getValue()} />
-      ),
-      footer: (info) => info.column.id,
-    }),
-    columnHelper.accessor((row) => row.fileName, {
-      id: "fileName",
-      cell: (info) => <i>{info.getValue()}</i>,
-      header: () => <span>File Name</span>,
-      footer: (info) => info.column.id,
-    }),
-    columnHelper.accessor("event", {
-      header: () => "Event",
-      cell: (info) => info.renderValue(),
-      footer: (info) => info.column.id,
-    }),
-    columnHelper.accessor("uploadStatus", {
-      header: () => <span>Upload Status</span>,
-      footer: (info) => info.column.id,
-    }),
-    columnHelper.accessor("submitted", {
-      header: "Submitted",
-      cell: (info) => {
-        const obj = info.getValue();
-        return (
-          <>
-            <span className="when">{obj.when}</span>
-            <span className="timestamp">{obj.timestamp}</span>
-          </>
-        );
+  const columns = React.useMemo<ColumnDef<TableModel>[]>(
+    () => [
+      {
+        accessorKey: "checked",
+        header: () => "",
+        footer: (props) => props.column.id,
       },
-      footer: (info) => info.column.id,
-    }),
-    columnHelper.accessor("details", {
-      header: "Details",
-      footer: (info) => info.column.id,
-    }),
-  ];
+      {
+        accessorKey: "fileName",
+        header: () => "File Name",
+        footer: (props) => props.column.id,
+      },
+      {
+        accessorKey: "event",
+        header: () => "Event",
+        footer: (props) => props.column.id,
+      },
+      {
+        accessorKey: "uploadStatus",
+        header: () => "Upload Status",
+        footer: (props) => props.column.id,
+      },
+      {
+        accessorKey: "submitted",
+        header: () => "Submitted",
+        cell: (info) => {
+          const cell: {
+            when: string;
+            timestamp: string;
+          } = info.getValue();
 
-  const [{ pageIndex, pageSize }, setPagination] =
-    React.useState<PaginationState>({
-      pageIndex: 0,
-      pageSize: 10,
-    });
-
-  const defaultData = React.useMemo(() => data || [], data || []);
-
-  const pagination = React.useMemo(
-    () => ({
-      pageIndex,
-      pageSize,
-    }),
-    [pageIndex, pageSize]
+          return (
+            <>
+              {cell.when}
+              {cell.timestamp}
+            </>
+          );
+        },
+        footer: (props) => props.column.id,
+      },
+      {
+        accessorKey: "details",
+        header: () => "Details",
+        footer: (props) => props.column.id,
+      },
+    ],
+    []
   );
+
+  const [defaultData, setData] = React.useState(() => [...data]);
 
   const table = useReactTable({
     data: defaultData,
     columns,
-    pageCount: 1,
-    state: {
-      pagination,
-    },
-    onPaginationChange: setPagination,
     getCoreRowModel: getCoreRowModel(),
-    manualPagination: true,
+    getPaginationRowModel: getPaginationRowModel(),
   });
 
   return (
