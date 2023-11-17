@@ -82,3 +82,15 @@ export const ButtonTertiaryColors = [
 ] as const;
 
 export type ButtonTertiaryColorTypes = (typeof ButtonTertiaryColors)[number];
+
+export interface TableModel {
+  readonly index: number;
+  readonly fileName: string;
+  readonly event: string;
+  readonly uploadStatus: string;
+  readonly submitted: {
+    when: string;
+    timestamp: string;
+  };
+  readonly details: string;
+}

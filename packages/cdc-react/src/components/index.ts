@@ -10,6 +10,7 @@ export * from "./Button/Button";
 export * from "./Divider/Divider";
 export * from "./Dropdown/Dropdown";
 export * from "./Card/Card";
+export * from "./Table/Table";
 export * from "./Modal/Modal";
 export * from "./Modal/ModalBody/ModalBody";
 export * from "./Modal/ModalFooter/ModalFooter";
