@@ -64,6 +64,7 @@ export const Pill = (props: PillProps) => {
   const [isToggled, setIsToggled] = useState(false);
 
   const showTitle = props.label.length > TRUNCATE_LENGTH;
+  const ariaLabel = props.ariaLabel.length > 0 ? props.ariaLabel : props.label;
   let classes = "cdc-react";
 
   props.shape === "roundCorners"
@@ -86,7 +87,7 @@ export const Pill = (props: PillProps) => {
       <button
         className={`${classes} ${isToggled ? "active" : ""} ${props.color}`}
         title={showTitle ? props.label : undefined}
-        aria-label={props.ariaLabel}
+        aria-label={ariaLabel}
         onClick={handleToggle}>
         <span className="label truncate">{props.label}</span>
       </button>
@@ -98,7 +99,7 @@ export const Pill = (props: PillProps) => {
   return (
     <span
       className={`${classes} ${props.color}`}
-      aria-label={props.ariaLabel}
+      aria-label={ariaLabel}
       title={showTitle ? props.label : undefined}>
       {props.variation === "info" && props.icon}
       {props.variation === "info" &&
@@ -113,7 +114,7 @@ export const Pill = (props: PillProps) => {
       <span className="label truncate">{props.label}</span>
       {props.variation === "input" && (
         <Button
-          ariaLabel="Close modal"
+          ariaLabel={`delete ${props.label}`}
           size="tiny"
           iconOnly={true}
           icon={<Icons.Close />}

@@ -25,6 +25,11 @@ describe("Pill Component", () => {
     expect(screen.getByLabelText("hello aria")).toBeInTheDocument();
   });
 
+  it("should default aria label to label text", () => {
+    render(<Pill label="hello" />);
+    expect(screen.getByLabelText("hello")).toBeInTheDocument();
+  });
+
   describe("Togglable", () => {
     it("should call onToggle callback", () => {
       let didGetCalled = false;
@@ -42,14 +47,14 @@ describe("Pill Component", () => {
   describe("Input", () => {
     it("should render close icon", () => {
       let testVal = false;
-      const { container } = render(
+      render(
         <Pill
           label="option 1"
           variation="input"
           onDelete={() => (testVal = true)}
         />
       );
-      const closeBtn = container.getElementsByTagName("button")[0];
+      const closeBtn = screen.getByLabelText("delete option 1");
       expect(closeBtn).toBeInTheDocument();
 
       fireEvent.click(closeBtn);
