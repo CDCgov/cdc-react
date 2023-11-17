@@ -209,6 +209,7 @@
 
 @mixin pill-outlined-states($default-clr, $hover-clr, $active-clr) {
   border: solid 1px $default-clr;
+  color: $default-clr;
 
   &:hover,
   &.hover {
@@ -218,6 +219,21 @@
   &:active,
   &.active {
     background-color: $active-clr;
+  }
+}
+
+@mixin pill-toggle-states($default-clr, $hover-clr) {
+  color: $default-clr;
+  border: 1px solid $default-clr;
+
+  &:hover {
+    background-color: $hover-clr;
+  }
+
+  &:active,
+  &.active {
+    background-color: $default-clr;
+    color: white;
   }
 }
 
@@ -240,14 +256,22 @@
 
 @mixin create-pill-outline($palette) {
   @each $color, $color-val in $palette {
+    background-color: transparent;
     &.#{$color} {
-      color: $color-val;
-      border: 1px solid $color-val;
       @include pill-outlined-states(
         #{$color-val},
         #{$color-val}1a,
         #{$color-val}12
       );
+    }
+  }
+}
+
+@mixin create-pill-toggle($palette) {
+  @each $color, $color-val in $palette {
+    background-color: transparent;
+    &.#{$color} {
+      @include pill-toggle-states(#{$color-val}, #{$color-val}1a);
     }
   }
 }

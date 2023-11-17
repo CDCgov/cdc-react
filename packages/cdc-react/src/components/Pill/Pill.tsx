@@ -70,12 +70,6 @@ export const Pill = (props: PillProps) => {
     classes += ` slot`;
   }
 
-  if (props.outline) {
-    classes += ` outline`;
-  } else {
-    classes += ` default`;
-  }
-
   if (props.inverse) {
     classes += ` inverse`;
   }
@@ -96,6 +90,12 @@ export const Pill = (props: PillProps) => {
         <span className="label truncate">{props.label}</span>
       </button>
     );
+  }
+
+  if (props.outline) {
+    classes += ` outline`;
+  } else {
+    classes += ` filled`;
   }
 
   return (

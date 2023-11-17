@@ -9,10 +9,11 @@
   height: units(4);
   padding: units(0.5);
 
-  &.default {
-    // border: 1px solid global.$main-theme;
-    background-color: global.$main-theme;
-    color: white;
+  &.filled {
+    &.primary {
+      background-color: global.$main-theme;
+      color: white;
+    }
 
     @include global.create-pill-filled(
       global.$status-palette,
@@ -21,9 +22,9 @@
   }
 
   &.outline {
-    background-color: transparent;
-
     &.primary {
+      background-color: transparent;
+
       border: 1px solid global.$main-theme;
       color: global.$main-theme;
     }
@@ -32,24 +33,29 @@
   }
 
   &.toggle {
-    background-color: transparent;
-    color: global.$main-theme;
-    border: 1px solid global.$main-theme;
     cursor: pointer;
 
-    &:hover {
-      background-color: #dff4ff;
+    &.primary {
+      background-color: transparent;
+      color: global.$main-theme;
+      border: 1px solid global.$main-theme;
+
+      &:hover {
+        background-color: #dff4ff;
+      }
+
+      &.active {
+        background-color: global.$main-theme;
+        color: white;
+      }
+
+      &.active:hover {
+        background-color: global.$main-theme-dark;
+        border-color: global.$main-theme-dark;
+      }
     }
 
-    &.active {
-      background-color: global.$main-theme;
-      color: white;
-    }
-
-    &.active:hover {
-      background-color: global.$main-theme-dark;
-      border-color: global.$main-theme-dark;
-    }
+    @include global.create-pill-toggle(global.$status-dark-palette);
 
     &.inverse {
       background-color: transparent;
