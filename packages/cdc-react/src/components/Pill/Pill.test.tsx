@@ -8,10 +8,16 @@ describe("Pill Component", () => {
   });
 
   it("should truncate long text", () => {
-    render(<Pill label="This is a long pull that should be truncated" />);
+    const { container } = render(
+      <Pill label="This is a long pull that should be truncated" />
+    );
+
     expect(
       screen.getByTitle("This is a long pull that should be truncated")
     ).toBeInTheDocument();
+
+    const truncatedText = container.getElementsByClassName("truncate")[0];
+    expect(truncatedText).toBeInTheDocument();
   });
 
   describe("Togglable", () => {
