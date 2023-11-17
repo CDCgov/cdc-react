@@ -64,11 +64,9 @@ export const Pill = (props: PillProps) => {
   const showTitle = props.label.length > TRUNCATE_LENGTH;
   let classes = "cdc-react";
 
-  if (props.shape == "roundCorners") {
-    classes += ` roundCorners`;
-  } else {
-    classes += ` slot`;
-  }
+  props.shape === "roundCorners"
+    ? (classes += ` roundCorners`)
+    : (classes += ` slot`);
 
   if (props.inverse) {
     classes += ` inverse`;
@@ -92,11 +90,7 @@ export const Pill = (props: PillProps) => {
     );
   }
 
-  if (props.outline) {
-    classes += ` outline`;
-  } else {
-    classes += ` filled`;
-  }
+  props.outline ? (classes += ` outline`) : (classes += ` filled`);
 
   return (
     <span
