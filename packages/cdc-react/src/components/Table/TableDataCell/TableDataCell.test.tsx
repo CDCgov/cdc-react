@@ -1,8 +1,8 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import { Table } from "./Table";
+import { TableDataCell } from "./TableDataCell";
 
-describe("Table component", () => {
+describe("TableDataCell component", () => {
   it("should render a table with data", () => {
-    render(<Table />);
+    render(<TableDataCell />);
   });
 });

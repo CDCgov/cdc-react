@@ -1,8 +1,8 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import { Table } from "./Table";
+import { TableHead } from "./TableHead";
 
-describe("Table component", () => {
+describe("TableHead component", () => {
   it("should render a table with data", () => {
-    render(<Table />);
+    render(<TableHead />);
   });
 });

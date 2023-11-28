@@ -93,18 +93,3 @@ export const ColorVariations = [
 ];
 
 export type ColorVariationTypes = (typeof ColorVariations)[number];
-
-export interface TableModel {
-  readonly index: number;
-  readonly fileName: string;
-  readonly event: string;
-  readonly uploadStatus: {
-    color: ColorVariationTypes;
-    label: string;
-  };
-  readonly submitted: {
-    when: string;
-    timestamp: string;
-  };
-  readonly details: string | React.ReactNode;
-}
