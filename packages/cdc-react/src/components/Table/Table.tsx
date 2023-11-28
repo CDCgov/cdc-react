@@ -1,12 +1,11 @@
 import "./Table.scss";
 
-import { ColorVariationTypes, TableModel } from "../../@types";
+import { TableModel } from "../../@types";
 
 import React from "react";
 
 import {
   useReactTable,
-  Table as ReactTable,
   getCoreRowModel,
   getPaginationRowModel,
   getFilteredRowModel,
@@ -54,7 +53,7 @@ export const Table = ({
         header: () => (
           <>
             <Icons.SortArrow></Icons.SortArrow>
-            File Name
+            <span>File Name</span>
           </>
         ),
         footer: (props) => props.column.id,
@@ -64,7 +63,7 @@ export const Table = ({
         header: () => (
           <>
             <Icons.SortArrow></Icons.SortArrow>
-            Event
+            <span>Event</span>
           </>
         ),
         footer: (props) => props.column.id,
@@ -74,7 +73,7 @@ export const Table = ({
         header: () => (
           <>
             <Icons.SortArrow></Icons.SortArrow>
-            Upload Status
+            <span>Upload Status</span>
           </>
         ),
         cell: (info) => {
@@ -99,7 +98,7 @@ export const Table = ({
         header: () => (
           <>
             <Icons.SortArrow></Icons.SortArrow>
-            Submitted
+            <span>Submitted</span>
           </>
         ),
         cell: (info) => {
@@ -107,8 +106,8 @@ export const Table = ({
 
           return (
             <>
-              {cell.when}
-              {cell.timestamp}
+              <div>{cell.when}</div>
+              <div>{cell.timestamp}</div>
             </>
           );
         },
@@ -116,13 +115,13 @@ export const Table = ({
       },
       {
         accessorKey: "details",
-        header: () => (
-          <>
-            <Icons.SortArrow></Icons.SortArrow>
-            Details
-          </>
-        ),
+        header: () => <>Details</>,
         footer: (props) => props.column.id,
+        cell: (info) => {
+          const status = info.getValue();
+
+          return <Icons.Dots />;
+        },
       },
     ],
     []
@@ -140,101 +139,106 @@ export const Table = ({
 
   return (
     <div className="cdc-react">
-      <table className="table">
-        <thead>
-          {table.getHeaderGroups().map((headerGroup) => (
-            <tr key={headerGroup.id}>
-              {headerGroup.headers.map((header) => {
-                return (
-                  <th key={header.id} colSpan={header.colSpan}>
-                    {header.isPlaceholder ? null : (
-                      <div>
-                        {flexRender(
-                          header.column.columnDef.header,
-                          header.getContext()
-                        )}
-                      </div>
-                    )}
-                  </th>
-                );
-              })}
-            </tr>
-          ))}
-        </thead>
-        <tbody>
-          {table.getRowModel().rows.map((row) => {
-            return (
-              <tr key={row.id}>
-                {row.getVisibleCells().map((cell) => {
+      <div className="table-wrap">
+        <table className="table">
+          <thead>
+            {table.getHeaderGroups().map((headerGroup) => (
+              <tr key={headerGroup.id} className="top">
+                {headerGroup.headers.map((header, index) => {
                   return (
-                    <td key={cell.id}>
-                      {flexRender(
-                        cell.column.columnDef.cell,
-                        cell.getContext()
+                    <th
+                      key={header.id}
+                      colSpan={header.colSpan}
+                      className={`th-${index}`}>
+                      {header.isPlaceholder ? null : (
+                        <div>
+                          {flexRender(
+                            header.column.columnDef.header,
+                            header.getContext()
+                          )}
+                        </div>
                       )}
-                    </td>
+                    </th>
                   );
                 })}
               </tr>
-            );
-          })}
-        </tbody>
-      </table>
-      <div className="pagination">
-        <button
-          className="previousState"
-          onClick={() => table.setPageIndex(0)}
-          disabled={!table.getCanPreviousPage()}>
-          {"<<"}
-        </button>
-        <button
-          className="previous"
-          onClick={() => table.previousPage()}
-          disabled={!table.getCanPreviousPage()}>
-          {"<"}
-        </button>
-        <button
-          className="next"
-          onClick={() => table.nextPage()}
-          disabled={!table.getCanNextPage()}>
-          {">"}
-        </button>
-        <button
-          className="nextEnd"
-          onClick={() => table.setPageIndex(table.getPageCount() - 1)}
-          disabled={!table.getCanNextPage()}>
-          {">>"}
-        </button>
-        <span className="page">
-          <div>Page</div>
-          <strong>
-            {table.getState().pagination.pageIndex + 1} of{" "}
-            {table.getPageCount()}
-          </strong>
-        </span>
-        <span className="pageByInput">
-          | Go to page:
-          <input
-            type="number"
-            defaultValue={table.getState().pagination.pageIndex + 1}
+            ))}
+          </thead>
+          <tbody>
+            {table.getRowModel().rows.map((row) => {
+              return (
+                <tr key={row.id}>
+                  {row.getVisibleCells().map((cell, index) => {
+                    return (
+                      <td key={cell.id} className={`td-${index}`}>
+                        {flexRender(
+                          cell.column.columnDef.cell,
+                          cell.getContext()
+                        )}
+                      </td>
+                    );
+                  })}
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+        <div className="pagination">
+          <button
+            className="previousState"
+            onClick={() => table.setPageIndex(0)}
+            disabled={!table.getCanPreviousPage()}>
+            {"<<"}
+          </button>
+          <button
+            className="previous"
+            onClick={() => table.previousPage()}
+            disabled={!table.getCanPreviousPage()}>
+            {"<"}
+          </button>
+          <button
+            className="next"
+            onClick={() => table.nextPage()}
+            disabled={!table.getCanNextPage()}>
+            {">"}
+          </button>
+          <button
+            className="nextEnd"
+            onClick={() => table.setPageIndex(table.getPageCount() - 1)}
+            disabled={!table.getCanNextPage()}>
+            {">>"}
+          </button>
+          <span className="page">
+            <div>Page</div>
+            <strong>
+              {table.getState().pagination.pageIndex + 1} of{" "}
+              {table.getPageCount()}
+            </strong>
+          </span>
+          <span className="pageByInput">
+            | Go to page:
+            <input
+              type="number"
+              defaultValue={table.getState().pagination.pageIndex + 1}
+              onChange={(e) => {
+                const page = e.target.value ? Number(e.target.value) - 1 : 0;
+                table.setPageIndex(page);
+              }}
+            />
+          </span>
+          <select
+            className="pageSize"
+            value={table.getState().pagination.pageSize}
             onChange={(e) => {
-              const page = e.target.value ? Number(e.target.value) - 1 : 0;
-              table.setPageIndex(page);
-            }}
-          />
-        </span>
-        <select
-          className="pageSize"
-          value={table.getState().pagination.pageSize}
-          onChange={(e) => {
-            table.setPageSize(Number(e.target.value));
-          }}>
-          {[10, 20, 30, 40, 50].map((pageSize) => (
-            <option key={pageSize} value={pageSize}>
-              Show {pageSize}
-            </option>
-          ))}
-        </select>
+              table.setPageSize(Number(e.target.value));
+            }}>
+            {[10, 20, 30, 40, 50].map((pageSize) => (
+              <option key={pageSize} value={pageSize}>
+                Show {pageSize}
+              </option>
+            ))}
+          </select>
+        </div>
       </div>
     </div>
   );

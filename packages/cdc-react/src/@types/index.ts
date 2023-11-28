@@ -91,6 +91,7 @@ export const ColorVariations = [
   "error",
   "warning",
 ];
+
 export type ColorVariationTypes = (typeof ColorVariations)[number];
 
 export interface TableModel {

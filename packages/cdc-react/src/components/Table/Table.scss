@@ -1,380 +1,65 @@
 @use "../../scss/global.scss";
 @use "uswds-core" as *;
 
-.cdc-react.btn {
-  display: flex;
-  width: auto;
-  height: auto;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  border-width: 0.15rem;
-
-  &.default {
-    min-width: units(10);
-    min-height: units(4);
-
-    span {
-      font-size: units(1.5);
-    }
-  }
-
-  &.tiny {
-    min-width: units(5);
-    min-height: units(3);
-
-    span {
-      font-size: units(1);
-    }
-  }
-
-  &.big {
-    min-width: units(7);
-    min-height: units(5);
-
-    span {
-      font-size: units(2);
-    }
-  }
-
-  &.primary {
-    &.filled {
-      background-color: global.$main-theme;
-      border-radius: 0.15rem;
-      border: solid 0.15rem global.$main-theme;
-      color: #ffffff;
-
-      &.inverse {
-        background-color: global.$main-theme-lighter;
-        border-color: global.$main-theme-lighter;
-        color: global.$gray-darker;
-
-        &:focus,
-        &.focus {
-          background-color: global.$main-theme-lighter;
-          border-color: global.$main-theme-lighter;
-        }
-
-        &:hover,
-        &.hover {
-          background-color: #dff4ff;
-          border-color: #dff4ff;
-        }
-
-        &:active,
-        &.active {
-          background-color: #ffffff;
-          border-color: #ffffff;
-        }
-
-        &.disabled,
-        &:disabled {
-          background-color: global.$gray-dark;
-          border-radius: 0.15rem;
-          border: solid 0.15rem global.$gray-dark;
-          color: #3e3e3e;
-          cursor: not-allowed;
-          text-decoration: none;
-        }
-      }
-
-      &:focus,
-      &.focus {
-        background-color: global.$main-theme;
-        border-color: global.$main-theme;
-      }
-
-      &:hover,
-      &.hover {
-        background-color: global.$main-theme-dark;
-        border-color: global.$main-theme-dark;
-      }
-
-      &:active,
-      &.active {
-        background-color: global.$main-theme-darker;
-        border-color: global.$main-theme-darker;
-      }
-
-      &.disabled,
-      &:disabled {
-        background-color: global.$gray-light;
-        border-radius: 0.2rem;
-        border: solid 0.15rem global.$gray-light;
-        color: #ffffff;
-        cursor: not-allowed;
-        text-decoration: none;
-      }
-
-      @include global.create-button-filled(global.$base-btn-palette);
-    }
-
-    &.outline {
-      background-color: transparent;
-      border-radius: 0.2rem;
-      border: solid 0.15rem global.$main-theme;
-      color: global.$main-theme;
-
-      &:focus,
-      &.focus {
-        background-color: transparent;
-      }
-
-      &:hover,
-      &.hover {
-        background-color: #f4f4f4fa;
-      }
-
-      &:active,
-      &.active {
-        background-color: #e8e4e4e7;
-      }
-
-      &.disabled,
-      &:disabled {
-        background-color: transparent;
-        border-radius: 0.2rem;
-        border: solid 0.15rem global.$gray-light;
-        color: global.$gray-light;
-        cursor: not-allowed;
-        text-decoration: none;
-      }
-
-      &.inverse {
-        background-color: transparent;
-        color: global.$main-theme-lighter;
-        border-color: global.$main-theme-lighter;
-
-        &:hover,
-        &.hover {
-          background-color: #3d3d3d;
-          border-color: global.$main-theme-lighter;
-          color: global.$main-theme-lighter;
-        }
-
-        &:active,
-        &.active {
-          border-color: #ffffff;
-          color: #ffffff;
-          background-color: #474747;
-        }
-
-        &:focus,
-        &.focus {
-          color: global.$main-theme-lighter;
-          border-color: global.$main-theme-lighter;
-          background-color: transparent;
-        }
-
-        &.disabled,
-        &:disabled {
-          border-color: global.$gray-dark;
-          color: global.$gray-dark;
-          background-color: transparent;
-          cursor: not-allowed;
-          text-decoration: none;
-        }
-      }
-
-      @include global.create-button-outline(global.$base-btn-palette);
-    }
-
-    &.text {
-      background-color: transparent;
-      border-radius: 0.2rem;
-      border: none;
-      color: global.$main-theme;
-
-      &:focus,
-      &.focus {
-        background-color: #f5f5f5;
-      }
-
-      &:hover,
-      &.hover {
-        background-color: #f5f5f5;
-      }
-
-      &:active,
-      &.active {
-        background-color: #ebebeb;
-      }
-
-      &.disabled,
-      &:disabled {
-        background-color: transparent;
-        border-radius: 0.2rem;
-        border: solid 0.15rem transparent;
-        color: global.$gray-light;
-        cursor: not-allowed;
-        text-decoration: none;
-      }
-
-      &.inverse {
-        background: transparent;
-        border-color: transparent;
-        color: global.$main-theme-light;
-
-        &:hover,
-        &.hover {
-          background-color: #3d3d3d;
-          color: global.$main-theme-lighter;
-        }
-
-        &:active,
-        &.active {
-          background-color: #5c5b5b;
-          color: #ffffff;
-        }
-
-        &:focus,
-        &.focus {
-          background-color: #333333;
-          color: global.$main-theme-light;
-        }
-
-        &.disabled,
-        &:disabled {
-          background-color: transparent;
-          border-color: transparent;
-          color: global.$gray-dark;
-          cursor: not-allowed;
-          text-decoration: none;
-        }
-      }
-
-      @include global.create-button-text(global.$base-btn-palette);
-    }
-
-    &.unstyled {
-      min-width: auto;
-      min-height: auto;
-      background-color: transparent;
-      border-radius: 0rem;
-      border: none;
-      color: global.$main-theme;
-
-      &:focus,
-      &.focus {
-        text-decoration: underline;
-        background-color: transparent;
-      }
-
-      &:hover,
-      &.hover {
-        text-decoration: underline;
-        background-color: transparent;
-      }
-
-      &:active,
-      &.active {
-        text-decoration: underline;
-        background-color: transparent;
-      }
-
-      &.disabled,
-      &:disabled {
-        color: global.$gray-light;
-        background-color: transparent;
-        border: solid 0.15rem transparent;
-        cursor: not-allowed;
-        text-decoration: none;
-      }
-
-      &.inverse {
-        color: global.$main-theme-light;
-        background-color: transparent;
-        border-color: transparent;
-
-        &:focus,
-        &.focus {
-          color: #ffffff;
-          text-decoration: underline;
-          background-color: transparent;
-        }
-
-        &:hover,
-        &.hover {
-          text-decoration: underline;
-          color: global.$main-theme-lighter;
-          background-color: transparent;
-        }
-
-        &:active,
-        &.active {
-          text-decoration: underline;
-          color: #ffffff;
-          background-color: transparent;
-        }
-
-        &.disabled,
-        &:disabled {
-          color: global.$gray-dark;
-          cursor: not-allowed;
-          text-decoration: none;
-        }
-      }
-
-      @include global.create-button-unstyled(global.$base-btn-palette);
-    }
-  }
-
-  &.has-icon {
-    flex-flow: row;
-
-    span {
-      padding: 0 0.2rem;
+.cdc-react {
+  .table-wrap {
+    .table {
       display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+      width: 100%;
+      flex-direction: column;
 
-    &.left span:last-child {
-      padding-right: 0.5rem;
-    }
-
-    &.right span:first-child {
-      padding-left: 0.5rem;
-    }
-  }
-
-  &.tertiary {
-    border-radius: 0.2rem;
-
-    &.filled {
-      @include global.create-button-filled(global.$tertiary-btn-palette);
-    }
-
-    &.outline {
-      &.disabled,
-      &:disabled {
-        background-color: transparent;
-        border: solid 0.15rem #e0e0e0;
-        color: #e0e0e0;
-        cursor: not-allowed;
-        text-decoration: none;
-      }
-      @include global.create-button-outline(global.$tertiary-btn-palette);
-    }
-
-    &.text {
-      border: none;
-      @include global.create-button-text(global.$tertiary-btn-palette);
-    }
-
-    &.unstyled {
-      min-width: auto;
-      min-height: auto;
-      border-radius: 0rem;
-      border: none;
-
-      &:focus,
-      &.focus {
-        text-decoration: underline;
+      tr.top {
+        display: flex;
+        flex-direction: row;
       }
 
-      @include global.create-button-unstyled(global.$tertiary-btn-palette);
+      th {
+        height: units(6);
+        display: flex;
+        flex-direction: row;
+        border: solid 1px global.$gray-light;
+        background-color: global.$gray-lighter;
+        flex-grow: 1;
+
+        svg {
+          flex-grow: 1;
+        }
+
+        div:nth-child(1) {
+          justify-content: center;
+        }
+
+        div {
+          display: flex;
+          width: 100%;
+          align-items: center;
+
+          span {
+            display: flex;
+            justify-content: center;
+            flex-grow: 1;
+          }
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        height: units(6);
+        display: flex;
+        flex-direction: row;
+
+        td {
+          border: solid 1px global.$gray-light;
+          flex-grow: 1;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+
+    .pagination {
+      display: flex;
+      flex-direction: row;
     }
   }
 }
