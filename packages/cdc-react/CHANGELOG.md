@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/CDCgov/cdc-react/compare/cdc-react-v1.1.0...cdc-react-v1.2.0) (2023-11-17)
+
+
+### Features
+
+* Portal 1138/pill component ([#106](https://github.com/CDCgov/cdc-react/issues/106)) ([f594a34](https://github.com/CDCgov/cdc-react/commit/f594a34abdb3aa104da3266cf7f23dfd53193ead))
+
 ## [1.1.0](https://github.com/CDCgov/cdc-react/compare/cdc-react-v1.0.0...cdc-react-v1.1.0) (2023-11-03)
 
 

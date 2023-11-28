@@ -20,7 +20,6 @@ import { Icons } from "@us-gov-cdc/cdc-react-icons";
 export interface TableProps {
   detailSelect: (data: TableModel[]) => void;
   data: TableModel[];
-  columns: ColumnDef<TableModel>[];
 }
 
 export interface submittedType {
