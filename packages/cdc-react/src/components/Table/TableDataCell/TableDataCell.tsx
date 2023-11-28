@@ -1,5 +1,3 @@
-import "./TableDataCell.scss";
-
 import React from "react";
 
 export interface TableDataCellProps {

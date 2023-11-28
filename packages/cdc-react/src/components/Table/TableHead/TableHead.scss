@@ -2,4 +2,36 @@
 @use "uswds-core" as *;
 
 .cdc-react.table {
+  thead {
+    width: 100%;
+
+    tr {
+      display: flex;
+      flex-direction: row;
+    }
+
+    th {
+      height: units(6);
+      display: flex;
+      flex-direction: row;
+      border: solid 1px global.$gray-light;
+      background-color: global.$gray-lighter;
+      flex-grow: 1;
+      align-items: center;
+      justify-content: center;
+
+      span {
+        flex-grow: 1;
+        text-align: left;
+      }
+
+      svg {
+        flex-grow: 1;
+      }
+
+      .details {
+        padding-left: units(1);
+      }
+    }
+  }
 }

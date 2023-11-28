@@ -31,7 +31,7 @@ const data = mockIndexes.map((item: number) => {
   return {
     index: item,
     checked: false,
-    fileName: "Test file Name " + (item + 1),
+    fileName: "Test File Name " + (item + 1),
     event: "Test Event Name " + (item + 1),
     uploadStatus: {
       color: "busy",
@@ -48,7 +48,7 @@ const data = mockIndexes.map((item: number) => {
 export default meta;
 type Story = StoryObj<typeof Table>;
 
-export const table: Story = {
+export const Example: Story = {
   render: (args: TableProps) => {
     return (
       <Table>
@@ -81,8 +81,8 @@ export const table: Story = {
           </TableRow>
         </TableHead>
         <TableBody>
-          {data.map((info) => (
-            <TableRow>
+          {data.map((info, index) => (
+            <TableRow key={`table-row-${index}`}>
               <TableDataCell className="table-data-cell-checkbox">
                 <input type="checkbox" checked={info.checked} />
               </TableDataCell>
