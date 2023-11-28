@@ -4,6 +4,7 @@ import React from "react";
 
 export interface TableBodyProps {
   children?: React.ReactNode | React.ReactNode[];
+  className?: string;
 }
 
 export const TableBody = ({

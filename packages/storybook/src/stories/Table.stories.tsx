@@ -1,3 +1,5 @@
+import "./assets/table.scss";
+
 import type { Meta, StoryObj } from "@storybook/react";
 
 import {
@@ -10,6 +12,7 @@ import {
   TableDataCell,
   Pill,
 } from "@us-gov-cdc/cdc-react";
+
 import { Icons } from "@us-gov-cdc/cdc-react-icons";
 
 const meta: Meta<typeof Table> = {
@@ -51,28 +54,28 @@ export const table: Story = {
       <Table>
         <TableHead>
           <TableRow>
-            <TableHeader>
+            <TableHeader className="table-header-checkbox">
               <input type="checkbox" />
             </TableHeader>
-            <TableHeader>
+            <TableHeader className="table-header-filename">
               <>
                 <Icons.SortArrow></Icons.SortArrow>
                 <span>File Name</span>
               </>
             </TableHeader>
-            <TableHeader>
+            <TableHeader className="table-header-event">
               <Icons.SortArrow></Icons.SortArrow>
               <span>Event</span>
             </TableHeader>
-            <TableHeader>
+            <TableHeader className="table-header-upload-status">
               <Icons.SortArrow></Icons.SortArrow>
               <span>Upload Status</span>
             </TableHeader>
-            <TableHeader>
+            <TableHeader className="table-header-submitted">
               <Icons.SortArrow></Icons.SortArrow>
               <span>Submitted</span>
             </TableHeader>
-            <TableHeader>
+            <TableHeader className="table-header-details">
               <span className="details">Details</span>
             </TableHeader>
           </TableRow>
@@ -80,12 +83,16 @@ export const table: Story = {
         <TableBody>
           {data.map((info) => (
             <TableRow>
-              <TableDataCell>
+              <TableDataCell className="table-data-cell-checkbox">
                 <input type="checkbox" checked={info.checked} />
               </TableDataCell>
-              <TableDataCell>{info.fileName}</TableDataCell>
-              <TableDataCell>{info.event}</TableDataCell>
-              <TableDataCell>
+              <TableDataCell className="table-data-cell-filename">
+                {info.fileName}
+              </TableDataCell>
+              <TableDataCell className="table-data-cell-event">
+                {info.event}
+              </TableDataCell>
+              <TableDataCell className="table-data-cell-upload-status">
                 <Pill
                   label={info.uploadStatus.label}
                   shape="slot"
@@ -94,8 +101,10 @@ export const table: Story = {
                   inverse={false}
                 />
               </TableDataCell>
-              <TableDataCell>{info.submitted.when}</TableDataCell>
-              <TableDataCell>
+              <TableDataCell className="table-data-cell-submitted">
+                {info.submitted.when}
+              </TableDataCell>
+              <TableDataCell className="table-data-cell-details">
                 <Icons.Dots />
               </TableDataCell>
             </TableRow>

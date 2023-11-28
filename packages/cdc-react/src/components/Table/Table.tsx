@@ -3,7 +3,8 @@ import "./Table.scss";
 import React from "react";
 
 export interface TableProps {
-  children: React.ReactNode | React.ReactNode[];
+  children?: React.ReactNode | React.ReactNode[];
+  className?: string;
 }
 
 export const Table = ({
@@ -11,8 +12,6 @@ export const Table = ({
   ...props
 }: TableProps & JSX.IntrinsicElements["table"]) => {
   return (
-    <table className="cdc-react table" {...props}>
-      {children}
-    </table>
+    <table className={`cdc-react table ${props.className}`}>{children}</table>
   );
 };

@@ -4,6 +4,7 @@ import React from "react";
 
 export interface TableHeadProps {
   children?: React.ReactNode | React.ReactNode[];
+  className?: string;
 }
 
 export const TableHead = ({
