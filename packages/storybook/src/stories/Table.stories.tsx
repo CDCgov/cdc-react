@@ -84,10 +84,10 @@ export const Example: Story = {
               <TableDataCell className="width-05 flex-justify-center">
                 <input type="checkbox" />
               </TableDataCell>
-              <TableDataCell className="width-15 text-left padding-left-2">
+              <TableDataCell className="width-15 text-left padding-left-105">
                 {info.fileName}
               </TableDataCell>
-              <TableDataCell className="width-15 text-left padding-left-2">
+              <TableDataCell className="width-15 text-left padding-left-105">
                 {info.event}
               </TableDataCell>
               <TableDataCell className="width-15 padding-left-1 padding-right-1">
