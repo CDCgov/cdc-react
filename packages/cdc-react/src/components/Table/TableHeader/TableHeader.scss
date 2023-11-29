@@ -16,14 +16,11 @@
       flex-grow: 2;
       font-weight: bold;
       font-size: 0.825rem;
+      padding-left: units("105");
     }
 
     svg {
-      min-width: units(4);
-    }
-
-    .details {
-      padding-left: units(1);
+      margin-left: units("105");
     }
   }
 }

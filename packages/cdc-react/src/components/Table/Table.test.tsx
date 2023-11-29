@@ -42,45 +42,43 @@ describe("Table component", () => {
       <Table>
         <TableHead>
           <TableRow>
-            <TableHeader className="width-05 flex-justify-center">
+            <TableHeader size="sm" className="flex-justify-center">
               <input type="checkbox" />
             </TableHeader>
-            <TableHeader className="width-15">
+            <TableHeader>
               <>
                 <Icons.SortArrow></Icons.SortArrow>
-                <span className="text-bold text-left">File Name</span>
+                <span className="text-left">File Name</span>
               </>
             </TableHeader>
-            <TableHeader className="width-15">
+            <TableHeader>
               <Icons.SortArrow></Icons.SortArrow>
-              <span className="text-bold text-left">Event</span>
+              <span className="text-left">Event</span>
             </TableHeader>
-            <TableHeader className="width-15">
+            <TableHeader>
               <Icons.SortArrow></Icons.SortArrow>
-              <span className="text-bold text-left">Upload Status</span>
+              <span className="text-left">Upload Status</span>
             </TableHeader>
-            <TableHeader className="width-10">
+            <TableHeader size="md">
               <Icons.SortArrow></Icons.SortArrow>
-              <span className="text-bold text-left">Submitted</span>
+              <span className="text-left">Submitted</span>
             </TableHeader>
-            <TableHeader className="width-8">
-              <span className="text-bold text-center">Details</span>
+            <TableHeader size="sm">
+              <span className="text-center">Details</span>
             </TableHeader>
           </TableRow>
         </TableHead>
         <TableBody>
           {data.map((info, index) => (
             <TableRow key={`table-row-${index}`}>
-              <TableDataCell className="width-05 flex-justify-center">
+              <TableDataCell size="sm" className="flex-justify-center">
                 <input type="checkbox" />
               </TableDataCell>
-              <TableDataCell className="width-15 text-left padding-left-2">
+              <TableDataCell className="text-left">
                 {info.fileName}
               </TableDataCell>
-              <TableDataCell className="width-15 text-left padding-left-2">
-                {info.event}
-              </TableDataCell>
-              <TableDataCell className="width-15 padding-left-1 padding-right-1">
+              <TableDataCell className="text-left">{info.event}</TableDataCell>
+              <TableDataCell>
                 <Pill
                   label={info.uploadStatus.label}
                   shape="slot"
@@ -89,10 +87,10 @@ describe("Table component", () => {
                   inverse={false}
                 />
               </TableDataCell>
-              <TableDataCell className="width-10 flex-justify-center">
+              <TableDataCell size="md" className="flex-justify-center">
                 {info.submitted.when}
               </TableDataCell>
-              <TableDataCell className="width-8">
+              <TableDataCell size="sm">
                 <Icons.Dots />
               </TableDataCell>
             </TableRow>
