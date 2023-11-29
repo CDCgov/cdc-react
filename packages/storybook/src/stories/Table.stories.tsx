@@ -1,5 +1,3 @@
-import "./assets/table.scss";
-
 import type { Meta, StoryObj } from "@storybook/react";
 
 import {
@@ -54,45 +52,45 @@ export const Example: Story = {
       <Table>
         <TableHead>
           <TableRow>
-            <TableHeader className="table-header-checkbox">
+            <TableHeader className="width-05 flex-justify-center">
               <input type="checkbox" />
             </TableHeader>
-            <TableHeader className="table-header-filename">
+            <TableHeader className="width-15">
               <>
                 <Icons.SortArrow></Icons.SortArrow>
-                <span>File Name</span>
+                <span className="text-bold text-left">File Name</span>
               </>
             </TableHeader>
-            <TableHeader className="table-header-event">
+            <TableHeader className="width-15">
               <Icons.SortArrow></Icons.SortArrow>
-              <span>Event</span>
+              <span className="text-bold text-left">Event</span>
             </TableHeader>
-            <TableHeader className="table-header-upload-status">
+            <TableHeader className="width-15">
               <Icons.SortArrow></Icons.SortArrow>
-              <span>Upload Status</span>
+              <span className="text-bold text-left">Upload Status</span>
             </TableHeader>
-            <TableHeader className="table-header-submitted">
+            <TableHeader className="width-10">
               <Icons.SortArrow></Icons.SortArrow>
-              <span>Submitted</span>
+              <span className="text-bold text-left">Submitted</span>
             </TableHeader>
-            <TableHeader className="table-header-details">
-              <span className="details">Details</span>
+            <TableHeader className="width-8">
+              <span className="text-bold text-center">Details</span>
             </TableHeader>
           </TableRow>
         </TableHead>
         <TableBody>
           {data.map((info, index) => (
             <TableRow key={`table-row-${index}`}>
-              <TableDataCell className="table-data-cell-checkbox">
-                <input type="checkbox" checked={info.checked} />
+              <TableDataCell className="width-05 flex-justify-center">
+                <input type="checkbox" />
               </TableDataCell>
-              <TableDataCell className="table-data-cell-filename">
+              <TableDataCell className="width-15 text-left padding-left-2">
                 {info.fileName}
               </TableDataCell>
-              <TableDataCell className="table-data-cell-event">
+              <TableDataCell className="width-15 text-left padding-left-2">
                 {info.event}
               </TableDataCell>
-              <TableDataCell className="table-data-cell-upload-status">
+              <TableDataCell className="width-15 padding-left-1 padding-right-1">
                 <Pill
                   label={info.uploadStatus.label}
                   shape="slot"
@@ -101,10 +99,10 @@ export const Example: Story = {
                   inverse={false}
                 />
               </TableDataCell>
-              <TableDataCell className="table-data-cell-submitted">
+              <TableDataCell className="width-10 flex-justify-center">
                 {info.submitted.when}
               </TableDataCell>
-              <TableDataCell className="table-data-cell-details">
+              <TableDataCell className="width-8">
                 <Icons.Dots />
               </TableDataCell>
             </TableRow>

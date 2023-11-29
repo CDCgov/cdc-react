@@ -1,0 +1,23 @@
+@use "../../../scss/global.scss";
+@use "uswds-core" as *;
+
+.cdc-react.table {
+  td {
+    height: units(5);
+    display: flex;
+    flex-direction: row;
+    border: solid 1px global.$gray-light;
+    flex-grow: 1;
+    align-items: center;
+    font-size: 0.825rem;
+
+    span {
+      flex-grow: 1;
+      font-size: 0.825rem;
+    }
+
+    svg {
+      flex-grow: 1;
+    }
+  }
+}

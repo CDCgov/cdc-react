@@ -72,7 +72,7 @@ describe("Table component", () => {
           {data.map((info, index) => (
             <TableRow key={`table-row-${index}`}>
               <TableDataCell className="table-data-cell-checkbox">
-                <input type="checkbox" checked={info.checked} />
+                <input type="checkbox" />
               </TableDataCell>
               <TableDataCell className="table-data-cell-filename">
                 {info.fileName}

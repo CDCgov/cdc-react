@@ -1,3 +1,5 @@
+import "./TableHeader.scss";
+
 import React from "react";
 
 export interface TableHeaderProps {
