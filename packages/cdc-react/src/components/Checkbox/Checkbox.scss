@@ -1,2 +1,82 @@
 @use "../../scss/global.scss";
 @use "uswds-core" as *;
+
+.checkbox-container {
+  display: flex;
+  align-items: flex-start;
+  padding: 8px;
+  gap: 8px;
+  border: 2px solid transparent;
+  border-radius: 0.236rem;
+
+  .checkbox {
+    flex-shrink: 0;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #fff;
+    margin: 0;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    border: 1px solid #cccccc;
+    border-radius: 0.236rem;
+
+    &:checked {
+      background-color: #fff;
+      background-image: url("data:image/svg+xml;base64,Cjxzdmcgd2lkdGg9IjI1IiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjUgMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHBhdGggZD0iTTIuNzUgMEgyMi43NUMyMy4yODA0IDAgMjMuNzg5MSAwLjIxMDcxNCAyNC4xNjQyIDAuNTg1Nzg2QzI0LjUzOTMgMC45NjA4NTkgMjQuNzUgMS40Njk1NyAyNC43NSAyVjIyQzI0Ljc1IDIyLjUzMDQgMjQuNTM5MyAyMy4wMzkxIDI0LjE2NDIgMjMuNDE0MkMyMy43ODkxIDIzLjc4OTMgMjMuMjgwNCAyNCAyMi43NSAyNEgyLjc1QzIuMjE5NTcgMjQgMS43MTA4NiAyMy43ODkzIDEuMzM1NzkgMjMuNDE0MkMwLjk2MDcxNCAyMy4wMzkxIDAuNzUgMjIuNTMwNCAwLjc1IDIyVjJDMC43NSAxLjQ2OTU3IDAuOTYwNzE0IDAuOTYwODU5IDEuMzM1NzkgMC41ODU3ODZDMS43MTA4NiAwLjIxMDcxNCAyLjIxOTU3IDAgMi43NSAwVjBaIiBmaWxsPSIjMDA1RUEyIi8+CiAgPHBhdGggZD0iTTYuNzUgMTIuNzI3M0wxMC4yMzM5IDE2TDE4Ljc1IDgiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+Cjwvc3ZnPgo=");
+      background-repeat: no-repeat;
+      background-position: center;
+      outline: none;
+    }
+
+    &:focus {
+      outline: none !important;
+    }
+  }
+
+  .label {
+    display: block;
+    color: global.$gray-darker;
+
+    font-weight: global.$font-weight-regular;
+  }
+
+  .label-description {
+    font-size: 1rem;
+    font-weight: global.$font-weight-light;
+  }
+
+  &:focus-within {
+    border-color: global.$main-theme-light;
+  }
+
+  &:hover {
+    background-color: global.$main-theme-lighter;
+  }
+
+  &.checkbox-disabled {
+    .label {
+      background-color: unset;
+      border-color: global.$gray-light;
+      color: #bdbdbd;
+    }
+
+    .label-description {
+      color: #bdbdbd;
+    }
+
+    &:hover {
+      background-color: unset;
+    }
+  }
+
+  .checkbox-content {
+    display: "flex";
+    flex-direction: "column";
+  }
+}
+
+label:hover {
+  cursor: pointer;
+}
