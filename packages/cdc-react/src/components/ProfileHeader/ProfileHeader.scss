@@ -10,6 +10,7 @@
     gap: units(1);
     border-bottom: 0.1rem solid #e0e0e0;
     background: #f0f0f0;
+    width: 100%;
 
     .profile-header-menu {
       display: flex;
@@ -17,11 +18,15 @@
       height: 100%;
       align-items: center;
     }
+
+    li::marker {
+      content: "";
+    }
   }
 
   .profile-header-popup-wrap {
     position: absolute;
-    top: units(8);
+    top: units(6);
     right: units(5);
     display: none;
 

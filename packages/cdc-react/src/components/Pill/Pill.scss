@@ -1,9 +1,8 @@
 @use "../../scss/global.scss";
 @use "uswds-core" as *;
 
-.cdc-react {
+.cdc-react.pill {
   display: inline-flex;
-  align-items: center;
   align-items: center;
   min-width: units(4);
   height: units(4);
