@@ -65,7 +65,7 @@ export const Pill = (props: PillProps) => {
 
   const showTitle = props.label.length > TRUNCATE_LENGTH;
   const ariaLabel = props.ariaLabel.length > 0 ? props.ariaLabel : props.label;
-  let classes = "cdc-react";
+  let classes = "cdc-react pill";
 
   props.shape === "roundCorners"
     ? (classes += ` roundCorners`)
