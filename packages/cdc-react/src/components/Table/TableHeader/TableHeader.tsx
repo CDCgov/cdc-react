@@ -1,11 +1,13 @@
 import "./TableHeader.scss";
 
+import { TableColumnTypes } from "../../../@types";
+
 import React from "react";
 
 export interface TableHeaderProps {
   children?: React.ReactNode | React.ReactNode[];
   className?: string;
-  size?: "sm" | "md" | "lg";
+  size?: TableColumnTypes;
 }
 
 export const TableHeader = ({

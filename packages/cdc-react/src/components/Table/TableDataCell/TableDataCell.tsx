@@ -1,11 +1,13 @@
 import "./TableDataCell.scss";
 
+import { TableColumnTypes } from "../../../@types";
+
 import React from "react";
 
 export interface TableDataCellProps {
   children?: React.ReactNode | React.ReactNode[];
   className?: string;
-  size?: "sm" | "md" | "lg";
+  size?: TableColumnTypes;
 }
 
 export const TableDataCell = ({

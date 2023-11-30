@@ -93,3 +93,7 @@ export const ColorVariations = [
 ];
 
 export type ColorVariationTypes = (typeof ColorVariations)[number];
+
+export const TableColumns = ["sm", "md", "lg"];
+
+export type TableColumnTypes = (typeof TableColumns)[number];
