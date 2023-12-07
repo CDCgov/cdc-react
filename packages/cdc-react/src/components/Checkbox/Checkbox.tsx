@@ -1,5 +1,5 @@
 // Checkbox.tsx
-import { ChangeEvent, ReactNode } from "react";
+import { ChangeEvent } from "react";
 import { Icons } from "@us-gov-cdc/cdc-react-icons";
 import "./Checkbox.scss";
 
@@ -11,7 +11,6 @@ type CheckboxProps = {
   onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
   indeterminate?: boolean;
   disabled?: boolean;
-  children?: ReactNode;
 };
 
 export const Checkbox = (props: CheckboxProps) => {
@@ -42,7 +41,6 @@ export const Checkbox = (props: CheckboxProps) => {
         onChange={props.onChange}
       />
       {Icon}
-      {props.children}
       <div className="checkbox-content">
         <span className="label">{props.label}</span>
         {props.description && (

@@ -63,7 +63,7 @@ export const CheckboxDescription: Story = {
     const [isCheckedBox, setCheckedBox] = useState(true);
 
     const toggleCheckbox = (e: ChangeEvent<HTMLInputElement>) => {
-      setCheckedBox(e.target.checked);
+      setCheckedBox(!e.target.checked);
     };
     return (
       <>
@@ -91,7 +91,7 @@ export const CheckboxDescription: Story = {
             id="person4"
             label="George Washington Carver"
             description="This is optional text that can be used to describe the label in more detail."
-            checkedBox={true}
+            checkedBox={isCheckedBox}
             disabled={true}
           />
         </fieldset>
