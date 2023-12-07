@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.0](https://github.com/CDCgov/cdc-react/compare/cdc-react-icons-v2.1.0...cdc-react-icons-v2.2.0) (2023-11-30)
+
+
+### Features
+
+* Portal 1139/Table Component  ([#108](https://github.com/CDCgov/cdc-react/issues/108)) ([85ce6be](https://github.com/CDCgov/cdc-react/commit/85ce6be0690ca88f0e0106d4564b47fa610d1b62))
+
 ## [2.1.0](https://github.com/CDCgov/cdc-react/compare/cdc-react-icons-v2.0.0...cdc-react-icons-v2.1.0) (2023-11-03)
 
 

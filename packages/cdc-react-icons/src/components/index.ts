@@ -26,6 +26,7 @@ import { ZigZag } from "./ZigZag";
 import { Star } from "./Star";
 import { Search } from "./Search";
 import { Settings } from "./Settings";
+import { SortArrow } from "./SortArrow";
 import { SquareArrowUpRight } from "./SquareArrowUpRight";
 import { Support } from "./Support";
 import { Person } from "./Person";
@@ -105,6 +106,7 @@ export const Icons = {
   Star,
   Search,
   Settings,
+  SortArrow,
   SpeechBubble,
   SquareArrowUpRight,
   Support,

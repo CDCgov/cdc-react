@@ -27,3 +27,19 @@ $tertiary-btn-palette: (
   "slate": colors.$tertiary-slate,
   "teal": colors.$tertiary-teal,
 );
+
+$status-palette: (
+  "success": colors.$success,
+  "error": colors.$error,
+  "warning": colors.$warning,
+  "info": colors.$info,
+  "busy": colors.$busy,
+);
+
+$status-dark-palette: (
+  "success": colors.$success-dark,
+  "error": colors.$error-dark,
+  "warning": colors.$warning-dark,
+  "info": colors.$info-dark,
+  "busy": colors.$busy-dark,
+);

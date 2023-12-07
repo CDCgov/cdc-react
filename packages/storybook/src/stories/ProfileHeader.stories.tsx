@@ -1,11 +1,16 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { ProfileHeader, ProfileHeaderLogo } from "@us-gov-cdc/cdc-react";
+import {
+  MenuItemType,
+  PopupMenuItemType,
+  ProfileHeader,
+  ProfileHeaderLogo,
+} from "@us-gov-cdc/cdc-react";
 import { Icons } from "@us-gov-cdc/cdc-react-icons";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta: Meta<typeof ProfileHeader> = {
   title: "Components/ProfileHeader",
-  tags: ['autodocs'],
+  tags: ["autodocs"],
   component: ProfileHeader,
   argTypes: {},
 };

@@ -1,0 +1,8 @@
+@use "../../../scss/global.scss";
+@use "uswds-core" as *;
+
+.cdc-react.table {
+  tbody {
+    width: 100%;
+  }
+}
