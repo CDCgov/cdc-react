@@ -1,13 +1,24 @@
 @use "../../scss/global.scss";
 @use "uswds-core" as *;
 
-.checkbox-container {
+.cdc-react.checkbox-container {
   display: flex;
   align-items: flex-start;
-  padding: 8px;
-  gap: 8px;
+  padding: units(1);
+  gap: units(1);
   border: 2px solid transparent;
   border-radius: 0.236rem;
+  line-height: 1.5;
+
+  .icon {
+    position: absolute;
+    border-radius: 0.23529rem;
+    background-color: global.$primary-blue;
+    path {
+      stroke: white;
+      stroke-width: 2px;
+    }
+  }
 
   .checkbox {
     flex-shrink: 0;
@@ -24,14 +35,13 @@
 
     &:checked {
       background-color: #fff;
-      background-image: url("data:image/svg+xml;base64,Cjxzdmcgd2lkdGg9IjI1IiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjUgMjQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHBhdGggZD0iTTIuNzUgMEgyMi43NUMyMy4yODA0IDAgMjMuNzg5MSAwLjIxMDcxNCAyNC4xNjQyIDAuNTg1Nzg2QzI0LjUzOTMgMC45NjA4NTkgMjQuNzUgMS40Njk1NyAyNC43NSAyVjIyQzI0Ljc1IDIyLjUzMDQgMjQuNTM5MyAyMy4wMzkxIDI0LjE2NDIgMjMuNDE0MkMyMy43ODkxIDIzLjc4OTMgMjMuMjgwNCAyNCAyMi43NSAyNEgyLjc1QzIuMjE5NTcgMjQgMS43MTA4NiAyMy43ODkzIDEuMzM1NzkgMjMuNDE0MkMwLjk2MDcxNCAyMy4wMzkxIDAuNzUgMjIuNTMwNCAwLjc1IDIyVjJDMC43NSAxLjQ2OTU3IDAuOTYwNzE0IDAuOTYwODU5IDEuMzM1NzkgMC41ODU3ODZDMS43MTA4NiAwLjIxMDcxNCAyLjIxOTU3IDAgMi43NSAwVjBaIiBmaWxsPSIjMDA1RUEyIi8+CiAgPHBhdGggZD0iTTYuNzUgMTIuNzI3M0wxMC4yMzM5IDE2TDE4Ljc1IDgiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+Cjwvc3ZnPgo=");
       background-repeat: no-repeat;
       background-position: center;
       outline: none;
     }
 
     &:focus {
-      outline: none !important;
+      outline: none;
     }
   }
 
