@@ -6,7 +6,6 @@ import React from "react";
 import { useState, useMemo, useEffect } from "react";
 
 export interface TablePaginationProps {
-  children?: React.ReactNode | React.ReactNode[];
   className?: string;
   data: never[];
   pageLimit: number;
@@ -14,7 +13,6 @@ export interface TablePaginationProps {
 }
 
 export const TablePagination = ({
-  children,
   ...props
 }: TablePaginationProps & JSX.IntrinsicElements["table"]) => {
   const { data, pageLimit, setPageData } = props;
@@ -35,6 +33,7 @@ export const TablePagination = ({
       const item = data[index];
       splicedData.push(item);
     }
+
     const pagesArr = [];
 
     for (let index = 0; index < pageCount; index++) {
@@ -46,7 +45,7 @@ export const TablePagination = ({
   }, [data, currentPage]);
 
   return (
-    <div className={`cdc-react pagination ${props.className}`}>
+    <div className={`cdc-react pagination ${props.className || ""}`}>
       {
         <>
           {currentPage + 1 > 1 && (
