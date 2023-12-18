@@ -1,9 +1,10 @@
 import "./TablePagination.scss";
 
-import { Icons } from "@us-gov-cdc/cdc-react-icons";
-
 import React from "react";
-import { useState, useMemo, useEffect } from "react";
+import { useState, useEffect } from "react";
+
+import { Button } from "@us-gov-cdc/cdc-react";
+import { Icons } from "@us-gov-cdc/cdc-react-icons";
 
 export interface TablePaginationProps {
   className?: string;
@@ -17,9 +18,7 @@ export const TablePagination = ({
 }: TablePaginationProps & JSX.IntrinsicElements["table"]) => {
   const { data, pageLimit, setPageData } = props;
 
-  const [pageCount, setPageCount] = useState(
-    Math.round(data.length / pageLimit)
-  );
+  const [pageCount] = useState(Math.round(data.length / pageLimit));
   const [currentPage, setCurrentPage] = useState(0);
   const [pages, setPages] = useState<number[]>([]);
 
@@ -50,34 +49,39 @@ export const TablePagination = ({
         <>
           {currentPage + 1 > 1 && (
             <>
-              <span
+              <Button
+                variation="unstyled"
+                ariaLabel="Previous page"
                 className="previous"
                 onClick={() => setCurrentPage(currentPage - 1)}>
                 <Icons.ChevronLeft />
                 Pevious
-              </span>
+              </Button>
             </>
           )}
           {pages.map((item: number, index: number) => {
             return (
-              <span
+              <Button
+                size="tiny"
+                variation={(item === currentPage + 1 && "filled") || "outline"}
+                ariaLabel={`Select page ${item}`}
                 key={`pagebox-${index}`}
-                className={`pagebox ${
-                  (item === currentPage + 1 && "active") || ""
-                }`}
+                className={`pagebox`}
                 onClick={() => setCurrentPage(item - 1)}>
                 {item}
-              </span>
+              </Button>
             );
           })}
           {currentPage + 1 < pageCount && (
             <>
-              <span
+              <Button
+                variation="unstyled"
+                ariaLabel={`Next page`}
                 className="next"
                 onClick={() => setCurrentPage(currentPage + 1)}>
                 Next
                 <Icons.ChevronRight />
-              </span>
+              </Button>
             </>
           )}
         </>
