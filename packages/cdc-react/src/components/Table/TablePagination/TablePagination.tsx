@@ -3,7 +3,7 @@ import "./TablePagination.scss";
 import React from "react";
 import { useState, useEffect } from "react";
 
-import { Button } from "@us-gov-cdc/cdc-react";
+import { Button } from "../../";
 import { Icons } from "@us-gov-cdc/cdc-react-icons";
 
 export interface TablePaginationProps {
