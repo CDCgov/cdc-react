@@ -1,12 +1,6 @@
 @use "../../../scss/global.scss";
 @use "uswds-core" as *;
 
-button.cdc-react.btn.default.primary.unstyled.previous,
-button.cdc-react.btn.default.primary.unstyled.next {
-  display: flex;
-  flex-flow: row;
-}
-
 .cdc-react.pagination {
   margin-top: units(1);
   display: flex;
@@ -28,5 +22,11 @@ button.cdc-react.btn.default.primary.unstyled.next {
     border: solid 0.1rem global.$primary-blue;
     margin: 0 units("05");
     cursor: pointer;
+  }
+
+  button.cdc-react.btn.default.primary.unstyled.previous,
+  button.cdc-react.btn.default.primary.unstyled.next {
+    display: flex;
+    flex-flow: row;
   }
 }
