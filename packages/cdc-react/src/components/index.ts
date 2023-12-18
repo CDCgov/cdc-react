@@ -16,6 +16,7 @@ export * from "./Table/TableRow/TableRow";
 export * from "./Table/TableHeader/TableHeader";
 export * from "./Table/TableBody/TableBody";
 export * from "./Table/TableDataCell/TableDataCell";
+export * from "./Table/TablePagination/TablePagination";
 export * from "./Modal/Modal";
 export * from "./Modal/ModalBody/ModalBody";
 export * from "./Modal/ModalFooter/ModalFooter";

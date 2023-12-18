@@ -9,9 +9,11 @@ import {
   TableHeader,
   TableDataCell,
   Pill,
+  TablePagination,
 } from "@us-gov-cdc/cdc-react";
 
 import { Icons } from "@us-gov-cdc/cdc-react-icons";
+import { useState } from "react";
 
 const meta: Meta<typeof Table> = {
   title: "Components/Table",
@@ -48,65 +50,72 @@ type Story = StoryObj<typeof Table>;
 
 export const Example: Story = {
   render: (args: TableProps) => {
+    const [pageData, setPageData] = useState([]);
+
     return (
-      <Table>
-        <TableHead>
-          <TableRow>
-            <TableHeader size="sm">
-              <input type="checkbox" />
-            </TableHeader>
-            <TableHeader>
-              <>
-                <Icons.SortArrow></Icons.SortArrow>
-                <span className="text-left">File Name</span>
-              </>
-            </TableHeader>
-            <TableHeader>
-              <Icons.SortArrow></Icons.SortArrow>
-              <span className="text-left">Event</span>
-            </TableHeader>
-            <TableHeader>
-              <Icons.SortArrow></Icons.SortArrow>
-              <span className="text-left">Upload Status</span>
-            </TableHeader>
-            <TableHeader size="md">
-              <Icons.SortArrow></Icons.SortArrow>
-              <span className="text-left">Submitted</span>
-            </TableHeader>
-            <TableHeader size="sm">
-              <span className="text-center">Details</span>
-            </TableHeader>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {data.map((info, index) => (
-            <TableRow key={`table-row-${index}`}>
-              <TableDataCell size="sm" className="flex-justify-center">
+      <>
+        <Table>
+          <TableHead>
+            <TableRow>
+              <TableHeader size="sm">
                 <input type="checkbox" />
-              </TableDataCell>
-              <TableDataCell className="text-left">
-                {info.fileName}
-              </TableDataCell>
-              <TableDataCell className="text-left">{info.event}</TableDataCell>
-              <TableDataCell>
-                <Pill
-                  label={info.uploadStatus.label}
-                  shape="slot"
-                  color={info.uploadStatus.color}
-                  outline={false}
-                  inverse={false}
-                />
-              </TableDataCell>
-              <TableDataCell size="md" className="flex-justify-center">
-                {info.submitted.when}
-              </TableDataCell>
-              <TableDataCell size="sm">
-                <Icons.Dots />
-              </TableDataCell>
+              </TableHeader>
+              <TableHeader>
+                <>
+                  <Icons.SortArrow></Icons.SortArrow>
+                  <span className="text-left">File Name</span>
+                </>
+              </TableHeader>
+              <TableHeader>
+                <Icons.SortArrow></Icons.SortArrow>
+                <span className="text-left">Event</span>
+              </TableHeader>
+              <TableHeader>
+                <Icons.SortArrow></Icons.SortArrow>
+                <span className="text-left">Upload Status</span>
+              </TableHeader>
+              <TableHeader size="md">
+                <Icons.SortArrow></Icons.SortArrow>
+                <span className="text-left">Submitted</span>
+              </TableHeader>
+              <TableHeader size="sm">
+                <span className="text-center">Details</span>
+              </TableHeader>
             </TableRow>
-          ))}
-        </TableBody>
-      </Table>
+          </TableHead>
+          <TableBody>
+            {pageData.map((info, index) => (
+              <TableRow key={`table-row-${index}`}>
+                <TableDataCell size="sm" className="flex-justify-center">
+                  <input type="checkbox" />
+                </TableDataCell>
+                <TableDataCell className="text-left">
+                  {info.fileName}
+                </TableDataCell>
+                <TableDataCell className="text-left">
+                  {info.event}
+                </TableDataCell>
+                <TableDataCell>
+                  <Pill
+                    label={info.uploadStatus.label}
+                    shape="slot"
+                    color={info.uploadStatus.color}
+                    outline={false}
+                    inverse={false}
+                  />
+                </TableDataCell>
+                <TableDataCell size="md" className="flex-justify-center">
+                  {info.submitted.when}
+                </TableDataCell>
+                <TableDataCell size="sm">
+                  <Icons.Dots />
+                </TableDataCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+        <TablePagination pageLimit={10} data={data} setPageData={setPageData} />
+      </>
     );
   },
 };
