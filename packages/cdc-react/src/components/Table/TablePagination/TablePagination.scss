@@ -1,7 +1,39 @@
 @use "../../../scss/global.scss";
 @use "uswds-core" as *;
 
-.cdc-react.table {
-  .pagination {
+.cdc-react.pagination {
+  margin-top: units(1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    padding: units("05");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pagebox {
+    width: units(4);
+    height: units(4);
+    border-radius: 0.325rem;
+    color: global.$primary-blue;
+    border: solid 0.1rem global.$primary-blue;
+    margin: 0 units("05");
+    cursor: pointer;
+
+    &.active {
+      background: global.$gray-darker;
+      border-color: global.$gray-darker;
+      color: #ffffff;
+    }
+  }
+
+  .previous,
+  .next {
+    color: global.$primary-blue;
+    font-size: 0.925rem;
+    cursor: pointer;
   }
 }

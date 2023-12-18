@@ -1,5 +1,7 @@
 import "./TablePagination.scss";
 
+import { Icons } from "@us-gov-cdc/cdc-react-icons";
+
 import React from "react";
 import { useState, useMemo, useEffect } from "react";
 
@@ -31,7 +33,6 @@ export const TablePagination = ({
 
     for (let index = currentIndex; index < currentIndex + pageLimit; index++) {
       const item = data[index];
-      console.log(index, data);
       splicedData.push(item);
     }
     const pagesArr = [];
@@ -48,18 +49,38 @@ export const TablePagination = ({
     <div className={`cdc-react pagination ${props.className}`}>
       {
         <>
-          {currentPage + 1 > 1 && <span className="pevious">Pevious</span>}
+          {currentPage + 1 > 1 && (
+            <>
+              <span
+                className="previous"
+                onClick={() => setCurrentPage(currentPage - 1)}>
+                <Icons.ChevronLeft />
+                Pevious
+              </span>
+            </>
+          )}
           {pages.map((item: number, index: number) => {
             return (
               <span
                 key={`pagebox-${index}`}
-                className="pagebox"
+                className={`pagebox ${
+                  (item === currentPage + 1 && "active") || ""
+                }`}
                 onClick={() => setCurrentPage(item - 1)}>
                 {item}
               </span>
             );
           })}
-          {currentPage + 1 < pageCount && <span className="next">Next</span>}
+          {currentPage + 1 < pageCount && (
+            <>
+              <span
+                className="next"
+                onClick={() => setCurrentPage(currentPage + 1)}>
+                Next
+                <Icons.ChevronRight />
+              </span>
+            </>
+          )}
         </>
       }
     </div>
