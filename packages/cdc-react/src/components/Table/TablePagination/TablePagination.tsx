@@ -10,12 +10,12 @@ export interface TablePaginationProps {
   className?: string;
   data: never[];
   pageLimit: number;
-  setPageData: React.Dispatch<React.SetStateAction<never[]>>;
+  setPageData?: React.Dispatch<React.SetStateAction<never[]>>;
 }
 
 export const TablePagination = ({
   ...props
-}: TablePaginationProps & JSX.IntrinsicElements["table"]) => {
+}: TablePaginationProps & JSX.IntrinsicElements["div"]) => {
   const { data, pageLimit, setPageData } = props;
 
   const [pageCount] = useState(Math.round(data.length / pageLimit));
@@ -28,7 +28,15 @@ export const TablePagination = ({
 
     const splicedData: never[] = [];
 
-    for (let index = currentIndex; index < currentIndex + pageLimit; index++) {
+    for (
+      let index = currentIndex;
+      index <
+      currentIndex +
+        (currentIndex + pageLimit < data.length
+          ? pageLimit
+          : data.length - currentIndex);
+      index++
+    ) {
       const item = data[index];
       splicedData.push(item);
     }
@@ -40,7 +48,7 @@ export const TablePagination = ({
     }
 
     setPages(pagesArr);
-    setPageData(splicedData);
+    setPageData && setPageData(splicedData);
   }, [data, currentPage]);
 
   return (

@@ -1,32 +1,34 @@
 @use "../../../scss/global.scss";
 @use "uswds-core" as *;
 
-.cdc-react.pagination {
-  margin-top: units(1);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  span {
-    padding: units("05");
+.cdc-react {
+  &.pagination {
+    margin-top: units(1);
     display: flex;
     justify-content: center;
     align-items: center;
-  }
 
-  .pagebox {
-    width: units(4);
-    height: units(4);
-    border-radius: 0.325rem;
-    color: global.$primary-blue;
-    border: solid 0.1rem global.$primary-blue;
-    margin: 0 units("05");
-    cursor: pointer;
-  }
+    span {
+      padding: units("05");
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-  button.cdc-react.btn.default.primary.unstyled.previous,
-  button.cdc-react.btn.default.primary.unstyled.next {
-    display: flex;
-    flex-flow: row;
+    .pagebox {
+      width: units(4);
+      height: units(4);
+      border-radius: 0.325rem;
+      color: global.$primary-blue;
+      border: solid 0.1rem global.$primary-blue;
+      margin: 0 units("05");
+      cursor: pointer;
+    }
+
+    button.cdc-react.btn.default.primary.unstyled.previous,
+    button.cdc-react.btn.default.primary.unstyled.next {
+      display: flex;
+      flex-flow: row;
+    }
   }
 }

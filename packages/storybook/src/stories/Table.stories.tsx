@@ -23,7 +23,7 @@ const meta: Meta<typeof Table> = {
 
 const mockIndexes = [];
 
-for (let index = 0; index < 100; index++) {
+for (let index = 0; index < 95; index++) {
   mockIndexes.push(index);
 }
 
