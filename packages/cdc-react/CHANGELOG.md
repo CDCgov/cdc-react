@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/CDCgov/cdc-react/compare/cdc-react-v1.3.0...cdc-react-v1.4.0) (2023-12-20)
+
+
+### Features
+
+* Table Pagination component ([32a4e3f](https://github.com/CDCgov/cdc-react/commit/32a4e3f14b665b53056b83641513302d0929ce10))
+
 ## [1.3.0](https://github.com/CDCgov/cdc-react/compare/cdc-react-v1.2.0...cdc-react-v1.3.0) (2023-11-30)
 
 
