@@ -35,22 +35,22 @@ export const IndeterminateCheckbox: Story = {
       <>
         <Checkbox
           label="Parent Checkbox"
-          checkedBox={allChecked}
+          isChecked={allChecked}
           indeterminate={isIndeterminate}
-          onChange={(e) =>
+          onChange={(e: { target: { checked: boolean; }; }) =>
             setCheckedItems([e.target.checked, e.target.checked])
           }></Checkbox>
 
         <Checkbox
           label="Child Checkbox 1"
-          checkedBox={checkedItems[0]}
-          onChange={(e) =>
+          isChecked={checkedItems[0]}
+          onChange={(e: { target: { checked: boolean; }; }) =>
             setCheckedItems([e.target.checked, checkedItems[1]])
           }></Checkbox>
         <Checkbox
           label="Child Checkbox 2"
-          checkedBox={checkedItems[1]}
-          onChange={(e) =>
+          isChecked={checkedItems[1]}
+          onChange={(e: { target: { checked: boolean; }; }) =>
             setCheckedItems([checkedItems[0], e.target.checked])
           }></Checkbox>
       </>
@@ -60,10 +60,10 @@ export const IndeterminateCheckbox: Story = {
 export const CheckboxDescription: Story = {
   args: {},
   render: function Render() {
-    const [isCheckedBox, setCheckedBox] = useState(true);
+    const [isisChecked, setisChecked] = useState(true);
 
     const toggleCheckbox = (e: ChangeEvent<HTMLInputElement>) => {
-      setCheckedBox(!e.target.checked);
+      setisChecked(!e.target.checked);
     };
     return (
       <>
@@ -79,7 +79,7 @@ export const CheckboxDescription: Story = {
             id="person2"
             label="Frederick Douglass"
             description="This is optional text that can be used to describe the label in more detail."
-            checkedBox={isCheckedBox}
+            isChecked={isisChecked}
             onChange={toggleCheckbox}
           />
           <Checkbox
@@ -91,7 +91,7 @@ export const CheckboxDescription: Story = {
             id="person4"
             label="George Washington Carver"
             description="This is optional text that can be used to describe the label in more detail."
-            checkedBox={isCheckedBox}
+            isChecked={isisChecked}
             disabled={true}
           />
         </fieldset>
@@ -102,10 +102,10 @@ export const CheckboxDescription: Story = {
 export const CheckboxList: Story = {
   args: {},
   render: function Render() {
-    const [isCheckedBox, setCheckedBox] = useState(true);
+    const [isisChecked, setisChecked] = useState(true);
 
     const toggleCheckbox = (e: ChangeEvent<HTMLInputElement>) => {
-      setCheckedBox(e.target.checked);
+      setisChecked(e.target.checked);
     };
     return (
       <>
@@ -115,7 +115,7 @@ export const CheckboxList: Story = {
           <Checkbox
             id="person1-nd"
             label="Sojourner Truth"
-            checkedBox={isCheckedBox}
+            isChecked={isisChecked}
             onChange={toggleCheckbox}
           />
           <Checkbox id="person2-nd" label="Frederick Douglass" />
