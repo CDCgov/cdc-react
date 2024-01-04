@@ -60,7 +60,7 @@ export const IndeterminateCheckbox: Story = {
 export const CheckboxDescription: Story = {
   args: {},
   render: function Render() {
-    const [isisChecked, setisChecked] = useState(true);
+    const [isChecked, setisChecked] = useState(true);
 
     const toggleCheckbox = (e: ChangeEvent<HTMLInputElement>) => {
       setisChecked(!e.target.checked);
@@ -79,7 +79,7 @@ export const CheckboxDescription: Story = {
             id="person2"
             label="Frederick Douglass"
             description="This is optional text that can be used to describe the label in more detail."
-            isChecked={isisChecked}
+            isChecked={isChecked}
             onChange={toggleCheckbox}
           />
           <Checkbox
@@ -91,7 +91,7 @@ export const CheckboxDescription: Story = {
             id="person4"
             label="George Washington Carver"
             description="This is optional text that can be used to describe the label in more detail."
-            isChecked={isisChecked}
+            isChecked={isChecked}
             disabled={true}
           />
         </fieldset>
@@ -102,7 +102,7 @@ export const CheckboxDescription: Story = {
 export const CheckboxList: Story = {
   args: {},
   render: function Render() {
-    const [isisChecked, setisChecked] = useState(true);
+    const [isChecked, setisChecked] = useState(true);
 
     const toggleCheckbox = (e: ChangeEvent<HTMLInputElement>) => {
       setisChecked(e.target.checked);
@@ -115,7 +115,7 @@ export const CheckboxList: Story = {
           <Checkbox
             id="person1-nd"
             label="Sojourner Truth"
-            isChecked={isisChecked}
+            isChecked={isChecked}
             onChange={toggleCheckbox}
           />
           <Checkbox id="person2-nd" label="Frederick Douglass" />
