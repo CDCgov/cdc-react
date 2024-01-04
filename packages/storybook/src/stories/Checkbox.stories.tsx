@@ -60,10 +60,10 @@ export const IndeterminateCheckbox: Story = {
 export const CheckboxDescription: Story = {
   args: {},
   render: function Render() {
-    const [isChecked, setisChecked] = useState(true);
+    const [isChecked, setIsChecked] = useState(true);
 
     const toggleCheckbox = (e: ChangeEvent<HTMLInputElement>) => {
-      setisChecked(!e.target.checked);
+      setIsChecked(!e.target.checked);
     };
     return (
       <>
@@ -102,10 +102,10 @@ export const CheckboxDescription: Story = {
 export const CheckboxList: Story = {
   args: {},
   render: function Render() {
-    const [isChecked, setisChecked] = useState(true);
+    const [isChecked, setIsChecked] = useState(true);
 
     const toggleCheckbox = (e: ChangeEvent<HTMLInputElement>) => {
-      setisChecked(e.target.checked);
+      setIsChecked(e.target.checked);
     };
     return (
       <>
