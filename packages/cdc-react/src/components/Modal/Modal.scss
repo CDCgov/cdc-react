@@ -42,7 +42,7 @@
       }
 
       .modal-body {
-        font-family: global.$font-family;
+        font-family: global.$font-family-sans;
         font-size: global.$font-size-small;
         font-weight: global.$font-weight-regular;
         display: flex;
@@ -79,7 +79,7 @@
 ul,
 li {
   list-style-type: initial;
-  font-family: global.$font-family;
+  font-family: global.$font-family-sans;
   font-size: global.$font-size-small;
   font-weight: global.$font-weight-regular;
 }

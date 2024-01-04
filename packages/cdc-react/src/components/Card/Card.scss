@@ -5,12 +5,12 @@
   border-radius: 0.4rem;
   border: 0.1rem solid global.$gray-light;
   overflow: hidden;
-  font-family: global.$font-family;
+  font-family: global.$font-family-sans;
   color: #1b1b1b;
 
   .card-content {
     border-top: 0.3rem solid global.$main-theme;
-    font-family: global.$font-family;
+    font-family: global.$font-family-sans;
 
     .card-header {
       background: global.$main-theme;
