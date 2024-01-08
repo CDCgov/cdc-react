@@ -23,7 +23,11 @@ export const Example: Story = {
 
     return (
       <>
-        <Checkbox isChecked={isChecked} onChange={toggleCheckbox} label="Single Checkbox" />
+        <Checkbox
+          isChecked={isChecked}
+          onChange={toggleCheckbox}
+          label="Single Checkbox"
+        />
       </>
     );
   },
@@ -43,20 +47,20 @@ export const IndeterminateCheckbox: Story = {
           label="Parent Checkbox"
           isChecked={allChecked}
           indeterminate={isIndeterminate}
-          onChange={(e: { target: { checked: boolean; }; }) =>
+          onChange={(e: { target: { checked: boolean } }) =>
             setCheckedItems([e.target.checked, e.target.checked])
           }></Checkbox>
 
         <Checkbox
           label="Child Checkbox 1"
           isChecked={checkedItems[0]}
-          onChange={(e: { target: { checked: boolean; }; }) =>
+          onChange={(e: { target: { checked: boolean } }) =>
             setCheckedItems([e.target.checked, checkedItems[1]])
           }></Checkbox>
         <Checkbox
           label="Child Checkbox 2"
           isChecked={checkedItems[1]}
-          onChange={(e: { target: { checked: boolean; }; }) =>
+          onChange={(e: { target: { checked: boolean } }) =>
             setCheckedItems([checkedItems[0], e.target.checked])
           }></Checkbox>
       </>
@@ -66,45 +70,69 @@ export const IndeterminateCheckbox: Story = {
 export const CheckboxDescription: Story = {
   args: {},
   render: function Render() {
-    const [isChecked, setIsChecked] = useState(true);
+    const checkboxList = [
+      {
+        id: "person1",
+        label: "Sojourner Truth",
+        description:
+          "This is optional text that can be used to describe the label in more detail.",
+        isChecked: false,
+      },
+      {
+        id: "person2",
+        label: "Frederick Douglass",
+        description:
+          "This is optional text that can be used to describe the label in more detail.",
+        isChecked: true,
+      },
+      {
+        id: "person3",
+        label: "Booker T. Washington",
+        description:
+          "This is optional text that can be used to describe the label in more detail.",
+      },
+      {
+        id: "person4",
+        label: "George Washington Carver",
+        description:
+          "This is optional text that can be used to describe the label in more detail.",
+        isChecked: true,
+        disabled: true,
+      },
+    ];
 
-    const toggleCheckbox = (e: ChangeEvent<HTMLInputElement>) => {
-      setIsChecked(!e.target.checked);
+    const [isChecked, setIsChecked] = useState(checkboxList);
+
+    const toggleCheckbox = (id: string, e: ChangeEvent<HTMLInputElement>) => {
+      setIsChecked((prevCheckboxes) =>
+        prevCheckboxes.map((checkbox) =>
+          checkbox.id === id
+            ? { ...checkbox, isChecked: e.target.checked }
+            : checkbox
+        )
+      );
     };
     return (
-      <>
-        <fieldset className="usa-fieldset">
-          <legend className="usa-legend">Select any historical figure</legend>
-
+      <fieldset className="usa-fieldset">
+        <legend className="usa-legend">Select any historical figure</legend>
+        {isChecked.map((checkbox) => (
           <Checkbox
-            id="person1"
-            label="Sojourner Truth"
-            description="This is optional text that can be used to describe the label in more detail."
+            key={checkbox.id}
+            id={checkbox.id}
+            label={checkbox.label}
+            disabled={checkbox.disabled}
+            description={checkbox.description}
+            isChecked={checkbox.isChecked}
+            onChange={(e: ChangeEvent<HTMLInputElement>) =>
+              toggleCheckbox(checkbox.id, e)
+            }
           />
-          <Checkbox
-            id="person2"
-            label="Frederick Douglass"
-            description="This is optional text that can be used to describe the label in more detail."
-            isChecked={isChecked}
-            onChange={toggleCheckbox}
-          />
-          <Checkbox
-            id="person3"
-            label="Booker T. Washington"
-            description="This is optional text that can be used to describe the label in more detail."
-          />
-          <Checkbox
-            id="person4"
-            label="George Washington Carver"
-            description="This is optional text that can be used to describe the label in more detail."
-            isChecked={isChecked}
-            disabled={true}
-          />
-        </fieldset>
-      </>
+        ))}
+      </fieldset>
     );
   },
 };
+
 export const CheckboxList: Story = {
   args: {},
   render: function Render() {
