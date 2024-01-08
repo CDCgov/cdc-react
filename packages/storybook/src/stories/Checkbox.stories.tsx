@@ -15,9 +15,15 @@ type Story = StoryObj<typeof Checkbox>;
 export const Example: Story = {
   args: {},
   render: function Render() {
+    const [isChecked, setIsChecked] = useState(true);
+
+    const toggleCheckbox = () => {
+      setIsChecked(!isChecked);
+    };
+
     return (
       <>
-        <Checkbox label="Single Checkbox" />
+        <Checkbox isChecked={isChecked} onChange={toggleCheckbox} label="Single Checkbox" />
       </>
     );
   },
