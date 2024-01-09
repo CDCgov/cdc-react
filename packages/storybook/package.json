@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build && cp -R storybook-static/fonts storybook-static/assets/"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.4.1",
