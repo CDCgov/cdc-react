@@ -1,100 +1,102 @@
 @use "../../scss/global.scss";
 @use "uswds-core" as *;
 
-.card-wrapper {
-  border-radius: 0.4rem;
-  border: 0.1rem solid global.$gray-light;
-  overflow: hidden;
-  font-family: global.$font-family-sans;
-  color: #1b1b1b;
-
-  .card-content {
-    border-top: 0.3rem solid global.$main-theme;
+.cdc-react {
+  &.card-wrapper {
+    border-radius: 0.4rem;
+    border: 0.1rem solid global.$gray-light;
+    overflow: hidden;
     font-family: global.$font-family-sans;
+    color: #1b1b1b;
 
-    .card-header {
-      background: global.$main-theme;
-      color: #fff;
-      padding: units(1) units(2);
-      font-size: global.$font-size-h4;
-      font-style: normal;
-      font-weight: global.$font-weight-medium;
-      line-height: 120%;
+    .card-content {
+      border-top: 0.3rem solid global.$main-theme;
+      font-family: global.$font-family-sans;
 
-      &.theme-dark {
-        background-color: global.$main-theme-dark;
+      .card-header {
+        background: global.$main-theme;
         color: #fff;
-      }
-      &.theme-darker {
-        background-color: global.$main-theme-darker;
-      }
-      &.theme-light {
-        background-color: global.$main-theme-light;
-        color: global.$gray-darker;
-      }
-      &.theme-lighter {
-        background-color: global.$main-theme-lighter;
-        color: global.$gray-darker;
-      }
-    }
-
-    .card-body {
-      font-style: normal;
-      font-weight: global.$font-weight-regular;
-
-      .card-section-title {
-        padding: units(3) units(3) units(1) units(3);
-        font-size: global.$font-size-h5;
+        padding: units(1) units(2);
+        font-size: global.$font-size-h4;
+        font-style: normal;
+        font-weight: global.$font-weight-medium;
         line-height: 120%;
+
+        &.theme-dark {
+          background-color: global.$main-theme-dark;
+          color: #fff;
+        }
+        &.theme-darker {
+          background-color: global.$main-theme-darker;
+        }
+        &.theme-light {
+          background-color: global.$main-theme-light;
+          color: global.$gray-darker;
+        }
+        &.theme-lighter {
+          background-color: global.$main-theme-lighter;
+          color: global.$gray-darker;
+        }
+      }
+
+      .card-body {
+        font-style: normal;
         font-weight: global.$font-weight-regular;
-      }
-      .card-section-media {
-        padding: 0 units(3) units(3) units(3);
-      }
-      .card-section-media.media-fill {
-        padding: 0;
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
-      }
-      .card-section-body {
-        padding: units(1) units(3);
-        margin-bottom: units(3);
-        p,
-        span {
-          font-size: global.$font-size-base;
-          font-weight: global.$font-weight-regular;
+
+        .card-section-title {
+          padding: units(3) units(3) units(1) units(3);
+          font-size: global.$font-size-h5;
           line-height: 120%;
+          font-weight: global.$font-weight-regular;
+        }
+        .card-section-media {
+          padding: 0 units(3) units(3) units(3);
+        }
+        .card-section-media.media-fill {
+          padding: 0;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        .card-section-body {
+          padding: units(1) units(3);
+          margin-bottom: units(3);
+          p,
+          span {
+            font-size: global.$font-size-base;
+            font-weight: global.$font-weight-regular;
+            line-height: 120%;
+          }
+        }
+        .card-section-footer {
+          padding: units(1) units(3) units(3) units(3);
         }
       }
-      .card-section-footer {
-        padding: units(1) units(3) units(3) units(3);
+      .card-body.horizontal {
+        display: flex;
+        flex-direction: column;
+        .card-section-media,
+        .card-body-content {
+          width: 100%;
+        }
       }
-    }
-    .card-body.horizontal {
-      display: flex;
-      flex-direction: column;
-      .card-section-media,
-      .card-body-content {
-        width: 100%;
+      .card-body.vertical-left {
+        display: flex;
+        flex-direction: row;
+        .card-section-media,
+        .card-body-content {
+          flex: 1;
+        }
       }
-    }
-    .card-body.vertical-left {
-      display: flex;
-      flex-direction: row;
-      .card-section-media,
-      .card-body-content {
-        flex: 1;
-      }
-    }
-    .card-body.vertical-right {
-      display: flex;
-      flex-direction: row-reverse;
-      .card-section-media,
-      .card-body-content {
-        flex: 1;
+      .card-body.vertical-right {
+        display: flex;
+        flex-direction: row-reverse;
+        .card-section-media,
+        .card-body-content {
+          flex: 1;
+        }
       }
     }
   }

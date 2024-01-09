@@ -3,6 +3,7 @@
 
 .cdc-react {
   &.pagination {
+    font-family: global.$font-family-sans;
     margin-top: units(1);
     display: flex;
     justify-content: center;

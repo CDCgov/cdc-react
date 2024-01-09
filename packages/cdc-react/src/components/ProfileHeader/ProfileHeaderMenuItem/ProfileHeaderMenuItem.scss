@@ -4,11 +4,9 @@
 .cdc-react {
   .profile-header {
     .profile-header-menu-item {
+      font-family: global.$font-family-sans;
       justify-content: end;
       flex-grow: 1;
-    }
-
-    .profile-header-menu-item {
       border-radius: 0.175rem;
       border: none;
       display: flex;
