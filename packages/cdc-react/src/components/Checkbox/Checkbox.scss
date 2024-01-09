@@ -1,0 +1,93 @@
+@use "../../scss/global.scss";
+@use "uswds-core" as *;
+
+.cdc-react.checkbox-container {
+  display: flex;
+  align-items: flex-start;
+  padding: units(1);
+  gap: units(1);
+  border: 2px solid transparent;
+  border-radius: 0.236rem;
+  line-height: 1.5;
+
+  .icon {
+    position: absolute;
+    border-radius: 0.23529rem;
+    background-color: global.$primary-blue;
+    height: units(3);
+    width: units(3);
+    path {
+      stroke: white;
+      stroke-width: 2px;
+    }
+  }
+
+  .checkbox {
+    flex-shrink: 0;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #fff;
+    margin: 0;
+    cursor: pointer;
+    width: units(3);
+    height: units(3);
+    border: 1px solid #cccccc;
+    border-radius: 0.236rem;
+
+    &:checked {
+      background-color: #fff;
+      background-repeat: no-repeat;
+      background-position: center;
+      outline: none;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .label {
+    color: global.$gray-darker;
+
+    font-weight: global.$font-weight-regular;
+  }
+
+  .label-description {
+    font-size: 1rem;
+    font-weight: global.$font-weight-light;
+  }
+
+  &:focus-within {
+    border-color: global.$main-theme-light;
+  }
+
+  &:hover {
+    background-color: global.$main-theme-lighter;
+  }
+
+  &.checkbox-disabled {
+    .label {
+      background-color: unset;
+      border-color: global.$gray-light;
+      color: #bdbdbd;
+    }
+
+    .label-description {
+      color: #bdbdbd;
+    }
+
+    &:hover {
+      background-color: unset;
+    }
+  }
+
+  .checkbox-content {
+    display: "flex";
+    flex-direction: "column";
+  }
+}
+
+label:hover {
+  cursor: pointer;
+}

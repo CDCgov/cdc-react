@@ -1,5 +1,28 @@
 # Changelog
 
+## [1.3.0](https://github.com/CDCgov/cdc-react/compare/cdc-react-v1.2.0...cdc-react-v1.3.0) (2023-11-30)
+
+
+### Features
+
+* Portal 1139/Table Component  ([#108](https://github.com/CDCgov/cdc-react/issues/108)) ([85ce6be](https://github.com/CDCgov/cdc-react/commit/85ce6be0690ca88f0e0106d4564b47fa610d1b62))
+* style adjustments for various components ([#111](https://github.com/CDCgov/cdc-react/issues/111)) ([c3d8a58](https://github.com/CDCgov/cdc-react/commit/c3d8a587774be91a96f4d7c01e83450cb634c316))
+
+## [1.3.0](https://github.com/CDCgov/cdc-react/compare/cdc-react-v1.2.0...cdc-react-v1.3.0) (2023-11-30)
+
+
+### Features
+
+* Portal 1139/Table Component  ([#108](https://github.com/CDCgov/cdc-react/issues/108)) ([85ce6be](https://github.com/CDCgov/cdc-react/commit/85ce6be0690ca88f0e0106d4564b47fa610d1b62))
+* style adjustments for various components ([#111](https://github.com/CDCgov/cdc-react/issues/111)) ([c3d8a58](https://github.com/CDCgov/cdc-react/commit/c3d8a587774be91a96f4d7c01e83450cb634c316))
+
+## [1.2.0](https://github.com/CDCgov/cdc-react/compare/cdc-react-v1.1.0...cdc-react-v1.2.0) (2023-11-17)
+
+
+### Features
+
+* Portal 1138/pill component ([#106](https://github.com/CDCgov/cdc-react/issues/106)) ([f594a34](https://github.com/CDCgov/cdc-react/commit/f594a34abdb3aa104da3266cf7f23dfd53193ead))
+
 ## [1.1.0](https://github.com/CDCgov/cdc-react/compare/cdc-react-v1.0.0...cdc-react-v1.1.0) (2023-11-03)
 
 

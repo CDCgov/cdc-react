@@ -82,3 +82,18 @@ export const ButtonTertiaryColors = [
 ] as const;
 
 export type ButtonTertiaryColorTypes = (typeof ButtonTertiaryColors)[number];
+
+export const ColorVariations = [
+  "primary",
+  "busy",
+  "info",
+  "success",
+  "error",
+  "warning",
+];
+
+export type ColorVariationTypes = (typeof ColorVariations)[number];
+
+export const TableColumns = ["sm", "md", "lg"];
+
+export type TableColumnTypes = (typeof TableColumns)[number];
