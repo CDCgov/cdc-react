@@ -33,7 +33,7 @@ type UploadStatusType = {
   label: string;
 };
 
-type ISubmissionType = {
+type SubmissionType = {
   when: string;
   timestamp: string;
 };
@@ -44,7 +44,7 @@ interface IData {
   fileName: string;
   event: string;
   uploadStatus: UploadStatusType;
-  submitted: ISubmissionType;
+  submitted: SubmissionType;
   details: string;
 }
 
