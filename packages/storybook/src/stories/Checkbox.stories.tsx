@@ -136,31 +136,56 @@ export const CheckboxDescription: Story = {
 export const CheckboxList: Story = {
   args: {},
   render: function Render() {
-    const [isChecked, setIsChecked] = useState(true);
+    const checkboxList = [
+      {
+        id: "person1",
+        label: "Sojourner Truth",
+        isChecked: false,
+      },
+      {
+        id: "person2",
+        label: "Frederick Douglass",
+        isChecked: true,
+      },
+      {
+        id: "person3",
+        label: "Booker T. Washington",
+      },
+      {
+        id: "person4",
+        label: "George Washington Carver",
+        isChecked: true,
+        disabled: true,
+      },
+    ];
 
-    const toggleCheckbox = (e: ChangeEvent<HTMLInputElement>) => {
-      setIsChecked(e.target.checked);
+    const [isChecked, setIsChecked] = useState(checkboxList);
+
+    const toggleCheckbox = (id: string, e: ChangeEvent<HTMLInputElement>) => {
+      setIsChecked((prevCheckboxes) =>
+        prevCheckboxes.map((checkbox) =>
+          checkbox.id === id
+            ? { ...checkbox, isChecked: e.target.checked }
+            : checkbox
+        )
+      );
     };
     return (
-      <>
-        <fieldset className="usa-fieldset">
-          <legend className="usa-legend">Select any historical figure</legend>
-
+      <fieldset className="usa-fieldset">
+        <legend className="usa-legend">Select any historical figure</legend>
+        {isChecked.map((checkbox) => (
           <Checkbox
-            id="person1-nd"
-            label="Sojourner Truth"
-            isChecked={isChecked}
-            onChange={toggleCheckbox}
+            key={checkbox.id}
+            id={checkbox.id}
+            label={checkbox.label}
+            disabled={checkbox.disabled}
+            isChecked={checkbox.isChecked}
+            onChange={(e: ChangeEvent<HTMLInputElement>) =>
+              toggleCheckbox(checkbox.id, e)
+            }
           />
-          <Checkbox id="person2-nd" label="Frederick Douglass" />
-          <Checkbox id="person3-nd" label="Booker T. Washington" />
-          <Checkbox
-            id="person4-nd"
-            label="George Washington Carver"
-            disabled={true}
-          />
-        </fieldset>
-      </>
+        ))}
+      </fieldset>
     );
   },
 };
