@@ -5,7 +5,6 @@
   display: flex;
   align-items: flex-start;
   padding: units(1);
-  gap: units(1);
   border: 2px solid transparent;
   border-radius: 0.236rem;
   line-height: 1.5;
@@ -14,6 +13,8 @@
     position: absolute;
     border-radius: 0.23529rem;
     background-color: global.$primary-blue;
+    height: units(3);
+    width: units(3);
     path {
       stroke: white;
       stroke-width: 2px;
@@ -28,8 +29,8 @@
     background-color: #fff;
     margin: 0;
     cursor: pointer;
-    width: 24px;
-    height: 24px;
+    width: units(3);
+    height: units(3);
     border: 1px solid #cccccc;
     border-radius: 0.236rem;
 
@@ -46,7 +47,6 @@
   }
 
   .label {
-    display: block;
     color: global.$gray-darker;
 
     font-weight: global.$font-weight-regular;
@@ -84,6 +84,7 @@
   .checkbox-content {
     display: "flex";
     flex-direction: "column";
+    margin-left: units(1);
   }
 }
 

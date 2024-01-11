@@ -5,7 +5,7 @@ import { Checkbox } from "./Checkbox";
 describe("Checkbox Component", () => {
   test("should render checkbox component with default state", () => {
     const { getByLabelText } = render(
-      <Checkbox label="checkbox" checkedBox={false} />
+      <Checkbox label="checkbox" isChecked={false} />
     );
     const checkbox = getByLabelText("checkbox") as HTMLInputElement;
 
@@ -15,7 +15,7 @@ describe("Checkbox Component", () => {
 
   test("should render checkbox component with checked state", () => {
     const { getByLabelText } = render(
-      <Checkbox label="checkbox" checkedBox={true} />
+      <Checkbox label="checkbox" isChecked={true} />
     );
     const checkbox = getByLabelText("checkbox") as HTMLInputElement;
 
@@ -24,7 +24,7 @@ describe("Checkbox Component", () => {
 
   test("should render checkbox component with indeterminate state", () => {
     const { getByLabelText } = render(
-      <Checkbox label="checkbox" checkedBox={false} indeterminate={true} />
+      <Checkbox label="checkbox" isChecked={false} indeterminate={true} />
     );
     const checkbox = getByLabelText("checkbox") as HTMLInputElement;
 
