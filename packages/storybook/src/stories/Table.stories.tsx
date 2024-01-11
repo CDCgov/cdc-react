@@ -14,7 +14,7 @@ import {
 } from "@us-gov-cdc/cdc-react";
 
 import { Icons } from "@us-gov-cdc/cdc-react-icons";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const meta: Meta<typeof Table> = {
   title: "Components/Table",
