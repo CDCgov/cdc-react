@@ -9,6 +9,7 @@ type CheckboxProps = {
   description?: string;
   isChecked?: boolean;
   onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
+  onKeyDown?: (event: React.KeyboardEvent<HTMLInputElement>) => void;
   indeterminate?: boolean;
   disabled?: boolean;
 };
@@ -39,6 +40,7 @@ export const Checkbox = (props: CheckboxProps) => {
           }
         }}
         onChange={props.onChange}
+        onKeyDown={props.onKeyDown}
       />
       {Icon}
       {(props.label || props.description) && (

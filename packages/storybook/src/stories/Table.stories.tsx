@@ -139,6 +139,7 @@ export const Example: Story = {
               <TableRow key={`table-row-${index}`}>
                 <TableDataCell size="md" className="flex-justify-center">
                   <Checkbox
+                    label={info.fileName}
                     isChecked={info.checked}
                     onChange={(e: { target: { checked: boolean } }) => {
                       const arr: IData[] = [];
@@ -152,6 +153,24 @@ export const Example: Story = {
                       }
 
                       setData(arr);
+                    }}
+                    onKeyDown={(e: {
+                      code: string;
+                      target: { checked: boolean };
+                    }) => {
+                      if (e?.code === "Enter") {
+                        const arr: IData[] = [];
+
+                        for (let i = 0; i < transformedData.length; i++) {
+                          let element = transformedData[i];
+                          if (element.id === info.id) {
+                            element.checked = !element.checked;
+                          }
+                          arr.push(element);
+                        }
+
+                        setData(arr);
+                      }
                     }}></Checkbox>
                 </TableDataCell>
                 <TableDataCell className="text-left">
