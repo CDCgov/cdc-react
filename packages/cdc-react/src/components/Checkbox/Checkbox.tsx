@@ -44,7 +44,7 @@ export const Checkbox = (props: CheckboxProps) => {
       />
       {Icon}
       <div className="checkbox-content">
-        {<span className="label">{props.label}</span>}
+        <span className="label">{props.label}</span>
         {props.description && (
           <div className="label-description">{props.description}</div>
         )}
