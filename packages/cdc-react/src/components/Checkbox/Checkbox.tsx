@@ -43,14 +43,12 @@ export const Checkbox = (props: CheckboxProps) => {
         onKeyDown={props.onKeyDown}
       />
       {Icon}
-      {(props.label || props.description) && (
-        <div className="checkbox-content">
-          {props.label && <span className="label">{props.label}</span>}
-          {props.description && (
-            <div className="label-description">{props.description}</div>
-          )}
-        </div>
-      )}
+      <div className="checkbox-content">
+        {<span className="label">{props.label}</span>}
+        {props.description && (
+          <div className="label-description">{props.description}</div>
+        )}
+      </div>
     </label>
   );
 };
