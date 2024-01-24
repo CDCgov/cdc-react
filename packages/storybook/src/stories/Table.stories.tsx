@@ -139,6 +139,7 @@ export const Example: Story = {
               <TableRow key={`table-row-${index}`}>
                 <TableDataCell size="md" className="flex-justify-center">
                   <Checkbox
+                    srOnly={true}
                     label={info.fileName}
                     isChecked={info.checked}
                     onChange={(e: { target: { checked: boolean } }) => {
