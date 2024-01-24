@@ -8,7 +8,9 @@ type CheckboxProps = {
   label?: string;
   description?: string;
   isChecked?: boolean;
+  srOnly?: boolean;
   onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
+  onKeyDown?: (event: React.KeyboardEvent<HTMLInputElement>) => void;
   indeterminate?: boolean;
   disabled?: boolean;
 };
@@ -39,9 +41,11 @@ export const Checkbox = (props: CheckboxProps) => {
           }
         }}
         onChange={props.onChange}
+        onKeyDown={props.onKeyDown}
       />
       {Icon}
-      <div className="checkbox-content">
+      <div
+        className={((props.srOnly && "sr-only ") || "") + "checkbox-content"}>
         <span className="label">{props.label}</span>
         {props.description && (
           <div className="label-description">{props.description}</div>
