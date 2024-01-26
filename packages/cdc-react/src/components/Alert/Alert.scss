@@ -1,5 +1,16 @@
 @use "../../scss/global.scss";
 @use "uswds-core" as *;
 
+.usa-alert {
+  border-left: none;
+  border-top-width: 0.5rem;
+  border-top-style: solid;
+  border-radius: 4px 4px 0 0;
+}
+
+.usa-alert--info {
+  border-top-color: global.$primary-blue;
+}
+
 .cdc-react {
 }
