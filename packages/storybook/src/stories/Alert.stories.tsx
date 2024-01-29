@@ -43,8 +43,8 @@ export const Example: Story = {
   args: {
     type: "info",
     heading: "Informational status",
-    slim: null,
-    noIcon: null,
+    slim: undefined,
+    noIcon: undefined,
     children: (
       <>
         Lorem ipsum dolor sit amet,{" "}
@@ -54,25 +54,119 @@ export const Example: Story = {
   },
 };
 
-export const basicAlerts: Story = {
+export const defaultOptions: Story = {
   render: () => {
     return (
       <>
-        <h5>Standard alerts:</h5>
         <Alert type="info" heading="Informative status">
-          Lorem ipsum dolor sit amet, <a href="#anchorsaway">link</a>
+          Lorem ipsum dolor sit amet,{" "}
+          <a href="#anchor">consectetur adipiscing elit</a>, sed do eiusmod.
         </Alert>
+        <br />
         <Alert type="warning" heading="Warning status">
-          This is the alert
+          Lorem ipsum dolor sit amet,{" "}
+          <a href="#anchor">consectetur adipiscing elit</a>, sed do eiusmod.
         </Alert>
+        <br />
         <Alert type="success" heading="Success status">
-          This is the alert
+          Lorem ipsum dolor sit amet,{" "}
+          <a href="#anchor">consectetur adipiscing elit</a>, sed do eiusmod.
         </Alert>
+        <br />
         <Alert type="error" heading="Error status">
-          This is the alert
+          Lorem ipsum dolor sit amet,{" "}
+          <a href="#anchor">consectetur adipiscing elit</a>, sed do eiusmod.
         </Alert>
+        <br />
         <Alert type="emergency" heading="Emergency status">
-          This is the alert
+          Lorem ipsum dolor sit amet,{" "}
+          <a href="#anchor">consectetur adipiscing elit</a>, sed do eiusmod.
+        </Alert>
+      </>
+    );
+  },
+};
+
+export const slimAlerts: Story = {
+  render: () => {
+    return (
+      <>
+        <Alert type="info" slim>
+          Lorem ipsum dolor sit amet,{" "}
+          <a href="#anchor">consectetur adipiscing elit</a>, sed do eiusmod.
+        </Alert>
+        <br />
+        <Alert type="warning" slim>
+          Lorem ipsum dolor sit amet,{" "}
+          <a href="#anchor">consectetur adipiscing elit</a>, sed do eiusmod.
+        </Alert>
+        <br />
+        <Alert type="success" slim>
+          Lorem ipsum dolor sit amet,{" "}
+          <a href="#anchor">consectetur adipiscing elit</a>, sed do eiusmod.
+        </Alert>
+        <br />
+        <Alert type="error" slim>
+          Lorem ipsum dolor sit amet,{" "}
+          <a href="#anchor">consectetur adipiscing elit</a>, sed do eiusmod.
+        </Alert>
+        <br />
+        <Alert type="emergency" slim>
+          Lorem ipsum dolor sit amet,{" "}
+          <a href="#anchor">consectetur adipiscing elit</a>, sed do eiusmod.
+        </Alert>
+      </>
+    );
+  },
+};
+
+export const noIcons: Story = {
+  render: () => {
+    return (
+      <>
+        <Alert type="info" noIcon>
+          Lorem ipsum dolor sit amet,{" "}
+          <a href="#anchor">consectetur adipiscing elit</a>, sed do eiusmod.
+        </Alert>
+        <br />
+        <Alert type="warning" noIcon>
+          Lorem ipsum dolor sit amet,{" "}
+          <a href="#anchor">consectetur adipiscing elit</a>, sed do eiusmod.
+        </Alert>
+        <br />
+        <Alert type="success" noIcon>
+          Lorem ipsum dolor sit amet,{" "}
+          <a href="#anchor">consectetur adipiscing elit</a>, sed do eiusmod.
+        </Alert>
+        <br />
+        <Alert type="error" noIcon>
+          Lorem ipsum dolor sit amet,{" "}
+          <a href="#anchor">consectetur adipiscing elit</a>, sed do eiusmod.
+        </Alert>
+        <br />
+        <Alert type="emergency" noIcon>
+          Lorem ipsum dolor sit amet,{" "}
+          <a href="#anchor">consectetur adipiscing elit</a>, sed do eiusmod.
+        </Alert>
+      </>
+    );
+  },
+};
+
+export const otherExamples: Story = {
+  render: () => {
+    return (
+      <>
+        <Alert type="info" heading="Status header">
+          This is a succinct, helpful message.
+          <ul>
+            <li>This is validation text</li>
+            <li>This is validation text</li>
+            <li>This is validation text</li>
+            <li>This is validation text</li>
+          </ul>
+          <button>Primary Action</button>
+          <button>Secondary Action</button>
         </Alert>
       </>
     );

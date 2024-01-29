@@ -1,16 +1,57 @@
 @use "../../scss/global.scss";
 @use "uswds-core" as *;
 
-.usa-alert {
-  border-left: none;
-  border-top-width: 0.5rem;
-  border-top-style: solid;
-  border-radius: 4px 4px 0 0;
-}
-
-.usa-alert--info {
-  border-top-color: global.$primary-blue;
-}
-
 .cdc-react {
+  .usa-alert {
+    border-left: none;
+    border-top-width: 0.5rem;
+    border-top-style: solid;
+    border-radius: 4px 4px 0 0;
+
+    a,
+    .usa-alert__body,
+    .usa-alert__text {
+      font-weight: 400;
+    }
+  }
+
+  .usa-alert--info {
+    border-top-color: global.$busy-dark;
+    .usa-alert__body {
+      background-color: global.$busy;
+    }
+  }
+
+  .usa-alert--warning {
+    border-top-color: global.$warning-dark-alt;
+    .usa-alert__body {
+      background-color: global.$warning;
+    }
+  }
+
+  .usa-alert--error {
+    border-top-color: global.$error-dark;
+    .usa-alert__body {
+      background-color: global.$error;
+    }
+  }
+
+  .usa-alert--success {
+    border-top-color: global.$success-dark;
+    .usa-alert__body {
+      background-color: global.$success;
+    }
+  }
+
+  .usa-alert--emergency {
+    border-top-color: global.$error-dark;
+    .usa-alert__body {
+      background-color: global.$error-dark;
+    }
+    a {
+      color: white;
+    }
+    a:hover {
+    }
+  }
 }
