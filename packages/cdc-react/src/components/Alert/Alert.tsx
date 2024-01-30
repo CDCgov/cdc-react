@@ -4,6 +4,8 @@ export interface AlertProps {
   type: "info" | "warning" | "success" | "error" | "emergency";
   slim?: boolean;
   noIcon?: boolean;
+  fullWidth?: boolean;
+  leftAlign?: boolean;
   heading?: string | React.ReactNode;
   children: string | React.ReactNode;
 }
@@ -15,12 +17,16 @@ export const Alert = ({
   type,
   slim,
   noIcon,
+  fullWidth,
+  leftAlign,
   heading,
   children,
 }: AlertProps) => {
   const classList = ["usa-alert", `usa-alert--${type}`];
   if (slim) classList.push("usa-alert--slim");
   if (noIcon) classList.push("usa-alert--no-icon");
+  if (fullWidth) classList.push("fluid");
+  if (leftAlign) classList.push("left-align");
   const classes = classList.join(" ");
 
   return (

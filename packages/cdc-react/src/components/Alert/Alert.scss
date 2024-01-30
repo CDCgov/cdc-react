@@ -2,16 +2,33 @@
 @use "uswds-core" as *;
 
 .cdc-react {
+  .usa-alert.fluid {
+    max-width: initial;
+  }
+
+  .usa-alert.left-align .usa-alert__body {
+    margin-left: 0;
+  }
+
   .usa-alert {
     border-left: none;
     border-top-width: 0.5rem;
     border-top-style: solid;
     border-radius: 4px 4px 0 0;
+    line-height: 140%;
+    max-width: 64rem;
 
     a,
     .usa-alert__body,
     .usa-alert__text {
       font-weight: 400;
+      font-size: 1.0625rem;
+      line-height: 140%;
+    }
+    .usa-alert__heading {
+      font-weight: 700;
+      font-size: 1.20063rem;
+      line-height: 140%;
     }
   }
 

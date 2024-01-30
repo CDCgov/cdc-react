@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Alert } from "@us-gov-cdc/cdc-react";
+import { Alert, Button } from "@us-gov-cdc/cdc-react";
 
 const meta: Meta<typeof Alert> = {
   title: "Components/Alert",
@@ -16,28 +16,38 @@ export const Example: Story = {
     type: {
       control: { type: "select" },
       options: ["info", "warning", "success", "error", "emergency"],
-      description: `Alert types: "info", "warning", "success", "error", "emergency"`,
+      description: `info | warning | success | error | emergency`,
       table: {
         defaultValue: {
           detail: "type is required",
-          summary: "null",
+          summary: "required",
         },
       },
     },
     slim: {
       control: { type: "boolean" },
-      description: `enable slim alert style/size`,
+      description:
+        "when set to `true` the slim variant of the alert will render",
     },
     noIcon: {
       control: { type: "boolean" },
-      description: `disable the display of the icon`,
+      description: "when set to `true` the alert icon will not display",
+    },
+    fullWidth: {
+      control: { type: "boolean" },
+      description:
+        "when set to `true` the max-width of the alert will be removed",
+    },
+    leftAlign: {
+      control: { type: "boolean" },
+      description:
+        "when set to `true` the left padding and margin will be removed",
     },
     heading: {
       description: "main heading of the alert",
     },
     children: {
-      description:
-        "body content of the alert, can be a `string` or `React Node`",
+      description: "body content of the alert, either `string` or `React Node`",
     },
   },
   args: {
@@ -45,6 +55,8 @@ export const Example: Story = {
     heading: "Informational status",
     slim: undefined,
     noIcon: undefined,
+    fullWidth: undefined,
+    leftAlign: undefined,
     children: (
       <>
         Lorem ipsum dolor sit amet,{" "}
@@ -153,22 +165,33 @@ export const noIcons: Story = {
   },
 };
 
-export const otherExamples: Story = {
-  render: () => {
-    return (
-      <>
-        <Alert type="info" heading="Status header">
-          This is a succinct, helpful message.
-          <ul>
-            <li>This is validation text</li>
-            <li>This is validation text</li>
-            <li>This is validation text</li>
-            <li>This is validation text</li>
-          </ul>
-          <button>Primary Action</button>
-          <button>Secondary Action</button>
-        </Alert>
-      </>
-    );
-  },
-};
+// Todo: Determine if it's necessary to style <ul> within <Alert> or create a custom
+// global <ul> style or new component
+// export const otherExamples: Story = {
+//   render: () => {
+//     return (
+//       <>
+//         <Alert type="info" heading="Status header">
+//           This is a succinct, helpful message.
+//           <ul>
+//             <li>This is validation text</li>
+//             <li>This is validation text</li>
+//             <li>This is validation text</li>
+//             <li>This is validation text</li>
+//           </ul>
+//           <div className="display-flex flex-row flex-align-center">
+//             <Button
+//               ariaLabel="test button"
+//               className="margin-right-1"
+//               size="big">
+//               Primary Action
+//             </Button>
+//             <Button ariaLabel="test button" variation="outline" size="big">
+//               Secondary Action
+//             </Button>
+//           </div>
+//         </Alert>
+//       </>
+//     );
+//   },
+// };
