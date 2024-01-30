@@ -1,7 +1,7 @@
 @use "typography" as *;
 
 @font-face {
-  font-family: "Open Sans";
+  font-family: "Open Sans Light";
   src:
     url("./fonts/opensans-light-webfont.woff2") format("woff2"),
     url("./fonts/opensans-light-webfont.woff") format("woff");
@@ -11,7 +11,7 @@
 
 //Light Italic
 @font-face {
-  font-family: "Open Sans";
+  font-family: "Open Sans Light Italic";
   src:
     url("./fonts/opensans-lightitalic-webfont.woff2") format("woff2"),
     url("./fonts/opensans-lightitalic-webfont.woff") format("woff");
@@ -31,7 +31,7 @@
 
 //Regular Italic
 @font-face {
-  font-family: "Open Sans";
+  font-family: "Open Sans Italic";
   src:
     url("./fonts/opensans-italic-webfont.woff2") format("woff2"),
     url("./fonts/opensans-italic-webfont.woff") format("woff");
@@ -41,7 +41,7 @@
 
 //Medium
 @font-face {
-  font-family: "Open Sans";
+  font-family: "Open Sans Medium";
   src:
     url("./fonts/opensans-medium-webfont.woff2") format("woff2"),
     url("./fonts/opensans-medium-webfont.woff") format("woff");
@@ -51,7 +51,7 @@
 
 //Medium Italic
 @font-face {
-  font-family: "Open Sans";
+  font-family: "Open Sans Medium Italic";
   src:
     url("./fonts/opensans-mediumitalic-webfont.woff2") format("woff2"),
     url("./fonts/opensans-mediumitalic-webfont.woff") format("woff");
@@ -61,7 +61,7 @@
 
 //Semibold
 @font-face {
-  font-family: "Open Sans";
+  font-family: "Open Sans Semi-bold";
   src:
     url("./fonts/opensans-semibold-webfont.woff2") format("woff2"),
     url("./fonts/opensans-semibold-webfont.woff") format("woff");
@@ -71,7 +71,7 @@
 
 //Semibold Italic
 @font-face {
-  font-family: "Open Sans";
+  font-family: "Open Sans Semi-bold Italic";
   src:
     url("./fonts/opensans-semibolditalic-webfont.woff2") format("woff2"),
     url("./fonts/opensans-semibolditalic-webfont.woff") format("woff");
@@ -81,7 +81,7 @@
 
 //Bold
 @font-face {
-  font-family: "Open Sans";
+  font-family: "Open Sans Bold";
   src:
     url("./fonts/opensans-bold-webfont.woff2") format("woff2"),
     url("./fonts/opensans-bold-webfont.woff") format("woff");
@@ -91,7 +91,7 @@
 
 //Bold Italic
 @font-face {
-  font-family: "Open Sans";
+  font-family: "Open Sans Bold Italic";
   src:
     url("./fonts/opensans-bolditalic-webfont.woff2") format("woff2"),
     url("./fonts/opensans-bolditalic-webfont.woff") format("woff");
@@ -101,7 +101,7 @@
 
 //Extra Bold
 @font-face {
-  font-family: "Open Sans";
+  font-family: "Open Sans Extra Bold";
   src:
     url("./fonts/opensans-extrabold-webfont.woff2") format("woff2"),
     url("./fonts/opensans-extrabold-webfont.woff") format("woff");
@@ -111,7 +111,7 @@
 
 //Extra Bold Italic
 @font-face {
-  font-family: "Open Sans";
+  font-family: "Open Sans Extra Bold Italic";
   src:
     url("./fonts/opensans-extrabolditalic-webfont.woff2") format("woff2"),
     url("./fonts/opensans-extrabolditalic-webfont.woff") format("woff");
