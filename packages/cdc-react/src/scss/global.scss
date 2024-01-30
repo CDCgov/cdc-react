@@ -4,6 +4,7 @@
 @forward "palettes";
 @forward "mixins";
 
+@use "colors";
 @use "typography";
 
 *,
@@ -13,6 +14,10 @@ body {
   box-sizing: border-box;
   font-family: "Open Sans-Regular", Helvetica;
   font-weight: 520;
+}
+
+a {
+  color: colors.$primary-blue;
 }
 
 ul {

@@ -17,6 +17,7 @@
 
   .usa-alert--info {
     border-top-color: global.$busy-dark;
+    background-color: global.$busy;
     .usa-alert__body {
       background-color: global.$busy;
     }
@@ -24,6 +25,7 @@
 
   .usa-alert--warning {
     border-top-color: global.$warning-dark-alt;
+    background-color: global.$warning;
     .usa-alert__body {
       background-color: global.$warning;
     }
@@ -31,6 +33,7 @@
 
   .usa-alert--error {
     border-top-color: global.$error-dark;
+    background-color: global.$error;
     .usa-alert__body {
       background-color: global.$error;
     }
@@ -38,6 +41,7 @@
 
   .usa-alert--success {
     border-top-color: global.$success-dark;
+    background-color: global.$success;
     .usa-alert__body {
       background-color: global.$success;
     }
@@ -45,6 +49,7 @@
 
   .usa-alert--emergency {
     border-top-color: global.$error-dark;
+    background-color: global.$error-dark;
     .usa-alert__body {
       background-color: global.$error-dark;
     }
@@ -52,6 +57,12 @@
       color: white;
     }
     a:hover {
+      // Todo: Add a :hover color for emergency alert
     }
+  }
+  .usa-alert--emergency {
+    // Reduce top border for emergency alert since the border and background are the same
+    // which makes it appear to have too much padding above the alert heading and body
+    border-top-width: 0.25rem;
   }
 }
