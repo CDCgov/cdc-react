@@ -3,6 +3,7 @@
 
 .cdc-react {
   .profile-header {
+    font-family: global.$font-family-sans;
     display: flex;
     height: units(7);
     padding: 0 units(0.5);

@@ -11,7 +11,7 @@
     "lint:cdc-react": "yarn workspace @us-gov-cdc/cdc-react lint",
     "lint:cdc-react-icons": "yarn workspace @us-gov-cdc/cdc-react-icons lint",
     "test:cdc-react": "yarn workspace @us-gov-cdc/cdc-react vitest",
-    "build:cdc-react": "yarn workspace @us-gov-cdc/cdc-react vite build && cp -r packages/cdc-react/dist/src/@types packages/cdc-react/dist/",
+    "build:cdc-react": "yarn workspace @us-gov-cdc/cdc-react vite build && cp -r packages/cdc-react/dist/src/@types packages/cdc-react/dist/ && cp -r packages/cdc-react/src/fonts packages/cdc-react/dist/",
     "build:cdc-react-icons": "yarn workspace @us-gov-cdc/cdc-react-icons vite build",
     "storybook": "yarn workspace @us-gov-cdc/cdc-react-storybook storybook"
   },

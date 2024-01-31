@@ -111,7 +111,6 @@ export const ProfileHeaderUserProfileMenuItem = ({
       <button
         className={className}
         ref={userProfileMenuItemRef}
-        onClick={() => setProfileHeaderPopupOpenState(!popupOpen)}
         onKeyDown={(ev: React.KeyboardEvent<HTMLButtonElement>) =>
           handleEnter(ev)
         }>

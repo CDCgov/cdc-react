@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "storybook": "storybook dev -p 6006",
+    "storybook": "rm -rf public/fonts && cp -R ../cdc-react/dist/fonts public/ && storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
   "devDependencies": {

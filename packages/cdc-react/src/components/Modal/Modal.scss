@@ -15,6 +15,7 @@
 }
 
 .modal {
+  font-family: global.$font-family-sans;
   border-radius: 0.236rem;
   border: 1px solid global.$gray-light;
   background: #fff;
@@ -42,7 +43,7 @@
       }
 
       .modal-body {
-        font-family: global.$font-family;
+        font-family: global.$font-family-sans;
         font-size: global.$font-size-small;
         font-weight: global.$font-weight-regular;
         display: flex;
@@ -79,7 +80,7 @@
 ul,
 li {
   list-style-type: initial;
-  font-family: global.$font-family;
+  font-family: global.$font-family-sans;
   font-size: global.$font-size-small;
   font-weight: global.$font-weight-regular;
 }
