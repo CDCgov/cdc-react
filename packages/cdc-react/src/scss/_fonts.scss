@@ -3,8 +3,8 @@
 @font-face {
   font-family: "Open Sans Light";
   src:
-    url("./fonts/opensans-light-webfont.woff2") format("woff2"),
-    url("./fonts/opensans-light-webfont.woff") format("woff");
+    url("/fonts/opensans-light-webfont.woff2") format("woff2"),
+    url("/fonts/opensans-light-webfont.woff") format("woff");
   font-weight: $font-weight-light;
   font-style: normal;
 }
@@ -13,8 +13,8 @@
 @font-face {
   font-family: "Open Sans Light Italic";
   src:
-    url("./fonts/opensans-lightitalic-webfont.woff2") format("woff2"),
-    url("./fonts/opensans-lightitalic-webfont.woff") format("woff");
+    url("/fonts/opensans-lightitalic-webfont.woff2") format("woff2"),
+    url("/fonts/opensans-lightitalic-webfont.woff") format("woff");
   font-weight: $font-weight-light;
   font-style: italic;
 }
@@ -23,8 +23,8 @@
 @font-face {
   font-family: "Open Sans";
   src:
-    url("./fonts/opensans-regular-webfont.woff2") format("woff2"),
-    url("./fonts/opensans-regular-webfont.woff") format("woff");
+    url("/fonts/opensans-regular-webfont.woff2") format("woff2"),
+    url("/fonts/opensans-regular-webfont.woff") format("woff");
   font-weight: $font-weight-regular;
   font-style: normal;
 }
@@ -33,8 +33,8 @@
 @font-face {
   font-family: "Open Sans Italic";
   src:
-    url("./fonts/opensans-italic-webfont.woff2") format("woff2"),
-    url("./fonts/opensans-italic-webfont.woff") format("woff");
+    url("/fonts/opensans-italic-webfont.woff2") format("woff2"),
+    url("/fonts/opensans-italic-webfont.woff") format("woff");
   font-weight: $font-weight-regular;
   font-style: italic;
 }
@@ -43,8 +43,8 @@
 @font-face {
   font-family: "Open Sans Medium";
   src:
-    url("./fonts/opensans-medium-webfont.woff2") format("woff2"),
-    url("./fonts/opensans-medium-webfont.woff") format("woff");
+    url("/fonts/opensans-medium-webfont.woff2") format("woff2"),
+    url("/fonts/opensans-medium-webfont.woff") format("woff");
   font-weight: $font-weight-medium;
   font-style: normal;
 }
@@ -53,8 +53,8 @@
 @font-face {
   font-family: "Open Sans Medium Italic";
   src:
-    url("./fonts/opensans-mediumitalic-webfont.woff2") format("woff2"),
-    url("./fonts/opensans-mediumitalic-webfont.woff") format("woff");
+    url("/fonts/opensans-mediumitalic-webfont.woff2") format("woff2"),
+    url("/fonts/opensans-mediumitalic-webfont.woff") format("woff");
   font-weight: $font-weight-medium;
   font-style: italic;
 }
@@ -63,8 +63,8 @@
 @font-face {
   font-family: "Open Sans Semi-bold";
   src:
-    url("./fonts/opensans-semibold-webfont.woff2") format("woff2"),
-    url("./fonts/opensans-semibold-webfont.woff") format("woff");
+    url("/fonts/opensans-semibold-webfont.woff2") format("woff2"),
+    url("/fonts/opensans-semibold-webfont.woff") format("woff");
   font-weight: $font-weight-semibold;
   font-style: normal;
 }
@@ -73,8 +73,8 @@
 @font-face {
   font-family: "Open Sans Semi-bold Italic";
   src:
-    url("./fonts/opensans-semibolditalic-webfont.woff2") format("woff2"),
-    url("./fonts/opensans-semibolditalic-webfont.woff") format("woff");
+    url("/fonts/opensans-semibolditalic-webfont.woff2") format("woff2"),
+    url("/fonts/opensans-semibolditalic-webfont.woff") format("woff");
   font-weight: $font-weight-semibold;
   font-style: italic;
 }
@@ -83,8 +83,8 @@
 @font-face {
   font-family: "Open Sans Bold";
   src:
-    url("./fonts/opensans-bold-webfont.woff2") format("woff2"),
-    url("./fonts/opensans-bold-webfont.woff") format("woff");
+    url("/fonts/opensans-bold-webfont.woff2") format("woff2"),
+    url("/fonts/opensans-bold-webfont.woff") format("woff");
   font-weight: $font-weight-bold;
   font-style: normal;
 }
@@ -93,8 +93,8 @@
 @font-face {
   font-family: "Open Sans Bold Italic";
   src:
-    url("./fonts/opensans-bolditalic-webfont.woff2") format("woff2"),
-    url("./fonts/opensans-bolditalic-webfont.woff") format("woff");
+    url("/fonts/opensans-bolditalic-webfont.woff2") format("woff2"),
+    url("/fonts/opensans-bolditalic-webfont.woff") format("woff");
   font-weight: $font-weight-bold;
   font-style: italic;
 }
@@ -103,8 +103,8 @@
 @font-face {
   font-family: "Open Sans Extra Bold";
   src:
-    url("./fonts/opensans-extrabold-webfont.woff2") format("woff2"),
-    url("./fonts/opensans-extrabold-webfont.woff") format("woff");
+    url("/fonts/opensans-extrabold-webfont.woff2") format("woff2"),
+    url("/fonts/opensans-extrabold-webfont.woff") format("woff");
   font-weight: $font-weight-extrabold;
   font-style: normal;
 }
@@ -113,8 +113,8 @@
 @font-face {
   font-family: "Open Sans Extra Bold Italic";
   src:
-    url("./fonts/opensans-extrabolditalic-webfont.woff2") format("woff2"),
-    url("./fonts/opensans-extrabolditalic-webfont.woff") format("woff");
+    url("/fonts/opensans-extrabolditalic-webfont.woff2") format("woff2"),
+    url("/fonts/opensans-extrabolditalic-webfont.woff") format("woff");
   font-weight: $font-weight-extrabold;
   font-style: italic;
 }
