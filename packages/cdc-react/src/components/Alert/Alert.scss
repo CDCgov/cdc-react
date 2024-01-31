@@ -12,23 +12,22 @@
 
   .usa-alert {
     border-left: none;
-    border-top-width: 0.5rem;
+    border-top-width: units(1);
     border-top-style: solid;
-    border-radius: 4px 4px 0 0;
-    line-height: 140%;
-    max-width: 64rem;
+    border-radius: units(0.5) units(0.5) 0 0;
+    max-width: units("desktop");
 
     a,
     .usa-alert__body,
     .usa-alert__text {
-      font-weight: 400;
-      font-size: 1.0625rem;
-      line-height: 140%;
+      font-weight: font-weight("normal");
+      font-size: size("body", 6);
+      line-height: line-height("sans", 3);
     }
     .usa-alert__heading {
-      font-weight: 700;
-      font-size: 1.20063rem;
-      line-height: 140%;
+      font-weight: font-weight("bold");
+      font-size: size("body", 8);
+      line-height: line-height("sans", 3);
     }
   }
 
@@ -80,6 +79,6 @@
   .usa-alert--emergency {
     // Reduce top border for emergency alert since the border and background are the same
     // which makes it appear to have too much padding above the alert heading and body
-    border-top-width: 0.25rem;
+    border-top-width: units(0.5);
   }
 }
