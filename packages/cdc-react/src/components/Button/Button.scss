@@ -1,7 +1,9 @@
 @use "../../scss/global.scss";
 @use "uswds-core" as *;
+@use "../../scss/typography.scss";
 
 .cdc-react.btn {
+  font-family: typography.$font-family-sans;
   display: flex;
   width: auto;
   height: auto;

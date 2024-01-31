@@ -21,7 +21,7 @@ interface CardProps {
 
 export const Card = (props: CardProps) => {
   return (
-    <div className="card-wrapper">
+    <div className="cdc-react card-wrapper">
       <div className="card-content">
         {props.header && (
           <div className={`card-header theme-${props.headerTheme}`}>

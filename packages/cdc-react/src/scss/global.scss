@@ -1,4 +1,7 @@
 @forward "uswds-theme";
+@use "uswds-core" as *;
+@forward "fonts";
+@use "fonts" as *;
 @forward "colors";
 @forward "typography";
 @forward "palettes";
@@ -6,13 +9,14 @@
 
 @use "typography";
 
-*,
-html,
-body {
-  font-size: 17px;
+* {
   box-sizing: border-box;
-  font-family: "Open Sans-Regular", Helvetica;
-  font-weight: 520;
+}
+
+body {
+  font-size: typography.$font-size-base-px;
+  font-family: typography.$font-family-sans;
+  font-weight: typography.$font-weight-regular;
 }
 
 ul {
