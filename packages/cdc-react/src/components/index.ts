@@ -1,5 +1,6 @@
 import "@uswds/uswds/css/uswds.css";
 
+export * from "./Alert/Alert";
 export * from "./Sidebar/Sidebar";
 export * from "./ProfileHeader/ProfileHeader";
 export * from "./ProfileHeader/ProfileHeaderLogo/ProfileHeaderLogo";
