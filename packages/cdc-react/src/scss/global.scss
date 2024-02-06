@@ -7,6 +7,7 @@
 @forward "palettes";
 @forward "mixins";
 
+@use "colors";
 @use "typography";
 
 * {
@@ -17,6 +18,10 @@ body {
   font-size: typography.$font-size-base-px;
   font-family: typography.$font-family-sans;
   font-weight: typography.$font-weight-regular;
+}
+
+a {
+  color: colors.$primary-blue;
 }
 
 ul {
