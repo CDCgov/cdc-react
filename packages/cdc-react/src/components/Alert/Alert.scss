@@ -20,13 +20,13 @@
     a,
     .usa-alert__body,
     .usa-alert__text {
-      font-weight: font-weight("normal");
-      font-size: size("body", 6);
+      font-family: "Open Sans";
+      font-size: 1.0625rem;
       line-height: line-height("sans", 3);
     }
     .usa-alert__heading {
-      font-weight: font-weight("bold");
-      font-size: size("body", 8);
+      font-family: "Open Sans Bold";
+      font-size: 1.20063rem;
       line-height: line-height("sans", 3);
     }
   }
