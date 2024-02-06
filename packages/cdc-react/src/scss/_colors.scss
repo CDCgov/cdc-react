@@ -11,30 +11,30 @@ $gray-darker: #333333;
 $gray-light: #e0e0e0;
 $gray-lighter: #f0f0f0;
 
-$primary-blue: #005eaa;
-$primary-amber: #ffecb3; // TODO: get accurate color.
+$primary-blue: #015fa9; // Figma is #015fa9
+$primary-amber: #fbab19; // Figma is #fbab19
 $primary-brown: #705043;
-$primary-cyan: #007b91;
+$primary-cyan: #027b91; // Figma is #027b91
 $primary-green: #497d0c;
 $primary-indigo: #26418f;
 $primary-orange: #bb4d00;
 $primary-pink: #af4448;
 $primary-purple: #712177;
 $primary-slate: #29434e;
-$primary-teal: #00695c;
+$primary-teal: #01695c; // Figma is #01695c
 
 $secondary-blue: #196eb3;
 
 $tertiary-amber: #ffecb3;
 $tertiary-blue: #c0e9ff;
-$tertiary-brown: #decec6;
+$tertiary-brown: #decec6; // Figma is #decdc6
 $tertiary-cyan: #cce5e9;
 $tertiary-green: #dcedc8;
 $tertiary-indigo: #dee8ff;
 $tertiary-orange: #ffe97d;
 $tertiary-pink: #ffc2c2;
 $tertiary-purple: #e3d3e4;
-$tertiary-slate: #b6c6d2;
+$tertiary-slate: #b6c6d2; // Figma is #b6c5d2
 $tertiary-teal: #ceece7;
 
 $success: #f1f8e9;
@@ -43,6 +43,7 @@ $error: #ffe7e7;
 $error-dark: #af4448;
 $warning: #fff4cf;
 $warning-dark: #bb4d00;
+$warning-dark-alt: #fbab18;
 $info: #f5f5f5;
 $info-dark: #555555;
 $busy: #edf9ff;
