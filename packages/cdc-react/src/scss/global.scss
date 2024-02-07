@@ -7,7 +7,66 @@
 @forward "palettes";
 @forward "mixins";
 
+@use "colors";
 @use "typography";
+
+// Expose CDC Color palette on :root for consuming applications
+:root {
+  --cdc-primary-amber: #{colors.$primary-amber};
+  --cdc-primary-blue: #{colors.$primary-blue};
+  --cdc-primary-brown: #{colors.$primary-brown};
+  --cdc-primary-cyan: #{colors.$primary-cyan};
+  --cdc-primary-green: #{colors.$primary-green};
+  --cdc-primary-indigo: #{colors.$primary-indigo};
+  --cdc-primary-orange: #{colors.$primary-orange};
+  --cdc-primary-pink: #{colors.$primary-pink};
+  --cdc-primary-purple: #{colors.$primary-purple};
+  --cdc-primary-slate: #{colors.$primary-slate};
+  --cdc-primary-teal: #{colors.$primary-teal};
+
+  --cdc-secondary-amber: #{colors.$secondary-amber};
+  --cdc-secondary-blue: #{colors.$secondary-blue};
+  --cdc-secondary-brown: #{colors.$secondary-brown};
+  --cdc-secondary-cyan: #{colors.$secondary-cyan};
+  --cdc-secondary-green: #{colors.$secondary-green};
+  --cdc-secondary-indigo: #{colors.$secondary-indigo};
+  --cdc-secondary-orange: #{colors.$secondary-orange};
+  --cdc-secondary-pink: #{colors.$secondary-pink};
+  --cdc-secondary-purple: #{colors.$secondary-purple};
+  --cdc-secondary-slate: #{colors.$secondary-slate};
+  --cdc-secondary-teal: #{colors.$secondary-teal};
+
+  --cdc-tertiary-amber: #{colors.$tertiary-amber};
+  --cdc-tertiary-blue: #{colors.$tertiary-blue};
+  --cdc-tertiary-brown: #{colors.$tertiary-brown};
+  --cdc-tertiary-cyan: #{colors.$tertiary-cyan};
+  --cdc-tertiary-green: #{colors.$tertiary-green};
+  --cdc-tertiary-indigo: #{colors.$tertiary-indigo};
+  --cdc-tertiary-orange: #{colors.$tertiary-orange};
+  --cdc-tertiary-pink: #{colors.$tertiary-pink};
+  --cdc-tertiary-purple: #{colors.$tertiary-purple};
+  --cdc-tertiary-slate: #{colors.$tertiary-slate};
+  --cdc-tertiary-teal: #{colors.$tertiary-teal};
+
+  --cdc-quaternary-amber: #{colors.$quaternary-amber};
+  --cdc-quaternary-blue: #{colors.$quaternary-blue};
+  --cdc-quaternary-brown: #{colors.$quaternary-brown};
+  --cdc-quaternary-cyan: #{colors.$quaternary-cyan};
+  --cdc-quaternary-green: #{colors.$quaternary-green};
+  --cdc-quaternary-indigo: #{colors.$quaternary-indigo};
+  --cdc-quaternary-orange: #{colors.$quaternary-orange};
+  --cdc-quaternary-pink: #{colors.$quaternary-pink};
+  --cdc-quaternary-purple: #{colors.$quaternary-purple};
+  --cdc-quaternary-slate: #{colors.$quaternary-slate};
+  --cdc-quaternary-teal: #{colors.$quaternary-teal};
+
+  --cdc-gray-lightest: #{colors.$gray-lightest};
+  --cdc-gray-lighter: #{colors.$gray-lighter};
+  --cdc-gray-light: #{colors.$gray-light};
+  --cdc-gray-standard: #{colors.$gray-standard};
+  --cdc-gray-dark: #{colors.$gray-dark};
+  --cdc-gray-darker: #{colors.$gray-darker};
+}
 
 * {
   box-sizing: border-box;
