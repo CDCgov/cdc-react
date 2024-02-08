@@ -1,18 +1,13 @@
-/* Accessibility Color Variables */
+/* These colors are sourced from the CDC WCMS - Color Explorer & Preferred Pairings:
+ * https://www.cdc.gov/wcms/4.0/cdc-wp/page-and-site-options/theme-explorer.html
+ * https://www.cdc.gov/wcms/4.0/cdc-wp/page-and-site-options/preferred-color-pairings.html
+ * There are 11 colors total between main and accents. For each color there is
+ * a primary, secondary, tertiary, and quaternary. Review the CDC WCMS TP4 site 
+ * for guidance on usage and 508 accessibility.
+ */
 
-$main-theme: #005eaa;
-$main-theme-dark: #004f8f;
-$main-theme-darker: #004175;
-$main-theme-light: #88c3ea;
-$main-theme-lighter: #c0e9ff;
-
-$gray-dark: #555555;
-$gray-darker: #333333;
-$gray-light: #e0e0e0;
-$gray-lighter: #f0f0f0;
-
+$primary-amber: #fbab18;
 $primary-blue: #005eaa;
-$primary-amber: #ffecb3; // TODO: get accurate color.
 $primary-brown: #705043;
 $primary-cyan: #007b91;
 $primary-green: #497d0c;
@@ -23,7 +18,17 @@ $primary-purple: #712177;
 $primary-slate: #29434e;
 $primary-teal: #00695c;
 
-$secondary-blue: #196eb3;
+$secondary-amber: #ffd54f;
+$secondary-blue: #88c3ea;
+$secondary-brown: #ad907b;
+$secondary-cyan: #65b0bd;
+$secondary-green: #84bc49;
+$secondary-indigo: #92a6dd;
+$secondary-orange: #ffad42;
+$secondary-pink: #e57373;
+$secondary-purple: #b890bb;
+$secondary-slate: #7e9ba5;
+$secondary-teal: #4ebaaa;
 
 $tertiary-amber: #ffecb3;
 $tertiary-blue: #c0e9ff;
@@ -37,14 +42,39 @@ $tertiary-purple: #e3d3e4;
 $tertiary-slate: #b6c6d2;
 $tertiary-teal: #ceece7;
 
-$success: #f1f8e9;
-$success-dark: #497d0c;
-$error: #ffe7e7;
-$error-dark: #af4448;
-$warning: #fff4cf;
-$warning-dark: #bb4d00;
-$warning-dark-alt: #fbab18;
-$info: #f5f5f5;
-$info-dark: #555555;
-$busy: #edf9ff;
-$busy-dark: #005eaa;
+$quaternary-amber: #fff7e1;
+$quaternary-blue: #edf9ff;
+$quaternary-brown: #f2ebe8;
+$quaternary-cyan: #ebf5f6;
+$quaternary-green: #f1f8e9;
+$quaternary-indigo: #f2f6ff;
+$quaternary-orange: #fff4cf;
+$quaternary-pink: #ffe7e7;
+$quaternary-purple: #f7f2f7;
+$quaternary-slate: #e2e8ed;
+$quaternary-teal: #ebf7f5;
+
+$gray-lightest: #f5f5f5;
+$gray-lighter: #f0f0f0;
+$gray-light: #e0e0e0;
+$gray-standard: #bdbdbd;
+$gray-dark: #555555;
+$gray-darker: #333333;
+
+$main-theme: $primary-blue;
+$main-theme-dark: #004f8f; // Todo: map this to CDC WCMS
+$main-theme-darker: #004175; // Todo: map this to CDC WCMS
+$main-theme-light: $secondary-blue;
+$main-theme-lighter: $tertiary-blue;
+
+$success: $quaternary-green;
+$success-dark: $primary-green;
+$error: $quaternary-pink;
+$error-dark: $primary-pink;
+$warning: $tertiary-amber;
+$warning-dark: $primary-orange; // Todo: this should be refactored to $primary-amber
+$warning-dark-alt: $primary-amber;
+$info: $gray-lightest;
+$info-dark: $gray-dark;
+$busy: $quaternary-blue;
+$busy-dark: $primary-blue;
