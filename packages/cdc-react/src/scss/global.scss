@@ -78,6 +78,10 @@ body {
   font-weight: typography.$font-weight-regular;
 }
 
+a {
+  color: colors.$primary-blue;
+}
+
 ul {
   list-style: none;
   padding: 0;
