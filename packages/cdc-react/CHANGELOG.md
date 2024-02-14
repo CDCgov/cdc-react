@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.4.0](https://github.com/CDCgov/cdc-react/compare/cdc-react-v1.3.0...cdc-react-v1.4.0) (2024-02-08)
+
+
+### Features
+
+* alert component ([d0ce65f](https://github.com/CDCgov/cdc-react/commit/d0ce65f90815f3f3def65a1dbcaeee4b6bab6407))
+* expose cdc color palette with css variables ([1cdbbc5](https://github.com/CDCgov/cdc-react/commit/1cdbbc5943cb1da1da8029f015f9ffed25d603b1))
+* Table Pagination component ([32a4e3f](https://github.com/CDCgov/cdc-react/commit/32a4e3f14b665b53056b83641513302d0929ce10))
+* update cdc color palette ([b8c5e32](https://github.com/CDCgov/cdc-react/commit/b8c5e324fc427129f9be8702a551ee1de71198a4))
+
+
+### Bug Fixes
+
+* update path for font faces ([#124](https://github.com/CDCgov/cdc-react/issues/124)) ([04301b7](https://github.com/CDCgov/cdc-react/commit/04301b7b9176e5e261cd1baa04eca2e7b30fb733))
+* updates Alert styles to use size mixins ([2439268](https://github.com/CDCgov/cdc-react/commit/243926872ce773b7659769de84a3a5ed658adfc2))
+
 ## [1.3.0](https://github.com/CDCgov/cdc-react/compare/cdc-react-v1.2.0...cdc-react-v1.3.0) (2023-11-30)
 
 
