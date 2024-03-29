@@ -26,7 +26,6 @@ import { Cube } from "./Cube";
 import { Dashboard } from "./Dashboard";
 import { Dots } from "./Dots";
 import { Eye } from "./Eye";
-import { File } from "./File";
 import { Filter } from "./Filter";
 import { Folder } from "./Folder";
 import { HandPointArcs } from "./HandPointArcs";
@@ -88,7 +87,6 @@ export const Icons = {
   Dashboard,
   Dots,
   Eye,
-  File,
   Filter,
   Folder,
   HandPointArcs,
