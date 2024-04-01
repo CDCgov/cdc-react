@@ -1,0 +1,17 @@
+@use "../../scss/global.scss";
+@use "uswds-core" as *;
+
+.progress-bar-background {
+  width: 100%;
+  background-color: #e0e0de;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 20px;
+  background-color: #4caf50;
+  text-align: right;
+  border-radius: 8px;
+  transition: width 0.3s ease-in-out;
+}
