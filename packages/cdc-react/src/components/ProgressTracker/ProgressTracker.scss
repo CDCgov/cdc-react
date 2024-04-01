@@ -1,17 +1,65 @@
 @use "../../scss/global.scss";
 @use "uswds-core" as *;
 
+@keyframes indeterminate {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+.progress-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.progress-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: global.$font-family-sans;
+  font-size: global.$font-size-small;
+  font-weight: global.$font-weight-light;
+  padding-bottom: 0.5rem;
+}
+
 .progress-bar-background {
   width: 100%;
-  background-color: #e0e0de;
+  background-color: global.$gray-light;
   border-radius: 8px;
   overflow: hidden;
 }
 
 .progress-bar-fill {
   height: 20px;
-  background-color: #4caf50;
+  background-color: global.$main-theme;
   text-align: right;
   border-radius: 8px;
   transition: width 0.3s ease-in-out;
+
+  &.complete {
+    background-color: global.$success-dark;
+  }
+
+  &.indeterminate {
+    background-color: global.$main-theme-lighter;
+    background-image: repeating-linear-gradient(
+      40deg,
+      rgba(108, 158, 211, 0.8),
+      rgba(108, 158, 211, 0.8) 1px,
+      transparent 1px,
+      transparent 5px
+    );
+    background-size: 100px 20px;
+    animation: indeterminate 45s linear infinite forwards;
+  }
+}
+
+.progress-label {
+  font-family: global.$font-family-sans;
+  font-size: global.$font-size-base;
+  font-weight: global.$font-weight-regular;
+  padding-bottom: 0.75rem;
 }

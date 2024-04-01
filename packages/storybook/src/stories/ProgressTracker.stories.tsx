@@ -31,6 +31,8 @@ export const determinateNotComplete: Story = {
 
 export const indeterminate: Story = {
   args: {
+    currentAmount: 50,
+    totalAmount: 100,
     indeterminate: true,
     label: "Stage: Validating",
   },
@@ -39,5 +41,7 @@ export const indeterminate: Story = {
 export const complete: Story = {
   args: {
     complete: true,
+    currentAmount: 50,
+    totalAmount: 100,
   },
 };
