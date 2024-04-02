@@ -1,36 +1,43 @@
 import "./ProgressTracker.scss";
 
 export interface ProgressTrackerProps {
-  complete?: boolean;
+  isComplete?: boolean;
   currentAmount?: number;
-  indeterminate?: boolean;
+  isIndeterminate?: boolean;
   label?: string;
   totalAmount?: number;
 }
 
 export const ProgressTracker = ({
-  complete = false,
+  isComplete = false,
   currentAmount = 0,
-  indeterminate = false,
+  isIndeterminate = false,
   label = "",
   totalAmount = 0,
 }: ProgressTrackerProps) => {
   const getBarClass = () => {
     const classList = ["progress-bar-fill"];
-    if (complete) classList.push("complete");
-    if (indeterminate) classList.push("indeterminate");
+    if (isComplete) classList.push("complete");
+    if (isIndeterminate) classList.push("indeterminate");
 
     return classList.join(" ");
   };
 
   const getBarPercentage = (): number => {
-    if (indeterminate || complete) return 100;
-    return totalAmount > 0 ? (currentAmount / totalAmount) * 100 : 0;
+    if (isIndeterminate || isComplete) return 100;
+
+    currentAmount = Math.max(0, Math.min(currentAmount, totalAmount));
+    totalAmount = Math.max(0, totalAmount);
+
+    const percentage =
+      totalAmount > 0 ? (currentAmount / totalAmount) * 100 : 0;
+
+    return Math.floor(percentage);
   };
 
   const getBarPercentageInfo = (): string => {
-    if (complete) return "Complete";
-    if (indeterminate) return "In progress...";
+    if (isComplete) return "Complete";
+    if (isIndeterminate) return "In progress...";
     return `${getBarPercentage()}% complete`;
   };
 
@@ -39,7 +46,7 @@ export const ProgressTracker = ({
       <div className="progress-label">{label}</div>
       <div className="progress-info">
         <span>{getBarPercentageInfo()}</span>
-        {!(indeterminate || complete) && (
+        {!(isIndeterminate || isComplete) && (
           <span>
             {currentAmount}MB of {totalAmount}MB
           </span>

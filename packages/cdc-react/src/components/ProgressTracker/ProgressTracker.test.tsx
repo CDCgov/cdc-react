@@ -35,7 +35,7 @@ describe("ProgressTracker component", () => {
       <ProgressTracker
         currentAmount={50}
         totalAmount={100}
-        indeterminate={true}
+        isIndeterminate={true}
         label="Stage: Uploading"
       />
     );
@@ -46,7 +46,7 @@ describe("ProgressTracker component", () => {
     const { getByText } = render(
       <ProgressTracker
         currentAmount={50}
-        complete={true}
+        isComplete={true}
         totalAmount={100}
         label="Stage: Uploading"
       />
@@ -56,8 +56,43 @@ describe("ProgressTracker component", () => {
 
   it("should render indeterminate version when indeterminate is set to true", () => {
     const { getByText } = render(
-      <ProgressTracker indeterminate={true} label="Stage: Uploading" />
+      <ProgressTracker isIndeterminate={true} label="Stage: Uploading" />
     );
     expect(getByText("In progress...")).toBeVisible();
+  });
+
+  it("should not render decimal percentage values", () => {
+    const { getByText } = render(
+      <ProgressTracker
+        currentAmount={150}
+        totalAmount={256}
+        label="Stage: Uploading"
+      />
+    );
+    expect(getByText("58% complete")).toBeVisible();
+  });
+
+  it("should convert current value to total value if current value exceeds total value", () => {
+    const { getByText } = render(
+      <ProgressTracker
+        currentAmount={150}
+        totalAmount={100}
+        label="Stage: Uploading"
+      />
+    );
+    expect(getByText("100MB of 100MB")).toBeVisible();
+    expect(getByText("100% complete")).toBeVisible();
+  });
+
+  it("should convert negative values to zero", () => {
+    const { getByText } = render(
+      <ProgressTracker
+        currentAmount={-50}
+        totalAmount={100}
+        label="Stage: Uploading"
+      />
+    );
+    expect(getByText("0MB of 100MB")).toBeVisible();
+    expect(getByText("0% complete")).toBeVisible();
   });
 });

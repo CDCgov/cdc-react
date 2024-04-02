@@ -13,11 +13,11 @@ type Story = StoryObj<typeof ProgressTracker>;
 
 export const Example: Story = {
   args: {
-    complete: false,
-    currentAmount: 50,
-    indeterminate: false,
+    isComplete: false,
+    currentAmount: 150,
+    isIndeterminate: false,
     label: "Stage: Uploading",
-    totalAmount: 100,
+    totalAmount: 256,
   },
 };
 
@@ -33,14 +33,14 @@ export const indeterminate: Story = {
   args: {
     currentAmount: 50,
     totalAmount: 100,
-    indeterminate: true,
+    isIndeterminate: true,
     label: "Stage: Validating",
   },
 };
 
 export const complete: Story = {
   args: {
-    complete: true,
+    isComplete: true,
     currentAmount: 50,
     totalAmount: 100,
   },
