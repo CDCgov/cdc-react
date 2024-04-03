@@ -1,20 +1,21 @@
 import "./ProgressTracker.scss";
 
 export interface ProgressTrackerProps {
-  isComplete?: boolean;
   currentAmount?: number;
+  isComplete?: boolean;
   isIndeterminate?: boolean;
   label?: string;
   totalAmount?: number;
 }
 
 export const ProgressTracker = ({
-  isComplete = false,
   currentAmount = 0,
+  className = "",
+  isComplete = false,
   isIndeterminate = false,
   label = "",
   totalAmount = 0,
-}: ProgressTrackerProps) => {
+}: ProgressTrackerProps & JSX.IntrinsicElements["div"]) => {
   const getBarClass = () => {
     const classList = ["progress-bar-fill"];
     if (isComplete) classList.push("complete");
@@ -42,7 +43,7 @@ export const ProgressTracker = ({
   };
 
   return (
-    <div className="progress-wrapper">
+    <div className={`progress-wrapper ${className}`}>
       <div className="progress-label">{label}</div>
       <div className="progress-info">
         <span>{getBarPercentageInfo()}</span>
