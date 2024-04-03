@@ -9,7 +9,14 @@ export const PillSquare = ({ className }: IconProps) => {
       viewBox="0 0 10 10"
       fill="none"
       xmlns="http://www.w3.org/2000/svg">
-      <rect x="0.727905" y="0.5" width="9" height="9" rx="1" fill="#333333" />
+      <rect
+        x="0.727905"
+        y="0.5"
+        width="9"
+        height="9"
+        rx="1"
+        fill="currentColor"
+      />
     </svg>
   );
 };
