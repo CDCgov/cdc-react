@@ -39,6 +39,9 @@ import { Minus } from "./Minus";
 import { PageLayout } from "./PageLayout";
 import { PaperLines } from "./PaperLines";
 import { Person } from "./Person";
+import { PillCircle } from "./PillCircle";
+import { PillSquare } from "./PillSquare";
+import { PillTriangle } from "./PillTriangle";
 import { Plus } from "./Plus";
 import { Search } from "./Search";
 import { Settings } from "./Settings";
@@ -100,6 +103,9 @@ export const Icons = {
   PageLayout,
   PaperLines,
   Person,
+  PillCircle,
+  PillSquare,
+  PillTriangle,
   Plus,
   Search,
   Settings,
