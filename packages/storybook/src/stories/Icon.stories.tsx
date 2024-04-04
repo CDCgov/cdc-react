@@ -262,6 +262,20 @@ export const all: StoryObj = {
           <pre>BarGraph</pre>
         </span>
       </div>
+      <div>
+        <span className="icon-story">
+          <Icons.PillCircle />
+          <pre>PillCircle</pre>
+        </span>
+        <span className="icon-story">
+          <Icons.PillSquare />
+          <pre>PillSquare</pre>
+        </span>
+        <span className="icon-story">
+          <Icons.PillTriangle />
+          <pre>PillTriangle</pre>
+        </span>
+      </div>
     </div>
   ),
 };
