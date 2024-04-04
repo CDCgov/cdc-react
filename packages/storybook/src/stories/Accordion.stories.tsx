@@ -1,9 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import {
-  Accordion,
-  AccordionItem,
-  AccordionItemProps,
-} from "@us-gov-cdc/cdc-react";
+import { Accordion, AccordionItemProps } from "@us-gov-cdc/cdc-react";
 
 const meta: Meta<typeof Accordion> = {
   title: "Components/Accordion",
@@ -15,7 +11,7 @@ export default meta;
 
 type Story = StoryObj<typeof Accordion>;
 
-const items: AccordionItemProps = [
+const items: AccordionItemProps[] = [
   {
     id: "1",
     expanded: false,

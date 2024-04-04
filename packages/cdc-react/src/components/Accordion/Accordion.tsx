@@ -3,8 +3,8 @@ import { useState } from "react";
 export interface AccordionItemProps {
   title: React.ReactNode | string;
   content: React.ReactNode | string;
-  expanded: boolean;
   id: string;
+  expanded?: boolean;
   handleToggle?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
@@ -18,7 +18,7 @@ export const AccordionItem = ({
   title,
   id,
   content,
-  expanded,
+  expanded = false,
   handleToggle,
 }: AccordionItemProps) => {
   return (
