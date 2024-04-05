@@ -19,7 +19,9 @@
   border-radius: 0.236rem;
   border: 1px solid global.$gray-light;
   background: #fff;
+  max-height: 80vh;
   max-width: 40rem;
+  overflow-y: auto;
 
   .modal-content {
     position: relative;

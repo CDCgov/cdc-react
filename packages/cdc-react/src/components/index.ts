@@ -1,5 +1,6 @@
 import "@uswds/uswds/css/uswds.css";
 
+export * from "./Accordion/Accordion";
 export * from "./Alert/Alert";
 export * from "./Button/Button";
 export * from "./Card/Card";
