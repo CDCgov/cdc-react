@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.0](https://github.com/CDCgov/cdc-react/compare/cdc-react-icons-v2.2.0...cdc-react-icons-v2.3.0) (2024-04-10)
+
+
+### Features
+
+* adds alert component, progress-tracker component, accordion component, new icons ([e2fb272](https://github.com/CDCgov/cdc-react/commit/e2fb272c11155841b24ffd68d860c19ecdf56275))
+
 ## [2.2.0](https://github.com/CDCgov/cdc-react/compare/cdc-react-icons-v2.1.0...cdc-react-icons-v2.2.0) (2023-11-30)
 
 
