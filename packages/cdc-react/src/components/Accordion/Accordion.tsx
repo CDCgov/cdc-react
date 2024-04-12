@@ -51,6 +51,7 @@ export const Accordion = ({
   className,
   multiselectable = false,
 }: AccordionProps & JSX.IntrinsicElements["div"]) => {
+  // testing
   const [openItems, setOpenState] = useState(
     items.filter((i) => !!i.expanded).map((i) => i.id)
   );
