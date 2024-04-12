@@ -39,11 +39,19 @@ To build a package, you can run `yarn build:<package name>` at the root level, o
 
 ## Publishing a Package
 
-Every package within this monorepo is published to a separate package on NPM. To publish a package, you will first need to create an NPM account and be added to the `us-goc-cdc` NPM organization. Next, you need to update the version of the package within the package's `package.json` file, as NPM does not allow previous versions to be overwritten.
+Releases are automated with a combination of GitHub Actions, [release-please](https://github.com/googleapis/release-please), and [conventionalcommits.org](https://www.conventionalcommits.org/en/v1.0.0/). Every package within this monorepo is published to a separate package on NPM.
 
-Finally, you can perform a manual publish by running `npm publish` at the package level. This command will upload all files and directories listed in the `files` property of the package's `package.json`. This is typically everything in the `dist` directory.
+How releases work:
 
-**Note: A CI/CD process will be built in the near-future to automate this publishing process. Once it is complete, it should be the main mechanism for publishing a package. Manual publishing should only be done if the CI/CD pipeline is not usable.**
+- When a PR is merged with a conventional commit title (ex. `feat: added new Pill component`) an automated "release" PR will be created. The automation will determine which packages had changes and will generate a release for each package(ie. if both `cdc-react` and `cdc-react-icons` had changes, then two PRs would be created).
+- The automated "release" PR can be merged once the build passes. This PR will automatically update the related `package.json` files and create updates to CHANGELOG. Be sure to keep the title of the merge commit the same as the initial PR commit title. An example of `cdc-react` automated release PR- https://github.com/CDCgov/cdc-react/pull/145
+- Once the "release" PR has been merged, [a release will be created in GitHub](https://github.com/CDCgov/cdc-react/releases) and the new version will be published to NPM.
+
+Note: `cdc-react` currently depends on `cdc-react-icons` so it's best to modify the "release" PR to manually update this if `cdc-react-icons` has had a new update.
+
+Release notes and the CHANGELOG are automatically generated based on commit messages that are following [conventional commits](https://github.com/googleapis/release-please?tab=readme-ov-file#how-should-i-write-my-commits).
+
+Manual publishing with `npm publish` should be avoided. When doing a manual release though be sure to update all related `package.json` versions, the changelog, and GitHub releases.
 
 ## Contributing
 
