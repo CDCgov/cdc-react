@@ -1,6 +1,6 @@
 {
   "name": "@us-gov-cdc/cdc-react",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "description": "Library for ReactJS components for the CDC",
   "main": "./dist/cdc-react.umd.js",
   "module": "./dist/cdc-react.es.js",
