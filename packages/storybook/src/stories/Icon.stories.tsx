@@ -268,6 +268,10 @@ export const all: StoryObj = {
           <pre>PillCircle</pre>
         </span>
         <span className="icon-story">
+          <Icons.PillDiamond />
+          <pre>PillDiamond</pre>
+        </span>
+        <span className="icon-story">
           <Icons.PillSquare />
           <pre>PillSquare</pre>
         </span>
