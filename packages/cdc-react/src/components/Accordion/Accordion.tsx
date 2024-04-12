@@ -51,11 +51,11 @@ export const Accordion = ({
   className,
   multiselectable = false,
 }: AccordionProps & JSX.IntrinsicElements["div"]) => {
-  // testing 
+  // testing
   const [openItems, setOpenState] = useState(
     items.filter((i) => !!i.expanded).map((i) => i.id)
   );
-  
+
   const getClasses = () => {
     const classList = ["usa-accordion"];
     if (bordered) classList.push("usa-accordion--bordered");
