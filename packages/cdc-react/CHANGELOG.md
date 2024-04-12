@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.7.0](https://github.com/CDCgov/cdc-react/compare/cdc-react-v1.6.0...cdc-react-v1.7.0) (2024-04-12)
+
+
+### Features
+
+* new PillDiamond icon, remove comment ([c36b720](https://github.com/CDCgov/cdc-react/commit/c36b720665bc1e34b6f4e164d3a583c3196f21ec))
+* remove comment ([dce90c8](https://github.com/CDCgov/cdc-react/commit/dce90c8257483899ec10ab280c8d57d8aea3ee96))
+
 ## [1.6.0](https://github.com/CDCgov/cdc-react/compare/cdc-react-v1.5.0...cdc-react-v1.6.0) (2024-04-12)
 
 
