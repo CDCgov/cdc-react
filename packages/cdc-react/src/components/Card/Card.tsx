@@ -35,9 +35,13 @@ export const Card = ({
   children,
   className,
 }: CardProps & JSX.IntrinsicElements["div"]) => {
+  const classList = ["card-content"];
+  if (className) classList.push(className);  
+  const classes = classList.join(" ");
+
   return (
     <div className="cdc-react card-wrapper">
-      <div className={`card-content ${className}`}>
+      <div className={classes}>
         {header && (
           <div className={`card-header theme-${headerTheme}`}>
             {header}
