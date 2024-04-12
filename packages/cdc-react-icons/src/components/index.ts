@@ -40,6 +40,7 @@ import { PageLayout } from "./PageLayout";
 import { PaperLines } from "./PaperLines";
 import { Person } from "./Person";
 import { PillCircle } from "./PillCircle";
+import { PillDiamond } from "./PillDiamond";
 import { PillSquare } from "./PillSquare";
 import { PillTriangle } from "./PillTriangle";
 import { Plus } from "./Plus";
@@ -104,6 +105,7 @@ export const Icons = {
   PaperLines,
   Person,
   PillCircle,
+  PillDiamond,
   PillSquare,
   PillTriangle,
   Plus,
