@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.6.0](https://github.com/CDCgov/cdc-react/compare/cdc-react-v1.5.0...cdc-react-v1.6.0) (2024-04-12)
+
+
+### Features
+
+* fix prettier ([83d83c3](https://github.com/CDCgov/cdc-react/commit/83d83c3cb6dc21b4370a3a2cce597e1efc0b683d))
+* test accordion update ([c80bb03](https://github.com/CDCgov/cdc-react/commit/c80bb03fdb6b86a0425814fa6a28d8460ed78817))
+* test accordion update ([c80bb03](https://github.com/CDCgov/cdc-react/commit/c80bb03fdb6b86a0425814fa6a28d8460ed78817))
+* test accordion update ([8b8d47a](https://github.com/CDCgov/cdc-react/commit/8b8d47a33b6bfbd7eb208e7e741996728158bd01))
+* update accordion ([257b3be](https://github.com/CDCgov/cdc-react/commit/257b3be93c364def8fbc350d20f4e17515e09ab6))
+
+
+### Bug Fixes
+
+* test release ([db40e34](https://github.com/CDCgov/cdc-react/commit/db40e345970b41995f2f099c2e98edcf7ff8f2eb))
+* test release ([a5e9b95](https://github.com/CDCgov/cdc-react/commit/a5e9b95f1836268ee7596b7e2c9f5b9fb1dd9d55))
+
 ## [1.5.0](https://github.com/CDCgov/cdc-react/compare/cdc-react-v1.4.0...cdc-react-v1.5.0) (2024-04-10)
 
 
