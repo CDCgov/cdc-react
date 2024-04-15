@@ -44,7 +44,7 @@ Releases are automated with a combination of GitHub Actions, [release-please](ht
 How releases work:
 
 - When a PR is merged with a conventional commit title (ex. `feat: added new Pill component`) an automated "release" PR will be created. The automation will determine which packages had changes and will generate a release for each package(ie. if both `cdc-react` and `cdc-react-icons` had changes, then two PRs would be created).
-- The automated "release" PR can be merged once the build passes. This PR will automatically update the related `package.json` files and create updates to CHANGELOG. Be sure to keep the title of the merge commit the same as the initial PR commit title. An example of `cdc-react` automated release PR- https://github.com/CDCgov/cdc-react/pull/145
+- The automated "release" PR can be merged once the build passes. This PR will automatically update the related `package.json` files and create release notes in `CHANGELOG.md`. Be sure to keep the title of the merge commit the same as the initial PR commit title. An example of `cdc-react` automated release PR- https://github.com/CDCgov/cdc-react/pull/145
 - Once the "release" PR has been merged, [a release will be created in GitHub](https://github.com/CDCgov/cdc-react/releases) and the new version will be published to NPM.
 
 Note: `cdc-react` currently depends on `cdc-react-icons` so it's best to modify the "release" PR to manually update this if `cdc-react-icons` has had a new update.
