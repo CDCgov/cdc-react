@@ -1,5 +1,37 @@
 # Changelog
 
+## [1.7.0](https://github.com/CDCgov/cdc-react/compare/cdc-react-v1.6.0...cdc-react-v1.7.0) (2024-04-12)
+
+
+### Features
+
+* new PillDiamond icon, remove comment ([c36b720](https://github.com/CDCgov/cdc-react/commit/c36b720665bc1e34b6f4e164d3a583c3196f21ec))
+* remove comment ([dce90c8](https://github.com/CDCgov/cdc-react/commit/dce90c8257483899ec10ab280c8d57d8aea3ee96))
+
+## [1.6.0](https://github.com/CDCgov/cdc-react/compare/cdc-react-v1.5.0...cdc-react-v1.6.0) (2024-04-12)
+
+
+### Features
+
+* fix prettier ([83d83c3](https://github.com/CDCgov/cdc-react/commit/83d83c3cb6dc21b4370a3a2cce597e1efc0b683d))
+* test accordion update ([c80bb03](https://github.com/CDCgov/cdc-react/commit/c80bb03fdb6b86a0425814fa6a28d8460ed78817))
+* test accordion update ([c80bb03](https://github.com/CDCgov/cdc-react/commit/c80bb03fdb6b86a0425814fa6a28d8460ed78817))
+* test accordion update ([8b8d47a](https://github.com/CDCgov/cdc-react/commit/8b8d47a33b6bfbd7eb208e7e741996728158bd01))
+* update accordion ([257b3be](https://github.com/CDCgov/cdc-react/commit/257b3be93c364def8fbc350d20f4e17515e09ab6))
+
+
+### Bug Fixes
+
+* test release ([db40e34](https://github.com/CDCgov/cdc-react/commit/db40e345970b41995f2f099c2e98edcf7ff8f2eb))
+* test release ([a5e9b95](https://github.com/CDCgov/cdc-react/commit/a5e9b95f1836268ee7596b7e2c9f5b9fb1dd9d55))
+
+## [1.5.0](https://github.com/CDCgov/cdc-react/compare/cdc-react-v1.4.0...cdc-react-v1.5.0) (2024-04-10)
+
+
+### Features
+
+* adds alert component, progress-tracker component, accordion component, new icons ([e2fb272](https://github.com/CDCgov/cdc-react/commit/e2fb272c11155841b24ffd68d860c19ecdf56275))
+
 ## [1.4.0](https://github.com/CDCgov/cdc-react/compare/cdc-react-v1.3.0...cdc-react-v1.4.0) (2024-02-08)
 
 

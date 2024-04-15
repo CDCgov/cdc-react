@@ -1,5 +1,26 @@
 # Changelog
 
+## [2.4.0](https://github.com/CDCgov/cdc-react/compare/cdc-react-icons-v2.3.0...cdc-react-icons-v2.4.0) (2024-04-12)
+
+
+### Features
+
+* add new PillDiamond icon ([d8e42b6](https://github.com/CDCgov/cdc-react/commit/d8e42b63a509e91e851ea18ad049c3d96ac4b768))
+* new PillDiamond icon, remove comment ([c36b720](https://github.com/CDCgov/cdc-react/commit/c36b720665bc1e34b6f4e164d3a583c3196f21ec))
+
+
+### Bug Fixes
+
+* test release ([db40e34](https://github.com/CDCgov/cdc-react/commit/db40e345970b41995f2f099c2e98edcf7ff8f2eb))
+* test release ([a5e9b95](https://github.com/CDCgov/cdc-react/commit/a5e9b95f1836268ee7596b7e2c9f5b9fb1dd9d55))
+
+## [2.3.0](https://github.com/CDCgov/cdc-react/compare/cdc-react-icons-v2.2.0...cdc-react-icons-v2.3.0) (2024-04-10)
+
+
+### Features
+
+* adds alert component, progress-tracker component, accordion component, new icons ([e2fb272](https://github.com/CDCgov/cdc-react/commit/e2fb272c11155841b24ffd68d860c19ecdf56275))
+
 ## [2.2.0](https://github.com/CDCgov/cdc-react/compare/cdc-react-icons-v2.1.0...cdc-react-icons-v2.2.0) (2023-11-30)
 
 
