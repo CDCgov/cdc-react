@@ -43,13 +43,24 @@ Releases are automated with a combination of GitHub Actions, [release-please](ht
 
 How releases work:
 
-- When a PR is merged with a conventional commit title (ex. `feat: added new Pill component`) an automated "release" PR will be created. The automation will determine which packages had changes and will generate a release for each package(ie. if both `cdc-react` and `cdc-react-icons` had changes, then two PRs would be created).
-- The automated "release" PR can be merged once the build passes. This PR will automatically update the related `package.json` files and create release notes in `CHANGELOG.md`. Be sure to keep the title of the merge commit the same as the initial PR commit title. An example of `cdc-react` automated release PR- https://github.com/CDCgov/cdc-react/pull/145
-- Once the "release" PR has been merged, [a release will be created in GitHub](https://github.com/CDCgov/cdc-react/releases) and the new version will be published to NPM.
+- When a PR is merged with a conventional commit title (ex. `feat: added new Pill component`) an automated chore/release PR will be created(will start with "chore:"). The automation will determine which packages had changes and will generate a release for each package(ie. if both `cdc-react` and `cdc-react-icons` had changes, then two PRs would be created).
+- The automated chore/release PR can be merged once the build passes. This PR will automatically update the related `package.json` files and create release notes in `CHANGELOG.md`. Be sure to keep the title of the merge commit the same as the initial PR commit title. An example of `cdc-react` automated release PR- https://github.com/CDCgov/cdc-react/pull/145
+- Once the chore/release PR has been merged, [a release will be created in GitHub](https://github.com/CDCgov/cdc-react/releases) and the new version will be published to NPM.
 
-Note: `cdc-react` currently depends on `cdc-react-icons` so it's best to modify the "release" PR to manually update this if `cdc-react-icons` has had a new update.
+Note: `cdc-react` currently depends on `cdc-react-icons` so it's best to modify the chore/release PR to manually update this if `cdc-react-icons` has had a new update.
 
 Release notes and the CHANGELOG are automatically generated based on commit messages that are following [conventional commits](https://github.com/googleapis/release-please?tab=readme-ov-file#how-should-i-write-my-commits).
+
+Example:
+
+1. `git commit -m "feat: added profile updates"`
+2. `git push` and create GitHub PR with name `feat: added profile updates`
+3. Get approval / builds passing
+4. Squash and merge with name `feat: added profile updates`
+5. Verify automatic chore/release PR created. It will have a name like `chore(main): release cdc-react X.X.X`
+6. Confirm changelog and package.json changes
+7. Merge chore/release PR
+8. Verify GitHub release is created, and npmjs.com is updated with latest version
 
 Manual publishing with `npm publish` should be avoided. When doing a manual release though be sure to update all related `package.json` versions, the changelog, and GitHub releases.
 
