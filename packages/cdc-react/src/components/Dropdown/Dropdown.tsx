@@ -35,13 +35,9 @@ export const Dropdown = ({
   const [dropdownOpen, setDropdownVisibility] = useState(false);
   const [dropdownCurrentItem, setDropdownCurrentItem] = useState(label);
 
-  const classList = ["dropdown"];
-  if (className) classList.push(className);
-  const classes = classList.join(" ");
-
   return (
     <div className="cdc-react" id={id}>
-      <div className={classes}>
+      <div className={`dropdown ${className}`}>
         <div
           role="presentation"
           onKeyDown={onKeyDownDropdownLabel}
