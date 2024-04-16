@@ -17,7 +17,6 @@ interface CardProps {
   actionButtonOnClick?: MouseEventHandler<HTMLDivElement> &
     MouseEventHandler<HTMLButtonElement>;
   children: React.ReactNode;
-  className: string;
 }
 
 export const Card = ({
