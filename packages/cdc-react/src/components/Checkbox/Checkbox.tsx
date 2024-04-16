@@ -25,26 +25,26 @@ export const Checkbox = ({
   onKeyDown,
   indeterminate,
   disabled,
-  className
+  className,
 }: CheckboxProps & JSX.IntrinsicElements["div"]) => {
   const Icon = isChecked ? (
     <Icons.Check className="icon check-icon" />
   ) : indeterminate ? (
     <Icons.Minus className="icon minus-icon" />
   ) : null;
-  
+
   const classList = ["cdc-react", "checkbox-container"];
   if (isChecked) {
-    classList.push("checked")
-  } else { classList.push("unchecked") }
-  if (disabled) classList.push("checkbox-disabled")
+    classList.push("checked");
+  } else {
+    classList.push("unchecked");
+  }
+  if (disabled) classList.push("checkbox-disabled");
   if (className) classList.push(className);
   const classes = classList.join(" ");
 
   return (
-    <label
-      htmlFor={id}
-      className={classes}>
+    <label htmlFor={id} className={classes}>
       <input
         type="checkbox"
         className="checkbox"
@@ -60,12 +60,9 @@ export const Checkbox = ({
         onKeyDown={onKeyDown}
       />
       {Icon}
-      <div
-        className={((srOnly && "sr-only ") || "") + "checkbox-content"}>
+      <div className={((srOnly && "sr-only ") || "") + "checkbox-content"}>
         <span className="label">{label}</span>
-        {description && (
-          <div className="label-description">{description}</div>
-        )}
+        {description && <div className="label-description">{description}</div>}
       </div>
     </label>
   );

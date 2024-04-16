@@ -21,7 +21,7 @@ export const Alert = ({
   leftAlign,
   heading,
   children,
-  className
+  className,
 }: AlertProps & JSX.IntrinsicElements["div"]) => {
   const classList = ["usa-alert", `usa-alert--${type}`];
   if (slim) classList.push("usa-alert--slim");
@@ -30,7 +30,7 @@ export const Alert = ({
   if (leftAlign) classList.push("left-align");
   if (className) classList.push(className);
   const classes = classList.join(" ");
-  
+
   return (
     <div className="cdc-react">
       <div className={classes}>

@@ -36,16 +36,14 @@ export const Card = ({
   className,
 }: CardProps & JSX.IntrinsicElements["div"]) => {
   const classList = ["card-content"];
-  if (className) classList.push(className);  
+  if (className) classList.push(className);
   const classes = classList.join(" ");
 
   return (
     <div className="cdc-react card-wrapper">
       <div className={classes}>
         {header && (
-          <div className={`card-header theme-${headerTheme}`}>
-            {header}
-          </div>
+          <div className={`card-header theme-${headerTheme}`}>{header}</div>
         )}
         <div className={`card-body ${layout}`}>
           {layout === "horizontal" && !setMediaBanner && (
@@ -55,9 +53,7 @@ export const Card = ({
             className={`card-section-media ${
               !setMediaBanner ? "" : "media-fill"
             }`}>
-            {mediaSource && (
-              <img src={mediaSource} alt={sectionTitle} />
-            )}
+            {mediaSource && <img src={mediaSource} alt={sectionTitle} />}
           </div>
           <div className="card-body-content">
             {setMediaBanner && (
