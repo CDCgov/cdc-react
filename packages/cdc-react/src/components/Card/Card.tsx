@@ -19,40 +19,54 @@ interface CardProps {
   children: React.ReactNode;
 }
 
-export const Card = (props: CardProps) => {
+export const Card = ({
+  layout,
+  mediaSource,
+  header,
+  headerTheme,
+  sectionTitle,
+  setMediaBanner,
+  actionButtonVariation,
+  actionButtonText,
+  actionButtonIcon,
+  actionButtonIconPosition,
+  actionButtonOnClick,
+  children,
+  className,
+}: CardProps & JSX.IntrinsicElements["div"]) => {
+  const classList = ["card-content"];
+  if (className) classList.push(className);
+  const classes = classList.join(" ");
+
   return (
     <div className="cdc-react card-wrapper">
-      <div className="card-content">
-        {props.header && (
-          <div className={`card-header theme-${props.headerTheme}`}>
-            {props.header}
-          </div>
+      <div className={classes}>
+        {header && (
+          <div className={`card-header theme-${headerTheme}`}>{header}</div>
         )}
-        <div className={`card-body ${props.layout}`}>
-          {props.layout === "horizontal" && !props.setMediaBanner && (
-            <div className="card-section-title">{props.sectionTitle}</div>
+        <div className={`card-body ${layout}`}>
+          {layout === "horizontal" && !setMediaBanner && (
+            <div className="card-section-title">{sectionTitle}</div>
           )}
           <div
             className={`card-section-media ${
-              !props.setMediaBanner ? "" : "media-fill"
+              !setMediaBanner ? "" : "media-fill"
             }`}>
-            {props.mediaSource && (
-              <img src={props.mediaSource} alt={props.sectionTitle} />
-            )}
+            {mediaSource && <img src={mediaSource} alt={sectionTitle} />}
           </div>
           <div className="card-body-content">
-            {props.setMediaBanner && (
-              <div className="card-section-title">{props.sectionTitle}</div>
+            {setMediaBanner && (
+              <div className="card-section-title">{sectionTitle}</div>
             )}
-            <div className="card-section-body">{props.children}</div>
+            <div className="card-section-body">{children}</div>
             <div className="card-section-footer">
               <Button
-                ariaLabel={props.actionButtonText || "action"}
-                variation={props.actionButtonVariation}
-                icon={props.actionButtonIcon}
-                iconPosition={props.actionButtonIconPosition}
-                onClick={props.actionButtonOnClick}>
-                {props.actionButtonText}
+                ariaLabel={actionButtonText || "action"}
+                variation={actionButtonVariation}
+                icon={actionButtonIcon}
+                iconPosition={actionButtonIconPosition}
+                onClick={actionButtonOnClick}>
+                {actionButtonText}
               </Button>
             </div>
           </div>

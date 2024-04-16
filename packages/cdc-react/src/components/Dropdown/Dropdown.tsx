@@ -30,13 +30,14 @@ export const Dropdown = ({
   onKeyDownDropdownLabel,
   onKeyDownDropdownItems,
   id,
-}: DropdownProps) => {
+  className,
+}: DropdownProps & JSX.IntrinsicElements["div"]) => {
   const [dropdownOpen, setDropdownVisibility] = useState(false);
   const [dropdownCurrentItem, setDropdownCurrentItem] = useState(label);
 
   return (
     <div className="cdc-react" id={id}>
-      <div className="dropdown">
+      <div className={`dropdown ${className}`}>
         <div
           role="presentation"
           onKeyDown={onKeyDownDropdownLabel}

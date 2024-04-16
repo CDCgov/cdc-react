@@ -15,41 +15,54 @@ type CheckboxProps = {
   disabled?: boolean;
 };
 
-export const Checkbox = (props: CheckboxProps) => {
-  const Icon = props.isChecked ? (
+export const Checkbox = ({
+  id,
+  label,
+  description,
+  isChecked,
+  srOnly,
+  onChange,
+  onKeyDown,
+  indeterminate,
+  disabled,
+  className,
+}: CheckboxProps & JSX.IntrinsicElements["div"]) => {
+  const Icon = isChecked ? (
     <Icons.Check className="icon check-icon" />
-  ) : props.indeterminate ? (
+  ) : indeterminate ? (
     <Icons.Minus className="icon minus-icon" />
   ) : null;
 
+  const classList = ["cdc-react", "checkbox-container"];
+  if (isChecked) {
+    classList.push("checked");
+  } else {
+    classList.push("unchecked");
+  }
+  if (disabled) classList.push("checkbox-disabled");
+  if (className) classList.push(className);
+  const classes = classList.join(" ");
+
   return (
-    <label
-      htmlFor={props.id}
-      className={`cdc-react checkbox-container 
-      ${props.isChecked ? "checked" : "unchecked"}
-      ${props.disabled ? "checkbox-disabled" : ""}
-      `}>
+    <label htmlFor={id} className={classes}>
       <input
         type="checkbox"
         className="checkbox"
-        checked={props.isChecked}
-        id={props.id}
-        disabled={props.disabled}
+        checked={isChecked}
+        id={id}
+        disabled={disabled}
         ref={(input) => {
           if (input) {
-            input.indeterminate = props.indeterminate || false;
+            input.indeterminate = indeterminate || false;
           }
         }}
-        onChange={props.onChange}
-        onKeyDown={props.onKeyDown}
+        onChange={onChange}
+        onKeyDown={onKeyDown}
       />
       {Icon}
-      <div
-        className={((props.srOnly && "sr-only ") || "") + "checkbox-content"}>
-        <span className="label">{props.label}</span>
-        {props.description && (
-          <div className="label-description">{props.description}</div>
-        )}
+      <div className={((srOnly && "sr-only ") || "") + "checkbox-content"}>
+        <span className="label">{label}</span>
+        {description && <div className="label-description">{description}</div>}
       </div>
     </label>
   );

@@ -5,9 +5,7 @@ interface DividerProps {
   className?: string;
 }
 
-export const Divider = (props: DividerProps) => {
-  const { width, height, stroke, className } = props;
-
+export const Divider = ({ stroke, height, width, className }: DividerProps) => {
   return (
     <svg
       className={className}
