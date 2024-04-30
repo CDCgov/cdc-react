@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.0](https://github.com/CDCgov/cdc-react/compare/cdc-react-v1.7.0...cdc-react-v1.8.0) (2024-04-30)
+
+
+### Features
+
+* add className as a prop for Pill ([#149](https://github.com/CDCgov/cdc-react/issues/149)) ([b0cafe9](https://github.com/CDCgov/cdc-react/commit/b0cafe91bd1d5c74f043e97dc8ffd0e5cad9a1c1))
+
 ## [1.7.0](https://github.com/CDCgov/cdc-react/compare/cdc-react-v1.6.0...cdc-react-v1.7.0) (2024-04-12)
 
 
