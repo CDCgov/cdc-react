@@ -48,6 +48,7 @@ export type PillProps = (
   outline?: boolean;
   inverse?: boolean;
   color?: ColorVariationTypes;
+  className?: string;
 };
 
 const defaultProps: PillProps = {
@@ -58,6 +59,7 @@ const defaultProps: PillProps = {
   outline: false,
   inverse: false,
   color: "primary",
+  className: "",
 };
 
 export const Pill = (props: PillProps) => {
@@ -95,6 +97,11 @@ export const Pill = (props: PillProps) => {
   }
 
   props.outline ? (classes += ` outline`) : (classes += ` filled`);
+
+  if (props.className) {
+    console.log(props.className);
+    classes += ` ${props.className}`;
+  }
 
   return (
     <span
