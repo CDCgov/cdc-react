@@ -69,6 +69,10 @@ export const Pill = (props: PillProps) => {
   const ariaLabel = props.ariaLabel.length > 0 ? props.ariaLabel : props.label;
   let classes = "cdc-react pill";
 
+  if (props.className) {
+    classes += ` ${props.className}`;
+  }
+
   props.shape === "roundCorners"
     ? (classes += ` roundCorners`)
     : (classes += ` slot`);
@@ -97,11 +101,6 @@ export const Pill = (props: PillProps) => {
   }
 
   props.outline ? (classes += ` outline`) : (classes += ` filled`);
-
-  if (props.className) {
-    console.log(props.className);
-    classes += ` ${props.className}`;
-  }
 
   return (
     <span
