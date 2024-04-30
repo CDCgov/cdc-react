@@ -48,6 +48,7 @@ export type PillProps = (
   outline?: boolean;
   inverse?: boolean;
   color?: ColorVariationTypes;
+  className?: string;
 };
 
 const defaultProps: PillProps = {
@@ -58,6 +59,7 @@ const defaultProps: PillProps = {
   outline: false,
   inverse: false,
   color: "primary",
+  className: "",
 };
 
 export const Pill = (props: PillProps) => {
@@ -66,6 +68,10 @@ export const Pill = (props: PillProps) => {
   const showTitle = props.label.length > TRUNCATE_LENGTH;
   const ariaLabel = props.ariaLabel.length > 0 ? props.ariaLabel : props.label;
   let classes = "cdc-react pill";
+
+  if (props.className) {
+    classes += ` ${props.className}`;
+  }
 
   props.shape === "roundCorners"
     ? (classes += ` roundCorners`)
