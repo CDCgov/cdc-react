@@ -60,6 +60,7 @@ import { ZigZag } from "./ZigZag";
 export interface IconProps {
   className?: string;
   hasBadge?: boolean;
+  title?: string;
 }
 
 export const Icons = {

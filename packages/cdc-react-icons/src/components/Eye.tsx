@@ -1,14 +1,18 @@
 import { IconProps } from ".";
 
-export const Eye = ({ className }: IconProps) => {
+export const Eye = ({ className, title }: IconProps) => {
+  const defaultTitle = "eye-icon";
   return (
     <svg
       className={className}
+      role="img"
+      aria-labelledby={defaultTitle}
       width="24"
       height="24"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg">
+      <title id={defaultTitle}>{title ? title : defaultTitle}</title>
       <path
         d="M3 11.5C3 11.5 6.27273 5 12 5C17.7273 5 21 11.5 21 11.5C21 11.5 17.7273 18 12 18C6.27273 18 3 11.5 3 11.5Z"
         stroke="currentColor"
