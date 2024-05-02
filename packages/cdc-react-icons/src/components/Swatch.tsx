@@ -1,14 +1,18 @@
 import { IconProps } from ".";
 
-export const Swatch = ({ className }: IconProps) => {
+export const Swatch = ({ className, title }: IconProps) => {
+  const defaultTitle = "swatch-icon";
   return (
     <svg
       className={className}
+      role="img"
+      aria-labelledby={defaultTitle}
       width="24"
       height="24"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg">
+      <title id={defaultTitle}>{title ? title : defaultTitle}</title>
       <path
         d="M3 17.5L3 4C3 3.44772 3.44772 3 4 3H9C9.55228 3 10 3.44772 10 4V9.02107M3 17.5C3 15.567 4.567 14 6.5 14L20 14C20.5523 14 21 14.4477 21 15V20C21 20.5523 20.5523 21 20 21H6.5C4.567 21 3 19.433 3 17.5ZM14.8995 14L19.2426 9.65686C19.6332 9.26633 19.6332 8.63317 19.2426 8.24264L15.7071 4.70711C15.3166 4.31658 14.6834 4.31658 14.2929 4.70711L4 15.0505"
         stroke="currentColor"

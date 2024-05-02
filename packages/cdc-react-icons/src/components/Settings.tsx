@@ -1,14 +1,18 @@
 import { IconProps } from ".";
 
-export const Settings = ({ className }: IconProps) => {
+export const Settings = ({ className, title }: IconProps) => {
+  const defaultTitle = "settings-icon";
   return (
     <svg
       className={className}
+      role="img"
+      aria-labelledby={defaultTitle}
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
       viewBox="0 0 24 24"
       fill="none">
+      <title id={defaultTitle}>{title ? title : defaultTitle}</title>
       <path
         d="M12 14.4545C13.3556 14.4545 14.4545 13.3556 14.4545 12C14.4545 10.6444 13.3556 9.54545 12 9.54545C10.6444 9.54545 9.54545 10.6444 9.54545 12C9.54545 13.3556 10.6444 14.4545 12 14.4545Z"
         stroke="currentColor"

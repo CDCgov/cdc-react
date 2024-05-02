@@ -1,14 +1,18 @@
 import { IconProps } from ".";
 
-export const SortArrow = ({ className }: IconProps) => {
+export const SortArrow = ({ className, title }: IconProps) => {
+  const defaultTitle = "sort-arrow-icon";
   return (
     <svg
       className={className}
+      role="img"
+      aria-labelledby={defaultTitle}
       width="10"
       height="18"
       viewBox="0 0 10 18"
       fill="none"
       xmlns="http://www.w3.org/2000/svg">
+      <title id={defaultTitle}>{title ? title : defaultTitle}</title>
       <path
         fillRule="evenodd"
         clipRule="evenodd"
