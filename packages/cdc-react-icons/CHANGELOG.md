@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.5.0](https://github.com/CDCgov/cdc-react/compare/cdc-react-icons-v2.4.0...cdc-react-icons-v2.5.0) (2024-05-02)
+
+
+### Features
+
+* added title input prop for icons ([3f5f02b](https://github.com/CDCgov/cdc-react/commit/3f5f02ba3b69d78f6498bc05de3d96328d61d35d))
+* added title input prop for icons ([3f5f02b](https://github.com/CDCgov/cdc-react/commit/3f5f02ba3b69d78f6498bc05de3d96328d61d35d))
+* added title input prop for icons ([aacbb10](https://github.com/CDCgov/cdc-react/commit/aacbb10a39993c9035ed09397b873af06c39fc85))
+
 ## [2.4.0](https://github.com/CDCgov/cdc-react/compare/cdc-react-icons-v2.3.0...cdc-react-icons-v2.4.0) (2024-04-12)
 
 
