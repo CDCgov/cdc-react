@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.0](https://github.com/CDCgov/cdc-react/compare/cdc-react-v1.8.0...cdc-react-v1.9.0) (2024-05-02)
+
+
+### Features
+
+* adds descriptive aria-label for sidebar button, adds aria-expanded to sidebar control button ([#153](https://github.com/CDCgov/cdc-react/issues/153)) ([3ab7e69](https://github.com/CDCgov/cdc-react/commit/3ab7e692641be68b761c7173b352f3776bfec4a9))
+
 ## [1.8.0](https://github.com/CDCgov/cdc-react/compare/cdc-react-v1.7.0...cdc-react-v1.8.0) (2024-04-30)
 
 
