@@ -11,7 +11,7 @@ describe("Sidebar component", () => {
   it("should render the toggle button", () => {
     render(<Sidebar sections={[]} />);
 
-    expect(screen.getByLabelText("toggle")).toBeInTheDocument();
+    expect(screen.getByLabelText("Toggle Side Menu")).toBeInTheDocument();
   });
 
   it("should show logout button by default", () => {
@@ -39,7 +39,7 @@ describe("Sidebar component", () => {
   it("should hide logout button when sidebar collapsed", () => {
     render(<Sidebar sections={[]} />);
 
-    const toggleBtn = screen.getByLabelText("toggle");
+    const toggleBtn = screen.getByLabelText("Toggle Side Menu");
     fireEvent.click(toggleBtn);
 
     expect(screen.queryByText("Logout")).not.toBeInTheDocument();

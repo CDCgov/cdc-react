@@ -47,7 +47,8 @@ export const Sidebar = ({ sections, footer }: SidebarProps) => {
               type="button"
               className="usa-button usa-button--outline usa-button--inverse"
               onClick={toggleVisibility}
-              aria-label="toggle">
+              aria-label="Toggle Side Menu"
+              aria-expanded={isCollapsed ? "false" : "true"}>
               <Icons.Menu className="menu" />
               <Icons.ChevronDoubleLeft className="chevron-double-left-mobile" />
 
