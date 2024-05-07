@@ -16,6 +16,7 @@ export interface DropdownProps {
     | React.KeyboardEventHandler<HTMLDivElement>
     | undefined;
   id?: string;
+  className?: string;
 }
 
 /**
@@ -31,7 +32,7 @@ export const Dropdown = ({
   onKeyDownDropdownItems,
   id,
   className,
-}: DropdownProps & JSX.IntrinsicElements["div"]) => {
+}: DropdownProps) => {
   const [dropdownOpen, setDropdownVisibility] = useState(false);
   const [dropdownCurrentItem, setDropdownCurrentItem] = useState(label);
 

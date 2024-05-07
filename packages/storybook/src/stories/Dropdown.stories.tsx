@@ -25,3 +25,14 @@ export const Example: Story = {
     },
   },
 };
+
+export const NoIcon: Story = {
+  args: {
+    srText: "Dropdown Screen Reader text",
+    label: "Dropdown Label",
+    items: ["Item One", "Item Two", "Item Three"],
+    onSelect: (item: string) => {
+      console.log(item);
+    },
+  },
+};
