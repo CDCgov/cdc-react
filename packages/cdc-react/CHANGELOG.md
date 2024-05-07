@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.10.0](https://github.com/CDCgov/cdc-react/compare/cdc-react-v1.9.0...cdc-react-v1.10.0) (2024-05-07)
+
+
+### Features
+
+* bespoke Dropdown onSelect class ([b2e4355](https://github.com/CDCgov/cdc-react/commit/b2e43552c3103854c1f7cf0530dd574101c832d3))
+* bespoke Dropdown onSelect class ([b2e4355](https://github.com/CDCgov/cdc-react/commit/b2e43552c3103854c1f7cf0530dd574101c832d3))
+
 ## [1.9.0](https://github.com/CDCgov/cdc-react/compare/cdc-react-v1.8.0...cdc-react-v1.9.0) (2024-05-02)
 
 
