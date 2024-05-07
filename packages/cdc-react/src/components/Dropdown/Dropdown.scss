@@ -16,10 +16,11 @@
     span {
       display: flex;
       color: global.$gray-darker;
+      margin: units("05") 0 units("05") 0;
 
       &.dropdown-label-icon {
         flex-grow: 0.05;
-        padding: units("05");
+        padding: 0 units("05") 0 units("05");
       }
 
       &.dropdown-label {
