@@ -24,7 +24,7 @@ export const Example: Story = {
       console.log(item);
     },
     helperText: "",
-    value: "",
+    defaultValue: "",
   },
 };
 
@@ -50,7 +50,7 @@ export const DefaultValue: Story = {
       console.log(item);
     },
     labelIcon: <Icons.Calendar />,
-    value: "Item Two",
+    defaultValue: "Item Two",
   },
 };
 
