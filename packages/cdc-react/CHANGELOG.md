@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.11.0](https://github.com/CDCgov/cdc-react/compare/cdc-react-v1.10.0...cdc-react-v1.11.0) (2024-05-08)
+
+
+### Features
+
+* Adding dropdown label, helper text, and default value ([dcbe3ed](https://github.com/CDCgov/cdc-react/commit/dcbe3ed8dbc9a8853198f7528cbe2af79dd508e7))
+* dropdown updates ([c43bb18](https://github.com/CDCgov/cdc-react/commit/c43bb18e1863aedd4f255670f4cd163eaaf946fd))
+* dropdown updates ([c43bb18](https://github.com/CDCgov/cdc-react/commit/c43bb18e1863aedd4f255670f4cd163eaaf946fd))
+
 ## [1.10.0](https://github.com/CDCgov/cdc-react/compare/cdc-react-v1.9.0...cdc-react-v1.10.0) (2024-05-07)
 
 
