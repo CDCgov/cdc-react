@@ -23,6 +23,34 @@ export const Example: Story = {
     onSelect: (item: string) => {
       console.log(item);
     },
+    helperText: "",
+    value: "",
+  },
+};
+
+export const WithHelperText: Story = {
+  args: {
+    srText: "Dropdown Screen Reader text",
+    label: "Dropdown Label",
+    items: ["Item One", "Item Two", "Item Three"],
+    onSelect: (item: string) => {
+      console.log(item);
+    },
+    labelIcon: <Icons.Calendar />,
+    helperText: "Helper text example",
+  },
+};
+
+export const DefaultValue: Story = {
+  args: {
+    srText: "Dropdown Screen Reader text",
+    label: "Dropdown Label",
+    items: ["Item One", "Item Two", "Item Three"],
+    onSelect: (item: string) => {
+      console.log(item);
+    },
+    labelIcon: <Icons.Calendar />,
+    value: "Item Two",
   },
 };
 

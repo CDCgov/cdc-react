@@ -1,7 +1,7 @@
 import "./Dropdown.scss";
 
 import { Icons } from "@us-gov-cdc/cdc-react-icons";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export interface DropdownProps {
   label: string;
@@ -17,6 +17,8 @@ export interface DropdownProps {
     | undefined;
   id?: string;
   className?: string;
+  defaultValue?: string;
+  helperText?: string;
 }
 
 /**
@@ -32,21 +34,31 @@ export const Dropdown = ({
   onKeyDownDropdownItems,
   id,
   className,
+  defaultValue = "",
+  helperText,
 }: DropdownProps) => {
   const [dropdownOpen, setDropdownVisibility] = useState(false);
-  const [dropdownCurrentItem, setDropdownCurrentItem] = useState(label);
+  const [dropdownCurrentItem, setDropdownCurrentItem] = useState("");
+
+  useEffect(() => {
+    setDropdownCurrentItem(defaultValue);
+  }, [defaultValue]);
 
   return (
-    <div className="cdc-react" id={id}>
-      <div className={`dropdown ${className}`}>
+    <div className={`cdc-react ${className || ""}`} id={id}>
+      <div className="dropdown-label">{label}</div>
+      {!!helperText && <div className="dropdown-helper-text">{helperText}</div>}
+      <div className="dropdown">
         <div
           role="presentation"
           onKeyDown={onKeyDownDropdownLabel}
           onClick={() => setDropdownVisibility(!dropdownOpen)}
           aria-label={srText}
-          className="dropdown-label-wrap">
-          <span className="dropdown-label-icon">{labelIcon}</span>
-          <span className="dropdown-label">{dropdownCurrentItem}</span>
+          className="dropdown-value-wrap">
+          <span className="dropdown-value-icon">{labelIcon}</span>
+          <span className="dropdown-value">
+            {dropdownCurrentItem ? dropdownCurrentItem : "-Select-"}
+          </span>
           <span className="dropdown-arrow">
             {dropdownOpen ? <Icons.ChevronUp /> : <Icons.ChevronDown />}
           </span>

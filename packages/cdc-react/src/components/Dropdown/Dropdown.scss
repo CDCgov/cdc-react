@@ -2,7 +2,7 @@
 @use "uswds-core" as *;
 
 .cdc-react {
-  .dropdown-label-wrap {
+  .dropdown-value-wrap {
     display: flex;
     flex-direction: row;
     max-width: units("card-lg");
@@ -18,12 +18,12 @@
       color: global.$gray-darker;
       margin: units("05") 0 units("05") 0;
 
-      &.dropdown-label-icon {
+      &.dropdown-value-icon {
         flex-grow: 0.05;
         padding: 0 units("05") 0 units("05");
       }
 
-      &.dropdown-label {
+      &.dropdown-value {
         font-size: 0.875rem;
         flex-grow: units("05");
       }
@@ -35,6 +35,21 @@
         padding-right: units(1);
       }
     }
+  }
+
+  .dropdown-wrapper {
+    display: flex;
+    flex-direction: "column";
+  }
+
+  .dropdown-label {
+    font-size: 0.925rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .dropdown-helper-text {
+    font-size: 0.825rem;
+    margin-bottom: 0.5rem;
   }
 
   .dropdown-items {
