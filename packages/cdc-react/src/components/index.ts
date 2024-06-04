@@ -24,6 +24,7 @@ export * from "./Table/TableDataCell/TableDataCell";
 export * from "./Table/TableHead/TableHead";
 export * from "./Table/TableHeader/TableHeader";
 export * from "./Table/TablePagination/TablePagination";
+export * from "./Table/TablePagination/TablePaginationServerSide";
 export * from "./Table/TableRow/TableRow";
 
 export * from "../@types";
