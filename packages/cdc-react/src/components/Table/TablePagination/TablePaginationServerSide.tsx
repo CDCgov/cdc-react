@@ -22,7 +22,7 @@ export const TablePaginationServerSide = ({
     <div className={`cdc-react pagination ${className || ""}`}>
       {
         <>
-          {currentPage > 1 && (
+          {currentPage + 1 > 1 && (
             <>
               <Button
                 variation="unstyled"
@@ -38,16 +38,16 @@ export const TablePaginationServerSide = ({
             return (
               <Button
                 size="tiny"
-                variation={(item === currentPage && "filled") || "outline"}
+                variation={(item === currentPage + 1 && "filled") || "outline"}
                 ariaLabel={`Select page ${item}`}
                 key={`pagebox-${item}`}
                 className={`pagebox`}
-                onClick={() => setCurrentPage(item)}>
+                onClick={() => setCurrentPage(item - 1)}>
                 {item}
               </Button>
             );
           })}
-          {currentPage < numberOfPages && (
+          {currentPage + 1 < numberOfPages && (
             <>
               <Button
                 variation="unstyled"
