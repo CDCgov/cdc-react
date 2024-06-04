@@ -42,7 +42,7 @@
     "vitest": "^0.33.0"
   },
   "dependencies": {
-    "@us-gov-cdc/cdc-react-icons": "^2.4.0",
+    "@us-gov-cdc/cdc-react-icons": "^2.5.0",
     "@uswds/uswds": "^3.5.0"
   },
   "peerDependencies": {
