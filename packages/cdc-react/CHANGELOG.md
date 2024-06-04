@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.13.0](https://github.com/CDCgov/cdc-react/compare/cdc-react-v1.12.0...cdc-react-v1.13.0) (2024-06-04)
+
+
+### Features
+
+* zero index server side paginator ([041ef20](https://github.com/CDCgov/cdc-react/commit/041ef20bf294c990b1521fbaf89b47c455c68aa0))
+* zero index server side paginator ([041ef20](https://github.com/CDCgov/cdc-react/commit/041ef20bf294c990b1521fbaf89b47c455c68aa0))
+
 ## [1.12.0](https://github.com/CDCgov/cdc-react/compare/cdc-react-v1.11.0...cdc-react-v1.12.0) (2024-06-04)
 
 
