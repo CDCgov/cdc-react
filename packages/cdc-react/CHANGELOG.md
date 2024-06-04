@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.12.0](https://github.com/CDCgov/cdc-react/compare/cdc-react-v1.11.0...cdc-react-v1.12.0) (2024-06-04)
+
+
+### Features
+
+* add server side pagination component ([b00e4ea](https://github.com/CDCgov/cdc-react/commit/b00e4eaef1ae711820c5df865a91c3cd9ed851a1))
+* add server side pagination component ([b00e4ea](https://github.com/CDCgov/cdc-react/commit/b00e4eaef1ae711820c5df865a91c3cd9ed851a1))
+* add server side pagination component ([1e4b390](https://github.com/CDCgov/cdc-react/commit/1e4b3903694e4b423945691d6373f9530d12030d))
+
 ## [1.11.0](https://github.com/CDCgov/cdc-react/compare/cdc-react-v1.10.0...cdc-react-v1.11.0) (2024-05-08)
 
 
