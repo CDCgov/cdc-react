@@ -16,7 +16,7 @@ export const SortArrow = ({ className, title }: IconProps) => {
       <path
         d="M12 5V19M12 5L9 8.10345M12 5L15 8.10345M12 19L9 16.1034M12 19L15 16.1034"
         stroke="currentColor"
-        stroke-linecap="round"
+        strokeLinecap="round"
       />
     </svg>
   );
