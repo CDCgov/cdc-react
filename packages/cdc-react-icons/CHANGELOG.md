@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.6.0](https://github.com/CDCgov/cdc-react/compare/cdc-react-icons-v2.5.0...cdc-react-icons-v2.6.0) (2024-06-05)
+
+
+### Features
+
+* adding arrows for sort ([01e6974](https://github.com/CDCgov/cdc-react/commit/01e6974c7ce5e075f656670e8a47729f4e2cf3ef))
+* adding arrows for sort ([01e6974](https://github.com/CDCgov/cdc-react/commit/01e6974c7ce5e075f656670e8a47729f4e2cf3ef))
+* adding arrows for sort ([10657ae](https://github.com/CDCgov/cdc-react/commit/10657aeea48d844f375dbdea9fe8e6d579e13129))
+
 ## [2.5.0](https://github.com/CDCgov/cdc-react/compare/cdc-react-icons-v2.4.0...cdc-react-icons-v2.5.0) (2024-05-02)
 
 
