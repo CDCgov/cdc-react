@@ -280,6 +280,20 @@ export const all: StoryObj = {
           <pre>PillTriangle</pre>
         </span>
       </div>
+      <div>
+        <span className="icon-story">
+          <Icons.SortArrow />
+          <pre>SortArrow</pre>
+        </span>
+        <span className="icon-story">
+          <Icons.SortArrowUp />
+          <pre>SortArrowUp</pre>
+        </span>
+        <span className="icon-story">
+          <Icons.SortArrowDown />
+          <pre>SortArrowDown</pre>
+        </span>
+      </div>
     </div>
   ),
 };
