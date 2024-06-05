@@ -47,6 +47,8 @@ import { Plus } from "./Plus";
 import { Search } from "./Search";
 import { Settings } from "./Settings";
 import { SortArrow } from "./SortArrow";
+import { SortArrowDown } from "./SortArrowDown";
+import { SortArrowUp } from "./SortArrowUp";
 import { SpeechBubble } from "./SpeechBubble";
 import { SquareArrowUpRight } from "./SquareArrowUpRight";
 import { SquareHalfArrowRight } from "./SquareHalfArrowRight";
@@ -113,6 +115,8 @@ export const Icons = {
   Search,
   Settings,
   SortArrow,
+  SortArrowDown,
+  SortArrowUp,
   SpeechBubble,
   SquareArrowUpRight,
   SquareHalfArrowRight,
