@@ -14,6 +14,7 @@
     padding-right: units("105");
 
     span {
+      word-break: break-all;
       flex-grow: 1;
       font-size: 0.825rem;
     }

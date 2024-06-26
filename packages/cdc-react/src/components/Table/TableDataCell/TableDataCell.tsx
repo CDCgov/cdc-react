@@ -23,7 +23,7 @@ export const TableDataCell = ({
           ? "width-15"
           : "width-card"
       }`}>
-      {children}
+      <span>{children}</span>
     </td>
   );
 };
