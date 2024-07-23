@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.7.0](https://github.com/CDCgov/cdc-react/compare/cdc-react-icons-v2.6.0...cdc-react-icons-v2.7.0) (2024-07-23)
+
+
+### Features
+
+* exclamation icons ([e3d3ebe](https://github.com/CDCgov/cdc-react/commit/e3d3ebe5bd02ca557bd03d828165cae5fb6813e8))
+* exclamation icons ([e3d3ebe](https://github.com/CDCgov/cdc-react/commit/e3d3ebe5bd02ca557bd03d828165cae5fb6813e8))
+
 ## [2.6.0](https://github.com/CDCgov/cdc-react/compare/cdc-react-icons-v2.5.0...cdc-react-icons-v2.6.0) (2024-06-05)
 
 
