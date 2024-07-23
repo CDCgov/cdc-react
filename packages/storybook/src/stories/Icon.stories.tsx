@@ -294,6 +294,16 @@ export const all: StoryObj = {
           <pre>SortArrowDown</pre>
         </span>
       </div>
+      <div>
+        <span className="icon-story">
+          <Icons.ExclamationCircle />
+          <pre>ExclamationCircle</pre>
+        </span>
+        <span className="icon-story">
+          <Icons.ExclamationTriangle />
+          <pre>ExclamationTriangle</pre>
+        </span>
+      </div>
     </div>
   ),
 };

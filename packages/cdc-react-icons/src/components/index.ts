@@ -25,6 +25,8 @@ import { CloudArrowUp } from "./CloudArrowUp";
 import { Cube } from "./Cube";
 import { Dashboard } from "./Dashboard";
 import { Dots } from "./Dots";
+import { ExclamationCircle } from "./ExclamationCircle";
+import { ExclamationTriangle } from "./ExclamationTriangle";
 import { Eye } from "./Eye";
 import { Filter } from "./Filter";
 import { Folder } from "./Folder";
@@ -93,6 +95,8 @@ export const Icons = {
   Cube,
   Dashboard,
   Dots,
+  ExclamationCircle,
+  ExclamationTriangle,
   Eye,
   Filter,
   Folder,
