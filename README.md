@@ -1,5 +1,7 @@
 # CDC React Design System
 
+NOTE: As of July 30th 2024 this application is no longer actively developed.
+
 This is a monorepo for the official CDC Design System catered for ReactJS applications. The overall goal of this project is to create open source, reusable components and libraries to be used across all ReactJS-based web applications built for the CDC.
 
 **General disclaimer** This repository was created for use by CDC programs to collaborate on public health related projects in support of the [CDC mission](https://www.cdc.gov/about/organization/mission.htm). GitHub is not hosted by the CDC, but is a third party website used by CDC and its partners to share information and collaborate on software. CDC use of GitHub does not imply an endorsement of any one particular service, product, or enterprise.
